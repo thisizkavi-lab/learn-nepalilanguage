@@ -1,0 +1,509 @@
+/* Nepali Reading Practice Styles */
+
+/* Layout */
+.reading-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+}
+
+/* Header */
+.reading-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--topbar-height);
+    background: var(--topbar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    color: white;
+}
+
+.reading-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reading-topbar-left a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.reading-topbar-left a:hover {
+    color: white;
+}
+
+.reading-topbar h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.reading-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ─── Left Sidebar: Level Navigation ─── */
+.reading-sidebar {
+    position: fixed;
+    top: var(--topbar-height);
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    z-index: 50;
+    padding: 16px 0;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    padding: 0 20px;
+    margin-bottom: 12px;
+}
+
+.level-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.level-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+}
+
+.level-item:hover {
+    background: var(--bg-surface-hover);
+}
+
+.level-item.active {
+    background: var(--bg-surface);
+    border-left-color: var(--link-color);
+}
+
+.level-icon {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--border-color);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.level-item.active .level-icon {
+    background: var(--link-color);
+    color: white;
+}
+
+.level-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.level-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.level-item.active .level-label {
+    color: var(--link-color);
+}
+
+.level-sublabel {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+}
+
+/* ─── Main Reading Area ─── */
+.reading-main {
+    flex: 1;
+    margin-top: var(--topbar-height);
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - var(--topbar-height));
+}
+
+/* ─── Vocab Bar (Soseki-inspired) ─── */
+.vocab-bar {
+    position: sticky;
+    top: var(--topbar-height);
+    z-index: 40;
+    background: var(--bg-surface);
+    border-bottom: 3px solid var(--link-color);
+    padding: 12px 40px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: background 0.2s;
+}
+
+.vocab-hint {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-style: italic;
+}
+
+.vocab-np {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.vocab-roman {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.vocab-en {
+    font-size: 1rem;
+    color: var(--link-color);
+    font-weight: 500;
+}
+
+/* ─── Content Area ─── */
+.reading-content {
+    padding: 40px 60px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.content-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 8px;
+}
+
+.content-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0 0 24px;
+}
+
+/* ─── Word Grid (Level 1) ─── */
+.word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.word-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.word-card:hover,
+.word-card.word-active {
+    border-color: var(--link-color);
+    background: var(--bg-surface-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.word-np {
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* ─── Phrases (Level 2) ─── */
+.phrase-section {
+    margin-bottom: 28px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.phrase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.phrase-row {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.phrase-row:hover,
+.phrase-row.word-active {
+    border-color: var(--link-color);
+    background: var(--bg-surface-hover);
+}
+
+.phrase-np {
+    font-size: 1.25rem;
+    color: var(--text-main);
+}
+
+/* ─── Sentences (Level 3) — Storybook Style ─── */
+.sentence-section {
+    margin-bottom: 64px;
+}
+
+.sentence-section .section-title {
+    font-size: 1.125rem;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.sentence-block {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 48px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sentence-block:last-child {
+    border-bottom: none;
+}
+
+.sentence-text {
+    font-size: 2rem;
+    line-height: 3;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.sentence-en {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+    padding-top: 12px;
+    border-top: none;
+    opacity: 0.7;
+}
+
+/* ─── Hoverable Words (shared) ─── */
+.hoverable-word {
+    cursor: pointer;
+    border-bottom: 1px dotted var(--border-color);
+    padding: 0 1px;
+    border-radius: 2px;
+    transition: all 0.1s;
+}
+
+.hoverable-word:hover,
+.hoverable-word.word-active {
+    background: rgba(88, 101, 242, 0.1);
+    border-bottom-color: var(--link-color);
+    color: var(--link-color);
+}
+
+[data-theme="dark"] .hoverable-word:hover,
+[data-theme="dark"] .hoverable-word.word-active {
+    background: rgba(88, 101, 242, 0.15);
+}
+
+/* ─── Long Text (Paragraphs & Essays) ─── */
+.item-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.item-tab {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    cursor: pointer;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+.item-tab:hover {
+    background: var(--bg-surface-hover);
+}
+
+.item-tab.active {
+    background: var(--link-color);
+    color: white;
+    border-color: var(--link-color);
+}
+
+.reading-block {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 40px 0;
+}
+
+.reading-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.reading-text {
+    font-size: 1.75rem;
+    line-height: 2.8;
+    color: var(--text-main);
+}
+
+.reading-text p {
+    margin: 0 0 48px;
+}
+
+.reading-text p:last-child {
+    margin-bottom: 0;
+}
+
+.translation-toggle {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-color);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.8125rem;
+    transition: all 0.15s;
+}
+
+.translation-toggle:hover {
+    background: var(--bg-surface-hover);
+    color: var(--text-main);
+}
+
+.translation-text {
+    margin-top: 16px;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    color: var(--text-content);
+    white-space: pre-wrap;
+}
+
+.translation-text.hidden {
+    display: none;
+}
+
+/* ─── Print Styles ─── */
+@media print {
+
+    .reading-topbar,
+    .reading-sidebar,
+    .vocab-bar,
+    .item-tabs,
+    .translation-toggle {
+        display: none !important;
+    }
+
+    .reading-main {
+        margin: 0;
+        padding: 16px;
+    }
+
+    .reading-layout {
+        display: block;
+    }
+
+    .reading-content {
+        max-width: 100%;
+    }
+
+    .translation-text {
+        display: block !important;
+    }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+    .reading-sidebar {
+        position: fixed;
+        left: -100%;
+        width: 250px;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 8px var(--shadow-color);
+    }
+
+    .reading-sidebar.open {
+        left: 0;
+    }
+
+    .reading-main {
+        margin-left: 0;
+    }
+
+    .reading-content {
+        padding: 24px 16px 40px;
+    }
+
+    .vocab-bar {
+        padding: 10px 16px;
+    }
+
+    .word-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}

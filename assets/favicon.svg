@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Nepal flag - two stacked triangles -->
+  <defs>
+    <clipPath id="flag">
+      <path d="M 0 512 L 0 0 L 384 256 L 128 256 L 384 512 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Blue border -->
+  <path d="M 0 512 L 0 0 L 384 256 L 128 256 L 384 512 Z" fill="#003893"/>
+  <!-- Red fill (inset) -->
+  <path d="M 24 488 L 24 24 L 360 248 L 136 248 L 360 488 Z" fill="#DC143C"/>
+  <!-- Moon (bottom triangle) - crescent -->
+  <circle cx="160" cy="388" r="48" fill="white"/>
+  <circle cx="176" cy="376" r="42" fill="#DC143C"/>
+  <!-- Sun (top triangle) - 12-pointed star -->
+  <g transform="translate(148, 148)">
+    <circle cx="0" cy="0" r="28" fill="white"/>
+    <g fill="white">
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(0)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(30)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(60)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(90)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(120)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(150)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(180)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(210)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(240)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(270)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(300)"/>
+      <polygon points="0,-44 5,-16 -5,-16" transform="rotate(330)"/>
+    </g>
+  </g>
+</svg>

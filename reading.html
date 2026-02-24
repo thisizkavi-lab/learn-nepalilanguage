@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Reading Practice</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reading.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('nepali-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <header class="reading-topbar">
+        <div class="reading-topbar-left">
+            <a href="index.html">← Back to Learn Nepali</a>
+            <a href="practice.html"
+                style="color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.875rem;">Writing</a>
+            <h1>Reading Practice</h1>
+        </div>
+        <div class="reading-topbar-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="reading-layout">
+        <!-- Left Sidebar: Levels -->
+        <aside class="reading-sidebar" id="reading-sidebar">
+            <div class="sidebar-title">Difficulty Levels</div>
+            <ul class="level-list" id="level-list"></ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="reading-main">
+            <!-- Vocab Bar -->
+            <div class="vocab-bar" id="vocab-bar">
+                <div id="vocab-display">
+                    <span class="vocab-hint">Hover over any Nepali word to see its English meaning</span>
+                </div>
+            </div>
+
+            <!-- Reading Content -->
+            <div class="reading-content" id="reading-content"></div>
+        </main>
+    </div>
+
+    <script src="js/reading.js"></script>
+</body>
+
+</html>

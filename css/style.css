@@ -1,4 +1,6 @@
 /* CSS Variables for consistent theming */
+
+/* Kalimati — standard Nepali textbook font for all Devanagari text */
 @font-face {
     font-family: 'Kalimati';
     src: local('Kalimati'), url('https://fonts.gstatic.com/ea/kalimati/v1/Kalimati-Regular.woff2') format('woff2');
@@ -6,21 +8,53 @@
     font-style: normal;
 }
 
+/* Noto Sans Devanagari fallback if Kalimati doesn't load */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
 :root {
     --topbar-height: 60px;
-    --topbar-bg: #1a73e8; /* Blue matching the reference */
-    --text-main: #202124;
-    --text-muted: #5f6368;
-    --link-color: #1a73e8;
-    --border-color: #e8eaed;
     --sidebar-width: 280px;
     --toc-width: 250px;
+    --font-sans: 'Kalimati', 'Noto Sans Devanagari', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ─── Light Theme (Paper White) ─── */
+[data-theme="light"] {
+    --topbar-bg: #1a73e8;
+    --text-main: #1a1a1a;
+    --text-muted: #5f6368;
+    --text-content: #3c4043;
+    --link-color: #1a73e8;
+    --border-color: #e0e0e0;
     --bg-color: #ffffff;
+    --bg-surface: #f8f9fa;
+    --bg-surface-hover: #f1f3f4;
     --callout-border: #b7e1cd;
     --callout-bg: #e6f4ea;
     --callout-text: #137333;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --sidebar-bg: #ffffff;
+    --code-bg: #f5f5f5;
+    --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ─── Dark Theme (Discord Dark) ─── */
+[data-theme="dark"] {
+    --topbar-bg: #1e1f22;
+    --text-main: #dbdee1;
+    --text-muted: #949ba4;
+    --text-content: #b5bac1;
+    --link-color: #5865f2;
+    --border-color: #3f4147;
+    --bg-color: #313338;
+    --bg-surface: #2b2d31;
+    --bg-surface-hover: #383a40;
+    --callout-border: #248046;
+    --callout-bg: #1a3a2a;
+    --callout-text: #4ade80;
+    --sidebar-bg: #2b2d31;
+    --code-bg: #1e1f22;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Reset and Base Styles */
@@ -56,39 +90,45 @@ a {
     gap: 8px;
     margin: 1.5rem 0;
 }
+
 @media (max-width: 600px) {
     .alphabet-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media (max-width: 400px) {
     .alphabet-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 .alphabet-cell {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 12px 8px;
     text-align: center;
-    background: #f8f9fa;
+    background: var(--bg-surface);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .alphabet-cell:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px var(--shadow-color);
     border-color: var(--link-color);
 }
+
 .nepali-char {
     font-family: 'Kalimati', sans-serif;
     font-size: 2.2rem;
     color: var(--text-main);
     line-height: 1.2;
 }
+
 .roman-char {
     font-size: 0.9rem;
     color: var(--text-muted);
@@ -101,22 +141,31 @@ a {
     overflow-x: auto;
     margin: 1.5rem 0;
 }
+
 .nepali-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
     min-width: 400px;
 }
-.nepali-table th, .nepali-table td {
+
+.nepali-table th,
+.nepali-table td {
     border: 1px solid var(--border-color);
     padding: 12px;
     text-align: left;
+    color: var(--text-main);
 }
+
 .nepali-table th {
-    background-color: #f8f9fa;
+    background-color: var(--bg-surface);
     font-weight: 600;
+    color: var(--text-main);
 }
-.nepali-table td:nth-child(1), .nepali-table td:nth-child(2), .nepali-table td:nth-child(3) {
+
+.nepali-table td:nth-child(1),
+.nepali-table td:nth-child(2),
+.nepali-table td:nth-child(3) {
     font-size: 1.1rem;
 }
 
@@ -145,7 +194,8 @@ a:hover {
     z-index: 100;
 }
 
-.topbar-left, .topbar-right {
+.topbar-left,
+.topbar-right {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -193,7 +243,8 @@ a:hover {
 }
 
 /* Sidebars */
-.sidebar-left, .sidebar-right {
+.sidebar-left,
+.sidebar-right {
     position: sticky;
     top: var(--topbar-height);
     height: calc(100vh - var(--topbar-height));
@@ -205,6 +256,7 @@ a:hover {
 .sidebar-left {
     width: var(--sidebar-width);
     border-right: 1px solid var(--border-color);
+    background-color: var(--sidebar-bg);
 }
 
 .sidebar-right {
@@ -279,6 +331,7 @@ a:hover {
     padding-left: 0;
     font-weight: 600;
 }
+
 .nav-subcategory:first-child {
     margin-top: 0.5rem;
 }
@@ -287,7 +340,8 @@ a:hover {
 .content {
     flex-grow: 1;
     padding: 48px 64px;
-    min-width: 0; /* Prevents flex blowout */
+    min-width: 0;
+    /* Prevents flex blowout */
 }
 
 .content-inner {
@@ -320,7 +374,7 @@ a:hover {
 .content p {
     margin-bottom: 16px;
     font-size: 1rem;
-    color: #3c4043;
+    color: var(--text-content);
 }
 
 .purpose-statement {
@@ -347,7 +401,7 @@ a:hover {
 }
 
 .lesson-list li {
-    background: #f8f9fa;
+    background: var(--bg-surface);
     padding: 12px 16px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
@@ -358,8 +412,8 @@ a:hover {
 }
 
 .lesson-list li:hover {
-    background: #f1f3f4;
-    border-color: #dadce0;
+    background: var(--bg-surface-hover);
+    border-color: var(--border-color);
 }
 
 /* Page Navigation */
@@ -459,11 +513,94 @@ a:hover {
     text-decoration: none;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: background 0.2s, border-color 0.2s;
+    width: 34px;
+    height: 34px;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+/* Smooth theme transition */
+body,
+.topbar,
+.sidebar-left,
+.sidebar-right,
+.content,
+.alphabet-cell,
+.nepali-table th,
+.nepali-table td,
+.lesson-list li,
+.page-navigation a,
+.toc-links a,
+.nav-links a,
+.callout {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Callout overrides for dark mode (inline styles in data.js) */
+[data-theme="dark"] .callout,
+[data-theme="dark"] div[style*="callout-bg"] {
+    background-color: var(--callout-bg) !important;
+    border-color: var(--callout-border) !important;
+}
+
+[data-theme="dark"] .callout p,
+[data-theme="dark"] div[style*="callout-bg"] p {
+    color: var(--callout-text) !important;
+}
+
+/* Dark mode list styling */
+[data-theme="dark"] .content ul li,
+[data-theme="dark"] .content ol li {
+    color: var(--text-content);
+}
+
+[data-theme="dark"] .content strong {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .content em {
+    color: var(--text-muted);
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .sidebar-right {
         display: none;
     }
+
     .content {
         padding: 48px 40px;
     }
@@ -473,24 +610,24 @@ a:hover {
     .menu-toggle {
         display: block;
     }
-    
+
     .sidebar-left {
         position: fixed;
         left: -100%;
-        background: white;
+        background: var(--sidebar-bg);
         z-index: 90;
         transition: left 0.3s ease;
-        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        box-shadow: 2px 0 8px var(--shadow-color);
     }
-    
+
     .sidebar-left.open {
         left: 0;
     }
-    
+
     .content {
         padding: 32px 24px;
     }
-    
+
     .lesson-list {
         grid-template-columns: 1fr;
     }

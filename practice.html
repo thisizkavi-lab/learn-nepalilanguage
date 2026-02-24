@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Writing Practice</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/practice.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('nepali-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <header class="practice-topbar">
+        <div class="practice-topbar-left">
+            <a href="index.html">← Back to Learn Nepali</a>
+            <a href="reading.html"
+                style="color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.875rem;">Reading</a>
+            <h1>Writing Practice</h1>
+        </div>
+        <div class="practice-topbar-right">
+            <button class="print-btn" id="print-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                Print
+            </button>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <button class="sidebar-toggle-mobile print-btn" id="sidebar-toggle" style="display:none;">
+                Characters
+            </button>
+        </div>
+    </header>
+
+    <div class="practice-layout">
+        <!-- Main Worksheet Area -->
+        <main class="practice-main" id="worksheet">
+            <div class="empty-state">
+                <div class="empty-icon">लेख्नुहोस्</div>
+                <p>Select characters from the sidebar to generate your practice worksheet.</p>
+                <p class="empty-hint">Click individual characters, or use "Select All" to add a whole section.</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="practice-sidebar" id="practice-sidebar">
+            <!-- Vowels -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>स्वर (Vowels)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-vowels">All</button>
+                        <button id="clear-vowels">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="vowel-grid"></div>
+            </div>
+
+            <!-- Consonants -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>व्यञ्जन (Consonants)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-consonants">All</button>
+                        <button id="clear-consonants">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="consonant-grid"></div>
+            </div>
+
+            <!-- Barakhari -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>बाराखरी (Barakhari)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-barakhari">All</button>
+                        <button id="clear-barakhari">Clear</button>
+                    </div>
+                </div>
+                <div id="barakhari-container"></div>
+            </div>
+
+            <!-- Numerals -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>अंक (Numerals)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-numerals">All</button>
+                        <button id="clear-numerals">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="numeral-grid"></div>
+            </div>
+
+            <!-- Special Marks -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>विशेष चिन्ह (Special Marks)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-special">All</button>
+                        <button id="clear-special">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="special-grid"></div>
+            </div>
+
+            <!-- Conjuncts -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>संयुक्त व्यञ्जन (Conjuncts)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-conjuncts">All</button>
+                        <button id="clear-conjuncts">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="conjunct-grid"></div>
+            </div>
+
+            <!-- Common Words -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-header">
+                    <h3>शब्द (Words)</h3>
+                    <div class="sidebar-actions">
+                        <button id="select-all-words">All</button>
+                        <button id="clear-words">Clear</button>
+                    </div>
+                </div>
+                <div class="char-grid" id="word-grid"></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/practice.js"></script>
+</body>
+
+</html>

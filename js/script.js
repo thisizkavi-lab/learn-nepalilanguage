@@ -5,11 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const tocLinksContainer = document.getElementById('toc-links');
     const sidebarLeft = document.getElementById('sidebar-left');
     const menuToggle = document.getElementById('menu-toggle');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Theme Toggle
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('nepali-theme', next);
+        });
+    }
 
     // 1. Render Left Sidebar
     function renderSidebar() {
         let html = ``;
-        
+
         courseData.forEach((part, partIndex) => {
             const isOpen = partIndex === 0;
             html += `<div class="nav-group">
@@ -20,23 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 </div>
                 <div class="nav-part-content" style="display: ${isOpen ? 'block' : 'none'};">`;
-            
+
             part.categories.forEach(cat => {
                 if (partIndex !== 0) {
                     html += `<div class="nav-subcategory">${cat.title}</div>`;
                 }
                 html += `<ul class="nav-links">`;
-                
+
                 cat.lessons.forEach(lesson => {
                     html += `<li><a href="#${lesson.id}" data-id="${lesson.id}">${lesson.title}</a></li>`;
                 });
-                
+
                 html += `</ul>`;
             });
-            
+
             html += `</div></div>`;
         });
-        
+
         navLeftContainer.innerHTML = html;
 
         // Attach event listeners for categories
@@ -46,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const content = category.nextElementSibling;
                 const icon = category.querySelector('svg');
                 const isOpen = category.getAttribute('data-open') === 'true';
-                
+
                 if (isOpen) {
                     content.style.display = 'none';
                     icon.style.transform = 'rotate(-90deg)';
@@ -64,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderContent(lessonId) {
         const lessonIndex = allLessons.findIndex(l => l.id === lessonId);
         const lesson = lessonIndex !== -1 ? allLessons[lessonIndex] : allLessons[0];
-        
+
         // Update active link in sidebar
         document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
         const activeLink = document.querySelector(`.nav-links a[data-id="${lesson.id}"]`);
@@ -97,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Render Prev/Next
         renderPageNavigation(lessonIndex !== -1 ? lessonIndex : 0);
-        
+
         // Scroll to top
         window.scrollTo(0, 0);
     }
@@ -118,13 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const a = document.createElement('a');
                 a.href = `#${heading.id}`;
                 a.textContent = heading.textContent;
-                
+
                 // Smooth scroll for TOC links
                 a.addEventListener('click', (e) => {
                     e.preventDefault();
                     const targetElement = document.getElementById(heading.id);
                     if (targetElement) {
-                        const headerOffset = 80; 
+                        const headerOffset = 80;
                         const elementPosition = targetElement.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -135,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tocLinksContainer.appendChild(li);
             });
         }
-        
+
         initScrollspy();
     }
 
@@ -174,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window._scrollSpyListener) {
             window.removeEventListener('scroll', window._scrollSpyListener);
         }
-        
+
         window._scrollSpyListener = () => {
             if (scrollTimeout) {
                 window.cancelAnimationFrame(scrollTimeout);
@@ -183,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         window.addEventListener('scroll', window._scrollSpyListener);
-        
+
         // Initial call
         updateActiveTOC();
     }
@@ -191,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Render Page Navigation
     function renderPageNavigation(currentIndex) {
         let html = '';
-        
+
         if (currentIndex > 0) {
             const prevLesson = allLessons[currentIndex - 1];
             html += `
@@ -233,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleRoute() {
         const hash = window.location.hash.substring(1);
         const lessonExists = allLessons.some(l => l.id === hash);
-        
+
         if (lessonExists) {
             renderContent(hash);
         } else if (hash === '') {
@@ -244,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Or we just scroll to it if it exists in the current DOM
             const target = document.getElementById(hash);
             if (target) {
-                const headerOffset = 80; 
+                const headerOffset = 80;
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
