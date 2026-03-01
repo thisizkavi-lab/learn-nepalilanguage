@@ -6531,7 +6531,174 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-33", title: "33 Hobbies" }
+                    {
+                        id: "lesson-33",
+                        title: "33 Hobbies",
+                        content: `
+                            <h2>33 रुचि — Hobbies</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>"So What Do You Do?" — Talking About Hobbies</strong></p>
+                            
+                            <p>In Nepal, the concept of a "hobby" is much more casual than in the West. People rarely use formal words for it. Instead, they just ask what you do with your free time or what you feel like doing.</p>
+                            <p>Whether you are learning the guitar, writing poetry, or just trying to figure out what you actually enjoy, here is how you talk about your passions—and how to react when someone shares theirs.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">1. Asking About Free Time (The Real Questions)</h3>
+                            </div>
+                            
+                            <p>Don't ask someone to list their "hobbies." Ask them how they spend their Saturdays.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फुर्सदमा के गर्छौ?</span> (Fursad ma ke garchau?)</strong><br>
+                                    <em>Meaning: What do you do in your free time? (The absolute most common way to ask).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">काम बाहेक के गर्छौ?</span> (Kaam bahek ke garchau?)</strong><br>
+                                    <em>Meaning: What do you do outside of work?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">शनिबारतिर के गरेर बिताउँछौ?</span> (Sanibar tira ke garera bitauchau?)</strong><br>
+                                    <em>Meaning: How do you spend your Saturdays? (Saturday is the only official weekend day in Nepal).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तिमीलाई के गर्न मन पर्छ?</span> (Timi lai ke garna man parcha?)</strong><br>
+                                    <em>Meaning: What do you like to do?</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #6366f1; margin-top: 1.5rem;">The Casual Answers:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म प्रायः फुटबल खेल्छु।</span> (Ma praya football khelchu.)</strong> - I usually play football.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म किताब पढ्न मन पराउँछु।</span> (Ma kitab padhna man parauchu.)</strong> - I like reading books.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म फिल्म हेर्छु धेरै।</span> (Ma film herchu dherai.)</strong> - I watch a lot of movies.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">2. Starting Something New & The "Reaction" Culture</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="50" width="280" height="60" rx="15" fill="#3b82f6"/>
+                                <text x="190" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"म गिटार सिक्दैछु अहिले।"</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="370" y="100" width="280" height="60" rx="15" fill="#10b981"/>
+                                <text x="510" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"ए हो र? गीत पनि गाउँछौ?"</text>
+                                <path d="M 620 160 L 610 190 L 590 160 Z" fill="#10b981"/>
+                                <text x="350" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">The Art of the Nepali Reaction</text>
+                            </svg>
+
+                            <p style="margin-top: 1.5rem;">When someone tells you about their new hobby, you cannot just say "Cool." Nepali conversations run on active, engaging reaction words. If you don't say "Eh ho ra?" (Oh, really?), you sound like you don't care.</p>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">Sharing the Hobby:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म गिटार सिक्दैछु अहिले।</span> (Ma guitar sikdaichu ahile.)</strong><br>
+                                    <em>Meaning: I'm learning guitar right now.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म कविता लेख्न थालेँ यार।</span> (Ma kabita lekhna thale yar.)</strong><br>
+                                    <em>Meaning: I started writing poetry, man.</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #10b981; margin-top: 1.5rem;">The Mandatory Reactions:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">ए हो र?</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Eh ho ra?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Oh, really? / Is that so?</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">साँच्चै?</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Sanchai?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Really? Do you sing too?</div>
+                                </div>
+                                <div style="background: #fefce8; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">वाह!</span></div>
+                                    <div style="font-size: 0.85rem; color: #854d0e; margin-top: 4px;">Waah!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Wow, what kind do you write?</div>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">मज्जा छ त!</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Majja cha ta!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">That's fun! / Sounds great!</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <h3 style="margin: 0;">3. The Duration (How Long Have You Been Doing It?)</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति समय भयो सिक्न थालेको?</span> (Kati samaya bhayo sikna thaleko?)</strong><br>
+                                    <em>Meaning: How long has it been since you started learning?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म ५ वर्षदेखि गिटार बजाउँदैछु।</span> (Ma paach barsa dekhi guitar bajaudaichu.)</strong><br>
+                                    <em>Meaning: I have been playing the guitar for 5 years.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म त भर्खरै सुरु गरेको।</span> (Ma ta bharkharai suru gareko.)</strong><br>
+                                    <em>Meaning: I just started recently.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #94a3b8;"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"/><rect x="3" y="4" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="2"/><line x1="8" y1="2" x2="8" y2="4"/><line x1="16" y1="2" x2="16" y2="4"/></svg>
+                                <h3 style="margin: 0;">4. The "I Don't Know" Reality</h3>
+                            </div>
+                            <p>Sometimes people just grind through work and don't actually have a specific hobby. It can sound a bit depressing, but it is a very common, honest answer in Nepal. Here is how you say it, and how a good friend responds.</p>
+
+                            <h4 style="color: #94a3b8; margin-top: 1.5rem;">The Honest Truth:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">खोइ, खासै केही छैन।</span> (Khoi, khasai kehi chaina.)</strong><br>
+                                    <em>Meaning: I don't know, nothing much really.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">केमा मन लाग्छ थाहा नै छैन।</span> (Kema man lagcha thaha nai chaina.)</strong><br>
+                                    <em>Meaning: I don't even know what I feel like doing.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फुर्सद भए पनि के गर्ने भन्ने हुँदैन।</span> (Fursad bhaye pani ke garne bhanne hudaina.)</strong><br>
+                                    <em>Meaning: Even if I have free time, I don't know what to do with it.</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">The Friend's Response:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">केही त हुन्छ नि, सानो कुरा भए पनि।</span> (Kehi ta huncha ni, sano kura bhaye pani.)</strong><br>
+                                    <em>Meaning: There must be something, even if it's a small thing.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">नयाँ कुरा ट्राइ गर न।</span> (Naya kura try gara na.)</strong><br>
+                                    <em>Meaning: Try something new, man.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fdf4ff; border-left: 4px solid #c026d3; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #86198f;">The Cultural Insight: The Collective Hobby</h3>
+                                <p style="margin-bottom: 1rem;">In Nepal, hobbies are rarely solitary. If you tell a Nepali friend you like reading or painting alone in your room, they might genuinely ask if you are feeling depressed. The culture is intensely communal.</p>
+                                <p style="margin-bottom: 0;">If you take up photography, you do it by going on a hike with five friends. If you take up the guitar, you do it to play at a rooftop BBQ. <strong>In Nepal, the true hobby is always the people you are with.</strong></p>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
