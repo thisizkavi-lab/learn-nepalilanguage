@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let html = ``;
 
         courseData.forEach((part, partIndex) => {
-            const isOpen = partIndex === 0;
+            const isOpen = true;
             html += `<div class="nav-group">
                 <div class="nav-category" data-open="${isOpen}">
                     ${part.part}

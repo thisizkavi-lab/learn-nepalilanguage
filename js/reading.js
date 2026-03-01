@@ -391,13 +391,80 @@ const LEVELS = [
 // ─── State ───
 let currentLevel = null;
 let currentItemIndex = 0;
+let showRoman = localStorage.getItem('nepali-show-roman') !== 'false';
+let learnedWords = new Set(JSON.parse(localStorage.getItem('nepali-learned') || '[]'));
 
 document.addEventListener('DOMContentLoaded', () => {
     renderLevelSidebar();
     setupThemeToggle();
-    // Default: show words level
+    setupRomanToggle();
     selectLevel('words');
 });
+
+// ─── Audio: Web Speech API ───
+function speakNepali(text) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'ne-NP';
+    utter.rate = 0.85;
+    window.speechSynthesis.speak(utter);
+}
+
+function createSpeakBtn(text) {
+    const btn = document.createElement('button');
+    btn.className = 'speak-btn';
+    btn.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+    btn.title = 'Listen';
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speakNepali(text);
+        btn.classList.add('speak-active');
+        setTimeout(() => btn.classList.remove('speak-active'), 600);
+    });
+    return btn;
+}
+
+// ─── Romanization Toggle ───
+function setupRomanToggle() {
+    const toggle = document.getElementById('roman-toggle');
+    if (!toggle) return;
+    toggle.checked = showRoman;
+    toggle.addEventListener('change', () => {
+        showRoman = toggle.checked;
+        localStorage.setItem('nepali-show-roman', showRoman);
+        document.querySelectorAll('.roman-sub').forEach(el => {
+            el.style.display = showRoman ? '' : 'none';
+        });
+    });
+}
+
+// ─── Progress Tracking ───
+function saveLearned() {
+    localStorage.setItem('nepali-learned', JSON.stringify([...learnedWords]));
+}
+
+function toggleLearned(key) {
+    if (learnedWords.has(key)) learnedWords.delete(key);
+    else learnedWords.add(key);
+    saveLearned();
+}
+
+function updateProgressBar(total, learnedKeys) {
+    const container = document.getElementById('progress-bar-container');
+    const label = document.getElementById('progress-label');
+    const fill = document.getElementById('progress-fill');
+    if (!container) return;
+    const count = learnedKeys.filter(k => learnedWords.has(k)).length;
+    container.style.display = '';
+    label.textContent = `${count} / ${total} learned`;
+    fill.style.width = total > 0 ? `${(count / total) * 100}%` : '0%';
+}
+
+function hideProgressBar() {
+    const container = document.getElementById('progress-bar-container');
+    if (container) container.style.display = 'none';
+}
 
 function renderLevelSidebar() {
     const sidebar = document.getElementById('level-list');
@@ -475,15 +542,20 @@ function renderWords(container) {
     const header = document.createElement('div');
     header.className = 'content-header';
     header.innerHTML = `<h2>शब्द — 100 Most Common Words</h2>
-        <p class="content-subtitle">Hover over each word to see its meaning. These are the building blocks of Nepali.</p>`;
+        <p class="content-subtitle">Click a word to hear it. Tap ✓ to mark as learned.</p>`;
     container.appendChild(header);
+
+    // Build learned keys for progress
+    const learnedKeys = WORDS.map((_, i) => `word-${i}`);
+    updateProgressBar(WORDS.length, learnedKeys);
 
     const grid = document.createElement('div');
     grid.className = 'word-grid';
 
-    WORDS.forEach(w => {
+    WORDS.forEach((w, i) => {
+        const key = `word-${i}`;
         const card = document.createElement('div');
-        card.className = 'word-card';
+        card.className = 'word-card' + (learnedWords.has(key) ? ' learned' : '');
 
         card.addEventListener('mouseenter', () => {
             const vocabBar = document.getElementById('vocab-display');
@@ -498,7 +570,30 @@ function renderWords(container) {
             card.classList.remove('word-active');
         });
 
-        card.innerHTML = `<span class="word-np">${w.np}</span>`;
+        // Nepali text + romanization
+        card.innerHTML = `<span class="word-np">${w.np}</span>
+            <span class="roman-sub" style="${showRoman ? '' : 'display:none'}">${w.roman}</span>`;
+
+        // Speak on card click
+        card.addEventListener('click', () => speakNepali(w.np));
+
+        // Speak button
+        card.appendChild(createSpeakBtn(w.np));
+
+        // Learned toggle
+        const learnBtn = document.createElement('button');
+        learnBtn.className = 'learn-btn' + (learnedWords.has(key) ? ' active' : '');
+        learnBtn.innerHTML = '✓';
+        learnBtn.title = 'Mark as learned';
+        learnBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLearned(key);
+            card.classList.toggle('learned');
+            learnBtn.classList.toggle('active');
+            updateProgressBar(WORDS.length, learnedKeys);
+        });
+        card.appendChild(learnBtn);
+
         grid.appendChild(card);
     });
 
@@ -508,11 +603,12 @@ function renderWords(container) {
 // ─── Render: Phrases ───
 function renderPhrases(container) {
     container.innerHTML = '';
+    hideProgressBar();
 
     const header = document.createElement('div');
     header.className = 'content-header';
     header.innerHTML = `<h2>वाक्यांश — Common Phrases</h2>
-        <p class="content-subtitle">Short 2-3 word combinations used in everyday Nepali.</p>`;
+        <p class="content-subtitle">Click any phrase to hear it spoken.</p>`;
     container.appendChild(header);
 
     PHRASES.forEach(group => {
@@ -540,7 +636,15 @@ function renderPhrases(container) {
                 row.classList.remove('word-active');
             });
 
-            row.innerHTML = `<span class="phrase-np">${p.np}</span>`;
+            row.innerHTML = `<span class="phrase-np">${p.np}</span>
+                <span class="roman-sub" style="${showRoman ? '' : 'display:none'}">${p.roman}</span>`;
+
+            // Speak on click
+            row.addEventListener('click', () => speakNepali(p.np));
+
+            // Speak button
+            row.appendChild(createSpeakBtn(p.np));
+
             list.appendChild(row);
         });
 
@@ -552,11 +656,12 @@ function renderPhrases(container) {
 // ─── Render: Sentences ───
 function renderSentences(container) {
     container.innerHTML = '';
+    hideProgressBar();
 
     const header = document.createElement('div');
     header.className = 'content-header';
     header.innerHTML = `<h2>वाक्य — Simple Sentences</h2>
-        <p class="content-subtitle">Hover over individual words in each sentence to see their meaning.</p>`;
+        <p class="content-subtitle">Hover over words for meaning. Click the speaker to listen.</p>`;
     container.appendChild(header);
 
     SENTENCES.forEach(group => {
@@ -568,7 +673,6 @@ function renderSentences(container) {
             const block = document.createElement('div');
             block.className = 'sentence-block';
 
-            // Full sentence translation on hover of the block
             const sentenceEl = document.createElement('div');
             sentenceEl.className = 'sentence-text';
 
@@ -578,9 +682,11 @@ function renderSentences(container) {
                 sentenceEl.appendChild(document.createTextNode(' '));
             });
 
+            // Speaker button for the whole sentence
+            sentenceEl.appendChild(createSpeakBtn(s.np));
+
             block.appendChild(sentenceEl);
 
-            // English below (hidden until hover)
             const enEl = document.createElement('div');
             enEl.className = 'sentence-en';
             enEl.textContent = s.en;
@@ -596,7 +702,7 @@ function renderSentences(container) {
 // ─── Render: Paragraphs ───
 function renderParagraphs(container) {
     container.innerHTML = '';
-
+    hideProgressBar();
     const header = document.createElement('div');
     header.className = 'content-header';
     header.innerHTML = `<h2>अनुच्छेद — Paragraphs</h2>
@@ -625,7 +731,7 @@ function renderParagraphs(container) {
 // ─── Render: Essays ───
 function renderEssays(container) {
     container.innerHTML = '';
-
+    hideProgressBar();
     const header = document.createElement('div');
     header.className = 'content-header';
     header.innerHTML = `<h2>निबन्ध — Essays</h2>

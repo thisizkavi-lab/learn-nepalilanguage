@@ -1,9 +1,9 @@
 function generateBarakhariTable() {
     const consonants = ['क', 'ख', 'ग', 'घ', 'ङ', 'च', 'छ', 'ज', 'झ', 'ञ', 'ट', 'ठ', 'ड', 'ढ', 'ण', 'त', 'थ', 'द', 'ध', 'न', 'प', 'फ', 'ब', 'भ', 'म', 'य', 'र', 'ल', 'व', 'श', 'ष', 'स', 'ह', 'क्ष', 'त्र', 'ज्ञ'];
     const matras = ['', 'ा', 'ि', 'ी', 'ु', 'ू', 'े', 'ै', 'ो', 'ौ', 'ं', 'ः'];
-    
+
     let html = '<div class="table-responsive"><table class="nepali-table barakhari-full-table" style="min-width: 800px;"><tbody>';
-    
+
     for (let c of consonants) {
         html += '<tr>';
         for (let m of matras) {
@@ -11,7 +11,7 @@ function generateBarakhariTable() {
         }
         html += '</tr>';
     }
-    
+
     html += '</tbody></table></div>';
     return html;
 }
@@ -23,9 +23,9 @@ const courseData = [
             {
                 title: "Understanding Nepal",
                 lessons: [
-                    { 
-                        id: "geography", 
-                        title: "Geography", 
+                    {
+                        id: "geography",
+                        title: "Geography",
                         content: `
                             <iframe src="https://maps.google.com/maps?q=Nepal&t=&z=6&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; border-radius: 8px; margin-bottom: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             <h2>The Hardware (Geography — Where Is Nepal?)</h2>
@@ -56,9 +56,9 @@ const courseData = [
                             <p>Because language grows out of land.</p>
                         `
                     },
-                    { 
-                        id: "history", 
-                        title: "History (Brief Overview)", 
+                    {
+                        id: "history",
+                        title: "History (Brief Overview)",
                         content: `
                             <h2>History — From Land to Nation</h2>
                             <p>Fast forward to prehistoric times. Humans lived in the hills and valleys that would become Nepal. Archaeological tools show early settlements long before written history.</p>
@@ -136,9 +136,9 @@ const courseData = [
                             <p>It’s unfinished.</p>
                         `
                     },
-                    { 
-                        id: "the-people", 
-                        title: "The People", 
+                    {
+                        id: "the-people",
+                        title: "The People",
                         content: `
                             <h2>The People — Who Lives Here?</h2>
                             <p>Nepal is small on the map.<br>It is not small in diversity.</p>
@@ -206,9 +206,9 @@ const courseData = [
                             <p>Nepal is still negotiating what “national identity” really means.</p>
                         `
                     },
-                    { 
-                        id: "government-structure", 
-                        title: "Government Structure", 
+                    {
+                        id: "government-structure",
+                        title: "Government Structure",
                         content: `
                             <h2>Government Structure — How Power Is Organized</h2>
                             <p>Nepal today is a Federal Democratic Republic.</p>
@@ -368,9 +368,9 @@ const courseData = [
             {
                 title: "Intro",
                 lessons: [
-                    { 
-                        id: "intro", 
-                        title: "Intro", 
+                    {
+                        id: "intro",
+                        title: "Intro",
                         content: `
                             <h2>Intro</h2>
                             <p>Before we learn Nepali, let’s ask a simple question.</p>
@@ -453,9 +453,9 @@ const courseData = [
                             <p>Just real language.</p>
                         `
                     },
-                    { 
-                        id: "script-basics", 
-                        title: "0.1 script basics", 
+                    {
+                        id: "script-basics",
+                        title: "0.1 script basics",
                         content: `
                             <h2>0.1 script basics</h2>
                             <p>Listen, every language on earth boils down to vowels and consonants. But the way Nepali puts them together is totally different—and honestly, way more efficient once you see the matrix.</p>
@@ -786,8 +786,8 @@ const courseData = [
             {
                 title: "CONVERSATION SKILLS",
                 lessons: [
-                    { 
-                        id: "lesson-01", 
+                    {
+                        id: "lesson-01",
                         title: "01 Greetings",
                         content: `
                             <h2>01 Greetings</h2>
@@ -915,8 +915,8 @@ const courseData = [
                             <p>In Nepal, asking if someone has eaten is the highest form of showing warmth and care. If it's 10:30 AM or 8:00 PM, people won't ask how your day is going—they will ask if you've sat down for a massive plate of Dal Bhat yet. If you use this phrase with a local, you will instantly win them over.</p>
                         `
                     },
-                    { 
-                        id: "lesson-02", 
+                    {
+                        id: "lesson-02",
                         title: "02 Making introductions",
                         content: `
                             <h2>02 Making Introductions</h2>
@@ -1043,8 +1043,8 @@ const courseData = [
                             <p>Shift gears correctly, and you’re golden.</p>
                         `
                     },
-                    { 
-                        id: "lesson-03", 
+                    {
+                        id: "lesson-03",
                         title: "03 Conversation fillers",
                         content: `
                             <h2>03 Conversational Fillers (How Not to Sound Like a Robot)</h2>
@@ -1228,8 +1228,8 @@ const courseData = [
                             <p>Nepali conversations are highly interactive. We constantly confirm what the other person is saying. Tossing out a "Ho ra?" or an "Oh ho..." doesn't interrupt the speaker—it encourages them. These little fillers are exactly what take you from sounding like a foreigner reading a textbook, to sounding like a local having a beer with a friend.</p>
                         `
                     },
-                    { 
-                        id: "lesson-04", 
+                    {
+                        id: "lesson-04",
                         title: "04 Saying you don't understand",
                         content: `
                             <h2>04 Surviving Confusion (How to Say "What?!")</h2>
@@ -1377,8 +1377,8 @@ const courseData = [
                             <p>If you bump into someone, you say "Sorry." If you didn't hear the waiter, you lean in and say, "Sorry?" It is completely culturally acceptable now. Don't stress about finding the ancient Sanskrit equivalent. Just use the hybrid language the city actually speaks.</p>
                         `
                     },
-                    { 
-                        id: "lesson-05", 
+                    {
+                        id: "lesson-05",
                         title: "05 Opinions and preferences",
                         content: `
                             <h2>05 Stating Opinions & Preferences (Taking a Stand)</h2>
@@ -1601,8 +1601,8 @@ const courseData = [
                             <p>If you can wield those three phrases, you have 70% of daily opinions covered. Keep it simple, and don't overthink it.</p>
                         `
                     },
-                    { 
-                        id: "lesson-06", 
+                    {
+                        id: "lesson-06",
                         title: "06 Agreeing and disagreeing",
                         content: `
                             <h2>06 Agreeing & Disagreeing (Picking Your Battles)</h2>
@@ -1787,8 +1787,8 @@ const courseData = [
                             <p>You can build almost any argument off those two sets of words.</p>
                         `
                     },
-                    { 
-                        id: "lesson-07", 
+                    {
+                        id: "lesson-07",
                         title: "07 Making suggestions",
                         content: `
                             <h2>07 Making & Dodging Plans (The Art of the Soft "No")</h2>
@@ -1974,8 +1974,8 @@ const courseData = [
                             <p>Master the circumstantial "No," and you will navigate Nepali social life without ever stepping on a landmine.</p>
                         `
                     },
-                    { 
-                        id: "lesson-08", 
+                    {
+                        id: "lesson-08",
                         title: "08 Saying thank you",
                         content: `
                             <h2>08 Thanking & Responding (How to Not Sound Like a Soap Opera)</h2>
@@ -2120,8 +2120,8 @@ const courseData = [
                             <p>If you master the art of saying <strong><span class="nepali-font">केही होइन</span> (Kei hoina)</strong> with a warm smile, people will instantly respect your vibe.</p>
                         `
                     },
-                    { 
-                        id: "lesson-09", 
+                    {
+                        id: "lesson-09",
                         title: "09 Saying sorry",
                         content: `
                             <h2>09 Apologies & Sympathy (Owning Your Mistakes)</h2>
@@ -2280,8 +2280,8 @@ const courseData = [
                             <p>Nepali sympathy isn't about perfectly crafted PR statements. It’s simple, direct, and human. We don't try to fix the problem with words. We just say <strong>"Dukha lagyo"</strong> to let them know we are carrying a piece of their sadness with them.</p>
                         `
                     },
-                    { 
-                        id: "lesson-10", 
+                    {
+                        id: "lesson-10",
                         title: "10 Saying goodbye",
                         content: `
                             <h2>10 The Nepali Goodbye (Why Leaving Takes 20 Minutes)</h2>
@@ -2427,8 +2427,8 @@ const courseData = [
                             <p>It’s not just a goodbye; it's a decompression phase. Embrace it. It’s where some of the best conversations happen.</p>
                         `
                     },
-                    { 
-                        id: "lesson-11", 
+                    {
+                        id: "lesson-11",
                         title: "11 Dates, time, and weather",
                         content: `
                             <h2>11 Time, Dates & Weather (The Survival Matrix)</h2>
@@ -2869,8 +2869,8 @@ const courseData = [
                             </div>
                         `
                     },
-                    { 
-                        id: "lesson-12", 
+                    {
+                        id: "lesson-12",
                         title: "12 Making arrangements",
                         content: `
                             <h2>12 Making Arrangements (Locking It Down)</h2>
@@ -3040,8 +3040,8 @@ const courseData = [
                             </div>
                         `
                     },
-                    { 
-                        id: "lesson-13", 
+                    {
+                        id: "lesson-13",
                         title: "13 Talking about the weather",
                         content: `
                             <h2>13 Weather Small Talk (The Universal Icebreaker)</h2>
@@ -3212,8 +3212,8 @@ const courseData = [
             {
                 title: "FAMILY AND RELATIONSHIPS",
                 lessons: [
-                    { 
-                        id: "lesson-14", 
+                    {
+                        id: "lesson-14",
                         title: "14 Family and relationships",
                         content: `
                             <h2>14 Family, Relatives & The "Dai/Didi" Culture</h2>
@@ -3483,8 +3483,8 @@ const courseData = [
                             <p>Do not copy this. They do this as a hustle to butter people up and get them onto the bus. It is a very specific, chaotic street tactic. In normal social etiquette, calling a younger person Dai is totally inappropriate. Stick to the rules: Dai for the older guys, Bro for the peers.</p>
                         `
                     },
-                    { 
-                        id: "lesson-15", 
+                    {
+                        id: "lesson-15",
                         title: "15 Talking about family",
                         content: `
                             <h2>15 Talking About Your Family (The Reality Check)</h2>
@@ -3681,8 +3681,8 @@ const courseData = [
                             </div>
                         `
                     },
-                    { 
-                        id: "lesson-16", 
+                    {
+                        id: "lesson-16",
                         title: "16 Life events",
                         content: `
                             <h2>16 Life Events & Milestones (How to Celebrate Like a Local)</h2>
@@ -3841,8 +3841,8 @@ const courseData = [
                             </ul>
                         `
                     },
-                    { 
-                        id: "lesson-17", 
+                    {
+                        id: "lesson-17",
                         title: "17 Socializing",
                         content: `
                             <h2>17 Party Talk & Mingling (Working the Room)</h2>
@@ -4025,8 +4025,8 @@ const courseData = [
                             </div>
                         `
                     },
-                    { 
-                        id: "lesson-18", 
+                    {
+                        id: "lesson-18",
                         title: "18 Dating and romance",
                         content: `
                             <h2>18 Dating & Romance (The Art of the Stealth Date)</h2>
@@ -4276,29 +4276,2124 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-19", title: "19 Showing support" }
+                    {
+                        id: "lesson-19",
+                        title: "19 Showing support",
+                        content: `
+                            <h2>19 Showing Support (No Drama, Just Presence)</h2>
+                            <p>When someone is stressed out, failing, or grieving in Nepal, we do not give long, emotional speeches. We don't say things like, "My door is always open for your emotional journey." It sounds fake.</p>
+                            <p>Nepali support is all about simple, unbreakable presence. You tell them not to take tension, and you remind them that you are standing right there with them. That’s it.</p>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_19_support.png" alt="Minimalist support illustration" style="max-width: 100%; width: 400px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>Here is how you actually have someone's back in Kathmandu.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f44336;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">1. The "Tension" Culture (Work &amp; Exam Stress)</h3>
+                            </div>
+                            <p>In Nepal, we don't really use the word "stress." We use the English word "tension," and we use it as a noun that you carry around.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">धेरै टेन्सन भयो यार।</span> (Dherai tension bhayo yaar.)</strong><br>
+                                    <em>Meaning: I’m so stressed, man. (Exams, work, life—this covers it all).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यस्तो पेसमा त सकिन्न जस्तो छ।</span> (Yesto pace ma ta sakinna jasto cha.)</strong><br>
+                                    <em>Meaning: We’re never going to finish at this pace.</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #1976d2; margin-top: 1.5rem;">How to respond (The Push):</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टेन्सन नलेऊ।</span> (Tension naleu.)</strong><br>
+                                    <em>Meaning: Don't stress. (Literally: Don't take tension. This is the #1 response to any complaint).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तिमीले सक्छौ।</span> (Timi le sakchhau.)</strong><br>
+                                    <em>Meaning: You can do it.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अब अलि जोर लगा, भइहाल्छ।</span> (Aba ali jor laga, bhaihalcha.)</strong><br>
+                                    <em>Meaning: Push a little harder now, it’ll get done. (Highly practical, gritty encouragement).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आत्तिनु पर्दैन।</span> (Aattinu pardaina.)</strong><br>
+                                    <em>Meaning: Don't panic. (Reality Check: "Himmat na hara" sounds like a dying soldier in a movie. "Aattinu pardaina" is what you actually say to a friend freaking out over an exam).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #4caf50;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                <h3 style="margin: 0;">2. Encouraging Someone to Take the Leap</h3>
+                            </div>
+                            <p>When your friend is hesitating about a job, a girl, or a risk, you don't overanalyze it. You just tell them to jump.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ट्राइ गरौँ कि नगरौँ?</span> (Try garum ki nagarum?)</strong><br>
+                                    <em>Meaning: Should I try or not? / I don't know if I should try out.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एक चोटी ट्राइ गर न।</span> (Ek choti try gara na.)</strong><br>
+                                    <em>Meaning: Just try it once. / Go on, it's worth a shot.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तिम्रो लेभलको लागि त इजी हो।</span> (Timro level ko lagi ta easy ho.)</strong><br>
+                                    <em>Meaning: For your level, it's easy. (Great way to pump someone up).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">वर्थ छ, जाऊ।</span> (Worth cha, jau.)</strong><br>
+                                    <em>Meaning: It's worth it, go.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ff9800;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <h3 style="margin: 0;">3. The Golden Phrase: "Hami Chhau Ni"</h3>
+                            </div>
+                            <p>If you memorize only one thing from this chapter, make it this. This is the ultimate Nepali safety net phrase.</p>
+
+                            <div style="margin: 2.5rem 0; padding: 2.5rem; background: #fff8e1; border-radius: 12px; border: 2px dashed #ffc107; text-align: center; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);">
+                                <h1 style="font-size: 3rem; margin: 0; color: #f57f17; font-family: 'Kalimati', 'Noto Sans Devanagari', sans-serif;">हामी छौँ नि</h1>
+                                <p style="font-size: 1.5rem; font-weight: bold; color: #ef6c00; margin: 0.5rem 0 0 0;">(Hami chhau ni)</p>
+                                <p style="font-size: 1rem; color: #fb8c00; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;">"We are here for you."</p>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">थाहा छ, सजिलो छैन।</span> (Thaha cha, sajilo chaina.)</strong><br>
+                                    <em>Meaning: I know things are tough. (Literally: I know it isn't easy).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हामी छौँ नि।</span> (Hami chhau ni.)</strong><br>
+                                    <em>Meaning: We are here for you. (Literally: We are here, right? This phrase is bulletproof. Use it when someone loses a job, fails a test, or goes through a breakup).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">केही पर्यो भने भन।</span> (Kehi paryo bhane bhana.)</strong><br>
+                                    <em>Meaning: Let me know if I can do anything. (Literally: If anything falls/happens, tell me).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जति बेला पनि कल गर।</span> (Jati bela pani call gara.)</strong><br>
+                                    <em>Meaning: Call me anytime.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">केही चाहियो भने सोध।</span> (Kehi chahiyo bhane sodha.)</strong><br>
+                                    <em>Meaning: Anything you need, just ask.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #9c27b0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">4. Acknowledging Help (The Bro Response)</h3>
+                            </div>
+                            <p>When someone actually helps you out, you don't make it weird by being overly grateful. You acknowledge the help, and they brush it off because that is what friends do.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तिम्रो धेरै हेल्प भयो।</span> (Timro dherai help bhayo.)</strong><br>
+                                    <em>Meaning: You’ve been a lot of help. / I really appreciate it.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">केही होइन।</span> (Kei hoina.)</strong><br>
+                                    <em>Meaning: It's nothing. (The classic Nepali deflection).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">साथी हो नि!</span> (Sathi ho ni!)</strong><br>
+                                    <em>Meaning: We're friends! / That's what friends are for. (The perfect way to end the exchange).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #e0f2f1; border-left: 4px solid #009688; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #00796b;">The Cultural Insight: Action Over Words</h3>
+                                <p>In Nepali culture, support is proved through action, not dialogue. If your friend is in the hospital, you don't text them a long paragraph about how you are "sending positive energy." You physically show up at the hospital with a thermos of tea.</p>
+                                <p style="margin-bottom: 0;">Keep your words brief ("Tension naleu", "Hami chhau ni") and let your presence do the heavy lifting.</p>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
                 title: "EATING AND DRINKING",
                 lessons: [
-                    { id: "lesson-20", title: "20 Eating and drinking" },
-                    { id: "lesson-21", title: "21 Cafés and coffee shops" },
-                    { id: "lesson-22", title: "22 Takeaway and delivery" },
-                    { id: "lesson-23", title: "23 Bars and pubs" },
-                    { id: "lesson-24", title: "24 At the restaurant" },
-                    { id: "lesson-25", title: "25 Cooking and eating" }
+                    {
+                        id: "lesson-20",
+                        title: "20 Eating and drinking",
+                        content: `
+                            <h2>20 Eating and drinking</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Food, Drink &amp; Kitchen Cheat Sheet (Vocab Cards)</strong></p>
+
+                            <!-- Card 1: Drinks -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_drinks.png" alt="Drinks Cluster" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M17 10c-2-3-6-3-8 0-2-3-6-3-8 0v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-8Z"/><path d="M17 10h5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-5"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 1: Chiya Pasals, Cafes &amp; The Local Bar (Drinks)</h3>
+                                </div>
+                                <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">Kathmandu has traditional tea stalls, high-end espresso bars, and local bhattis (bars) all on the same street. You need the vocabulary for all three.</p>
+                                <h4 style="color: #6d28d9; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">पिउने कुरा र रक्सी</span> (Drinks &amp; Alcohol)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">दूध चिया</span> (Dudh Chiya)</strong> - Milk tea. (The national fuel).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कालो चिया</span> (Kalo Chiya)</strong> - Black tea.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">तातो पानी</span> (Tato Pani)</strong> - Hot water. (Nepalis drink this constantly, especially in winter).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">सुन्तलाको जुस</span> (Suntala ko Juice)</strong> - Orange juice.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">ब्ल्याक कफी</span> (Black Coffee)</strong> - Black coffee. (Modern cafes use English).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">रक्सी</span> (Raksi)</strong> - Traditional clear distilled spirit (millet/rice), or the general word for any alcohol.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">छ्याङ</span> (Chhaang)</strong> - Milky, cloudy, fermented rice beer.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">तोङ्बा</span> (Tongba)</strong> - Fermented millet beverage served in a wooden pot with hot water.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card 2: Kitchen Equipment -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_kitchen.png" alt="Kitchen Equipment" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #64748b;"><path d="m2 22 2-2"/><path d="M11 22v-3"/><path d="m22 22-2-2"/><path d="M4 14a8 8 0 0 0 16 0"/><path d="M8 10V6"/><path d="M16 10V6"/><path d="M10 2h4"/><path d="M4 14h16"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 2: The Nepali Bhaansa (Kitchen Equipment)</h3>
+                                </div>
+                                <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">We don't use casserole dishes. We use heavy metal woks and pressure cookers.</p>
+                                <h4 style="color: #475569; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">भान्साका सामान</span> (Kitchen Gear)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कराई</span> (Karai)</strong> - A deep, heavy wok used for frying and making curries. (Crucial word).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">तावा</span> (Taawa)</strong> - Flat pan used for making roti.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">डेक्ची</span> (Dekchi)</strong> - A flat-bottomed metal pot for boiling milk or water.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कुकर</span> (Cooker)</strong> - Pressure cooker. (Every single Nepali home uses this).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">चक्कु</span> (Chakku)</strong> - Knife.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">चम्चा</span> (Chamcha) / <span class="nepali-font">काँटा</span> (Kanta)</strong> - Spoon / Fork.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कचौरा</span> (Kachaura)</strong> - Small metal bowl. (This is what your Dal and curries are served in).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">थाली</span> (Thali)</strong> - The large metal plate used for Dal Bhat.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card 3: Prep Actions -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_prep.png" alt="Prep Actions" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #fbbf24;"><path d="M5.5 22h13a1.5 1.5 0 0 0 1.5-1.5V10l-6.5-6.5H5.5A1.5 1.5 0 0 0 4 5.5v15A1.5 1.5 0 0 0 5.5 22Z"/><path d="M14 3v5h5"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 3: Prep Actions (Getting Your Hands Dirty)</h3>
+                                </div>
+                                <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">If you are helping out in the kitchen, these are the verbs you will actually hear.</p>
+                                <h4 style="color: #d97706; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">भान्साको काम</span> (Prep &amp; Actions)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">काट्नु</span> (Katnu)</strong> - To chop / cut.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">ताछ्नु</span> (Tachnu)</strong> - To peel. (Used for potatoes and apples).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कोर्नु</span> (Kornu)</strong> - To grate.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">मोल्नु</span> (Molnu)</strong> - To mix/marinate using your hands. (Crucial for making meat or achar).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">चलाउनु</span> (Chalaunu)</strong> - To stir.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बेल्नु</span> (Belnu)</strong> - To roll out. (Used when making roti).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">उमाल्नु</span> (Umalnu)</strong> - To boil.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card 4: Cooking Styles -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_cooking.png" alt="Cooking Styles" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 2v20"/><path d="m6 8 12 8"/><path d="m18 8-12 8"/><path d="M17 11V7l-5-5-5 5v4"/><path d="m6 16 6-6 6 6"/><path d="M12 18v-3"/><path d="m10 20 2-2 2 2"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 4: How the Food is Cooked (The Styles)</h3>
+                                </div>
+                                <h4 style="color: #dc2626; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">पकाउने तरिका</span> (Cooking Styles)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">तारेको</span> (Tareko)</strong> - Deep-fried. (Used for things like fish or chicken).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">भुटेको</span> (Bhuteko)</strong> - Pan-fried / Roasted. (Used for veggies or meat cooked in a pan until dry).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">पोलेको</span> (Poleko)</strong> - Grilled / Roasted over an open fire. (Used for street meat or corn).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बाफाएको</span> (Baphaeko)</strong> - Steamed. (If you want steamed Momos, this is the word).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">झोल</span> (Jhol)</strong> - Broth / Soupy curry.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card 5: Snacks & Meals -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_meals.png" alt="Dal Bhat, Momo, Noodles" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><ellipse cx="12" cy="12" rx="10" ry="5"/><path d="M12 7v10"/><path d="M22 12c0 2.8-4.5 5-10 5S2 14.8 2 12"/><path d="M2 12c0-2.8 4.5-5 10-5s10 2.2 10 5"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 5: The Survival Menu (Khaja &amp; Khana)</h3>
+                                </div>
+                                <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">In Nepal, you either order <span class="nepali-font" style="font-size:1.1rem">खाजा</span> (Khaja - Snacks) or you order <span class="nepali-font" style="font-size:1.1rem">खाना</span> (Khana - A full meal of Dal Bhat). That is the system.</p>
+                                <h4 style="color: #16a34a; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">खाजा र खाना</span> (Snacks &amp; Meals)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">दाल भात</span> (Dal Bhat)</strong> - The national dish. Steamed rice (Bhat) with lentil soup (Dal), veg curry (Tarkari), and meat (Masu).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">म:म:</span> (Momo)</strong> - Steamed or fried meat/veg dumplings.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">चाउमिन</span> (Chowmein)</strong> - Nepali-style stir-fried noodles with heavy spices.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">सुकुटी</span> (Sukuti)</strong> - Dried / Smoked meat. (A massive drinking snack).</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">सेकुवा</span> (Sekuwa)</strong> - Wood-fired or charcoal-grilled skewered meat.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card 6: Restaurant & Ordering -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_restaurant.png" alt="Restaurant Interaction" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 6: Eating Out &amp; The Bill (The Reality Check)</h3>
+                                </div>
+                                <p style="color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">Here is how you actually survive a restaurant interaction, order your food, and pay without making things awkward.</p>
+                                <h4 style="color: #0284c7; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">रेस्टुरेन्ट र अर्डर</span> (Restaurant &amp; Ordering)</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">मेनु दिनुस् न।</span> (Menu dinus na.)</strong> - Please bring the menu.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">अर्डर गरौँ।</span> (Order garam.)</strong> - Let's order.</li>
+                                    <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बिल ल्याइदिनुस्।</span> (Bill lyaidinus.)</strong> - Bring the bill, please.</li>
+                                </ul>
+
+                                <div style="background: #f0fdfa; border-left: 4px solid #14b8a6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                    <h4 style="margin-top: 0; color: #0f766e; margin-bottom: 0.5rem;">Paying the Bill (No Calculators Allowed)</h4>
+                                    <p style="margin-bottom: 1rem;">Nepalis don't do exact math at the table. You roughly throw cash into a pile, or you fight to pay the whole thing.</p>
+                                    <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म तिर्छु।</span> (Ma tirchu.)</strong> - I will pay. / It's on me. (The ultimate respect move).</li>
+                                        <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म हजार दिन्छु, तिमी पाँच सय थप न।</span> (Ma hajar dinchu, timi paach saya thapa na.)</strong> - I’ll put in 1000, you add 500. (How friends actually "split" a bill).</li>
+                                        <li style="margin-bottom: 0;"><strong><span class="nepali-font">अर्को पालि तिम्रो ट्रिट।</span> (Arko pali timro treat.)</strong> - Next time is your treat.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Card 7: Tastes & Dietary Needs -->
+                            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <div style="text-align: center; margin-bottom: 2rem; background: #f8fafc; border-radius: 8px; padding: 1rem;">
+                                    <img src="assets/lesson_20_tastes.png" alt="Tastes and Feedback" style="max-width: 100%; height: 220px; object-fit: contain; mix-blend-mode: multiply;">
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 0.75rem;">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="m15.5 10.5 4-4a2.828 2.828 0 0 0-4-4l-4 4"/><path d="M2.5 21.5 12 12"/><path d="m7.5 10.5 4-4"/><path d="M14.5 9.5 9 15"/><path d="M11 17l2 2"/><path d="M7 13l2 2"/></svg>
+                                    <h3 style="margin: 0; color: #334155;">Card 7: Tastes, Complaints &amp; Dietary Needs</h3>
+                                </div>
+                                <h4 style="color: #be185d; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="font-size:1.1rem">स्वाद र डाइट</span> (Tastes &amp; Diets)</h4>
+                                
+                                <h5 style="color: #475569; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem;">The Core Flavors:</h5>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पिरो</span> (Piro)</strong> - Spicy.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अमिलो</span> (Amilo)</strong> - Sour.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">नुनिलो</span> (Nunilo)</strong> - Salty.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">गुलियो</span> (Guliyo)</strong> - Sweet.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">तीतो</span> (Tito)</strong> - Bitter.</li>
+                                </ul>
+
+                                <h5 style="color: #475569; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem;">The Verdict (Is it good?):</h5>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मिठो छ / स्वादिलो छ</span> (Mitho cha / Swadilo cha)</strong> - It’s delicious / tasty. (In the city, people heavily mix English and just say "Tasty cha").</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">स्वाद नै छैन</span> (Swad nai chaina)</strong> - It has absolutely no taste / it's bland. (Or the Nepanglish version: "Taste nai chaina").</li>
+                                </ul>
+
+                                <div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                    <h5 style="color: #be123c; margin-top: 0; margin-bottom: 1rem;">Complaining (The "Yar" Protocol):</h5>
+                                    <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">लास्टै पिरो छ यार!</span> (Lastai piro cha yar!)</strong> - It’s extremely spicy, man! (Crucial Slang Alert: "Lastai" means extremely, and "Yar" is the universal filler word for 'man/bro'. You will hear "yar" in almost every casual sentence).</li>
+                                        <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">हल्का नुन कम छ।</span> (Halka nun kam cha.)</strong> - It has a little less salt / it needs salt. (Halka = a little bit / light).</li>
+                                        <li style="margin-bottom: 0;"><strong><span class="nepali-font">चिनी अलि बढी भयो।</span> (Chini ali badhi bhayo.)</strong> - It has a bit too much sugar.</li>
+                                    </ul>
+                                </div>
+
+                                <h5 style="color: #475569; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem;">Customizing the Order:</h5>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अलि पिरो कम गर्दिनु है।</span> (Ali piro kam gardinu hai.)</strong> - Please make it less spicy.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अलि पिरो मिडियम (ठिक्कको) गर्दिनु।</span> (Ali piro medium / thikkai ko gardinu.)</strong> - Please make the spice medium / just okay.</li>
+                                </ul>
+
+                                <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                    <h5 style="color: #15803d; margin-top: 0; margin-bottom: 1rem;">Dietary Needs:</h5>
+                                    <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                        <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">म भेजिटेरियन हो।</span> (Ma vegetarian ho.)</strong> - I am a vegetarian. (Don't bother saying "Shakahari" unless you are talking to a priest. "Vegetarian" is the standard word everywhere).</li>
+                                        <li style="margin-bottom: 0;"><strong><span class="nepali-font">म मासु र अण्डा खान्दिनँ।</span> (Ma masu ra anda khadina.)</strong> - I don't eat meat or eggs. (If you are strictly Vegan, use this phrase to guarantee they don't accidentally feed you butter or eggs).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-21",
+                        title: "21 Cafés and coffee shops",
+                        content: `
+                            <h2>21 Cafés and coffee shops</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Chiya Pasal vs. The Modern Cafe</strong></p>
+                            <p>Nepali cafe culture is a completely hybrid beast. On one corner, you have traditional tea shops where old men sit for hours drinking milk tea and smoking. On the next corner, you have modern cafes with high-speed Wi-Fi, digital nomads, and iced lattes.</p>
+                            <p>You do not act the same way in both places. If you use formal, polite cafe language at a local tea stall, you will sound ridiculous.</p>
+                            <p>Here is exactly how to order in both worlds.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_21_cafe.png" alt="Chiya Pasal vs Modern Cafe" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f43f5e;"><path d="M17 10c-2-3-6-3-8 0-2-3-6-3-8 0v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-8Z"/><path d="M17 10h5a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-5"/></svg>
+                                <h3 style="margin: 0;">1. The Chiya Pasal (The Traditional Tea Shop)</h3>
+                            </div>
+                            <p>This is the raw, beating heart of Nepal. There is no menu. There is no "Hi, what can I get you?" and absolutely no "Please." It is entirely informal, fast, and relationship-based.</p>
+
+                            <h4 style="color: #e11d48; margin-top: 1.5rem;">How to get attention:</h4>
+                            <p>Do not say "Excuse me." You look at the person running the stall, gauge their age, and yell their title.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दाइ!</span> (Dai!)</strong> - Older brother.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दिदी!</span> (Didi!)</strong> - Older sister.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">अंकल / आन्टी!</span> (Uncle / Aunty!)</strong> - If they look like your parents' age.</li>
+                            </ul>
+
+                            <h4 style="color: #e11d48; margin-top: 1.5rem;">The Raw Order:</h4>
+                            <p>Keep it incredibly short.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ, दुईटा चिया।</span> (Dai, duita chiya.)</strong><br>
+                                    <em>Meaning: Bro, two teas.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दिदी, एक कप कालो चिया दिनुस्।</span> (Didi, ek cup kalo chiya dinus.)</strong><br>
+                                    <em>Meaning: Sister, give me a cup of black tea.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दुईटा चिया, एक खिल्ली चुरोट।</span> (Duita chiya, ek khilli churot.)</strong><br>
+                                    <em>Meaning: Two teas, one cigarette. (Cultural Note: Selling single cigarettes—"ek khilli"—is the standard at every tea stall in the country).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एउटा सेलरोटी दिनुस्।</span> (Euta selroti dinus.)</strong><br>
+                                    <em>Meaning: Give me one Selroti. (Cultural Note: Selroti is sold by the piece, not by the plate. Say "euta" [one] or "duita" [two]).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फेरि अर्को चिया गर्दिनु।</span> (Pheri arko chiya gardinu.)</strong><br>
+                                    <em>Meaning: Make me another tea, please. (The most natural, street-accurate way to ask for a refill).</em>
+                                </li>
+                            </ul>
+                            <p style="font-style: italic; color: #64748b;">(Rule of Thumb: You sit, you drink, you talk. You do not ask for Chiya "to-go").</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                                <h3 style="margin: 0;">2. The Modern Cafe (The City Vibe)</h3>
+                            </div>
+                            <p>If you are in Thamel, Jhamsikhel, or Lakeside Pokhara, the vibe completely shifts. They have espresso machines, menus, and they will ask if you want to take your drink with you. The language here is heavy "Nepanglish."</p>
+
+                            <h4 style="color: #7c3aed; margin-top: 1.5rem;">The Barista's Questions:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">के लिनुहुन्छ?</span> (Ke linuhuncha?)</strong><br>
+                                    <em>Meaning: What will you have? / What can I get you?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">रेगुलर कि लार्ज?</span> (Regular ki large?)</strong><br>
+                                    <em>Meaning: Regular or large? (Nobody translates cup sizes).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यतै बस्ने कि लैजाने?</span> (Yatai basne ki laijane?)</strong><br>
+                                    <em>Meaning: For here or to go? (Literally: Sit right here or take away?)</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टोस्ट गरिदिऊँ?</span> (Toast garidiu?)</strong><br>
+                                    <em>Meaning: Should I toast it?</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #7c3aed; margin-top: 1.5rem;">Your Order:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दुईटा ब्ल्याक कफी र एउटा सुन्तलाको जुस।</span> (Duita black coffee ra euta suntala ko juice.)</strong><br>
+                                    <em>Meaning: Two black coffees and an orange juice.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एउटा क्यापुचिनो, प्लिज।</span> (Euta cappuccino, please.)</strong><br>
+                                    <em>Meaning: A cappuccino, please. (Young Nepalis use "please" in English at modern cafes).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ल्याटे छ?</span> (Latte cha?)</strong><br>
+                                    <em>Meaning: Do you have lattes?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एउटा आइस कफी लैजाने।</span> (Euta iced coffee laijane.)</strong><br>
+                                    <em>Meaning: An iced coffee to go. (Use "Laijane" for taking away cold drinks, juices, or pastries).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                                <h3 style="margin: 0;">3. The "Excuse Me" Reality Checks</h3>
+                            </div>
+                            <p>When you are navigating crowded cafes, you need these three survival phrases to grab a seat, get online, or figure out what you are eating.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">वाइफाइको पासवर्ड के हो?</span> (Wi-Fi ko password ke ho?)</strong><br>
+                                    <em>Meaning: What is the Wi-Fi password? (The most important sentence for any modern cafe).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो म:म: भेज हो?</span> (Yo momo veg ho?) / <span class="nepali-font">यो चाउमिन भेज हो?</span> (Yo chowmein veg ho?)</strong><br>
+                                    <em>Meaning: Is this momo/chowmein vegetarian? (Remember, "veg" is the universal safe word. Always ask this before digging into street food if you don't eat meat).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यहाँ कोही बस्नुभएको छ?</span> (Yaha kohi basnubhayeko cha?)</strong><br>
+                                    <em>Meaning: Is anyone sitting here? (How to claim an empty chair at a shared table).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">छैन, बस्नुस्।</span> (Chaina, basnus.)</strong><br>
+                                    <em>Meaning: No, take a seat. (The green light).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #1d4ed8;">The Cultural Insight: Reading the Room</h3>
+                                <p>In Nepal, respect is contextual. Calling a barista at an upscale coffee shop "Dai" might feel a bit too informal for the setting (though still acceptable), whereas calling the lady at the local tea stall "Waitress" or trying to order a "Skinny Latte" will make you look like an alien.</p>
+                                <p style="margin-bottom: 0;">Look at the cups. If it’s served in a small glass, use the local rules. If it’s served in a ceramic mug or a plastic takeaway cup, use the modern rules.</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-22",
+                        title: "22 Takeaway and delivery",
+                        content: `
+                            <h2>22 Takeaway and delivery (The "Pack" Culture)</h2>
+                            <p>In Western countries, you ask for food "to go." In Nepal, nobody says that. If you want to take food home, you use the magic English loanword: <strong>Pack</strong>.</p>
+                            <p>And forget about ordering sushi or tacos. When Nepalis order delivery or grab takeaway, 90% of the time, it revolves around local heavy hitters like Momo and Chowmein.</p>
+                            <p>Here is how you actually bring food home in Nepal.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_22_delivery.png" alt="Takeaway and Delivery" style="max-width: 100%; width: 450px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f97316;"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                <h3 style="margin: 0;">1. The "Pack" Culture (Ordering at the Local Stall)</h3>
+                            </div>
+                            <p>Whether you are grabbing food on the way home from work or deciding you don't want to cook, this is the exact street language you need.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज बाहिरबाट खाउँ।</span> (Aaja baira bata khaum.)</strong><br>
+                                    <em>Meaning: Let's eat from outside today. (This is the ultimate Nepali phrase for "Let's get takeout or delivery tonight").</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कस्तो म:म: खाने मन गरेको छ, आज म:म: खाउँ न।</span> (Kasto momo khane man gareko cha, aaja momo khaum na.)</strong><br>
+                                    <em>Meaning: I’m really craving momos, let's have momos today. (Highly natural way to suggest a specific food).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ, एक प्लेट म:म: प्याक गर्दिनु है।</span> (Dai, ek plate momo pack gardinu hai.)</strong><br>
+                                    <em>Meaning: Bro, pack one plate of momos, please.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दुई प्लेट चाउमिन प्याक।</span> (Dui plate chowmein pack.)</strong><br>
+                                    <em>Meaning: Two plates of chowmein to go. (Short, sharp, and perfectly natural).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M12 22v-7l-2-2"/><path d="M12 15l2-2"/><path d="M17 8h.01"/><path d="M4 14.19a4 4 0 0 1 5.3-.22l2.37 1.9a2 2 0 0 0 2.66 0l2.37-1.9a4 4 0 0 1 5.3.22"/><path d="M4 21.8c2.2-.6 4.6-.6 6.8 0l.6.15c1.6.4 3.2.4 4.8 0l.6-.15c2.2-.6 4.6-.6 6.8 0"/></svg>
+                                <h3 style="margin: 0;">2. Picking Up Your Order</h3>
+                            </div>
+                            <p>If you called ahead or are grabbing your food from the counter, keep it respectful but simple.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मेरो अर्डर लिन आएको।</span> (Mero order lina aako.)</strong><br>
+                                    <em>Meaning: I’ve come to pick up my order.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हजुरको शुभनाम? / हजुरको नाम?</span> (Hajur ko shubhnaam? / Hajur ko naam?)</strong><br>
+                                    <em>Meaning: What is your good name? / Your name, please? (What the cashier will actually ask you. "Hajur" adds the required respect).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #06b6d4;"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                                <h3 style="margin: 0;">3. The Delivery Apps (City Survival)</h3>
+                            </div>
+                            <p>In Kathmandu and Pokhara, delivery culture is exploding. But people don't use UberEats or DoorDash; they use Foodmandu and Pathao.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फुडमाण्डुबाट अर्डर गरौँ।</span> (Foodmandu bata order garam.)</strong><br>
+                                    <em>Meaning: Let's order on Foodmandu.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पठाओमा हेरौँ न।</span> (Pathao ma heraum na.)</strong><br>
+                                    <em>Meaning: Let's check on Pathao.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यहाँ डेलिभरी हुन्छ?</span> (Yaha delivery huncha?)</strong><br>
+                                    <em>Meaning: Do you deliver here? (Crucial question if you live outside the main Ring Road in Kathmandu).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अर्डर अझै आएन।</span> (Order ajhai aayena.)</strong><br>
+                                    <em>Meaning: The order still hasn't arrived.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कहाँ पुग्यो?</span> (Kaha pugyo?)</strong><br>
+                                    <em>Meaning: Where did it reach? (The #1 question you will ask the delivery driver when they call you lost in your neighborhood).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 8V4"/><path d="M16 8V4"/><path d="M3 12h18"/></svg>
+                                <h3 style="margin: 0;">4. What People Actually Order (The Real Menu)</h3>
+                            </div>
+                            <p>Burn the textbook vocabulary list of "burgers, fries, and nachos." If you are doing takeaway in Nepal, this is what is actually in the bag:</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म:म:</span> (Momo)</strong> - The undisputed king of delivery.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">चाउमिन</span> (Chowmein)</strong> - Stir-fried noodles. It travels well and fills you up.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">थुक्पा</span> (Thukpa)</strong> - Hot noodle soup. (Very popular in winter).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सेकुवा</span> (Sekuwa)</strong> - Grilled, skewered meat. (Usually ordered as a drinking snack).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">खाजा सेट</span> (Khaja Set)</strong> - A boxed combo meal, usually containing beaten rice (chiura), meat curry, and pickles.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #d97706;">The Cultural Insight: The "Dai" Navigates</h3>
+                                <p>When you order on an app in Kathmandu, the driver will call you. Kathmandu doesn't have a perfect street address system like the West. You cannot just give a zip code and expect them to show up at your door.</p>
+                                <p style="margin-bottom: 0;">Be prepared to explain your location using landmarks to the delivery guy: "Near the big peepal tree," or "Behind the blue gate next to the hospital."</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-23",
+                        title: "23 Bars and pubs",
+                        content: `
+                            <h2>23 Bars and pubs</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Nightlife (Bhattis, Dohori & Bars)</strong></p>
+                            <p>Drinking culture in Nepal is not a one-size-fits-all experience. It is split into three completely different worlds. If you use urban bar slang in a local village Bhatti, you sound arrogant. If you use Bhatti slang in a Thamel pub, you sound out of place.</p>
+                            <p>Here is exactly how to order drinks, grab snacks, and survive the night in all three settings.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_23_bars.png" alt="Traditional Alcohol vs Modern Bar" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ea580c;"><path d="M12 2v20"/><path d="m8 2 8 20"/><path d="m16 2-8 20"/></svg>
+                                <h3 style="margin: 0;">Layer 1: The Local Bhatti (The Old-School Dive)</h3>
+                            </div>
+                            <p>A Bhatti is a small, cheap, highly local drinking spot. There is no menu, no "on tap," and no cocktails. It is raw and functional. The golden rule here: You do not call the owners "waiter." You call them the boss.</p>
+                            
+                            <p><strong><span class="nepali-font">साहुजी / साहुनी</span> (Sauji / Sauni)</strong> - Male Boss / Female Boss. (Always use this to get their attention).</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">साहुनी, एउटा खुकुरी रम दिनु न।</span> (Sauni, euta Khukuri Rum dinu na.)</strong><br>
+                                    <em>Meaning: Sauni, give us a Khukuri Rum. (Khukuri Rum is the legendary national dark rum).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कोदोको रक्सी छ?</span> (Kodo ko raksi cha?)</strong><br>
+                                    <em>Meaning: Do you have millet alcohol? (The traditional, strong, clear village spirit).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एउटा टुबोर्ग बियर दिनु।</span> (Euta Tuborg beer dinu.)</strong><br>
+                                    <em>Meaning: Give me a Tuborg beer. (Brands matter. You don't ask for a "lager," you just name the brand).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">चकना के छ?</span> (Chakhna ke cha?)</strong><br>
+                                    <em>Meaning: What bar snacks do you have? (Crucial word: "Chakhna" is the universal Nepali term for spicy snacks eaten exclusively with alcohol).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एक प्लेट सुकुटी र भुटेको भटमास दिनु।</span> (Ek plate sukuti ra bhuteko bhatmas dinu.)</strong><br>
+                                    <em>Meaning: Give us a plate of dry meat and roasted soybeans.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="M9 18V5l12-2v13"/><path d="m9 9 12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                                <h3 style="margin: 0;">Layer 2: Dohori Sanjh (The Cultural Party)</h3>
+                            </div>
+                            <p>A Dohori Sanjh (often culturally rooted in the Rodighar tradition) is where people go to drink, listen to live folk music, sing back-and-forth, and dance. The energy is loud, heavily social, and revolves around group drinking.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अर्को राउन्ड ल्याइदिनु न।</span> (Arko round lyaidinu na.)</strong><br>
+                                    <em>Meaning: Bring another round, please.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अघिको जस्तै ल्याइदिनु।</span> (Aghiko jastai lyaidinu.)</strong><br>
+                                    <em>Meaning: Bring the same as before. (Reality Check: Do not say "eutai feri"—that is a broken English translation. "Aghiko jastai" is how you actually order the same round again).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कस्तो मजा आयो यार!</span> (Kasto maja aayo yar!)</strong><br>
+                                    <em>Meaning: This is so fun, man! (You will hear this yelled over the music constantly).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">नाच्ने हो!</span> (Nachne ho!)</strong><br>
+                                    <em>Meaning: Let's dance! / We're going to dance!</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="m18 22-5.5-5.5"/><path d="M14 18 2.5 6.5a2.12 2.12 0 0 1 0-3h0a2.12 2.12 0 0 1 3 0L17 15l-3 3Z"/><path d="M22 2 13 4l-4 4 4 4 4-4 2-9Z"/></svg>
+                                <h3 style="margin: 0;">Layer 3: The Urban Bar & Pub (Kathmandu / Pokhara)</h3>
+                            </div>
+                            <p>If you are in Thamel or Lakeside, you are in the modern city scene. English is heavily mixed in. You will find cocktails, shots, and closing times here.</p>
+
+                            <h4 style="color: #7c3aed; margin-top: 1.5rem;">Ordering & Customizing:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">के लिने हुन्छ?</span> (Ke line huncha?)</strong> - What will you have?</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">एक सट भोड्का, अनि एउटा बियर।</span> (Ek shot vodka, ani euta beer.)</strong> - One shot of vodka, and a beer.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">आइस राख्ने कि नराख्ने?</span> (Ice rakhne ki narakhne?)</strong> - With or without ice? <em>(What the bartender will ask)</em>.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">हल्का आइस हाल्दिनु।</span> (Halka ice haldinu.)</strong> - Put a little ice in it.</li>
+                            </ul>
+
+                            <h4 style="color: #7c3aed; margin-top: 1.5rem;">Closing Time (The Last Order):</h4>
+                            <p>Unlike the village Bhattis that might stay open as long as the Sauni is awake, city bars have strict curfews enforced by the police.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">लास्ट अर्डर हो है।</span> (Last order ho hai.)</strong> - It's the last order / Last call.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बार बन्द हुन लाग्यो।</span> (Bar banda huna lagyo.)</strong> - The bar is about to close.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बिल ल्याइदिनुस्।</span> (Bill lyaidinus.)</strong> - Bring the bill, please.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #1d4ed8;">The Cultural Insight: The "Chakhna" Rule</h3>
+                                <p>In the West, people can sit at a bar and drink three pints of beer on an empty stomach. In Nepal, drinking without eating is considered borderline psychotic.</p>
+                                <p style="margin-bottom: 0;">Alcohol must be accompanied by Chakhna (spicy snacks). Whether it is spicy peanuts (Sadheko Badam), smoked meat (Sukuti), or instant noodles mixed with chili (Wai Wai Sadeko), the food is just as important as the alcohol.</p>
+                            </div>
+
+                            <!-- START OF SETTLING THE BILL SECTION -->
+
+                            <h2 style="margin-top: 3rem; color: #1e293b;">Settling the Bill (The Fonepay & QR Reality)</h2>
+                            <p>If you sit at your table waiting for the bill in Nepal, you are going to be waiting a very long time. In local spots, the culture is entirely different: when you are done eating, you stand up, walk directly to the counter, and settle up with the Sauji (boss).</p>
+                            <p>Furthermore, Nepal has experienced a massive digital revolution. While cash is still king in the villages, the cities run entirely on digital wallets and QR codes. Here is how you actually pay the bill today.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_23_qr.png" alt="Cashless QR Payment" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #64748b;"><rect width="18" height="14" x="3" y="5" rx="2" ry="2"/><path d="M3 11h18"/><path d="M7 15h.01"/><path d="M11 15h2"/></svg>
+                                <h3 style="margin: 0;">1. The Counter Walk (Asking for the Damage)</h3>
+                            </div>
+                            <p>When you walk up to the counter, the person working the register will usually mentally tally up what you ate ("Okay, two teas, one momo, one chowmein..."). You do not ask for a physical bill; you ask for the total.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हाम्रो कति भयो?</span> (Hamro kati bhayo?)</strong><br>
+                                    <em>Meaning: How much is ours? (This is the absolute #1 phrase used in Nepal to ask for the bill. Memorize it).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">बिल कति भयो?</span> (Bill kati bhayo?)</strong> - How much is the bill?</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">हिसाब गरिदिनुहोस्।</span> (Hisab garidinuhos.)</strong> - Please calculate it. / Do the math.</li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जम्मा आठ सय पचास भयो।</span> (Jamma aath saya pachas bhayo.)</strong><br>
+                                    <em>Meaning: The total is 850. (What the cashier will reply. "Jamma" means total).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 8V4"/><path d="M16 8V4"/><path d="M3 12h18"/></svg>
+                                <h3 style="margin: 0;">2. The QR Code Revolution (Fonepay & eSewa)</h3>
+                            </div>
+                            <p>Nepal runs on three major digital platforms: Fonepay, eSewa, and IME Pay. You will see green or blue QR codes plastered on every counter. Most locals don't even carry cash anymore; they just wave their phones. Keep your sentences short and direct.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फोनपे छ?</span> (Fonepay cha?)</strong><br>
+                                    <em>Meaning: Do you have Fonepay? (Crucial Note: It is spelled Fonepay, not PhonePay. It is the largest local payment network).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">क्यु-आर छ?</span> (QR cha?)</strong> - Do you have a QR code?</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">इसेवा हुन्छ?</span> (eSewa huncha?)</strong> - Do you take eSewa? / Does eSewa work?</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">स्क्यान गरौँ?</span> (Scan garam?)</strong> - Shall I scan it?</li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">क्यास छैन, क्यु-आर छ?</span> (Cash chaina, QR cha?)</strong><br>
+                                    <em>Meaning: I don't have cash, do you have QR? (Use this when you are buying something small from a street vendor and need to check if they are digital yet).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M2 12h20"/><path d="M5 12v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/><path d="M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5"/><circle cx="12" cy="12" r="2"/></svg>
+                                <h3 style="margin: 0;">3. Cards vs. Cash (The City/Village Divide)</h3>
+                            </div>
+                            <p>If you are relying on a Visa or Mastercard, you need to understand the boundaries. Cards work in Thamel, at big hotels, and in modern supermarkets. The second you step into a local Bhatti or travel outside the Kathmandu Valley, plastic is useless.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कार्ड चल्छ?</span> (Card chalcha?)</strong> - Do you take cards? (Literally: Does a card work?)</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कार्ड एक्सेप्ट गर्नुहुन्छ?</span> (Card accept garnuhuncha?)</strong> - Do you accept cards? (Nepanglish works perfectly here).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">हुन्छ, स्क्यान गर्नुहोस्।</span> (Huncha, scan garnuhos.)</strong> - Sure, scan it. (The green light from the cashier).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">क्यास मात्र।</span> (Cash matra.)</strong> - Cash only. (If you hear this, you better hope you hit an ATM).</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #b91c1c;">The Cultural Insight: The "Chanchun" Problem</h3>
+                                <p>If you are paying in cash, be very careful handing over a 1000 Rupee note early in the morning for a 50 Rupee milk tea. Shopkeepers hate breaking large bills because it drains their small change for the rest of the day.</p>
+                                <p>If you hand them a big note, they will usually ask: <strong>"चानचुन छैन?" (Chanchun chaina?)</strong> - Don't you have change? (The ultimate, authentic local word for loose change or small bills. Sometimes also referred to as "Chillar").</p>
+                                <h4 style="margin-bottom: 0.5rem;">How to actually ask someone to break a bill:</h4>
+                                <p>If you need to break a big note, you don't just awkwardly ask for "change." You ask them to exchange it, or you specify exactly what notes you want back. Always keep 100s and 50s in your wallet for the streets, or just use Fonepay.</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">यो हजारको नोट साटिदिनुहुन्छ कि?</span> (Yo hajar ko note satidinuhuncha ki?)</strong> - Could you please change this 1000 note? (The verb "Satnu" means to exchange. This is the most natural way to ask).</li>
+                                    <li><strong><span class="nepali-font">दुईवटा पाँच-पाँच सयको छ हजुरसँग?</span> (Dui ota paach-paach saya ko cha hajur sanga?)</strong> - Do you have two 500s with you? (Highly respectful and native way to ask for specific change. Using "Hajur" softens the request perfectly).</li>
+                                </ul>
+                            </div>
+
+                            <!-- START OF UDARO SECTION -->
+
+                            <h2 style="margin-top: 3rem; color: #1e293b;">The "Udaro" System (Running a Tab)</h2>
+                            <p>In Nepal, the local economy runs on trust. At village tea stalls, neighborhood grocery shops (Kirana), and local Bhattis, people rarely pay for every single cup of tea or shot of alcohol in cash. They run a tab.</p>
+                            <p>This system is called <span class="nepali-font">उधारो</span> <strong>(Udaro)</strong>. There are no credit checks and no contracts. The shopkeeper just writes your name in a notebook. If you break this trust, your reputation in the neighborhood is permanently burned.</p>
+                            <p>If you become a "regular" at a local spot, here is how you navigate the Udaro system.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_23_udaro.png" alt="Notebook Ledger for Udaro Tab" style="max-width: 100%; width: 450px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                                <h3 style="margin: 0;">1. Putting it on the Tab</h3>
+                            </div>
+                            <p>When you finish your food or drinks, you don't pull out your wallet. You just tell the boss to add it to your page in the book.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">खातामा लेखिदिनुहोस् न।</span> (Khata ma lekhidinuhos na.)</strong><br>
+                                    <em>Meaning: Please write it in the ledger. (Khata = Account/Ledger).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ल, मेरो खातामा लेखिदिनु है।</span> (La, mero khata ma lekhidinu hai.)</strong><br>
+                                    <em>Meaning: Alright, put it on my tab. (Very casual, used as you are walking out the door).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">उधारो राखिदिनु।</span> (Udharo rakhidinu.)</strong><br>
+                                    <em>Meaning: Keep it on credit.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #eab308;"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">2. The Promises (Negotiating the Payback)</h3>
+                            </div>
+                            <p>When you ask for Udaro, you usually have to give a timeline for when you are going to clear the notebook.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म यति गते दिन्छु।</span> (Ma yati gate dinchu.)</strong><br>
+                                    <em>Meaning: I will pay on this date. (Nepalis use the local calendar dates, 'gate', to set deadlines).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तलब आएपछि दिन्छु नि साहुजी।</span> (Talab aayepachi dinchu ni, Sauji.)</strong><br>
+                                    <em>Meaning: I'll pay when my salary comes, boss. (The most common excuse/promise in the country).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">भोलि पक्का दिन्छु।</span> (Bholi pakka dinchu.)</strong><br>
+                                    <em>Meaning: I'll pay tomorrow for sure. (Pakka = For sure / 100%).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M20 6 9 17l-5-5"/></svg>
+                                <h3 style="margin: 0;">3. The Shopkeeper's Reply</h3>
+                            </div>
+                            <p>If they know you and trust you, they won't make a big deal out of it.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">हुन्छ, समस्या छैन।</span> (Huncha, samasya chaina.)</strong> - Sure, no problem.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ल ल, पछि दिँदा हुन्छ।</span> (La la, pachi dida huncha.)</strong> - Okay, okay, you can pay later.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #15803d;">The Cultural Insight: The Foreigner Reality Check</h3>
+                                <p>Do not try to use the Udaro system as a tourist. The shopkeeper will just stare at you and point to the Fonepay QR code.</p>
+                                <p style="margin-bottom: 0;">Udaro is a highly localized web of trust. It only works if the shopkeeper knows where your house is, knows who your family is, or sees you every single day. However, if you are living in Nepal long-term and the local tea-seller tells you, "Bholi dida huncha" (You can pay tomorrow) when you forget your wallet, congratulations—you are no longer a tourist. You are officially part of the neighborhood.</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-24",
+                        title: "24 At the restaurant",
+                        content: `
+                            <h2>24 At the restaurant</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Sit-Down Restaurants & Group Dining</strong></p>
+                            <p>Most dining in Nepal is casual and spontaneous. You just walk in. The Western concept of calling ahead to "reserve a table for two" is highly unusual unless you are going to a very expensive, high-end spot in the city.</p>
+                            <p>However, if you are throwing a birthday party, bringing 15 people from work, or trying to secure a table during a massive festival like Dashain, you need to know how to lock it down.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="M12 14v4"/><path d="M10 16h4"/></svg>
+                                <h3 style="margin: 0;">1. The Booking Reality (Groups & Parties)</h3>
+                            </div>
+                            <p>Keep it direct. You aren't asking for a "reservation under the name of Kavi." You are just checking if they have enough physical space for your crew.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टेबल पाइन्छ?</span> (Table paincha?)</strong><br>
+                                    <em>Meaning: Is a table available? (Ask this right when you walk in).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">चार जनाको लागि ठाउँ छ?</span> (Char jana ko lagi thau cha?)</strong><br>
+                                    <em>Meaning: Is there room for four people?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हाम्रो १५ जनाको पार्टी छ। मिल्छ?</span> (Hamro pandhra jana ko party cha. Milcha?)</strong><br>
+                                    <em>Meaning: We have a party of 15 people. Is that possible? (Crucial for group bookings).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पार्किङ छ?</span> (Parking cha?)</strong><br>
+                                    <em>Meaning: Do you have parking? (A massive issue in crowded Kathmandu. Always ask this if you are driving a bike or car).</em>
+                                </li>
+                            </ul>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_24_group.png" alt="Group Dining Table" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f43f5e;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                                <h3 style="margin: 0;">2. Ordering Your Meal (The Allergy Reality Check)</h3>
+                            </div>
+                            <p>When the waiter comes over, keep it simple. Do not give them a ten-minute speech about your dietary journey. And unless you are in a high-end tourist restaurant, asking detailed questions about nut allergies or gluten cross-contamination will just cause mass confusion.</p>
+
+                            <h4 style="color: #e11d48; margin-top: 1.5rem;">The Waiter:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अर्डर लिने?</span> (Order line?)</strong> - Ready to order? / Shall I take the order?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">के खानुहुन्छ?</span> (Ke khanuhuncha?)</strong> - What will you eat?</li>
+                            </ul>
+
+                            <h4 style="color: #e11d48; margin-top: 1.5rem;">Your Order:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">एक प्लेट म:म:।</span> (Ek plate momo.)</strong> - One plate of momos.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म चाउमिन लिन्छु।</span> (Ma chowmein linchu.)</strong> - I'll take the chowmein.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">चिकेन सेट दिनुहोस्।</span> (Chicken set dinuhos.)</strong> - Please give me the chicken set.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मलाई पिरो अलि कम गर्दिनु है।</span> (Malai piro ali kam gardinu hai.)</strong> - A little less spicy for me, please.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><circle cx="9" cy="12" r="4"/><circle cx="15" cy="12" r="4"/><path d="M12 2A10 10 0 0 0 12 22"/></svg>
+                                <h3 style="margin: 0;">3. Sharing is Mandatory (Discussing the Food)</h3>
+                            </div>
+                            <p>In the West, people order their own plate and guard it. In Nepal, food is communal. If you order a plate of momos or a sizzling platter of Sekuwa, everyone at the table is going to put a fork in it.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">कस्तो छ?</span> (Kasto cha?)</strong> - How is it?</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">एकदम मिठो छ।</span> (Ekdam mitho cha.)</strong> - It's really delicious.</li>
+                                <li style="margin-bottom: 1rem;"><strong><span class="nepali-font">पिरो छ।</span> (Piro cha.)</strong> - It's spicy.</li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अलि नुन धेरै भयो।</span> (Ali nun dherai bhayo.)</strong><br>
+                                    <em>Meaning: It’s a bit too salty. (Note: Don't say this to the waiter or Sauji—this is just for talking among the people you are eating with).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">चाख्ने?</span> (Chakhne?)</strong><br>
+                                    <em>Meaning: Want to taste? / Want a bite? (The single most important word when eating with Nepali friends. Offer your food).</em>
+                                </li>
+                            </ul>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_24_sharing.png" alt="Sharing Food Plate" style="max-width: 100%; width: 450px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                                <h3 style="margin: 0;">4. The Reality of Complaining (The Silent Boycott)</h3>
+                            </div>
+                            <p>In the West, if food tastes bad, people send it back to the kitchen. In Nepal, people almost never complain about the taste. If a Nepali person hates their meal, they will quietly finish it, pay the bill, and then permanently boycott the restaurant while telling all their friends to never go there.</p>
+                            <p>If you do need to speak up, you flag the Dai down and use a soft, apologetic tone. Screaming at a waiter makes you look entirely unhinged in Nepali culture. You only really complain for delays, wrong orders, or slightly cold food.</p>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">Getting Attention & Soft Complaints:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दाइ, सुन्नुस् न।</span> (Dai, sunnus na.)</strong> - Brother, listen please. (How to politely call the waiter over).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">माफ गर्नुस्, यो अलि चिसो छ।</span> (Maaf garnus, yo ali chiso cha.)</strong> - Excuse me, this is a bit cold.</li>
+                            </ul>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">When the Food is Taking Forever:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दाइ, म:म: अझै आएन नि।</span> (Dai, momo ajhai aayena ni.)</strong> - Brother, the momos still aren't here. (The "ni" makes it sound friendly).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कति टाइम लाग्छ हो?</span> (Kati time lagcha ho?)</strong> - How much time will it take?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अलि ढिलो भए जस्तो छ।</span> (Ali dhilo bhaye jasto cha.)</strong> - It seems to be a bit late. (The classic Nepali passive-aggressive nudge).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म अलि हतारमा छु।</span> (Ma ali hatarma chu.)</strong> - I’m in a bit of a rush.</li>
+                            </ul>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">When the Order is Wrong:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मैले यो अर्डर गरेको होइन।</span> (Maile yo order gareko hoina.)</strong> - I didn't order this.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मैले कोक मगाएको थिएँ / भनेको थिएँ।</span> (Maile Coke magaeko thie / bhaneko thie.)</strong> - I ordered / asked for a Coke.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">यो मेरो अर्डर होइन जस्तो छ।</span> (Yo mero order hoina jasto cha.)</strong> - I don't think this is my order. (Literally: It seems like this isn't my order).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">चिकेन भनेको, यो त भेज भएछ।</span> (Chicken bhaneko, yo ta veg bhayecha.)</strong> - I asked for chicken, but this is veg.</li>
+                            </ul>
+                            <p style="font-style: italic; color: #64748b;">(Cultural Rule: Notice how many times we use "jasto cha" [it seems like] or "bhayecha" [it happened to be]. By removing direct blame, you save the waiter from losing face, which gets your problem solved much faster).</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #eab308;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                                <h3 style="margin: 0;">5. The "Treat" Culture (Fighting for the Bill)</h3>
+                            </div>
+                            <p>When you are at a sit-down restaurant with friends, the biggest battle is deciding who pays. In Nepal, going "Dutch" (splitting the bill perfectly) is common among broke college students, but among adults, someone usually claims the bill to show respect or celebrate an event.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज मेरो ट्रिट!</span> (Aaja mero treat!)</strong><br>
+                                    <em>Meaning: It's my treat today!</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज मेरो पालो हो, म तिर्छु।</span> (Aaja mero palo ho, ma tirchu.)</strong><br>
+                                    <em>Meaning: Today is my turn, I will pay. (Say this if it is your birthday or you just got a promotion).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हाफ-हाफ गरौँ न।</span> (Half-half garam na.)</strong><br>
+                                    <em>Meaning: Let's just split it half-and-half.</em>
+                                </li>
+                            </ul>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_24_treat.png" alt="Treating Friends / Paying the Bill" style="max-width: 100%; width: 450px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #d97706;">The Cultural Insight: The Birthday Reversal</h3>
+                                <p>If it is your birthday in a Western country, your friends take you out and pay for your drinks. In Nepal, it is the exact opposite.</p>
+                                <p style="margin-bottom: 0;">If it is your birthday, you are expected to throw the party and pay the bill for all your friends. It is considered an honor to treat your circle on your special day. Do not sit there waiting for them to pick up the check!</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-25",
+                        title: "25 Cooking and eating",
+                        content: `
+                            <h2>25 Cooking and eating</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Kitchen, The Guest & The Culture of Food</strong></p>
+                            
+                            <p>If you want to understand Nepal, you have to understand the kitchen. Cooking here is not a science experiment with exact measurements and digital scales. It is a ritual based on instinct, senses, and "embodied knowledge."</p>
+                            <p>Furthermore, hospitality in Nepal isn't a branded, commercial experience like you might find in high-end sushi restaurants abroad. It is raw, domestic, and intimately personal. If someone really respects you in Nepal, they don’t drop money at a fancy restaurant to impress you. They invite you into their home, cook for hours, and practically force-feed you until you can't breathe.</p>
+                            <p>Here is your survival guide to the Nepali kitchen and guest culture.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_25_kitchen.png" alt="Traditional Nepali Kitchen Scene" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d97706;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                                <h3 style="margin: 0;">1. The Spice Cabinet (Masala)</h3>
+                            </div>
+                            <p>If you are cooking Nepali food, you need to know your spices. We don't just "add flavor"—we grind spices from scratch <strong>(<span class="nepali-font">मसला पिस्ने</span> - Masala pisne)</strong>.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_25_spices.png" alt="Grinding Spices" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p style="text-align: center; font-size: 0.9rem; color: #3b82f6; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                                <em>Tap the table rows to hear the pronunciation.</em>
+                            </p>
+
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.95rem;">
+                                <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+                                    <th style="padding: 12px; text-align: left;">Nepali Spice</th>
+                                    <th style="padding: 12px; text-align: left;">Romanized</th>
+                                    <th style="padding: 12px; text-align: left;">English</th>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">नुन</span></td>
+                                    <td style="padding: 12px;">Nun</td>
+                                    <td style="padding: 12px;">Salt</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">बेसार</span></td>
+                                    <td style="padding: 12px;">Besar</td>
+                                    <td style="padding: 12px;">Turmeric</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">धनियाँ</span></td>
+                                    <td style="padding: 12px;">Dhaniya</td>
+                                    <td style="padding: 12px;">Coriander</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">जिरा</span></td>
+                                    <td style="padding: 12px;">Jira</td>
+                                    <td style="padding: 12px;">Cumin</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">लसुन र प्याज</span></td>
+                                    <td style="padding: 12px;">Lasun ra Pyaaj</td>
+                                    <td style="padding: 12px;">Garlic and Onion</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">अदुवा</span></td>
+                                    <td style="padding: 12px;">Aduwa</td>
+                                    <td style="padding: 12px;">Ginger</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">धुलो खुर्सानी</span></td>
+                                    <td style="padding: 12px;">Dhulo Khursani</td>
+                                    <td style="padding: 12px;">Chili powder</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">ल्वाङ र सुकमेल</span></td>
+                                    <td style="padding: 12px;">Laung ra Sukmel</td>
+                                    <td style="padding: 12px;">Clove and Cardamom</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0; cursor: pointer;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='transparent'">
+                                    <td style="padding: 12px; font-weight: bold;"><span class="nepali-font">मेथी र ज्वानो</span></td>
+                                    <td style="padding: 12px;">Methi ra Jwano</td>
+                                    <td style="padding: 12px;">Fenugreek & Ajwain</td>
+                                </tr>
+                            </table>
+
+                            <div style="background: linear-gradient(135deg, #fef2f2, #fff7ed); border: 1px solid #fca5a5; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <h4 style="margin-top: 0; color: #b91c1c; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    Sensory Prompt: The Smell of Nepal
+                                </h4>
+                                <p style="margin-bottom: 0; font-style: italic; color: #7f1d1d;">Imagine frying <strong>Methi</strong> (Fenugreek seeds) in hot oil. It releases a slight bitterness, deeply nutty and earthy. This exact scent is the foundational base aroma of millions of Nepali dishes.</p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                                <h3 style="margin: 0;">2. "Aakha Andaj" & Embodied Cooking</h3>
+                            </div>
+                            <p>If you ask a Nepali mother for her Dal Bhat or Momo recipe, she cannot give you exact measurements. The entire culinary system is based on instinct and cooking "by eye."</p>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">The Instinct Rules:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आँखा अन्दाजले।</span> (Aakha andaj le.)</strong> - By eye / By guessing. (If you ask how much salt to put in, this will be the answer).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">अलि अलि हाल्दै जाने।</span> (Ali ali haldai jane.)</strong> - Keep adding a little bit as you go.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">जति मन लाग्छ त्यति हाल्ने।</span> (Jati man lagcha tyati halne.)</strong> - Add as much as you feel like.</li>
+                            </ul>
+
+                            <div style="background: #e0f2fe; border-left: 4px solid #0284c7; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <p style="margin: 0; color: #0369a1;"><strong>Cultural Insight:</strong> Culinary knowledge in Nepal is transmitted through observation, not measurement. You learn by watching hands, smelling smoke, and tasting progress—not by reading tablespoons.</p>
+                            </div>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">The Action Verbs:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सुरुमा ग्यास बाल्ने।</span> (Suruma gas balne.)</strong> - First, turn on the gas.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मिडियम ग्यास बनाउने।</span> (Medium gas banaune.)</strong> - Turn it to medium heat.</li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <strong><span class="nepali-font">दाल झान्ने।</span> (Dal jhanne.)</strong> - Tempering the lentils.<br> 
+                                    <em>(The crucial step of frying garlic, cumin, or chili in hot oil/ghee and pouring it over the cooked dal).</em>
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मसला भुट्ने।</span> (Masala bhutne.)</strong> - Fry/roast the spices.</li>
+                            </ul>
+
+                            <!-- AROMA SECTION INSERTION -->
+                            <div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 12px; background: #fafafa; position: relative; overflow: hidden;">
+                                <div style="position: absolute; top: -20px; right: 10px; color: #cbd5e1; opacity: 0.5;">
+                                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                                <h4 style="color: #475569; margin-top: 0;">Scene: A guest walks into the kitchen</h4>
+                                
+                                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong><span class="nepali-font">ओ हो, के पाक्दैछ? कस्तो राम्रो बास्ना!</span></strong></p>
+                                <p style="color: #64748b; margin-top: 0; margin-bottom: 1rem;">(O ho, ke pakdai cha? Kasto ramro baasna!)</p>
+                                <p><em>— What’s cooking? It smells amazing!</em></p>
+                                
+                                <button style="background: #3b82f6; color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: bold; margin-bottom: 1.5rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                    Play Audio (Natural Tone)
+                                </button>
+                                
+                                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong><span class="nepali-font">मिठो जस्तो छ, मेरो मुखमा पानी आयो!</span></strong></p>
+                                <p style="color: #64748b; margin-top: 0; margin-bottom: 1rem;">(Mitho jasto cha, mero mukh ma pani ayo!)</p>
+                                <p><em>— It looks delicious, my mouth is watering!</em></p>
+                                
+                                <div style="background: #f1f5f9; padding: 12px; border-radius: 8px; font-size: 0.9rem; color: #475569;">
+                                    <strong>Usage Note:</strong> Said casually when you smell or see food before eating, often with a slight smile and widened eyes.
+                                </div>
+                            </div>
+
+                            <h4 style="color: #059669; margin-top: 1.5rem;">The Holy Grail: Cooking Rice (Bhat)</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">चामललाई राम्रोसँग पखाल्ने।</span> (Chamal lai ramrosanga pakhalne.)</strong> - Wash the rice well.</li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <strong><span class="nepali-font">आफ्नो औँलाले नाप्ने।</span> (Aafno aula le napne.)</strong> - Measure with your finger. <br>
+                                    <em>(The ultimate Nepali kitchen flex: you measure the water by resting your fingertip on the rice and filling water up to the first knuckle. No cups required).</em>
+                                </li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">बिच-बिचमा हल्का चलाउनु पर्छ।</span> (Bich-bich ma halka chalaunu parcha.)</strong> - You have to stir it lightly in between.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                <h3 style="margin: 0;">3. The Guest Endurance Test (Force-Feeding as Love)</h3>
+                            </div>
+                            <p>When you are a guest, the host will actively monitor your plate. Empty space on your plate is treated as an emergency. They will push food on you, and you must know how to politely (and jokingly) defend yourself.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_25_guest.png" alt="Nepali Hospitality Scene" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <div style="background: #faf5ff; border: 1px solid #d8b4fe; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                                <h4 style="margin-top: 0; color: #9333ea;">🗣️ Interactive Role-Play: The Host (The Push) vs The Guest (The Defense)</h4>
+                                
+                                <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #c084fc;">
+                                    <p style="margin: 0; color: #7e22ce;"><strong>Host: "केही खानुहोस् न।" (Kehi khanuhos na.)</strong> - Please eat something.</p>
+                                    <p style="margin: 0; color: #7e22ce;"><strong>Host: "लाज नमानी खानुहोस् है।" (Laaj namani khanuhos hai.)</strong> - Eat without feeling shy. (The ultimate welcoming phrase).</p>
+                                    <p style="margin: 0; color: #7e22ce;"><strong>Host: "भात थपिदिऊँ कि?" (Bhat thapidiu ki?)</strong> - Shall I add some more rice?</p>
+                                </div>
+
+                                <p style="font-weight: bold; color: #475569;">Choose your defense response:</p>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="background: white; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='#9333ea'; this.style.backgroundColor='#f3e8ff'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.backgroundColor='white'">
+                                        <strong>The Polite Compliment:</strong> "एकदम मिठो भयो। हातमा जादु रैछ!"<br>
+                                        <em>(Ekdam mitho bhayo. Haat ma jadu raicha!)</em> - It was incredibly delicious. You have magic in your hands!
+                                    </div>
+                                    <div style="background: white; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='#9333ea'; this.style.backgroundColor='#f3e8ff'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.backgroundColor='white'">
+                                        <strong>The Polite Refusal:</strong> "खना एकदम मिठो थियो। मैले कहिले धेरै नखाने मान्छे, यति धेरै खाएँ!"<br>
+                                        <em>(Khana ekdam mitho thiyo. Maile kahile dherai nakhane manche, yati dherai khaye!)</em> - The food was delicious. I’m someone who never eats much, but I ate so much today!
+                                    </div>
+                                    <div style="background: white; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='#9333ea'; this.style.backgroundColor='#f3e8ff'" onmouseout="this.style.borderColor='#e2e8f0'; this.style.backgroundColor='white'">
+                                        <strong>The Ultimate Joke (Guaranteed to work):</strong> "नयाँ नयाँ, मलाई पुग्यो! मेरो भुँडी फुट्छ फेरि खाएँ भने!"<br>
+                                        <em>(Naya naya, malai pugyo! Mero bhudi futcha feri khaye bhane!)</em> - No, no, I've had enough! My belly will explode if I eat again!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f97316;"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                                <h3 style="margin: 0;">4. The Modern Urban BBQ (Roof-Top Culture)</h3>
+                            </div>
+                            <p>While traditional hospitality is inside the home, young people in the cities love roof-top BBQs. It is heavily collaborative, very casual, and involves a lot of mixed Nepanglish.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आज बार्बेक्यु गरौँ न।</span> (Aaja <span style="color: #ea580c">BBQ</span> garam na.)</strong> - Let's do a BBQ today.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म मासु म्यारिनेट गर्छु।</span> (Ma masu <span style="color: #ea580c">marinate</span> garchu.)</strong> - I'll marinate the meat.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">तिमी सलाद बनाऊ है।</span> (Timi <span style="color: #ea580c">salad</span> banau hai.)</strong> - You make the salad.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मासु पाक्यो?</span> (Masu pakyo?)</strong> - Is the meat cooked?</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><line x1="12" y1="2" x2="12" y2="22"/><line x1="17" y1="5" x2="17" y2="19"/><line x1="7" y1="5" x2="7" y2="19"/></svg>
+                                <h3 style="margin: 0;">5. Dietary Needs in a Nepali Home</h3>
+                            </div>
+                            <p>If you have dietary restrictions, tell the host <em>before</em> you arrive. If you wait until you're at the table to tell them you don't eat meat after they spent four hours cooking chicken curry, it is a disaster.</p>
+
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #475569;">The Quick Phrase Card: Dietary Needs</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">म शाकाहारी हुँ।</span> (Ma shakahari hu.)</strong> - I am a vegetarian.</li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">म पोर्क खाँदिनँ।</span> (Ma pork khandina.)</strong> - I don't eat pork.<br> 
+                                        <em>(Many Nepalis avoid pork or beef for religious reasons, so this is completely normal and respected).</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">मलाई एलर्जी छ।</span> (Malai allergy cha.)</strong> - I have an allergy.<br>
+                                        <em>(Only use this if it's a severe medical issue. For preferences, just say you don't eat it).</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
+                                <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px;">
+                                    <h3 style="margin-top: 0; color: #b91c1c;">Critical Cultural Insight #1: The "Jutho" Rule</h3>
+                                    <p>When eating with Nepalis or sharing food, you must understand the concept of <strong>जुठो (Jutho)</strong>.</p>
+                                    <p>Once food has touched your lips, your plate, or your spoon, it is considered Jutho (spiritually contaminated). You cannot offer a bite of your half-eaten momo to someone else, and you absolutely cannot use your personal spoon to scoop curry out of the main serving bowl.</p>
+                                    <p style="margin-bottom: 0;">Always use the designated serving spoon, and never share drinks from the exact same bottle without pouring it or "waterfalling" it.</p>
+                                    
+                                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #fca5a5; display: flex; gap: 12px; color: #7f1d1d; font-weight: bold;">
+                                        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#ef4444; margin-right:4px;"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg> Your Plate</span>
+                                        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#ef4444; margin-right:4px;"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg> Your Spoon</span>
+                                        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#ef4444; margin-right:4px;"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg> Shared Bottle Lips</span>
+                                    </div>
+                                </div>
+
+                                <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px;">
+                                    <h3 style="margin-top: 0; color: #d97706;">Critical Cultural Insight #2: Meat, Caste & Identity</h3>
+                                    <p>In the West, being a vegetarian or choosing not to eat a certain type of meat is usually a personal lifestyle choice. In Nepal, dietary restrictions are deeply tied to history, religion, and the caste system.</p>
+                                    <p>For example, traditionally, Brahmins (the priestly caste) were not supposed to eat any meat, and avoiding beef is still a massive cultural and religious taboo for Hindus across the country.</p>
+                                    <p>If you go to a Momo shop, you will see a strict divide between Chicken Momo and Buff (Buffalo) Momo. For a foreigner, this is just a menu choice. But historically in Nepal, Buffalo meat was heavily consumed by indigenous groups like the Newars, while upper-caste groups avoided it entirely.</p>
+                                    <p style="margin-bottom: 0;">While modern urban youth often mix and joke about these old rules, you must understand that food in Nepal isn't just about calories or taste. <strong>Food is identity.</strong> If someone tells you they don't eat a specific type of meat, respect it immediately—it is often tied to thousands of years of cultural heritage.</p>
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
                 title: "FREE TIME AND HOBBIES",
                 lessons: [
-                    { id: "lesson-26", title: "26 Free time and hobbies" },
-                    { id: "lesson-27", title: "27 At the cinema" },
-                    { id: "lesson-28", title: "28 At the theatre" },
-                    { id: "lesson-29", title: "29 Concerts and festivals" },
-                    { id: "lesson-30", title: "30 At the gym" },
-                    { id: "lesson-31", title: "31 Sporting activities" },
+                    {
+                        id: "lesson-26",
+                        title: "26 Free time and hobbies",
+                        content: `
+                            <h2>26 Free time and hobbies</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The "Social" Reality</strong></p>
+                            
+                            <p>In Western countries, hobbies are highly structured. People schedule "tai chi classes" or go "bird watching." In Nepal, free time is completely unstructured, highly social, and usually revolves around food, tea, or a festival.</p>
+                            <p>If you ask a Nepali person what their hobby is, the most common answer you will get is <strong><span class="nepali-font">घुम्न जाने</span> (Ghumna jane)</strong>, which translates directly to "going to roam." It just means wandering around, sitting at a Chok (intersection), and talking with friends.</p>
+                            <p>Here is the actual vocabulary for how people spend their downtime.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16 4.6V3.75c0-.85-.33-1.65-.93-2.25L13.82.25A2.12 2.12 0 0 0 10.82.25L5.75 5.31c-.6.6-.93 1.4-.93 2.25v.86L2 11.2a2.12 2.12 0 0 0 0 3l1.82 1.82"/></svg>
+                                <h3 style="margin: 0;">Block A: Everyday Free Time & The Streets</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_26_kite.png" alt="Nepali Diamond Kite Flying" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p style="color: #64748b; font-weight: bold; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="color:#0ea5e9">फुर्सदको समय</span> (Free Time)</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">घुम्न जाने</span> (Ghumna jane)</strong><br>
+                                    <em>Meaning: Hanging out / Roaming. (The #1 Nepali hobby).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">चङ्गा उडाउने</span> (Changa udaune)</strong><br>
+                                    <em>Meaning: Flying a kite. (Not a year-round hobby. This is a massive, aggressive rooftop sport during the Dashain festival).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मर्निङ वाक जाने</span> (Morning walk jane)</strong><br>
+                                    <em>Meaning: Going for a morning run/walk. (Usually done at Tudikhel or open grounds in the city).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फुटसल खेल्ने</span> (Futsal khelne)</strong><br>
+                                    <em>Meaning: Playing Futsal. (Urban Nepal is absolutely obsessed with 5-a-side indoor football).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4"/><path d="M8 10v4"/><circle cx="16.5" cy="10.5" r=".5"/><circle cx="14.5" cy="13.5" r=".5"/></svg>
+                                <h3 style="margin: 0;">Block B: Games & Digital Culture</h3>
+                            </div>
+                            <p>Forget jigsaw puzzles and darts. Nepali gaming is either fiercely traditional or aggressively digital.</p>
+                            
+                            <div style="margin: 2.5rem 0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="auto" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                  <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                  <text x="350" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">The Nepali Game Night (Taas, Bagh-Chal & Mobile)</text>
+                                  
+                                  <rect x="50" y="80" width="180" height="200" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+                                  <rect x="90" y="110" width="100" height="140" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+                                  <text x="140" y="200" font-family="Arial, sans-serif" font-size="60" fill="#ef4444" text-anchor="middle">♥</text>
+                                  <text x="140" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">तास (Taas)</text>
+                                  
+                                  <rect x="260" y="80" width="180" height="200" rx="8" fill="#bfdbfe" stroke="#60a5fa" stroke-width="2"/>
+                                  <path d="M 280 100 L 420 100 L 420 240 L 280 240 Z" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+                                  <path d="M 280 100 L 420 240 M 280 240 L 420 100" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+                                  <path d="M 350 100 L 350 240 M 280 170 L 420 170" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+                                  <circle cx="280" cy="100" r="8" fill="#1e3a8a"/>
+                                  <circle cx="420" cy="240" r="8" fill="#1e3a8a"/>
+                                  <text x="350" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e3a8a" text-anchor="middle">बाघचाल (Bagh-Chal)</text>
+                                  
+                                  <rect x="470" y="80" width="180" height="200" rx="8" fill="#bbf7d0" stroke="#4ade80" stroke-width="2"/>
+                                  <rect x="510" y="100" width="100" height="160" rx="10" fill="#14532d" stroke="#16a34a" stroke-width="4"/>
+                                  <rect x="520" y="115" width="80" height="130" fill="#ffffff"/>
+                                  <circle cx="560" cy="180" r="20" fill="#ef4444"/>
+                                  <circle cx="540" cy="160" r="20" fill="#3b82f6"/>
+                                  <text x="560" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#14532d" text-anchor="middle">मोबाइल गेम (Mobile)</text>
+                                </svg>
+                            </div>
+
+                            <p style="color: #64748b; font-weight: bold; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="color:#ef4444">खेल</span> (Games)</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तास खेल्ने</span> (Taas khelne)</strong><br>
+                                    <em>Meaning: Playing cards. (Specifically games like "Teen Patti" or "Call Break." Massive cultural activity during festivals).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बाघचाल</span> (Bagh-Chal)</strong><br>
+                                    <em>Meaning: Traditional Nepali board game (Tigers and Goats).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">लुडो खेल्ने</span> (Ludo khelne)</strong><br>
+                                    <em>Meaning: Playing Ludo. (The absolute king of casual mobile games in Nepal).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पब्जी / पब्जी खेल्ने</span> (PUBG / PUBG khelne)</strong><br>
+                                    <em>Meaning: Playing PUBG. (The undisputed heavy-hitter for the youth).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                                <h3 style="margin: 0;">Block C: Creative & Domestic Hobbies</h3>
+                            </div>
+                            <p>You won't find many "knitting circles," but Nepalis are incredibly creative within their own spaces.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_26_creative.png" alt="Singing and Guitar on Rooftop" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p style="color: #64748b; font-weight: bold; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="color:#ec4899">सिर्जनात्मक काम</span> (Creative Hobbies)</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कौसी खेती</span> (Kausi kheti)</strong><br>
+                                    <em>Meaning: Rooftop gardening. (In dense Kathmandu, growing vegetables in pots on the roof is a massive domestic hobby).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">गीत गाउने / गितार बजाउने</span> (Geet gaune / Guitar bajaune)</strong><br>
+                                    <em>Meaning: Singing / Playing guitar. (Music is central to Nepali hangouts).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दोहोरी</span> (Dohori)</strong><br>
+                                    <em>Meaning: Traditional folk singing where participants sing witty, improvised verses back and forth.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बेकिङ</span> (Baking)</strong><br>
+                                    <em>Meaning: Baking. (Becoming a massive trend in urban areas).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+                                <h3 style="margin: 0;">Block D: The Weekend Escape (Adventure & Entertainment)</h3>
+                            </div>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_26_banbhoj.png" alt="Nepali Banbhoj Picnic Scene" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p style="color: #64748b; font-weight: bold; margin-bottom: 1rem;">Main Category: <span class="nepali-font" style="color:#10b981">रमाइलो र घुमघाम</span> (Entertainment & Adventure)</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">वनभोज / पिकनिक जाने</span> (Banbhoj / Picnic jane)</strong><br>
+                                    <em>Meaning: Going for a picnic. (A Nepali picnic is not a quiet sandwich on the grass. It involves hiring a bus, hauling massive speakers into the jungle, cooking a full meat feast on a wood fire, and dancing).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हाइकिङ जाने</span> (Hiking jane)</strong><br>
+                                    <em>Meaning: Going hiking. (Very popular weekend escape to spots like Shivapuri or Phulchowki).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ट्रेकिङ जाने</span> (Trekking jane)</strong><br>
+                                    <em>Meaning: Trekking. (The longer, multi-day mountain adventure).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कन्सर्ट जाने</span> (Concert jane)</strong><br>
+                                    <em>Meaning: Going to a live band gig or concert.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फिल्म हेर्न जाने</span> (Film herna jane)</strong><br>
+                                    <em>Meaning: Going to the cinema (often referred to as going to QFX, the major cinema chain).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #15803d;">The Cultural Insight: The "Banbhoj" (Picnic) Rules</h3>
+                                <p>If a Nepali friend invites you to a "picnic," do not bring a woven basket and a blanket.</p>
+                                <p style="margin-bottom: 0;">A Nepali <strong><span class="nepali-font">वनभोज</span> (Banbhoj)</strong> is essentially a massive, loud, outdoor kitchen party. You will spend the entire day chopping onions, marinating meat for the BBQ, drinking beer, and dancing to insanely loud music in a forest clearing. It is a full-day commitment, and it is the absolute peak of Nepali group leisure.</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-27",
+                        title: "27 At the cinema",
+                        content: `
+                            <h2>27 At the cinema</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>QFX, Popcorn & Post-Movie Reviews</strong></p>
+                            
+                            <p>In Nepal, going to the movies is a highly social event. You rarely go alone. You go on dates, you go with a massive group of friends, or you take the whole family to the newest Nepali blockbuster (like Kabaddi or Jatra).</p>
+                            <p>While most urban youth book their tickets on apps like eSewa or Khalti to skip the lines, you still need to know how to navigate the counter, grab the right seats, and most importantly, how to review the movie using actual street slang.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                                <h3 style="margin: 0;">Block 1: The Box Office & Seating (The "Back Seat" Rule)</h3>
+                            </div>
+                            <p>If you are buying tickets at the counter, keep it short. Don't ask philosophical questions about the film's rating; just ask for the time and the seats.</p>
+
+                            <div style="margin: 2rem 0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="auto" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                  <rect width="100%" height="100%" fill="#1e293b" rx="10"/>
+                                  
+                                  <rect x="150" y="30" width="400" height="20" rx="5" fill="#e2e8f0"/>
+                                  <text x="350" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">SCREEN (पर्दा)</text>
+                                  
+                                  <path d="M 150 50 L 550 50 L 650 300 L 50 300 Z" fill="#38bdf8" opacity="0.1"/>
+
+                                  <!-- Rows -->
+                                  <g fill="#475569">
+                                      <rect x="200" y="100" width="40" height="30" rx="5"/>
+                                      <rect x="260" y="100" width="40" height="30" rx="5"/>
+                                      <rect x="320" y="100" width="40" height="30" rx="5"/>
+                                      <rect x="380" y="100" width="40" height="30" rx="5"/>
+                                      <rect x="440" y="100" width="40" height="30" rx="5"/>
+                                      
+                                      <rect x="170" y="150" width="40" height="30" rx="5"/>
+                                      <rect x="230" y="150" width="40" height="30" rx="5"/>
+                                      <rect x="290" y="150" width="40" height="30" rx="5"/>
+                                      <rect x="350" y="150" width="40" height="30" rx="5"/>
+                                      <rect x="410" y="150" width="40" height="30" rx="5"/>
+                                      <rect x="470" y="150" width="40" height="30" rx="5"/>
+                                      
+                                      <rect x="140" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="200" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="260" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="320" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="380" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="440" y="200" width="40" height="30" rx="5"/>
+                                      <rect x="500" y="200" width="40" height="30" rx="5"/>
+                                  </g>
+
+                                  <!-- Back Row Highlight -->
+                                  <g fill="#ec4899">
+                                      <rect x="110" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="170" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="230" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="290" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="350" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="410" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="470" y="260" width="40" height="30" rx="5"/>
+                                      <rect x="530" y="260" width="40" height="30" rx="5"/>
+                                  </g>
+
+                                  <text x="350" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc" text-anchor="middle">पछाडिको सिट (Pachadi ko seat) - The Back Seats</text>
+                                  <text x="350" y="340" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Highly requested by couples on dates.</text>
+                                </svg>
+                            </div>
+
+                            <h4 style="color: #ec4899; margin-top: 1.5rem;">Booking the Tickets:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">२ बजेको शोको तीनवटा टिकट दिनुस् न।</span> (Dui baje ko show ko tinwata ticket dinus na.)</strong> - Give me three tickets for the 2 PM show, please.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आज बेलुकाको शो सोल्ड आउट छ?</span> (Aaja beluka ko show sold out cha?)</strong> - Is tonight's show sold out?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पछाडिको सिट छ?</span> (Pachadi ko seat cha?)</strong> - Are there seats at the back?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सबटाइटल छ?</span> (Subtitle cha?)</strong> - Are there subtitles? <em>(Crucial if you are watching Anime or a heavy regional Indian film).</em></li>
+                            </ul>
+
+                            <h4 style="color: #ec4899; margin-top: 1.5rem;">Snacks & Navigation:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पपकर्न काउन्टर कता छ?</span> (Popcorn counter kata cha?)</strong> - Where is the popcorn counter?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">हल नम्बर ३ कता हो?</span> (Hall number tin kata ho?)</strong> - Which way is Hall Number 3? <em>(QFX calls screens "Halls").</em></li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">Block 2: The Post-Movie Review (Street Slang)</h3>
+                            </div>
+                            <p>When you walk out of the cinema, nobody gives a boring, polite review. You either hype it up to the moon, or you completely trash it. Here is the exact slang Nepalis use to dissect a movie.</p>
+
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #15803d; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                                    When the movie was amazing (The Hype):
+                                </h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">बबाल थियो यार!</span> (Babal thiyo yar!)</strong> - It was fucking awesome, man! <em>(Babal is the ultimate Nepali slang for something incredibly cool, crazy, or amazing).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दमदार थियो।</span> (Damdaar thiyo.)</strong> - It was powerful / solid. <em>(Usually used for heavy action or intense Bollywood films).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">डाइलग चाहिँ खतरा थियो।</span> (Dialogue chai khatra thiyo.)</strong> - The dialogue was dangerous/epic. <em>(You will hear guys imitating the hero's lines outside the theater).</em></li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #b91c1c; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                    When the movie was terrible (The Trash Talk):
+                                </h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पूरै टाइम वेस्ट।</span> (Purai time waste.)</strong> - Complete waste of time. <em>(Nepanglish at its finest).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">लास्टै झुर लाग्यो।</span> (Lastai jhur lagyo.)</strong> - I thought it was incredibly garbage/boring. <em>(Jhur = terrible/useless).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">क्लाइमेक्स अलि पकाउ थियो।</span> (Climax ali pakau thiyo.)</strong> - The climax was a bit brain-cooking/boring. <em>(Pakau literally means "to cook," but in slang, it means someone or something is talking so much or dragging on so long that it's cooking your brain).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">एक्टिङ त हावा थियो।</span> (Acting ta hawa thiyo.)</strong> - The acting was just air/nonsense. <em>(Hawa = air/wind, used to describe something fake or baseless).</em></li>
+                                </ul>
+                            </div>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_27_chiya.png" alt="After-Movie Chiya Pasal Ritual" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                                <h3 style="margin-top: 0; color: #d97706;">The Cultural Insight: The "After-Movie Chiya" Ritual</h3>
+                                <p>In Nepal, the event is not over when the credits roll. It is an unwritten rule that after a movie, the group must immediately go to a nearby Chiya Pasal (tea stall) or Momo shop.</p>
+                                <p style="margin-bottom: 0;">This is where the real entertainment happens—dissecting the plot holes, making fun of the bad acting, or hyping up the action scenes over a boiling cup of milk tea. <strong>If you say "Bye, I'm going home" right at the cinema exit, you are cutting the cultural experience in half.</strong></p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-28",
+                        title: "28 At the theatre",
+                        content: `
+                            <h2>28 Live Entertainment</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Art Theaters vs. Comedy Clubs</strong></p>
+                            
+                            <p>In Western textbooks, you learn how to pick up tickets for a ballet and find the cloakroom. In Nepal, live entertainment is split into two entirely different worlds: the intellectual, artistic crowd watching dramas at Mandala Theatre, or the loud, packed, modern youth crowding into Comedy Clubs for stand-up.</p>
+                            <p>There are no "stalls" or "box seats." You book your tickets on your phone, find a chair, and turn your phone on silent. Here is the street-level guide to both scenes.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <h3 style="margin: 0;">Block 1: The Booking Reality (Digital First)</h3>
+                            </div>
+                            <p>Whether you are going to a heavy, emotional drama or a stand-up night, almost everything is booked online through eSewa or Khalti. If you are picking up tickets at the door, keep it brief.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आजको शोको टिकट छ?</span> (Aaja ko show ko ticket cha?)</strong><br>
+                                    <em>Meaning: Are there tickets for tonight's show?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अगाडिको सिट छ?</span> (Agadi ko seat cha?)</strong><br>
+                                    <em>Meaning: Are there seats in the front row? (Crucial for stand-up if you want to get roasted by the comedian).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सबै सोल्ड आउट भयो?</span> (Sabai sold out bhayo?)</strong><br>
+                                    <em>Meaning: Is everything sold out?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मेरो अनलाइन बुकिङ हो।</span> (Mero online booking ho.)</strong><br>
+                                    <em>Meaning: I booked online. (Show them your phone screen).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c-.15-2.05-.22-3.82.04-5.91c.21-1.76 1.4-7.46 1.4-7.46s-.36-.72-.36-1.78c0-1.67.97-2.91 2.18-2.91c1.03 0 1.53.77 1.53 1.7c0 1.04-.66 2.59-1 4.02c-.28 1.19.6 2.17 1.77 2.17c2.12 0 3.75-2.24 3.75-5.47c0-2.86-2.06-4.86-5-4.86c-3.4 0-5.39 2.55-5.39 5.2c0 1.04.4 2.16.9 2.76c.1.13.11.23.08.35c-.09.38-.3 1.25-.34 1.42c-.05.21-.18.26-.39.16C3.93 11 3.5 9.4 3.5 7.82c0-3.02 2.19-5.78 6.32-5.78c3.34 0 5.94 2.38 5.94 5.54c0 3.32-2.09 6-5 6c-.98 0-1.89-.51-2.21-1.11c0 0-.48 1.83-.6 2.27c-.22.84-.81 1.9-1.2 2.54c1.03.32 2.13.49 3.27.49A10 10 0 0 0 12 2Z"/></svg>
+                                <h3 style="margin: 0;">Block 2: The Theater (नाटक - Natak)</h3>
+                            </div>
+                            <p>Traditional Nepali theater (<strong><span class="nepali-font">नाटक</span> - Natak</strong>) is highly respected but niche. It is the domain of actors, artists, and university students. The vibe is serious and deeply cultural.</p>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_28_theater.png" alt="Traditional Nepali Theater Stage" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">The Theater Vocabulary:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">नाटक</span> (Natak)</strong> - The play / drama.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कलाकार</span> (Kalakar)</strong> - Artist / Performer. <em>(A highly respected title in Nepal).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मञ्च</span> (Mancha)</strong> - The stage.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दर्शक</span> (Darshak)</strong> - The audience.</li>
+                            </ul>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">Before the Show Starts:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कृपया मोबाइल साइलेन्ट गर्नुहोस्।</span> (Kripaya mobile silent garnuhos.)</strong> - Please put your mobile on silent. <em>(The standard pre-show announcement).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">शो सुरु हुँदैछ।</span> (Show suru hudaicha.)</strong> - The show is starting.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">इन्टरभल कति बेरको छ?</span> (Interval kati ber ko cha?)</strong> - How long is the intermission/interval?</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="m12 14 4-2M12 14l-4-2M12 14v4M16 12A4 4 0 0 0 8 12M5 12h14M3 6h18"/></svg>
+                                <h3 style="margin: 0;">Block 3: The Stand-Up Comedy Club (The Modern Wave)</h3>
+                            </div>
+
+                            <div style="margin: 2.5rem 0;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="auto" style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                                  <rect width="100%" height="100%" fill="#0f172a" rx="10"/>
+                                  
+                                  <path d="M 350 20 L 200 350 L 500 350 Z" fill="#fde047" opacity="0.2"/>
+                                  
+                                  <rect x="150" y="320" width="400" height="30" fill="#1e293b"/>
+                                  
+                                  <rect x="348" y="240" width="4" height="80" fill="#94a3b8"/>
+                                  <circle cx="350" cy="230" r="10" fill="#cbd5e1"/>
+                                  
+                                  <text x="350" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f8fafc" text-anchor="middle">The Comedy Club Review</text>
+                                  
+                                  <rect x="50" y="150" width="220" height="50" rx="25" fill="#3b82f6" opacity="0.9"/>
+                                  <text x="160" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"पन्चलाइन खतरा थियो!"</text>
+                                  
+                                  <rect x="430" y="150" width="220" height="50" rx="25" fill="#ef4444" opacity="0.9"/>
+                                  <text x="540" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"कस्तो रिलेटेबल जोक!"</text>
+                                </svg>
+                            </div>
+
+                            <p>Stand-up comedy has exploded in Kathmandu. It is casual, packed, and relies heavily on roasting Nepali politics, family dynamics, and dating culture. The language used afterward is pure, modern Nepanglish.</p>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">Reviewing the Comedy Set (Street Slang):</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कस्तो रिलेटेबल जोक!</span> (Kasto relatable joke!)</strong><br>
+                                    <em>Meaning: That joke was so relatable! (The highest compliment for modern Nepali stand-up, which focuses heavily on shared middle-class struggles).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पन्चलाइन त खतरा थियो।</span> (Punchline ta khatra thiyo.)</strong><br>
+                                    <em>Meaning: The punchline was dangerous/insane. (Khatra = dangerous/awesome).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पूरै हल हाँस्यो।</span> (Purai hall hasyo.)</strong><br>
+                                    <em>Meaning: The whole hall laughed.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जबरजस्त शो रैछ।</span> (Jabarjast show raicha.)</strong><br>
+                                    <em>Meaning: It was a tremendous/powerful show.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h3 style="margin-top: 0; color: #d97706;">The Cultural Insight: The Satire Tradition</h3>
+                                <p>While modern, Western-style stand-up comedy clubs are a recent trend, Nepal has a very deep, historical tradition of <strong><span class="nepali-font">व्यङ्ग्य</span> (Vyangya - Satire)</strong>.</p>
+                                <p>Because of years of political instability and censorship in the past, Nepalis became masters of hiding sharp, brutal political critiques inside comedy shows and poems.</p>
+                                <p style="margin-bottom: 0;">Even today, the most famous comedians in Nepal are the ones who can flawlessly roast politicians without ever crossing the line into direct insults. <strong>When you hear the whole room erupt at a joke you don't fully understand, there is usually a deep, hidden political meaning behind it.</strong></p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-29",
+                        title: "29 Concerts and festivals",
+                        content: `
+                            <h2>29 The Heartbeat of Nepal</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Festivals, Blessings & Chaos</strong></p>
+                            
+                            <p>Nepal has more festivals than there are days in the year. Because the country is a vertical stack of dozens of different ethnic groups, religions, and calendars, there is always a celebration happening somewhere.</p>
+                            <p>But festivals here are not quiet, commercialized holidays. They are massive, country-wide family reunions. Millions of people migrate back to their home villages. The cities empty out, the buses are packed to the roof, and the streets smell like marigolds and roasted spices.</p>
+                            <p>Here is how to survive, understand, and speak the language of Nepal’s biggest cultural anchors.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">1. Bada Dashain (<span class="nepali-font">बडा दशैं</span>): The Giant</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_29_dashain.png" alt="Dashain Festival - Linge Ping and Tika Blessing" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>Dashain is the longest and most important festival in Nepal, lasting 15 days. It celebrates the goddess Durga’s victory over evil, but socially, it is the ultimate family reunion. You eat meat, you play cards (Taas) for money, and you build massive bamboo swings called <strong><span class="nepali-font">लिङ्गे पिङ</span> (Linge Ping)</strong> that make your stomach drop.</p>
+
+                            <h4 style="color: #ef4444; margin-top: 1.5rem;">The Vocabulary of Dashain:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">टीका र जमरा</span> (Tika ra Jamara)</strong> - The red powder mixed with rice (Tika) placed on the forehead, and the sacred yellow barley grass (Jamara) placed behind the ear.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पिङ खेल्ने</span> (Ping khelne)</strong> - Swinging on the bamboo swing. <em>(Tradition says you must leave the ground at least once a year during Dashain).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आशीर्वाद</span> (Aashirwad)</strong> - Blessings given by elders.</li>
+                            </ul>
+
+                            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #b91c1c;">The Dashain Blessings (What the elders say to you):</h4>
+                                <p style="margin-bottom: 1rem;">Nepali blessings are highly poetic. They don't just say "Good luck." They use the landscape.</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दशैंको शुभकामना!</span> (Dashain ko shubhakamana!)</strong> - Happy Dashain! <em>(The standard greeting).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सन्तानले डाँडा काँडा ढाकून्।</span> (Santan le danda kanda dhakun.)</strong> - May your children cover the hills and valleys. <em>(A beautiful, classic blessing for a growing, prosperous lineage).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दुश्मनको आँखाले नदेखोस्।</span> (Dushman ko aakha le nadekhos.)</strong> - May the eyes of your enemies never even see you. <em>(A fierce blessing for protection).</em></li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सुख, शान्ति र समृद्धि मिलोस्।</span> (Sukha, shanti ra samriddhi milos.)</strong> - May you find happiness, peace, and prosperity.</li>
+                                    <li><strong><span class="nepali-font">आयु, धन र विद्या बढोस्।</span> (Aayu, dhan ra bidya badhos.)</strong> - May your lifespan, wealth, and wisdom increase.</li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #eab308;"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">2. Tihar (<span class="nepali-font">तिहार</span>): Lights, Dogs, and Sisters</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_29_tihar.png" alt="Tihar Festival - Dog with Marigold Garland and Diyo" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>Also known as Deepawali, Tihar is the festival of lights. But what makes Nepal’s Tihar entirely unique in the world is that it is deeply connected to animals. Over five days, people worship crows, dogs, cows, and oxen. The final day is <strong><span class="nepali-font">भाइटीका</span> (Bhai Tika)</strong>, where sisters bless their brothers for a long life.</p>
+
+                            <h4 style="color: #eab308; margin-top: 1.5rem;">The Tihar Reality (Deusi-Bhailo):</h4>
+                            <p>During Tihar, groups of kids, teenagers, and even adults will hijack your courtyard. They sing traditional songs, dance, and refuse to leave until you give them money, fruit, and Selroti. This is called <strong><span class="nepali-font">देउसी-भैलो</span> (Deusi-Bhailo)</strong>.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">तिहारको शुभकामना।</span> (Tihar ko shubhakamana.)</strong> - Happy Tihar.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">देउसी रे! भैलो!</span> (Deusi re! Bhailo!)</strong> - The rhythmic chant yelled by the singing groups at your door.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">लक्ष्मीले घरमा बास गरून्।</span> (Laxmi le ghar ma baas garun.)</strong> - May Goddess Laxmi (the goddess of wealth) reside in your home.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+                                <h3 style="margin: 0;">3. The Wild Ones: Holi & Shivaratri</h3>
+                            </div>
+
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                                <img src="assets/lesson_29_holi.png" alt="Holi Festival Colored Powder" style="flex: 1; min-width: 250px; max-width: 350px; border-radius: 12px; mix-blend-mode: multiply;">
+                                <img src="assets/lesson_29_shiva.png" alt="Maha Shivaratri Sadhu by Bonfire" style="flex: 1; min-width: 250px; max-width: 350px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">Holi (<span class="nepali-font">होली / फागु पूर्णिमा</span> - Fagu Purnima):</h4>
+                            <p>The festival of colors marks the arrival of spring. It is pure, colorful chaos in the streets.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">होलीको शुभकामना।</span> (Holi ko shubhakamana.)</strong> - Happy Holi.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">रङ्गीन जीवनको शुभकामना।</span> (Rangin jiwan ko shubhakamana.)</strong> - Wishing you a colorful life.</li>
+                            </ul>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">Maha Shivaratri (<span class="nepali-font">महाशिवरात्रि</span>):</h4>
+                            <p>The night dedicated to Lord Shiva. Hundreds of thousands of people, including naked Sadhus covered in ash, gather at the Pashupatinath Temple in Kathmandu. Massive bonfires are lit across the city.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">महाशिवरात्रिको शुभकामना।</span> (Maha Shivaratri ko shubhakamana.)</strong> - Happy Maha Shivaratri.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">भगवान् शिवको कृपा रहोस्।</span> (Bhagwan Shiva ko kripa rahos.)</strong> - May Lord Shiva’s grace be upon you.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+                                <h3 style="margin: 0;">4. Asar 15 (<span class="nepali-font">असार १५</span>): The Mud Party</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_29_asar15.png" alt="Farmers Planting Rice in Muddy Fields" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>Nepal is deeply agricultural. Asar 15 is the national day of rice planting (<strong><span class="nepali-font">रोपाइँ</span> - Ropain</strong>). Farmers sing traditional songs, plant rice in the flooded, muddy terraces, and eat a massive feast of curd and beaten rice.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दही चिउरा खाने दिन</span> (Dahi Chiura khane din)</strong> - The day to eat curd and beaten rice.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">धान जस्तै फलिफाप होस्।</span> (Dhan jastai falifap hos.)</strong> - May you flourish and multiply like the rice crops. <em>(A highly localized, beautiful blessing).</em></li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <h3 style="margin: 0;">5. The Stacked Civilizations (Lhosars, Jatras & New Years)</h3>
+                            </div>
+                            <p>Nepal does not have just one New Year. Because of its intense ethnic diversity, there are multiple calendars running simultaneously.</p>
+                            
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ल्होसार</span> (Lhosar)</strong>: The New Year celebrated by the indigenous mountain communities. The Gurung people celebrate Tamu Lhosar, the Tamang celebrate Sonam Lhosar, and the Sherpa/Tibetan communities celebrate Gyalpo Lhosar.<br>
+                                    <em><span class="nepali-font">ल्होसारको शुभकामना।</span> (Lhosar ko shubhakamana.) - Happy Lhosar.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">इन्द्रजात्रा</span> (Indra Jatra)</strong>: A massive, chaotic street festival in the Kathmandu Valley led by the Newar community. It features towering chariots, masked demon dances, and the public appearance of the Kumari (the living goddess).
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बुद्ध जयन्ती</span> (Buddha Jayanti)</strong>: The celebration of the birth of Gautama Buddha, heavily celebrated in Lumbini and by Buddhist communities nationwide.<br>
+                                    <em><span class="nepali-font">बुद्धको ज्ञानले मार्गदर्शन गरोस्।</span> (Buddha ko gyan le margadarshan garos.) - May Buddha’s wisdom guide you.</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #d97706;">The Cultural Insight: The Holiday Overload</h3>
+                                <p>If you work or study in Nepal, you will quickly realize that the country has more public holidays than almost anywhere else on earth.</p>
+                                <p style="margin-bottom: 0;">Because the government recognizes the major festivals of the Hindus, Buddhists, Kirats, Muslims, and Christians, the calendar is packed. If you are trying to get official paperwork done at a government office during the month of Ashwin (September/October), give up. <strong>The entire country practically shuts down for a month-long celebration.</strong></p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #db2777;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                                <h3 style="margin: 0;">6. Ramailo Mela (<span class="nepali-font">रमाइलो मेला</span>): The Dusty, Loud, Local Fair</h3>
+                            </div>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_29_mela.png" alt="Ramailo Mela local village fair with Rotary Ping and stage" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>If you step outside the major cities, people don't go to "concerts." They go to the <strong><span class="nepali-font">रमाइलो मेला</span> (Ramailo Mela)</strong>.</p>
+                            <p>These are traveling fairs or local village festivals set up in huge open fields. It is a complete sensory overload: blaring folk music, suffocating dust, gambling stalls, terrifyingly fast Ferris wheels, and local street food. The stage doesn't just feature singers—you get stand-up comedians, local dance troupes, and local politicians.</p>
+
+                            <h4 style="color: #db2777; margin-top: 1.5rem;">The Mela Vocabulary & Street Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आज को आउँदैछ रे?</span> (Aaja ko aaudai cha re?)</strong> - Who is coming today? <em>(The #1 question asked in the village when the Mela sets up. Everyone wants to know which famous Dohori singer or comedian is headlining).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">साँझतिर प्रोग्राम सुरु हुन्छ।</span> (Sanjhtir program suru huncha.)</strong> - The program starts towards the evening. <em>(Never show up in the afternoon; the real energy happens after dark).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मेलामा भेटौँला है।</span> (Mela ma bhetaula hai.)</strong> - Let's meet at the Mela. <em>(The standard sign-off with your friends for the week the fair is in town).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पिङ खेल्ने हो?</span> (Ping khelne ho?)</strong> - Wanna ride the Ferris wheel/swing?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">टिकट कति हो भित्र छिर्न?</span> (Ticket kati ho bhitra chirna?)</strong> - How much is the ticket to get inside? <em>(Usually, it's a very cheap flat entry fee).</em></li>
+                            </ul>
+
+                            <div style="background: #fdf2f8; border-left: 4px solid #db2777; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #9d174d;">The Cultural Insight: The "Bhasan" (Speech) Tax</h4>
+                                <p style="margin-bottom: 1rem;">If you go to a Ramailo Mela to see a famous singer or a comedian, you have to pay the ultimate Nepali cultural tax: <strong><span class="nepali-font">भाषण</span> (Bhasan - The Political Speech)</strong>.</p>
+                                <p style="margin-bottom: 0;">Because these fairs are usually sponsored by local leaders or youth clubs, before the actual entertainment begins, you are forced to listen to local politicians and sponsors give incredibly long, boring speeches on the stage. You will literally hear the crowd groaning: <strong>"भाषण कति लामो गरेको!" (Bhasan kati lamo gareko! - How long is this speech!)</strong>. You just have to eat your Chatpate, endure the politics, and wait for the music to start.</p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #14b8a6;"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                                <h3 style="margin: 0;">7. Urban Concerts & Live Music (The City Gig)</h3>
+                            </div>
+
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_29_gig.png" alt="Dark moody indoor rock concert in Kathmandu" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>While the villages have the Ramailo Mela, the cities have a massive live music culture. From local indie bands playing in Thamel bars to massive hip-hop and rock concerts in open arenas, urban Nepali youth are obsessed with live gigs.</p>
+                            <p>You don't just walk in for free here. There are bouncers, bag checks, and opening acts.</p>
+
+                            <h4 style="color: #14b8a6; margin-top: 1.5rem;">At the Door & Ticketing:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">टिकट कति हो?</span> (Ticket kati ho?)</strong> - How much is the ticket? <em>(Usually ranges from 500 to 2000 rupees depending on the artist).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">लाइनअप को-को छ?</span> (Lineup ko-ko cha?)</strong> - Who is on the lineup?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">डोर कहिले खुल्छ?</span> (Door kahile khulcha?)</strong> - When do the doors open?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ब्याग चेक हुन्छ?</span> (Bag check huncha?)</strong> - Is there a bag check? <em>(Yes, and you absolutely cannot bring your own alcohol inside).</em></li>
+                            </ul>
+
+                            <h4 style="color: #14b8a6; margin-top: 1.5rem;">During the Show (The Crowd Energy):</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मेन आर्टिस्ट कहिले आउँछ?</span> (Main artist kahile aaucha?)</strong> - When is the main artist coming on? <em>(The classic complaint when the opening acts are taking too long).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सपोर्ट ब्यान्ड बजाउँदैछ।</span> (Support band bajaudaicha.)</strong> - The support/opening band is playing right now.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">लाइभमा झन् मज्जा आयो यार!</span> (Live ma jhan majja aayo yar!)</strong> - It's even more fun live, man! <em>(What you scream to your friend over the massive speakers).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">वान मोर! / एन्कोर!</span> (One more! / Encore!)</strong> - Play one more! <em>(The crowd will aggressively chant "One More!" when the band tries to leave the stage).</em></li>
+                            </ul>
+
+                            <div style="background: #f0fdfa; border-left: 4px solid #14b8a6; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #0f766e;">The Cultural Insight: The "Nepali Time" Gig Reality</h3>
+                                <p style="margin-bottom: 1rem;">If a concert flyer in Kathmandu says the show starts at 7:00 PM, absolutely no one is on stage at 7:00 PM. This is the ultimate test of Nepali Time.</p>
+                                <p style="margin-bottom: 0;">At 7:00 PM, the sound guy is still testing the mics. At 8:30 PM, a random opening act you’ve never heard of comes on. The actual headliner you paid to see probably won't touch a guitar until 10:00 PM. <strong>If you show up exactly on time, you are going to be standing around for hours.</strong> Urban youth know this, which is why they usually pre-drink at a local Bhatti or cafe nearby and only roll into the venue when the main act is finally ready.</p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-30",
+                        title: "30 At the gym",
+                        content: `
+                            <h2>30 Fitness & Gyms</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Urban Workout vs. The Village Reality</strong></p>
+                            
+                            <p>Fitness in Nepal is split into two entirely different realities. In the villages, "working out" doesn't exist—daily life is a brutal strength and conditioning routine. People carry massive loads on their backs, farm by hand, and walk for hours across hills.</p>
+                            <p>But in cities like Kathmandu and Pokhara, the urban youth are aggressively adopting gym culture. Driven by social media and a desire for discipline, neighborhood gyms are packed. If you are joining a gym in the city, forget asking about "Pilates" or "Spin Classes." You need to know how to negotiate the monthly fee and dodge the extra trainer costs.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+                                <h3 style="margin: 0;">1. Joining the Gym (The Front Desk Hustle)</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_30_gym.png" alt="Modern urban gym in Kathmandu" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>When you walk into a Nepali gym, there is rarely a massive corporate "joining fee" or a binding year-long contract. Everything is negotiated month-to-month.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यहाँ जिमको मेम्बरशिप कति पर्छ?</span> (Yaha gym ko membership kati parcha?)</strong><br>
+                                    <em>Meaning: How much is the gym membership here?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मासिक हो कि वार्षिक?</span> (Masik ho ki barshik?)</strong><br>
+                                    <em>Meaning: Is it monthly or yearly?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एक दिन ट्रायल गर्न मिल्छ?</span> (Ek din trial garna milcha?)</strong><br>
+                                    <em>Meaning: Can I do a one-day trial? (Always ask this. Gym quality in Nepal varies wildly from air-conditioned paradises to rusty dungeons).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ट्रेनरको छुट्टै पैसा तिर्नुपर्छ?</span> (Trainer ko chuttai paisa tirnuparcha?)</strong><br>
+                                    <em>Meaning: Do I have to pay extra for the trainer? (The answer is almost always yes for a "Personal Trainer," though floor trainers are usually free).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9C8.8 1 15.2 1 19.1 4.9C23 8.8 23 15.2 19.1 19.1C15.2 23 8.8 23 4.9 19.1Z"/><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c-.15-2.05-.22-3.82.04-5.91c.21-1.76 1.4-7.46 1.4-7.46s-.36-.72-.36-1.78c0-1.67.97-2.91 2.18-2.91c1.03 0 1.53.77 1.53 1.7c0 1.04-.66 2.59-1 4.02c-.28 1.19.6 2.17 1.77 2.17c2.12 0 3.75-2.24 3.75-5.47c0-2.86-2.06-4.86-5-4.86c-3.4 0-5.39 2.55-5.39 5.2c0 1.04.4 2.16.9 2.76c.1.13.11.23.08.35c-.09.38-.3 1.25-.34 1.42c-.05.21-.18.26-.39.16C3.93 11 3.5 9.4 3.5 7.82c0-3.02 2.19-5.78 6.32-5.78c3.34 0 5.94 2.38 5.94 5.54c0 3.32-2.09 6-5 6c-.98 0-1.89-.51-2.21-1.11c0 0-.48 1.83-.6 2.27c-.22.84-.81 1.9-1.2 2.54c1.03.32 2.13.49 3.27.49A10 10 0 0 0 12 2Z"/></svg>
+                                <h3 style="margin: 0;">2. Specialized Classes & Safe Spaces</h3>
+                            </div>
+                            <p>While guys usually crowd the free-weight section, many women look for gyms with specific group classes or dedicated timings for privacy and comfort.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">योगा क्लास कति बेला हुन्छ?</span> (Yoga class kati bela huncha?)</strong> - What time is the yoga class?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">महिलाको छुट्टै सेसन छ?</span> (Mahila ko chuttai session cha?)</strong> - Is there a separate session for women?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">जुम्बा पनि हुन्छ?</span> (Zumba pani huncha?)</strong> - Do you also have Zumba? <em>(Zumba is massively popular for group fitness in Nepal).</em></li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                <h3 style="margin: 0;">3. Gym Slang (Talking About Your Routine)</h3>
+                            </div>
+                            <p>If you are chatting with friends at a cafe, this is how urban youth actually talk about their fitness goals. It is a heavy mix of Nepanglish.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म आजकाल जिम जाँदैछु।</span> (Ma aajakal gym jadaichu.)</strong><br>
+                                    <em>Meaning: I'm going to the gym these days.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म तौल घटाउँदैछु।</span> (Ma taul ghataudaichu.)</strong><br>
+                                    <em>Meaning: I am losing weight.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म मसल बनाउँदैछु।</span> (Ma muscle banaudaichu.)</strong><br>
+                                    <em>Meaning: I am building muscle.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज मेरो 'लेग डे' हो।</span> (Aaja mero 'leg day' ho.)</strong><br>
+                                    <em>Meaning: Today is my leg day. (Nobody translates this into Nepali; you just say "leg day").</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज जान अलि अल्छी लाग्यो।</span> (Aaja jana ali alchi lagyo.)</strong><br>
+                                    <em>Meaning: I felt a bit lazy to go today. (The universal gym-skipping excuse).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fdf4ff; border-left: 4px solid #c026d3; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #86198f;">The Cultural Insight: The Rural "Workout"</h3>
+                                
+                                <div style="margin: 1.5rem 0; text-align: center;">
+                                    <img src="assets/lesson_30_village.png" alt="Nepali local carrying load with Namlo on Himalayan trail" style="max-width: 100%; width: 400px; border-radius: 12px; mix-blend-mode: multiply;">
+                                </div>
+
+                                <p>If you travel outside the Kathmandu Valley, you will not see gyms. Rural Nepalis have incredible natural strength built purely through survival and labor.</p>
+                                
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 1rem;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">गाउँमा जिम हुँदैन।</span> (Gaun ma gym hudaina.)</strong> - There are no gyms in the village.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">मान्छेहरू खेतमा काम गर्छन्, भारी बोक्छन्।</span> (Mancheharu khet ma kaam garchan, bhari bokchan.)</strong> - People work in the fields, they carry heavy loads.</li>
+                                    <li><strong><span class="nepali-font">त्यो नै वर्कआउट हो।</span> (Tyo nai workout ho.)</strong> - That itself is the workout.</li>
+                                </ul>
+
+                                <p style="margin-bottom: 0;">If you are trekking in the Himalayas, you will routinely see a 60-year-old local carrying a refrigerator on their back using a <strong><span class="nepali-font">नाम्लो</span> (Namlo - a traditional head strap)</strong>, walking up a 45-degree incline, passing you while you struggle with a 10kg North Face backpack. <strong>That is real Nepali fitness.</strong></p>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-31",
+                        title: "31 Sporting activities",
+                        content: `
+                            <h2>31 Sports & Futsal</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Football Religion & Weekend Hustle</strong></p>
+                            
+                            <p>If you want to bond with young Nepali men, you don't need to speak perfect grammar—you just need to know who they support in the English Premier League or La Liga.</p>
+                            <p>While Nepal has traditional games like <strong><span class="nepali-font">डन्डी बियो</span> (Dandi Biyo)</strong>—a street game played with two sticks that is sadly fading away—modern Nepali sports culture is dominated by cricket, volleyball (the official national sport), and football. Here is how you actually talk about sports, book a court, and survive a weekend game.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><circle cx="12" cy="12" r="10"/><path d="m8 12 4 4"/><path d="m16 12-4 4"/><path d="m12 16v6"/><path d="m8 12 4-4"/><path d="m16 12-4-4"/><path d="m12 8V2"/></svg>
+                                <h3 style="margin: 0;">1. The Weekend Hustle (Playing with Friends)</h3>
+                            </div>
+                            
+                            <div style="margin: 2rem 0; text-align: center;">
+                                <img src="assets/lesson_31_futsal.png" alt="Indoor Futsal match in Kathmandu" style="max-width: 100%; width: 500px; border-radius: 12px; mix-blend-mode: multiply;">
+                            </div>
+
+                            <p>In the cities, finding a massive open grass field is almost impossible. So, urban youth play <strong><span class="nepali-font">फुटसल</span> (Futsal)</strong>—5-a-side football on small artificial turf pitches surrounded by nets. It is the ultimate Saturday activity.</p>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Organizing the Game:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फुटसल खेल्न जाने हो?</span> (Futsal khelna jane ho?)</strong> - Are we going to play Futsal?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आज त म आउँदिनँ, हिजो खुट्टा मर्कियो।</span> (Aaja ta ma aaudina, hijo khutta markiyo.)</strong> - I'm not coming today, I sprained my ankle yesterday. <em>(Khutta markiyo = sprained ankle/leg).</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">गोलकिपर को बस्ने?</span> (Goalkeeper ko basne?)</strong> - Who is staying as the goalkeeper? <em>(Nobody ever wants to be the goalie in Nepal).</em></li>
+                            </ul>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">On the Pitch (The Shouts):</h4>
+                            <p>When the game is moving fast, nobody uses polite, formal Nepali. It is entirely aggressive Nepanglish.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पास दे!</span> (Pass de!)</strong> - Pass it!</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सुट हान!</span> (Shoot haan!)</strong> - Take the shot! / Shoot! <em>(We use the verb 'haannu', which literally means 'to hit' or 'strike').</em></li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ओइ, फाउल हो त्यो!</span> (Oi, foul ho tyo!)</strong> - Hey, that’s a foul!</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f97316;"><path d="m14.5 14.5 3-3"/><path d="m19 9-4 4"/><path d="m15 15 4-4"/><path d="M11.5 15.5 3 24"/><path d="m5 19 4-4"/><path d="M9.8 14.2A5.5 5.5 0 0 0 10 11.5"/><path d="M12.5 14a5.5 5.5 0 0 0 2.7.2"/><path d="M14 6a2 2 0 1 0-4 0v5h4V6Z"/></svg>
+                                <h3 style="margin: 0;">2. The Sports Center (Booking Courts & Pools)</h3>
+                            </div>
+                            
+                            <p>If you are trying to book a badminton court or hit a swimming pool in the city, you need to know how to ask for times and prices at the local sports complex.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यहाँ ब्याडमिन्टन कोर्ट खाली छ?</span> (Yaha badminton court khali cha?)</strong><br>
+                                    <em>Meaning: Is the badminton court empty/available here?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एक घण्टाको कति लाग्छ?</span> (Ek ghanta ko kati lagcha?)</strong><br>
+                                    <em>Meaning: How much does it cost for an hour? (Prices are usually split among the players).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">स्विमिङ पुल कति बजेसम्म खुल्छ?</span> (Swimming pool kati baje samma khulcha?)</strong><br>
+                                    <em>Meaning: Until what time is the swimming pool open?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                                <h3 style="margin: 0;">3. The Real Sports Dictionary</h3>
+                            </div>
+                            <p>Burn your textbook list of "rugby" and "golf." If you are in Nepal, these are the sports you will actually see and talk about:</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">क्रिकेट</span> (Cricket)</strong> - The fastest-growing sport in Nepal, driven by massive national pride in the Nepali Rhino cricket team.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फुटबल</span> (Football)</strong> - Soccer. The undisputed king of the streets.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">भलिबल</span> (Volleyball)</strong> - The official National Sport of Nepal. It requires very little flat space, so you will see it played in almost every mountain village.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ब्याडमिन्टन</span> (Badminton)</strong> - A massive morning sport. You will see middle-aged men playing this in neighborhood courtyards at 6:00 AM.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">कबड्डी</span> (Kabaddi)</strong> - A traditional, aggressive contact sport popular in schools and the Terai region.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #1d4ed8;">The Cultural Insight: The European Football Tribalism</h3>
+                                <p style="margin-bottom: 1rem;">If you sit at a local Bhatti or cafe on a Saturday night, you will hear people screaming at the television. Nepal hasn't made it to the FIFA World Cup, so Nepali fans have aggressively adopted European clubs.</p>
+                                <p style="margin-bottom: 0;">The tribalism is intense. Fans of Manchester United, Arsenal, Real Madrid, and Barcelona will argue with each other for hours over tea. If you want to instantly make friends with a local, just ask them: <strong>"कुन क्लब सपोर्ट गर्छौ?" (Kun club support garchau? - Which club do you support?).</strong></p>
+                            </div>
+
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #15803d;">The Cultural Insight: River Swimming vs. Pool Swimming</h3>
+                                <p style="margin-bottom: 1rem;">In the city, going swimming means paying 1000 rupees to sit by a chlorinated hotel pool. But Nepal is a country of roaring rivers and waterfalls.</p>
+                                <p style="margin-bottom: 0;">If you grew up in a village near a river, you didn't take "swimming lessons." You learned by jumping into the fast-moving, freezing glacier water of rivers like the Trisuli or Bhotekoshi. <strong>City kids swim for fitness; village kids swim for survival and summer fun.</strong></p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-32", title: "32 Sports events" },
                     { id: "lesson-33", title: "33 Hobbies" }
                 ]

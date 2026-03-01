@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Quiz — Test Your Knowledge</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <script>
+        (function () {
+            var t = localStorage.getItem('nepali-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="quiz-topbar">
+        <div class="quiz-topbar-left">
+            <a href="reading.html">← Reading</a>
+            <a href="index.html" style="color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.875rem;">Home</a>
+            <h1>Quiz</h1>
+        </div>
+        <div class="quiz-topbar-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <!-- Setup Screen -->
+        <div id="quiz-setup" class="quiz-setup">
+            <h2>Choose Your Quiz</h2>
+            <p class="setup-desc">Test your Nepali vocabulary knowledge</p>
+
+            <div class="setup-options">
+                <div class="option-group">
+                    <label class="option-label">Mode</label>
+                    <div class="option-buttons" id="mode-select">
+                        <button class="opt-btn active" data-value="flashcard">Flashcards</button>
+                        <button class="opt-btn" data-value="mcq">Multiple Choice</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="option-label">Content</label>
+                    <div class="option-buttons" id="content-select">
+                        <button class="opt-btn active" data-value="words">Words</button>
+                        <button class="opt-btn" data-value="phrases">Phrases</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="option-label">Direction</label>
+                    <div class="option-buttons" id="direction-select">
+                        <button class="opt-btn active" data-value="np-en">नेपाली → English</button>
+                        <button class="opt-btn" data-value="en-np">English → नेपाली</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label class="option-label">Questions</label>
+                    <div class="option-buttons" id="count-select">
+                        <button class="opt-btn" data-value="10">10</button>
+                        <button class="opt-btn active" data-value="20">20</button>
+                        <button class="opt-btn" data-value="50">50</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="start-btn" id="start-quiz">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Playing Screen -->
+        <div id="quiz-play" class="quiz-play hidden">
+            <!-- Score Bar -->
+            <div class="score-bar">
+                <div class="score-left">
+                    <span class="score-item correct-count">✓ <span id="correct">0</span></span>
+                    <span class="score-item wrong-count">✗ <span id="wrong">0</span></span>
+                </div>
+                <div class="score-center">
+                    <span id="q-progress">1 / 20</span>
+                </div>
+                <div class="score-right">
+                    <span class="streak-label">Streak</span>
+                    <span class="streak-value" id="streak">0</span>
+                </div>
+            </div>
+
+            <!-- Flashcard Mode -->
+            <div id="flashcard-area" class="flashcard-area">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-inner" id="flashcard-inner">
+                        <div class="flashcard-front" id="card-front">
+                            <span class="card-text" id="front-text">म</span>
+                        </div>
+                        <div class="flashcard-back" id="card-back">
+                            <span class="card-text" id="back-text">I / me</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="flash-hint">Click card to flip</p>
+                <div class="flash-actions">
+                    <button class="flash-btn wrong-btn" id="flash-wrong">✗ Didn't Know</button>
+                    <button class="flash-btn correct-btn" id="flash-correct">✓ Knew It</button>
+                </div>
+            </div>
+
+            <!-- Multiple Choice Mode -->
+            <div id="mcq-area" class="mcq-area hidden">
+                <div class="mcq-prompt" id="mcq-prompt">म</div>
+                <div class="mcq-options" id="mcq-options"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="quiz-results" class="quiz-results hidden">
+            <h2>Quiz Complete!</h2>
+            <div class="results-score" id="results-score"></div>
+            <div class="results-details" id="results-details"></div>
+            <div class="results-actions">
+                <button class="start-btn" id="retry-quiz">Try Again</button>
+                <button class="start-btn secondary" id="new-quiz">New Quiz</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/reading-data.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
