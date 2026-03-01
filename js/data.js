@@ -7575,7 +7575,117 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-40", title: "40 Returning goods" },
+                    {
+                        id: "lesson-40",
+                        title: "40 Returning goods",
+                        content: `
+                            <h2>40 Returns, Exchanges & The "No Refund" Reality</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Navigating the Exchange Counter in a No-Return Culture</strong></p>
+                            
+                            <p>In the West, consumers expect a 30-day, no-questions-asked return policy. In Nepal, almost every shop has the exact same sign: <strong><span class="nepali-font">बिकेको सामान फिर्ता हुनेछैन</span></strong> (Goods once sold will not be returned).</p>
+                            <p>Getting a cash refund (<span class="nepali-font">पैसा फिर्ता</span>) is virtually impossible. However, if you are polite, keep the tags on, and return within 24 hours, shopkeepers will almost always allow you to <strong>exchange (<span class="nepali-font">साट्ने</span> - Satne)</strong> the item.</p>
+
+                            <div style="background: #fef2f2; border: 2px solid #fecaca; padding: 1rem; border-radius: 10px; margin: 1.5rem 0; text-align: center;">
+                                <div style="font-size: 1.3rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">बिकेको सामान फिर्ता हुनेछैन</span></div>
+                                <div style="font-size: 0.9rem; color: #6b7280; margin-top: 4px;">Goods once sold will not be returned.</div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                <h3 style="margin: 0;">1. Explaining the Problem (Softly)</h3>
+                            </div>
+                            <p>Do not walk in angry. If you are aggressive, the shopkeeper will just point at the "No Returns" sign. State the problem softly.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो साइज मिलेन।</span> (Yo size milena.)</strong><br>
+                                    <em>Meaning: This size didn't fit. (The most common, acceptable reason).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो अलि टाइट भयो / ढिलो भयो।</span> (Yo ali tight bhayo / dhilo bhayo.)</strong><br>
+                                    <em>Meaning: This is a bit tight / a bit loose.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो काम गरेन।</span> (Yo kaam garena.)</strong><br>
+                                    <em>Meaning: This didn't work. (For electronics or hardware).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो फुटेको रहेछ।</span> (Yo futeko raicha.)</strong><br>
+                                    <em>Meaning: This was broken. (Using "raicha" implies "I discovered it was broken," which removes direct blame from the shopkeeper and makes them less defensive).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                                <h3 style="margin: 0;">2. The Exchange Dialogue</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="50" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, हिजो किनेको, साइज मिलेन।"</text>
+                                <text x="200" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"साट्न मिल्छ?"</text>
+                                <path d="M 80 120 L 90 150 L 110 120 Z" fill="#3b82f6"/>
+                                <rect x="350" y="140" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"बिल छ? ट्याग निकालेको छैन नि?"</text>
+                                <text x="500" y="195" font-family="Arial, sans-serif" font-size="14" fill="#fffbeb" text-anchor="middle">(Got the bill? Didn't take the tag off?)</text>
+                                <path d="M 620 210 L 610 240 L 590 210 Z" fill="#f59e0b"/>
+                                <rect x="50" y="230" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="200" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"छैन दाइ, ट्याग यहीँ छ।"</text>
+                                <text x="200" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"ठुलो साइज दिनुस् न।"</text>
+                                <path d="M 80 300 L 90 330 L 110 300 Z" fill="#10b981"/>
+                            </svg>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">The Key Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ/दिदी, यो साट्न मिल्छ?</span> (Dai/Didi, yo satna milcha?)</strong><br>
+                                    <em>Meaning: Brother/Sister, can this be exchanged?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अर्को साइज दिनुहुन्छ?</span> (Arko size dinuhuncha?)</strong><br>
+                                    <em>Meaning: Will you give me another size?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बिल हरायो दाइ, हिजो मात्र लगेको हो।</span> (Bill harayo dai, hijo matra lageko ho.)</strong><br>
+                                    <em>Meaning: I lost the receipt brother, I just took it yesterday. (Emphasize you were just there—they'll remember your face).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                                <h3 style="margin: 0;">3. When They Don't Have Your Size</h3>
+                            </div>
+                            <p>If they don't have a larger size, they still won't give you money back. You'll be forced to pick something else for the exact same value.</p>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">त्यो साइज त सकियो। अर्को सामान लानुस्।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">That size is finished. Take a different item.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">पैसा फिर्ता हुँदैन, बरु अरू नै केही लानुस्।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">No cash refund, rather just take something else.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #854d0e;">The Cultural Insight: The 24-Hour Rule & The Tags ⏰</h3>
+                                <p style="margin-bottom: 1rem;">If you need to exchange an item, the clock is ticking. You must bring it back <strong>the very next day</strong>. If you bring a shirt back four days later, the shopkeeper will assume you wore it to a party and are now trying to return it.</p>
+                                <p style="margin-bottom: 0;">Furthermore, <strong>never remove the tags or wash the item</strong>. If the cardboard tag is snipped off, or if the item smells even slightly like detergent or sweat, the exchange is completely void. Treat the receipt and the tags like gold until you are 100% sure the item fits perfectly.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-41", title: "41 Hair, beauty, and grooming" },
                     { id: "lesson-42", title: "42 Sending and receiving" },
                     { id: "lesson-43", title: "43 Money and finance" },
