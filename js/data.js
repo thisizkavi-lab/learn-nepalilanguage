@@ -7233,7 +7233,157 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-38", title: "38 At the DIY store" },
+                    {
+                        id: "lesson-38",
+                        title: "38 At the DIY store",
+                        content: `
+                            <h2>38 The Hardware Pasal & The "Mistri" Culture</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Tools, Fixes & The Jugaad Mentality</strong></p>
+                            
+                            <p>In Western countries, remodeling a house yourself is a weekend hobby. In Nepal, if you try to plaster your own walls, your neighbors will think you have gone crazy. For big jobs, you hire a <strong><span class="nepali-font">मिस्त्री</span> (Mistri - Handyman/Mason)</strong>.</p>
+                            <p>You only go to the <strong><span class="nepali-font">हार्डवेयर पसल</span> (Hardware Pasal)</strong> to buy the materials the Mistri requested, or to grab simple tools for minor apartment fixes.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #78716c;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">1. The Essential Toolkit (Vocabulary)</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">हथौडा</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Hathauda</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Hammer</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">किला / काँटी</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Kila / Kanti</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Nail (Kanti = smaller, for pictures)</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">पेचकस</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Pechkas</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Screwdriver</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">स्क्रू</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Screw</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Screws (English loan word)</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">आरी</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Aari</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Saw</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">ड्रिल मेसिन</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Drill Machine</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Drill</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">खाक्सी</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Khaksi</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Sandpaper</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">⚡ The Action Verbs:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">घोट्नु</span> <span style="color: #78716c; font-size: 0.85rem;">(Ghotnu)</span> — To sand / rub down
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">प्लास्टर गर्नु</span> <span style="color: #78716c; font-size: 0.85rem;">(Plaster garnu)</span> — To plaster
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">टायल हाल्नु</span> <span style="color: #78716c; font-size: 0.85rem;">(Tile halnu)</span> — To lay tiles
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">झुण्ड्याउनु</span> <span style="color: #78716c; font-size: 0.85rem;">(Jhundyaunu)</span> — To hang
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. Asking for Advice (The Quick Fixes)</h3>
+                            </div>
+                            <p>If you are doing small fixes yourself, the hardware store owner is your best friend. Tell them the problem, and they will hand you the solution.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टेबल घोट्न के चाहिन्छ?</span> (Table ghotna ke chaincha?)</strong><br>
+                                    <em>Meaning: What do I need to sand a table? (They'll hand you Khaksi - sandpaper).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">चिरा परेको छ, भर्न के हाल्ने?</span> (Chira pareko cha, bharna ke halne?)</strong><br>
+                                    <em>Meaning: There is a crack, what should I put to fill it? (They'll suggest Wall Putty or White Cement).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">फोटो झुण्ड्याउन के प्रयोग गर्ने?</span> (Photo jhundyauna ke prayog garne?)</strong><br>
+                                    <em>Meaning: What should I use to hang a photo?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">किचन पेन्ट गर्न कुन रङ राम्रो हुन्छ?</span> (Kitchen paint garna kun rang ramro huncha?)</strong><br>
+                                    <em>Meaning: Which paint is good for the kitchen? (Rang = Paint/Color).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                <h3 style="margin: 0;">3. The WhatsApp "Mistri" Chat</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f3f4f6" rx="15"/>
+                                <rect width="100%" height="60" fill="#075e54" rx="15"/>
+                                <circle cx="40" cy="30" r="18" fill="#cbd5e1"/>
+                                <text x="70" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Mistri Dai (Plumber/Fixer)</text>
+                                <rect x="180" y="80" width="290" height="70" rx="10" fill="#dcf8c6"/>
+                                <text x="195" y="105" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">दाइ, बाथरुममा टायल हाल्न</text>
+                                <text x="195" y="130" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">के–के चाहिन्छ?</text>
+                                <path d="M 470 90 L 485 80 L 470 100 Z" fill="#dcf8c6"/>
+                                <rect x="30" y="170" width="310" height="95" rx="10" fill="#ffffff"/>
+                                <text x="45" y="195" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">टायल, सेतो सिमेन्ट, र बालुवा</text>
+                                <text x="45" y="220" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">ल्याउनुस्। हार्डवेयरमा गएर</text>
+                                <text x="45" y="245" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">भन्नुस्, उनीहरूले दिन्छन्।</text>
+                                <path d="M 30 180 L 15 170 L 30 190 Z" fill="#ffffff"/>
+                                <rect x="220" y="285" width="250" height="50" rx="10" fill="#dcf8c6"/>
+                                <text x="235" y="315" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">हवस् दाइ, म अहिले किन्छु।</text>
+                                <path d="M 470 295 L 485 285 L 470 305 Z" fill="#dcf8c6"/>
+                                <rect x="20" y="380" width="460" height="45" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+                                <text x="40" y="408" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">Message...</text>
+                            </svg>
+
+                            <h4 style="color: #78716c; margin-top: 1.5rem;">Buying the Tools (Direct to the Point):</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हथौडा र काँटी छ?</span> (Hathauda ra kanti cha?)</strong><br>
+                                    <em>Meaning: Do you have a hammer and nails?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">वायरलेस ड्रिल छ?</span> (Wireless drill cha?)</strong><br>
+                                    <em>Meaning: Do you have a cordless/wireless drill?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो ड्रिल कति पर्छ?</span> (Yo drill kati parcha?)</strong><br>
+                                    <em>Meaning: How much does this drill cost?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #854d0e;">The Cultural Insight: The "Jugaad" Mentality 🔧</h3>
+                                <p style="margin-bottom: 1rem;">In Nepal, if something breaks, you do not immediately throw it away and buy a new one. The culture runs heavily on <strong><span class="nepali-font">जुगाड</span> (Jugaad)</strong>—a brilliant, sometimes messy hack or workaround to fix something using whatever is lying around.</p>
+                                <p style="margin-bottom: 0;">If a pipe leaks, a Nepali person will wrap it in strips of old bicycle tire rubber and bind it with wire before they ever think about buying a new PVC joint. <strong>Perfection isn't the goal; making it work for another five years is the goal.</strong></p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-39", title: "39 Buying clothes and shoes" },
                     { id: "lesson-40", title: "40 Returning goods" },
                     { id: "lesson-41", title: "41 Hair, beauty, and grooming" },
