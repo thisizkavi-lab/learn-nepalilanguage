@@ -7686,7 +7686,122 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-41", title: "41 Hair, beauty, and grooming" },
+                    {
+                        id: "lesson-41",
+                        title: "41 Hair, beauty, and grooming",
+                        content: `
+                            <h2>41 The Barber, The Parlor & The Walk-in Culture</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Haircuts, Threading & The Surprise Head Massage</strong></p>
+                            
+                            <p>If you want a haircut in Nepal, you don't need an appointment, and you don't need a "consultation." You just need to know how to ask about the queue and how to tell the barber not to cut off too much.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <h3 style="margin: 0;">1. The Walk-In & The Queue</h3>
+                            </div>
+                            <p>When you walk in, you don't ask for the receptionist. You just ask the guy holding the scissors how long you have to wait.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ, पालो कति छ?</span> (Dai, palo kati cha?)</strong><br>
+                                    <em>Meaning: Brother, how many are in the queue? (The absolute most important phrase).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">धेरै कुर्नु पर्छ?</span> (Dherai kurnu parcha?)</strong><br>
+                                    <em>Meaning: Do I have to wait a long time?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कपाल काट्न अपोइन्टमेन्ट चाहिन्छ?</span> (Kapal katna appointment chaincha?)</strong><br>
+                                    <em>Meaning: Do I need an appointment? (Only at fancy mall salons).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M6 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2"/><path d="M6 2h12"/><path d="M12 12h.01"/></svg>
+                                <h3 style="margin: 0;">2. The Men's Saloon (<span class="nepali-font">हजाम पसल</span>)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#1e293b" rx="10"/>
+                                <rect x="20" y="20" width="30" height="260" fill="#ffffff" rx="15"/>
+                                <path d="M 20 40 L 50 70 L 50 100 L 20 70 Z" fill="#ef4444"/>
+                                <path d="M 20 100 L 50 130 L 50 160 L 20 130 Z" fill="#3b82f6"/>
+                                <path d="M 20 160 L 50 190 L 50 220 L 20 190 Z" fill="#ef4444"/>
+                                <path d="M 20 220 L 50 250 L 50 280 L 20 250 Z" fill="#3b82f6"/>
+                                <rect x="100" y="50" width="250" height="60" rx="15" fill="#f8fafc"/>
+                                <text x="225" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">"कस्तो काट्ने हो?"</text>
+                                <path d="M 120 110 L 130 140 L 150 110 Z" fill="#f8fafc"/>
+                                <rect x="400" y="120" width="250" height="90" rx="15" fill="#3b82f6"/>
+                                <text x="525" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"साइड छोटो,"</text>
+                                <text x="525" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"माथि अलि लामो।"</text>
+                                <path d="M 620 210 L 610 240 L 590 210 Z" fill="#3b82f6"/>
+                            </svg>
+
+                            <p style="margin-top: 1.5rem;">When you sit in the chair, keep the instructions simple. Nepalese barbers are notorious for cutting hair way shorter than you asked, so be firm.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">धेरै नकाट्नु है।</span> (Dherai nakatnu hai.)</strong><br>
+                                    <em>Meaning: Don't cut too much, please.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ट्रिम मात्र गरिदिनु।</span> (Trim matra garidinu.)</strong><br>
+                                    <em>Meaning: Just trim it.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">साइड छोटो, माथि अलि लामो राखिदिनु।</span> (Side choto, mathi ali lamo rakhidinu.)</strong><br>
+                                    <em>Meaning: Keep the sides short, top a bit long. (The universal male haircut instruction in Nepal).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाह्री मिलाइदिनु।</span> (Dahri milaidinu.)</strong><br>
+                                    <em>Meaning: Fix/trim my beard. (A straight-razor shave is incredibly cheap and highly recommended).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                <h3 style="margin: 0;">3. The Beauty Parlor (<span class="nepali-font">ब्युटी पार्लर</span>)</h3>
+                            </div>
+                            <p>For women, the <strong><span class="nepali-font">ब्युटी पार्लर</span></strong> is an absolute neighborhood staple. The single most common service is <strong>threading</strong> (shaping eyebrows using a twisted cotton thread).</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दिदी, आइब्रो बनाइदिनु न।</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Didi, eyebrow banaidinu na.</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Please do my eyebrows. (Threading is just called 'making the eyebrows').</div>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फेशियल कति पर्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Facial kati parcha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">How much does a facial cost?</div>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेनिक्योर र पेडिक्योर गरिदिनु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Manicure ra pedicure garidinu.</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Please do a manicure and pedicure.</div>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कपाल रङ्ग्याउन कति लाग्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Kapal rangyauna kati lagcha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">How much to dye/color hair?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #065f46;">The Cultural Insight: The Aggressive Head Massage 💆</h3>
+                                <p style="margin-bottom: 1rem;">If you go to a local men's barber shop, be prepared for the finale. After they brush the loose hair off your neck, without warning, the barber will often <strong>grab your head, crack your neck, and start giving you a highly aggressive, rapid-fire head and shoulder massage</strong>. They might even lightly slap your head with a rhythmic drumming motion.</p>
+                                <p style="margin-bottom: 0;">This is called a <strong><span class="nepali-font">चम्पी</span> (Champi)</strong>. Do not panic. It is a traditional, complimentary part of the service, and it actually feels amazing once the shock wears off.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-42", title: "42 Sending and receiving" },
                     { id: "lesson-43", title: "43 Money and finance" },
                     { id: "lesson-44", title: "44 At the library" }
