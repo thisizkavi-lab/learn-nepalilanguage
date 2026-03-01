@@ -7096,7 +7096,143 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-37", title: "37 At the garden centre" },
+                    {
+                        id: "lesson-37",
+                        title: "37 At the garden centre",
+                        content: `
+                            <h2>37 The Nursery & Rooftop Gardening</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>कौसी खेती (Kausi Kheti) — Plants, Pots & The Rooftop Farm</strong></p>
+                            
+                            <p>You won't find massive "garden centres" in Nepal selling ceramic birdbaths and robotic lawnmowers. If you want to grow a few plants on your balcony or start a rooftop vegetable garden, you head to a local <strong><span class="nepali-font">नर्सरी</span> (Nursery)</strong>.</p>
+                            <p>The vocabulary here is simple, direct, and completely focused on survival: Will this plant die in the winter? Does it need sun? How much fertilizer do I need?</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                                <h3 style="margin: 0;">1. Buying Plants at the Nursery</h3>
+                            </div>
+                            
+                            <p>When you walk into a nursery, you don't ask for "houseplants" or "outdoor foliage." You ask if the plant can survive inside, or you ask for specific fruit and vegetable saplings.</p>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Getting Started:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो फलफूलको बिरुवा हो?</span> (Yo phalphul ko biruwa ho?)</strong><br>
+                                    <em>Meaning: Is this a fruit plant/sapling? (<span class="nepali-font">बिरुवा</span>/Biruwa is the word for any small plant or sapling).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पहिलो पटक तरकारी लगाउन लागेको, के सजिलो हुन्छ?</span> (Pahilo patak tarkari lagauna lageko, ke sajilo huncha?)</strong><br>
+                                    <em>Meaning: I'm planting vegetables for the first time, what is easy?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">धनियाँ र गोलभेडा कहिले रोप्ने?</span> (Dhaniya ra golbheda kahile ropne?)</strong><br>
+                                    <em>Meaning: When should I plant cilantro and tomatoes?</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #6366f1; margin-top: 1.5rem;">The "Houseplant" Check:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">घरभित्र राख्न मिल्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #4338ca; margin-top: 4px;">Ghar bhitra rakhna milcha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Can I keep this inside the house?</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">छायाँमा उम्रिन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #4338ca; margin-top: 4px;">Chhaya ma umrincha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Will it grow in the shade?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                                <h3 style="margin: 0;">2. Plant Survival (Care & Maintenance)</h3>
+                            </div>
+                            <p>Nepali weather shifts drastically from a brutal monsoon to a freezing, dry winter. You have to ask the nursery owner how tough the plant actually is.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति घाम चाहिन्छ?</span> (Kati gham chaincha?)</strong><br>
+                                    <em>Meaning: How much sun does it need?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति दिनमा पानी हाल्ने?</span> (Kati din ma pani halne?)</strong><br>
+                                    <em>Meaning: How often should I water it?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जाडोमा बाँच्ला?</span> (Jado ma banchla?)</strong><br>
+                                    <em>Meaning: Will it survive in the winter? (Crucial question for Kathmandu).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मल कस्तो हाल्ने?</span> (Mal kasto halne?)</strong><br>
+                                    <em>Meaning: What kind of fertilizer/compost should I put in? (<span class="nepali-font">मल</span>/Mal means fertilizer, compost, or manure).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #78716c;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">3. The Real Gardening Toolkit</h3>
+                            </div>
+                            <p>Burn the textbook words like "pitchfork" and "shears." Here is what a Nepali urban gardener actually uses:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">गमला</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Gamala</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Pot / Planter</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">बीउ</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Biu</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Seed</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">बिरुवा</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Biruwa</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Plant / Sapling</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">मल</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Mal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Fertilizer / Compost</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">माटो</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Mato</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Soil / Dirt</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">कुटो</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Kuto</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Small hand-hoe (like a trowel)</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">कोदालो</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Kodalo</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Larger hoe for digging ground</div>
+                                </div>
+                                <div style="background: #fafaf9; border: 1px solid #e7e5e4; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">हँसिया</span></div>
+                                    <div style="font-size: 0.85rem; color: #78716c; margin-top: 4px;">Hasiya</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Sickle (for cutting grass / harvesting)</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #065f46;">The Cultural Insight: The "Kausi Kheti" Hustle 🌱</h3>
+                                <p style="margin-bottom: 1rem;">If you look at an aerial shot of Kathmandu, you will notice that almost every flat concrete rooftop is covered in green. Because land is insanely expensive and yards are non-existent, urban Nepalis have perfected <strong><span class="nepali-font">कौसी खेती</span> (Kausi Kheti - Rooftop Farming)</strong>.</p>
+                                <p style="margin-bottom: 1rem;">People use old paint buckets, broken water tanks, and clay pots to grow garlic, chilies, tomatoes, and even climbing pumpkins on their roofs.</p>
+                                <p style="margin-bottom: 0;"><strong>It is a massive point of pride to serve Dal Bhat using vegetables grown entirely on your own roof.</strong> If you visit a Nepali home, always compliment their Kausi Kheti.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-38", title: "38 At the DIY store" },
                     { id: "lesson-39", title: "39 Buying clothes and shoes" },
                     { id: "lesson-40", title: "40 Returning goods" },
