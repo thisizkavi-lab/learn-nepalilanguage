@@ -6704,7 +6704,165 @@ const courseData = [
             {
                 title: "SHOPS AND SERVICES",
                 lessons: [
-                    { id: "lesson-34", title: "34 Shops and services" },
+                    {
+                        id: "lesson-34",
+                        title: "34 Shops and services",
+                        content: `
+                            <h2>34 Shops, Services & The Art of Bargaining</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Street Markets, Real Shop Names & How to Haggle</strong></p>
+                            
+                            <p>Shopping in Nepal is divided into two distinct worlds. You have the modern, fixed-price supermarkets, and then you have the traditional, chaotic street markets.</p>
+                            <p>If you just use a dictionary, you'll end up asking for a "convenience store" or a "DIY shop." Nobody says that here. You need to know the actual street names for these shops and, most importantly, how to haggle without insulting the shopkeeper.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <h3 style="margin: 0;">1. The Street-Level Directory (Real Shop Names)</h3>
+                            </div>
+                            
+                            <p>Burn the textbook words like "Green Grocer." Nepalis just attach the word <strong><span class="nepali-font">पसल</span> (Pasal - Shop)</strong> or <strong><span class="nepali-font">घर</span> (Ghar - House)</strong> to whatever is being sold.</p>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">🍛 Food & Drink Spots:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">खाजाघर / नास्ता पसल</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Khajaghar / Nasta Pasal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Local eatery or snack shop. Where you go for cheap, authentic Dal Bhat or Momo.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">रेस्टुरेन्ट / क्याफे</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Restaurant / Cafe</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Modern, usually slightly more expensive or Westernized dining. (E.g., Himalayan Java Coffee).</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">🛒 Daily Needs & Retail:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">किराना पसल</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Kirana Pasal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">The neighborhood grocery/convenience store. The lifeblood of every street. You buy your daily tea, biscuits, and rice here.</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">खुद्रा पसल</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Khudra Pasal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Small retail or petty shop.</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">भाटभटेनी</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Bhat-Bhateni</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">The Supermarket. The biggest retail chain in Nepal. Locals don't say "Let's go to the mall," they say "Let's go to Bhat-Bhateni."</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">औषधि पसल / मेडिकल</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Aushadhi Pasal / Medical</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Pharmacy. Locals almost always just call it the "Medical."</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">कपडा पसल</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Kapada Pasal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Clothes shop.</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">हार्डवेयर पसल</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Hardware Pasal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Hardware store. Where you go to buy tools, pipes, or fix anything in your house.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">2. The Bargaining Battlefield</h3>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                                <p style="margin: 0;"><strong>Rule #1:</strong> Know WHERE to bargain. If you try to bargain at Bhat-Bhateni, a branded boutique, or a pharmacy, you will look stupid. The price is printed on the barcode. You bargain in the <strong><span class="nepali-font">बजार</span> (Bazar)</strong> — traditional markets, for clothes, souvenirs, and vegetables.</p>
+                                <p style="margin: 0.5rem 0 0;"><strong>Rule #2:</strong> It is a game, not a fight. Never be aggressive. Never insult the quality of the item. Bargaining in Nepal is about building a quick, smiling connection.</p>
+                            </div>
+
+                            <h4 style="color: #ef4444; margin-top: 1.5rem;">The Negotiation Dialogue:</h4>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">कति पर्छ?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">How much does this cost?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">यो बाह्र सय पर्छ।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">This costs 1200. (The opening bid — always inflated).</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">अलि कम हुँदैन?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Can't it be a bit less? (Memorize this one).</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">धेरै भयो नि। आठ सयमा दिनुस् न।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">That's too much. Give it to me for 800.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">हैन, सम्भव छैन। हजारभन्दा तल जाँदैन।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">No, not possible. It won't go below 1000.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Closing the Deal:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दिदी, अलि मिलाइदिनुस् न।</span> (Didi, ali milaidinus na.)</strong><br>
+                                    <em>Meaning: Sister, please adjust the price a bit. (Using "Didi" or "Dai" builds instant respect and often gets you the discount).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ल, अन्तिम नौ सय पचास मा दिन्छु।</span> (La, antim nau saya pachas ma dinchu.)</strong><br>
+                                    <em>Meaning: Okay, I'll give it to you for a final price of 950.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हुन्छ, दिनुस्।</span> (Huncha, dinus.)</strong><br>
+                                    <em>Meaning: Okay, give it to me. (Deal closed).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <h3 style="margin: 0;">3. Money & The Checkout Checks</h3>
+                            </div>
+
+                            <p>When you are shopping for actual physical goods, there are a few extra phrases you need to survive.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बिल दिनुहुन्छ?</span> (Bill dinuhuncha?)</strong><br>
+                                    <em>Meaning: Will you give me a bill/receipt?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">साट्न मिल्छ?</span> (Satna milcha?)</strong><br>
+                                    <em>Meaning: Can I exchange this? (If buying clothes, always ask. Most places let you swap sizes but rarely give cash refunds).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">रिफन्ड हुन्छ?</span> (Refund huncha?)</strong><br>
+                                    <em>Meaning: Is there a refund? (Outside of major malls, the answer is almost always a hard "No").</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #065f46;">The Cultural Insight: The "Walkaway" Tactic</h3>
+                                <p style="margin-bottom: 1rem;">If you are at a standoff over the price in a tourist area like Thamel or a busy market like Asan, the most powerful tool you have is the <strong>Walkaway</strong>.</p>
+                                <p style="margin-bottom: 1rem;">If the shopkeeper won't budge, you smile, say <strong>"<span class="nepali-font">ल छोडिदिनुस्</span>" (La chhodidinus - Okay, leave it)</strong>, and slowly walk out of the shop.</p>
+                                <p style="margin-bottom: 0;">If your price was actually fair, there is a <strong>90% chance</strong> they will yell from the counter, <strong>"<span class="nepali-font">ल आउनुस्, आउनुस्!</span>" (La aaunus, aaunus! - Okay, come, come!)</strong> and give it to you for your price. If they let you keep walking, you know you hit their absolute rock-bottom limit.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-35", title: "35 At the market" },
                     { id: "lesson-36", title: "36 At the supermarket" },
                     { id: "lesson-37", title: "37 At the garden centre" },
