@@ -7384,7 +7384,197 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-39", title: "39 Buying clothes and shoes" },
+                    {
+                        id: "lesson-39",
+                        title: "39 Buying clothes and shoes",
+                        content: `
+                            <h2>39 Buying Clothes & Traditional Wear</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>"First Copies," Trial Rooms & The Tailor on the Corner</strong></p>
+                            
+                            <p>Shopping for clothes in Nepal is practical. Unless you are in an upscale mall in Kathmandu, most street-side <strong><span class="nepali-font">कपडा पसल</span> (Kapada Pasal)</strong> are packed floor-to-ceiling with imported goods from China or India. It is a "First Copy" culture—people buy things because they look good and the price is right, not because they care about official brand authenticity.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M20.38 3.46L16 2 12 5.5 8 2 3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6l-1 12h14l-1-12h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                                <h3 style="margin: 0;">1. Everyday Vocabulary (The Nepanglish Wardrobe)</h3>
+                            </div>
+                            <p>For daily Western wear, don't try to find ancient Sanskrit words. We just use English words with a Nepali accent.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">सर्ट</span><br><span style="font-size: 0.8rem; color: #4338ca;">Shirt</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">पाइन्ट</span><br><span style="font-size: 0.8rem; color: #4338ca;">Pants (never "trousers")</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">टि-सर्ट</span><br><span style="font-size: 0.8rem; color: #4338ca;">T-shirt</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">ज्याकेट</span><br><span style="font-size: 0.8rem; color: #4338ca;">Jacket</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">स्वेटर</span><br><span style="font-size: 0.8rem; color: #4338ca;">Sweater</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">Pure Nepali Items:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">जुत्ता</span> <span style="font-size: 0.85rem; color: #78716c;">(Jutta)</span> — Shoes
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">मोजा</span> <span style="font-size: 0.85rem; color: #78716c;">(Moja)</span> — Socks
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">गन्जी</span> <span style="font-size: 0.85rem; color: #78716c;">(Ganji)</span> — Undershirt / Tank top
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">रुमाल</span> <span style="font-size: 0.85rem; color: #78716c;">(Rumal)</span> — Handkerchief
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                <h3 style="margin: 0;">2. The "Trial Room" (Sizes & Fitting)</h3>
+                            </div>
+                            <p>You don't ask for the "fitting room." You ask for the <strong><span class="nepali-font">ट्रायल रुम</span> (Trial Room)</strong>. Nepali shoe shops almost exclusively use European sizing (40, 41, 42).</p>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">Asking for Sizes:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो सर्ट ठुलो साइजमा छ?</span> (Yo shirt thulo size ma cha?)</strong><br>
+                                    <em>Meaning: Do you have this shirt in a bigger size?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अलि सानो साइज छ?</span> (Ali sano size cha?)</strong><br>
+                                    <em>Meaning: Do you have a slightly smaller size?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो जुत्ता ४२ नम्बरमा छ?</span> (Yo jutta 42 number ma cha?)</strong><br>
+                                    <em>Meaning: Do you have these shoes in a size 42?</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Trying it On:</h4>
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">ट्रायल गर्न मिल्छ?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Can I try this on?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">यो अलि टाइट भयो।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">This is a bit tight.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="background: #f59e0b; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">यो पाइन्ट अलि ढिलो भयो।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">These pants are a bit loose. (ढिलो/Dhilo = slow/late, but for clothes = loose/baggy).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                <h3 style="margin: 0;">3. The Traditional Wardrobe</h3>
+                            </div>
+                            <p>If you stay in Nepal long enough, you will be invited to a festival or a wedding. Showing up in traditional Nepali clothing is the ultimate sign of respect.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">ढाका टोपी</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Dhaka Topi</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">The traditional Nepali patterned hat. The easiest way to show cultural respect—wear it with a regular shirt and jacket.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">दौरा सुरुवाल</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Daura Surwal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">National dress for men. Wrap-around shirt tied with strings (Daura), tight trousers (Surwal), usually worn with a waistcoat (Istakot).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">गुन्यु चोली</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Gunyo Choli</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Traditional dress for women—a blouse (Choli) and a wrapped skirt/sari.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">कुर्था सुरुवाल</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Kurtha Surwal</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">A long tunic over loose pants. The standard comfortable everyday wear for Nepali women.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">4. Buying the Dhaka Topi (Dialogue)</h3>
+                            </div>
+                            <p>If you want a good hat, ask for "Palpali Dhaka"—the famous, high-quality fabric from the Palpa region.</p>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">दाइ, राम्रो पाल्पाली ढाका टोपी देखाउनुस् न।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Brother, please show me a good Palpali Dhaka hat.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">यो हेर्नुस्, एकदम ओरिजिनल हो। आठ सय पर्छ।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Look at this, it's completely original. 800 rupees.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">अलि महँगो भएन? अलि मिलाउनुस् न।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Isn't that a bit expensive? Please adjust it a bit.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                <h3 style="margin: 0;">5. Getting a Daura Surwal Tailored</h3>
+                            </div>
+                            <p>You don't usually buy a Daura Surwal off the rack; you get it stitched by a <strong><span class="nepali-font">सुचिकार</span> (Suchikar - Tailor)</strong>.</p>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">दाइ, दौरा सुरुवाल सिलाउन कति लाग्छ?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Brother, how much to stitch a Daura Surwal?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">कपडासहित कि सिलाइ मात्र?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">With the fabric or just the stitching?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">कपडासहित सबै गरेर भन्नुस् न।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Tell me for everything, including the fabric.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">नाप दिनुस्, एक हप्तामा तयार हुन्छ।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Give me your measurements, it'll be ready in one week.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fdf4ff; border-left: 4px solid #c026d3; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #86198f;">The Cultural Insight: The "Fixing" Culture (Tailoring) ✂️</h3>
+                                <p style="margin-bottom: 1rem;">If you buy a pair of jeans and they are too long or too loose, you don't put them back on the rack. You buy them anyway, take them to the local <strong><span class="nepali-font">सुचिकार</span> (Suchikar - Tailor)</strong> sitting on the street corner with an old pedal-powered sewing machine, and pay them <strong>100 rupees ($0.75)</strong> to hem or tighten them.</p>
+                                <p style="margin-bottom: 0;"><strong>Clothes in Nepal are meant to be altered.</strong> Do not let a slightly bad fit stop you from buying a good piece.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-40", title: "40 Returning goods" },
                     { id: "lesson-41", title: "41 Hair, beauty, and grooming" },
                     { id: "lesson-42", title: "42 Sending and receiving" },
