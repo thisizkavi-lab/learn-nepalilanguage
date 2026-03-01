@@ -6863,7 +6863,130 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-35", title: "35 At the market" },
+                    {
+                        id: "lesson-35",
+                        title: "35 At the market",
+                        content: `
+                            <h2>35 The Local Market & The "Free Dhaniya" Flex</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Vegetable Bazars, Street Carts & How to Sound Like a Local</strong></p>
+                            
+                            <p>Buying fresh food in Nepal is a completely different game. You aren't going to a clean, quiet supermarket to buy a "punnet of strawberries." You are going to the chaotic, muddy, and loud <strong><span class="nepali-font">तरकारी बजार</span> (Tarkari Bazar - Vegetable Market)</strong> or buying directly from a wooden cart <strong>(<span class="nepali-font">ठेला गाडा</span> - Thela Gaada)</strong> on the street corner.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                <h3 style="margin: 0;">1. Real Market Vocabulary & Measurements</h3>
+                            </div>
+                            
+                            <p>Forget Western packaging. In Nepal, fresh produce is weighed right in front of you on a traditional hanging scale (<span class="nepali-font">तराजु</span> - Taraju) or a digital one. You need to know the local units.</p>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">⚖️ The Local Measurements:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">एक किलो</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Ek Kilo</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">1 Kilogram. The standard for apples, tomatoes, onions.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">एक पाउ</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Ek Pau</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">250 grams. Crucial word — you buy spicy chilies by the Pau, not the Kilo.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">एक मुठा</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Ek Mutha</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">One bunch/bundle. Used for leafy greens and herbs only.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">एक धार्नी</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Ek Dharni</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">~2.4 KG. Older, traditional weight still used for bulk potatoes or onions.</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">🥬 The Food Items:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक मुठा साग</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Ek mutha saag — A bunch of greens.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक पाउ खुर्सानी</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Ek pau khursani — 250g of chilies.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अण्डाको क्रेट</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Anda ko crate — A flat of 30 eggs. (No cute boxes of 6 here. You buy loose or a massive crate).</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक बट्टा मह</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Ek batta maha — A jar/tub of honey.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पाउरोटी</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Pauroti — A loaf of sliced bread. (Usually from the Kirana Pasal, not the veggie market).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                <h3 style="margin: 0;">2. The Rapid-Fire Produce Bargain</h3>
+                            </div>
+                            <p>Bargaining for food is much faster and softer than for clothes. The profit margins are tiny, so you're just shaving off 10-20 rupees by buying in bulk.</p>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">यो गोलभेडा कति हो?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">How much are these tomatoes?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">सय रुपैयाँ किलो।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">100 rupees a kilo.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">असी मा दिनुस् न, दुई किलो लान्छु।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Give it for 80, I'll take two kilos. (Golden rule: offer to buy more for the discount).</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 75%;">
+                                        <span class="nepali-font">ल लानुस्।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Okay, take it.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #94a3b8; margin-top: 1.5rem;">When they won't budge:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हैन, घाटा पर्छ।</span> (Haina, ghata parcha.)</strong><br>
+                                    <em>Meaning: No, I will take a loss. (If a vendor says this, respect it. It means you've hit their absolute bottom line).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h3 style="margin: 0;">3. The "Free Dhaniya" Law 🌿</h3>
+                            </div>
+
+                            <p>If you want to look like a true local, you have to execute the final step of any vegetable transaction.</p>
+                            <p>After you have agreed on the price, weighed the vegetables, and are handing over the cash, you look at the vendor and ask them to throw in a little bit of <strong><span class="nepali-font">धनियाँ</span> (Dhaniya - Cilantro)</strong> or a couple of green chilies for free. It is practically a constitutional right in Nepal. (Just joking haha 😄)</p>
+
+                            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid #22c55e; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; text-align: center;">
+                                <div style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;"><span class="nepali-font">दिदी, अलिकति धनियाँ फ्रीमा हालिदिनुस् न!</span></div>
+                                <div style="font-size: 1rem; color: #166534;">Didi, alikati dhaniya free ma halidinus na!</div>
+                                <div style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;"><em>Sister, throw in a little bit of cilantro for free, please!</em></div>
+                            </div>
+
+                            <p>They will almost always smile, grab a tiny handful of cilantro, and toss it into your bag. <strong>If you can pull this off, you are no longer a tourist; you are officially surviving the Nepali streets.</strong></p>
+                        `
+                    },
                     { id: "lesson-36", title: "36 At the supermarket" },
                     { id: "lesson-37", title: "37 At the garden centre" },
                     { id: "lesson-38", title: "38 At the DIY store" },
