@@ -6987,7 +6987,115 @@ const courseData = [
                             <p>They will almost always smile, grab a tiny handful of cilantro, and toss it into your bag. <strong>If you can pull this off, you are no longer a tourist; you are officially surviving the Nepali streets.</strong></p>
                         `
                     },
-                    { id: "lesson-36", title: "36 At the supermarket" },
+                    {
+                        id: "lesson-36",
+                        title: "36 At the supermarket",
+                        content: `
+                            <h2>36 Grocery Shopping</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Kirana Pasal & The "Change" Crisis</strong></p>
+                            
+                            <p>Forget self-checkout aisles and loyalty cards. Buying your daily groceries in Nepal is about knowing exactly what to ask for, and making sure you have the exact right amount of cash so the shopkeeper doesn't yell at you.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <h3 style="margin: 0;">1. The Kirana Pasal (Counter-Style Shopping)</h3>
+                            </div>
+                            
+                            <p>At a neighborhood <strong><span class="nepali-font">किराना पसल</span> (Kirana Pasal)</strong>, there are no shopping carts. You stand at the front counter and list off exactly what you need.</p>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">Asking for Items:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ, एक किलो चिनी दिनुस् न।</span> (Dai, ek kilo chini dinus na.)</strong><br>
+                                    <em>Meaning: Brother, give me one kilo of sugar, please.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तोरीको तेल छ?</span> (Tori ko tel cha?)</strong><br>
+                                    <em>Meaning: Do you have mustard oil? (The standard cooking oil in Nepali homes).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो साबुन कति पर्छ?</span> (Yo saabun kati parcha?)</strong><br>
+                                    <em>Meaning: How much is this soap?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यसको अर्को ब्रान्ड छैन?</span> (Yesko arko brand chaina?)</strong><br>
+                                    <em>Meaning: Don't you have another brand of this?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                                <h3 style="margin: 0;">2. The Big Marts (Bhat-Bhateni)</h3>
+                            </div>
+                            <p>If you are at a modern supermarket like Bhat-Bhateni or Big Mart, you actually walk down aisles with a basket. But things are constantly moved around, so you'll need to ask the floor staff.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ओट्स कता छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Oats kata cha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Which way are the oats? (Use 'kata' [which direction] rather than 'kaha' [where] when looking for aisles).</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ग्लुटेन-फ्री सामान छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Gluten-free saman cha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Do you have gluten-free items? (Only ask this in high-end Kathmandu supermarkets. Ask this in a village Kirana, and they will just stare at you).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">3. The Checkout & The Crisis of "Change"</h3>
+                            </div>
+
+                            <p>When it is time to pay, you will usually use Fonepay (QR). But if you are using cash, you must understand the concept of <strong><span class="nepali-font">चानचुन</span> (Chanchun - Small Change)</strong>. Early in the morning, shopkeepers do not have change. If you try to break a 1000-rupee note for a 30-rupee item, they will straight up refuse to sell it to you.</p>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Checking Out:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जम्मा कति भयो?</span> (Jamma kati bhayo?)</strong><br>
+                                    <em>Meaning: How much is it altogether? (The universal phrase for "What's the total?").</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">बिल चाहियो।</span> (Bill chahiyo.)</strong><br>
+                                    <em>Meaning: I need the bill/receipt. (Only expected at big marts, not local Kiranas).</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #ef4444; margin-top: 1.5rem;">💸 The Cash & Change Battle:</h4>
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">सानो पैसा छैन? / चानचुन छैन?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Don't you have small money/change? (Shopkeeper asks you aggressively).</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">छैन दाइ, हजारको मात्र नोट छ।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">No brother, I only have a thousand note.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">बिहान-बिहानै चानचुन हुँदैन।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">I don't have change this early in the morning. (The ultimate rejection. Go find change elsewhere).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #92400e;">The Cultural Insight: The "Udharo" (Tab) Culture</h3>
+                                <p style="margin-bottom: 1rem;">If you buy your groceries from the exact same Kirana Pasal every day, you don't actually need to pay every day. Nepali neighborhoods run on a system of deep trust called <strong><span class="nepali-font">उधारो</span> (Udharo - Credit/Tab)</strong>.</p>
+                                <p style="margin-bottom: 1rem;">You simply pick up your milk, eggs, and rice, look at the shopkeeper, and say: <strong>"<span class="nepali-font">खातामा लेखिदिनुस् है</span>" (Khata ma lekhidinus hai - Please write it in the book)</strong>.</p>
+                                <p style="margin-bottom: 0;">They have a physical notebook behind the counter where they log your daily purchases, and you <strong>settle the entire bill once a month</strong> when you get your salary. You cannot do this on your first day, but once you are a "regular," this is how you survive without cash.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-37", title: "37 At the garden centre" },
                     { id: "lesson-38", title: "38 At the DIY store" },
                     { id: "lesson-39", title: "39 Buying clothes and shoes" },
