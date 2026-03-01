@@ -6394,7 +6394,143 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-32", title: "32 Sports events" },
+                    {
+                        id: "lesson-32",
+                        title: "32 Sports events",
+                        content: `
+                            <h2>32 Sports Events & Stadiums</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Stadiums, Fandom & The Chiya Pasal Screening</strong></p>
+                            
+                            <p>Attending a live sporting event in Nepal is loud, chaotic, and incredibly fun. While you won't find many giant stadiums outside of Kathmandu's Dasharath Rangasala, the passion for sports—especially local volleyball, national cricket, and European club football—is absolutely massive.</p>
+                            <p>Here is how you buy tickets, cheer in the stands, and talk trash at the local bar.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3h-8l-2 4h12l-2-4z"/></svg>
+                                <h3 style="margin: 0;">1. The Stadium (Buying Tickets)</h3>
+                            </div>
+                            
+                            <p>If you are going to watch a national football or cricket match at the stadium, you usually buy tickets at a designated counter outside the gates or via digital wallets like eSewa. Do not ask for a "season ticket"—they don't really exist in the local leagues. You buy match by match.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज रंगशालामा गेम छ, जाने हो?</span> (Aaja rangashala ma game cha, jane ho?)</strong><br>
+                                    <em>Meaning: There's a game at the stadium today, wanna go?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टिकट कति पर्छ?</span> (Ticket kati parcha?)</strong><br>
+                                    <em>Meaning: How much is the ticket? (Usually ranges between 500 to 1500 rupees).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">विद्यार्थी छुट छ?</span> (Bidyarthi chut cha?)</strong><br>
+                                    <em>Meaning: Is there a student discount? (If you have a student ID, always ask. You can usually get 20% off).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">टिकट सबै सोल्ड आउट भयो?</span> (Ticket sabai sold out bhayo?)</strong><br>
+                                    <em>Meaning: Are all tickets sold out?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अपाङ्गता भएका दर्शकका लागि सिट छ?</span> (Apangata bhayeka darshak ka lagi seat cha?)</strong><br>
+                                    <em>Meaning: Are there seats for disabled spectators? (Reality Check: Accessibility is still a work in progress in many Nepali venues, so it is highly recommended to ask this in advance).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                                <h3 style="margin: 0;">2. In the Stands (How to Cheer)</h3>
+                            </div>
+                            <p>Nepali crowds do not do polite, synchronized golf claps. If you are in the stands for a national match, it is a wall of noise, drums, and yelling.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 1.5rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">नेपाल! नेपाल!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Nepal! Nepal!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">The standard, roaring stadium chant</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">अगाडि बढ!</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af; margin-top: 4px;">Agadi badha!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Move forward! / Keep pushing!</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">हान! हान!</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Haan! haan!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Shoot! / Hit it!</div>
+                                </div>
+                                <div style="background: #fefce8; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">सबास!</span></div>
+                                    <div style="font-size: 0.85rem; color: #854d0e; margin-top: 4px;">Shabas!</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Well done! / Bravo!</div>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">रेफ्री अन्धो छ कि के हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #9d174d; margin-top: 4px;">Referee andho cha ki ke ho?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 2px;">Is the referee blind or what?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 3 11 3s2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>
+                                <h3 style="margin: 0;">3. The Bar Scene (European Football Tribalism)</h3>
+                            </div>
+                            <p>You cannot underestimate the absolute obsession Nepali youth have with European football. Fans of the English Premier League and La Liga will pack into bars and pubs at 1:00 AM to watch the matches live.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज एल क्लासिको छ। कहाँ हेर्ने?</span> (Aaja El Clasico cha. Kaha herne?)</strong><br>
+                                    <em>Meaning: El Clasico is today. Where are we watching?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">गेम कति बजे सुरु हुन्छ?</span> (Game kati baje suru huncha?)</strong><br>
+                                    <em>Meaning: What time does the game start?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज त रियलले जित्छ।</span> (Aaja ta Real le jitcha.)</strong><br>
+                                    <em>Meaning: Real [Madrid] is going to win today.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हैन, बार्सिलोना बलियो छ।</span> (Haina, Barcelona baliyo cha.)</strong><br>
+                                    <em>Meaning: No, Barcelona is stronger.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                <h3 style="margin: 0;">4. The Cricket Craze</h3>
+                            </div>
+                            <p>Cricket is the fastest-growing sport in the country. The national "Rhinos" team has a rabid fanbase, and the regional obsession with neighboring superstars is very real.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">नेपालको गेम कति बेला हो?</span> (Nepal ko game kati bela ho?)</strong><br>
+                                    <em>Meaning: What time is Nepal's game?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कोहलीले फेरि सेन्चुरी हान्यो यार।</span> (Kohli le feri century haanyo yar.)</strong><br>
+                                    <em>Meaning: Kohli hit a century again, man. (Virat Kohli is a massive topic of conversation among cricket fans).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हाम्रो टिम पनि कडा हुँदैछ है।</span> (Hamro team pani kada hudaicha hai.)</strong><br>
+                                    <em>Meaning: Our [national] team is getting really strong/tough too.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #92400e;">The Cultural Insight: The "Chiya Pasal" Screening</h3>
+                                <p style="margin-bottom: 1rem;">In the West, if you want to watch a big sports match with a crowd, you go to a dedicated sports bar. In Nepal, the ultimate communal viewing experience is often at the local <strong><span class="nepali-font">चिया पसल</span> (Chiya Pasal - Tea Shop)</strong>.</p>
+                                <p style="margin-bottom: 0;">During the World Cup or a major cricket tournament, a small street-side tea shop will pull a television out to the front counter, and thirty guys will crowd around on the sidewalk, drinking 25-rupee cups of milk tea, screaming at the screen for 90 minutes. <strong>It is raw, cheap, and the absolute best way to experience sports culture in the country.</strong></p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-33", title: "33 Hobbies" }
                 ]
             },
