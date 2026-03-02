@@ -8157,7 +8157,126 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-44", title: "44 At the library" }
+                    {
+                        id: "lesson-44",
+                        title: "44 At the library",
+                        content: `
+                            <h2>44 Libraries, Bookstores & The Bag Counter</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Memberships, Tokens & The Lok Sewa Grind</strong></p>
+                            
+                            <p>In Nepal, the <strong><span class="nepali-font">पुस्तकालय</span> (Pustakalaya - Library)</strong> is a place for absolute silence and serious study, not casual browsing. Joining one requires actual physical paperwork, not just an email address. For everything else, you head to the local <strong><span class="nepali-font">पुस्तक पसल</span> (Pustak Pasal - Bookstore)</strong>.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                <h3 style="margin: 0;">1. The Library Bureaucracy (Joining & Borrowing)</h3>
+                            </div>
+                            <p>You cannot just walk in and borrow a book. You have to become a registered member with citizenship/passport copies, photos, and a deposit.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मेम्बर बन्न कसरी मिल्छ?</span> (Member banna kasari milcha?)</strong><br>
+                                    <em>Meaning: How can I become a member?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कुन-कुन कागज चाहिन्छ?</span> (Kun-kun kagaj chaincha?)</strong><br>
+                                    <em>Meaning: What documents are needed? (<span class="nepali-font">कागज</span> = paper, but used for official documents).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यी किताब घर लैजान मिल्छ?</span> (Yi kitab ghar laijana milcha?)</strong><br>
+                                    <em>Meaning: Can I take these books home? (Many libraries are "Reference Only").</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति दिनका लागि हो?</span> (Kati din ka lagi ho?)</strong><br>
+                                    <em>Meaning: For how many days is it?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">रिन्यु गर्न मिल्छ?</span> (Renew garna milcha?)</strong><br>
+                                    <em>Meaning: Can it be renewed?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <h3 style="margin: 0;">2. The Golden Rule (The Bag Counter)</h3>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 2px solid #fecaca; padding: 1rem; border-radius: 10px; margin: 1rem 0; text-align: center;">
+                                <div style="font-size: 1.3rem; font-weight: 700; color: #991b1b;">🚫 You Cannot Take Your Bag Inside</div>
+                                <div style="font-size: 0.9rem; color: #6b7280; margin-top: 4px;">Every library and large bookstore has a Bag Counter at the door.</div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">झोला बाहिर राख्नुस्।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Jhola bahira rakhnus.</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Leave your bag outside. (The security guard will say this immediately).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">टोकन दिनुस् न।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Token dinus na.</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Please give me the token. (They give you a numbered token when you hand over your bag. Do not lose this).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">वाइफाइ छ? पासवर्ड के हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Wi-Fi cha? Password ke ho?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Is there Wi-Fi? What's the password? (Mobile data often drops inside thick concrete buildings).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                <h3 style="margin: 0;">3. The Bookstore (Hunting Down Books)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="60" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, 'शिरीषको फूल' छ?"</text>
+                                <path d="M 80 100 L 90 130 L 110 100 Z" fill="#3b82f6"/>
+                                <rect x="350" y="110" width="300" height="60" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अहिले त सकियो। अर्डर गर्नुपर्छ।"</text>
+                                <path d="M 620 170 L 610 200 L 590 170 Z" fill="#f59e0b"/>
+                                <rect x="50" y="180" width="300" height="60" rx="15" fill="#10b981"/>
+                                <text x="200" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"कहिले आउँछ त? म मगाउँछु।"</text>
+                                <path d="M 80 240 L 90 270 L 110 240 Z" fill="#10b981"/>
+                            </svg>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">Book Hunting Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो किताब छ?</span> (Yo kitab cha?)</strong><br>
+                                    <em>Meaning: Do you have this book?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यसको नयाँ एडिसन आएको छ?</span> (Yesko naya edition aayeko cha?)</strong><br>
+                                    <em>Meaning: Has the new edition arrived? (Crucial for textbook-hunting students).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अहिले छैन भने अर्डर गर्न मिल्छ?</span> (Ahile chaina bhane order garna milcha?)</strong><br>
+                                    <em>Meaning: If it's not here, can I order it?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कहिले आउँछ त?</span> (Kahile aaucha ta?)</strong><br>
+                                    <em>Meaning: When will it arrive then?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Lok Sewa" Grind 📚</h3>
+                                <p style="margin-bottom: 1rem;">If you visit a public library, you will notice that almost everyone inside is young, intensely focused, and reading thick, identical-looking guidebooks. They are studying for the <strong><span class="nepali-font">लोक सेवा</span> (Lok Sewa - Public Service Commission)</strong> exams.</p>
+                                <p style="margin-bottom: 1rem;">Because the private sector in Nepal is relatively small, securing a permanent government job is considered <strong>the ultimate golden ticket</strong> for financial security and social status.</p>
+                                <p style="margin-bottom: 0;">Hundreds of thousands of youths spend years studying in libraries from dawn to dusk to pass these highly competitive exams. <strong>The library isn't for leisure reading; it is a battleground for their future.</strong></p>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
