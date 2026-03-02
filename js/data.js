@@ -10836,7 +10836,106 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-64", title: "64 Home entertainment" }
+                    {
+                        id: "lesson-64",
+                        title: "64 Home entertainment",
+                        content: `
+                            <h2>64 Home Entertainment, The Remote War & PUBG</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The TV Schedule Battles, Mobile Gaming Lag & The Wi-Fi Password</strong></p>
+                            
+                            <p>In a typical Nepali home, the <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">बैठक कोठा</span> (Baithak kotha - Living room) revolves around one central television. "Home entertainment" is a shared, loud family experience. You don't retreat to your room to watch a streaming service; you sit on the sofa and fight over the channel.</p>
+                            <p>Meanwhile, the real gaming revolution in Nepal isn't happening on expensive PlayStations; it’s happening entirely on smartphones connected to the home Wi-Fi. Here is the actual vocabulary of Nepali screen time.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                                <h3 style="margin: 0;">1. Watching TV & The Channel Wars</h3>
+                            </div>
+                            <p>"What shall we watch tonight?" In Nepal, the schedule is usually fixed by the parents: Hindi daily soaps for the mothers, and the 8:00 PM <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">समाचार</span> (Samachar - News) for the fathers. But when a major sports tournament is on, everything else gets canceled.</p>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">रिमोट कता छ?</span> (Remote kata cha?)</strong><br>
+                                        <span style="color: #3730a3;">Where is the remote? <em>(The most frequently asked question in any Nepali household).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">च्यानल चेन्ज गर त।</span> (Channel change gara ta.)</strong><br>
+                                        <span style="color: #3730a3;">Change the channel.</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem; background: #eff6ff; padding: 8px; border-left: 3px solid #6366f1;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">आज म्याच छ, फुटबल / क्रिकेट लगाऊ।</span></strong><br>
+                                        <span style="color: #1e40af;">There is a match today, put on football/cricket. <em>(Sports will always hijack the main TV).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">सिरियल आउने बेला भयो।</span> (Serial aaune bela bhayo.)</strong><br>
+                                        <span style="color: #3730a3;">It's time for the (TV) serial to come on.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4"/><path d="M8 10v4"/><path d="M15 13h.01"/><path d="M18 11h.01"/></svg>
+                                <h3 style="margin: 0;">2. Gaming (The Mobile Reality)</h3>
+                            </div>
+                            <p>Forget kids with headsets playing on a "console." In Kathmandu, a PS5 is a rare luxury. Instead, millions of Nepali youth are absolutely addicted to mobile battle royale games like PUBG or Free Fire. They don't talk about "levels"; they talk about getting a "Chicken Dinner" or their phone lagging.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पब्जी खेल्ने हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Wanna play PUBG?</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एकछिन है, गेम सकिन लाग्यो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Just a moment, the game is about to finish. <em>(The universal excuse for ignoring dinner).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">मेरो फोन ह्याङ भयो यार!</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">My phone froze, man! <em>(Used constantly when cheap mid-range phones overheat).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">इन्टरनेट लास्टै स्लो छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The internet is extremely slow. <em>(Screamed angrily when the gameplay lags).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                <h3 style="margin: 0;">3. Screen Time & The Wi-Fi Password</h3>
+                            </div>
+                            <p>Parents in Nepal don't politely say, "Your screen time's up now." They use fear tactics about your eyesight to get you off the phone.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति फोन हेरेको?</span> (Kati phone hereko?)</strong><br>
+                                    <em>How much are you looking at the phone?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आँखा बिग्रिन्छ, फोन राख!</span> (Aankha bigrincha, phone rakha!)</strong><br>
+                                    <em>Your eyes will be ruined, put the phone away!</em>
+                                </li>
+                                <li style="background: #ecfdf5; border: 1px dashed #10b981; padding: 10px; border-radius: 6px; margin-top: 1rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.1rem; color: #047857;">वाइफाइको पासवर्ड के हो?</span></strong><br>
+                                    <span style="color: #064e3b;">What is the Wi-Fi password? <em>(The absolute first question any guest will ask when they walk into your house).</em></span>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The 8 PM Dal Bhat Ritual 🍛📺</h3>
+                                <p style="margin-bottom: 1rem;">In many Western countries, eating dinner in front of the TV is seen as an anti-social habit.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    In Nepal, gathering in the living room to eat <strong><span class="nepali-font">दाल भात</span> (Dal Bhat)</strong> at 8:00 PM while watching the evening news or a comedy show is a core family bonding ritual. You sit together, eat with your hands, and loudly debate the political news flashing across the screen. It is the defining hour of Nepali home entertainment.
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
