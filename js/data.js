@@ -10598,7 +10598,120 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-62", title: "62 Pets" },
+                    {
+                        id: "lesson-62",
+                        title: "62 Pets",
+                        content: `
+                            <h2>62 Pets, "Bhusya" Dogs & The Rabies Vaccine</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Street Dogs, The "Sui" (Injections), Fleas & Kukur Tihar</strong></p>
+                            
+                            <p>Western pet culture is heavily formalized with microchips, grooming salons, and pet passports. In Nepal, pet ownership is much more organic.</p>
+                            <p>While expensive breeds like Huskies and German Shepherds are becoming status symbols in Kathmandu, the true Nepali pet experience revolves around neighborhood street dogs, avoiding rabies, and the one day a year where dogs are treated like literal gods.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 2.539-4 6 .081 2.316.633 4.234 1.5 5.5F16l3-3.655A2.002 2.002 0 0 0 17.5 7h-6.219c-.381 0-.756-.15-.15-.5V5.172Z"/><path d="M16 16v-2.5l-3 3V19a2 2 0 0 1-2 2H9a2 2 0 0 1-1-1v-4"/><path d="m21.5 11.5-3 3"/><path d="m14 8 2.5-2.5"/></svg>
+                                <h3 style="margin: 0;">1. Getting a Pet (The "Bhusya" Reality)</h3>
+                            </div>
+                            <p>You rarely go to an "adoption center." If you want a dog, you ask around your network to see whose dog just had puppies, or you adopt a local street dog.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #3730a3; margin-bottom: 0.5rem;">The Animals</h4>
+                                    <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: #1e3a8a;">
+                                        <li><strong><span class="nepali-font" style="font-size: 1.05rem;">कुकुर</span> (Kukur)</strong> - Dog.</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1.05rem;">छाउरा / छाउरी</span> (Chhaura/Chhauri)</strong> - Puppy (M/F).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1.05rem;">बिरालो</span> (Biralo)</strong> - Cat. (Often kept to catch mice).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1.05rem;">भुस्याहा कुकुर</span> (Bhusyaha Kukur)</strong> - Street Dog / Stray Dog. (Often affectionately shortened to just "Bhusya").</li>
+                                    </ul>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #3730a3; margin-bottom: 0.5rem;">Acquiring the Pet</h4>
+                                    <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: #1e3a8a;">
+                                        <li><strong><span class="nepali-font" style="font-size: 1.05rem;">मलाई एउटा कुकुर पाल्न मन छ।</span></strong><br>I want to raise/keep a dog.</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1.05rem;">तपाईंको कुकुरले छाउरा पायो?</span></strong><br>Did your dog have puppies?</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1.05rem;">मलाई एउटा छाउरा दिनुस् न।</span></strong><br>Please give me one puppy.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 11v4"/><path d="M10 13h4"/></svg>
+                                <h3 style="margin: 0;">2. Seeing the Vet & The "Sui" (Injections)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"कुकुरलाई के भयो?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(What happened to the dog?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हिजोदेखि केही खाएको छैन।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Hasn't eaten anything since yesterday.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">You do not take your dog to the vet for a "microchip." You take them to the <strong><span class="nepali-font">भेटेरिनरी</span> (Veterinary - often just called 'Vet')</strong> for emergencies or, most importantly, the rabies vaccine. Because street dogs are everywhere, rabies is a serious public health concern.</p>
+
+                            <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">यसलाई सुई लगाएको छ?</span></strong><br>
+                                        <span style="color: #1e40af;">Has it been given injections (vaccinated)? (Sui = Needle/Injection).</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem; background: #dbeafe; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">रेबिजको सुई लगाउनु पर्छ।</span></strong><br>
+                                        <span style="color: #1e3a8a;">A rabies injection must be given. <em>(Crucial vocabulary).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">कुकुर बिरामी भयो।</span></strong><br>
+                                        <span style="color: #1e40af;">The dog got sick.</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">औषधि दिनुस् न।</span></strong><br>
+                                        <span style="color: #1e40af;">Please give medicine.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">3. Animal Problems</h3>
+                            </div>
+                            <p>Forget "my rabbit is losing her fur." If you have a pet issue in Nepal, it's usually about fighting or eating.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यसले टोक्छ?</span> (Yesle tokcha?)</strong><br>
+                                    <em>Does it bite? (The first question anyone will ask when entering your house).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कुकुर करायो।</span> (Kukur karayo.)</strong><br>
+                                    <em>The dog barked/cried.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यसलाई जुम्रा परेको छ।</span> (Yeslai jumra pareko cha.)</strong><br>
+                                    <em>It has gotten fleas/lice. (Instead of formal 'flea treatment', the vet will give you a medicated bar soap).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: Kukur Tihar (The Day of the Dog) 🐕🌼</h3>
+                                <p style="margin-bottom: 1rem;">Westerners might have dog parks and pet spas, but Nepal is the only country in the world that dedicates an entire national festival day to worshipping dogs.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    During <strong><span class="nepali-font">कुकुर तिहार</span> (Kukur Tihar)</strong>—the second day of the massive Tihar festival—every dog in the country, from expensive house pets to the mangiest street dogs, is treated like a god. They are given red tika on their foreheads, beautiful marigold garlands (sayapatri mala) around their necks, and plates full of delicious meat, eggs, and treats. It is an incredibly beautiful acknowledgment of the deep bond between humans and animals.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-63", title: "63 Home emergencies" },
                     { id: "lesson-64", title: "64 Home entertainment" }
                 ]
