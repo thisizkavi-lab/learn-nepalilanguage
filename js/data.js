@@ -9387,7 +9387,124 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-52", title: "52 In the workplace" },
+                    {
+                        id: "lesson-52",
+                        title: "52 In the workplace",
+                        content: `
+                            <h2>52 Meetings & The "Viber Group" Reality</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Viber Messages, Fingerprints, Shift Swaps & The "System Down" Crisis</strong></p>
+                            
+                            <p>If a manager wants to call a meeting in Nepal, they don't usually send a formal calendar invite. They drop a message in the official office messaging group (usually Viber or WhatsApp), and everyone is expected to see it instantly.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                <h3 style="margin: 0;">1. The Office Group Chat</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#8b5cf6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"आज ४ बजे मिटिङ छ है।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#ddd6fe" text-anchor="middle">(There is a meeting today at 4, okay.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#8b5cf6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"👍 हवस् सर।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ecfdf5" text-anchor="middle">(Yes, Sir. / Understood.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The word "hai" (<span class="nepali-font">है</span>) at the end of a sentence makes it an informal but firm command.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">भाइबर ग्रुपमा म्यासेज हाल्दिनुस्।</span></strong><br>
+                                    <em>Please drop a message in the Viber group. (The standard way to disseminate any office info).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हवस् सर / हवस् म्याम।</span></strong><br>
+                                    <em>Yes, Sir / Yes, Ma'am. (The exact replacement for "Thanks, I'll put it in my diary." Just agree respectfully).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+                                <h3 style="margin: 0;">2. Shifts & Clocking In (Hajiri)</h3>
+                            </div>
+                            <p>Forget "punch cards." In modern Nepali offices, restaurants, and retail spaces, attendance is almost entirely done via biometric fingerprint scanners.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हाजिरी गर्नुभयो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Did you do your attendance? (Hajiri = Attendance).</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फिंगर गर्नुभयो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Did you do your fingerprint? (A very common Nepanglish way of asking if you clocked in).</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">🔄 Managing Shifts:</h4>
+                            <p>People use the English words for shifts (Morning, Day, Night), but negotiating a swap is all about calling your colleague "Dai" or "Didi" and asking for a favor.</p>
+
+                            <div style="margin: 1rem 0;">
+                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाइ, मेरो सिफ्ट चेन्ज गर्न मिल्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569;">Brother, is it possible to change my shift?</div>
+                                </div>
+                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म मर्निङ सिफ्टमा छु, डे सिफ्टमा आउन मिल्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569;">I am on the morning shift, can I come in the day shift?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                <h3 style="margin: 0;">3. Workplace Issues (The "System Down" Crisis)</h3>
+                            </div>
+                            <p>In Nepal, internet stability and server issues are a daily reality. The phrase <span class="nepali-font">सिस्टम चलेको छैन</span> (System chaleko chaina) is the ultimate shield used by everyone from bank tellers to government bureaucrats when work grinds to a halt.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिस्टम डाउन छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The system is down. (If you hear this, go grab a tea. You are going to be waiting a while).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इन्टरनेट गयो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The internet went out.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कम्प्युटर ह्याङ भयो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The computer froze. (Nepalis use the word 'hang' exclusively for any device that freezes/crashes).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बत्ती गयो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The electricity went out. (Historically the most common issue, though better nowadays).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: "Colleague" vs "Family" 👨‍👩‍👧‍👦</h3>
+                                <p style="margin-bottom: 1rem;">Western workplaces highly value boundaries between personal and professional life. <strong>In a Nepali office, those boundaries do not exist.</strong></p>
+                                <p style="margin-bottom: 1rem;">Your <span class="nepali-font">सहकर्मी</span> (Sahakarmi - Colleague) will almost certainly ask you about:</p>
+                                <ul style="margin: 0.5rem 0 1rem 1.2rem; padding: 0;">
+                                    <li>Your marital status</li>
+                                    <li>How much rent you pay</li>
+                                    <li>Your family's home village</li>
+                                </ul>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <strong>💡 Pro Tip:</strong> Becoming overly defensive or refusing to answer these questions is seen as arrogant or cold. You don't just work with your team; you are expected to treat them like an extended, slightly nosy family.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-53", title: "53 Giving a presentation" },
                     { id: "lesson-54", title: "54 Work meetings" },
                     { id: "lesson-55", title: "55 Online meetings" }
