@@ -9133,7 +9133,125 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-50", title: "50 Job interviews" },
+                    {
+                        id: "lesson-50",
+                        title: "50 Job interviews",
+                        content: `
+                            <h2>50 Nailing the Interview (Strengths & The "Flight Risk" Trap)</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Self-Promotion, Hidden Questions, Consultancies & The Notice Period</strong></p>
+                            
+                            <p>When you are sitting in the <span class="nepali-font">अन्तर्वार्ता</span> (Interview) room in Kathmandu, the rules of self-promotion are different. You don't boast about your "excellent track record." You emphasize that you are hardworking, honest, and capable of handling pressure.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <h3 style="margin: 0;">1. Talking About Yourself (The Humble Flex)</h3>
+                            </div>
+
+                            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                                <strong><span class="nepali-font">आफ्नो बारेमा केही भन्नुस्।</span></strong> — Tell me something about yourself.
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म मेहेनती र इमानदार छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I am hardworking and honest. (The Nepali "I am reliable and organized").</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म सबैसँग मिलेर काम गर्न सक्छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I can work together with everyone. ("I work well in a team").</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म नयाँ कुरा छिट्टै सिक्न सक्छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I can learn new things quickly. ("I'm a quick learner").</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मलाई प्रेसरमा पनि काम गर्न बानी परेको छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I am used to working under pressure. (Crucial for banking & NGO jobs).</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म कस्टमरसँग राम्ररी बोल्न सक्छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I can speak well with customers.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. The Employer's Hidden Questions</h3>
+                            </div>
+                            <p>Employers in Nepal are <strong>terrified</strong> of hiring someone, training them, and then watching them leave the country. You must reassure them of your stability.</p>
+
+                            <div style="margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #ef4444; text-transform: uppercase; margin-bottom: 4px;">⚠️ The "Flight Risk" Question</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भविष्यको योजना के छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">What are your future plans?</div>
+                                    <div style="margin-top: 8px; background: #fef2f2; border: 1px dashed #ef4444; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem;">
+                                        <strong>🚫 Warning:</strong> Do NOT mention applying for a visa or studying abroad. Say you want to build a career in Nepal.
+                                    </div>
+                                </div>
+
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अघिल्लो काम किन छोड्नुभएको?</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e;">Why did you leave the previous job? (Keep it brief: "For better growth" or "Company closed").</div>
+                                </div>
+
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कहिलेदेखि काम सुरु गर्न सक्नुहुन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e;">From when can you start work?</div>
+                                    <div style="margin-top: 8px; background: #ecfdf5; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem;">
+                                        <strong>✅ Best Answer:</strong> <span class="nepali-font">भोलिदेखि नै सक्छु।</span> — I can from tomorrow. <em>(Employers love immediate availability).</em>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <h3 style="margin: 0;">3. The "Employment Agency" Reality</h3>
+                            </div>
+                            <p>In Nepal, if you are looking for local work, you use a <span class="nepali-font">कन्सल्टेन्सी</span> (Consultancy). The dialogue is very direct:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मलाई पार्ट-टाइम जब चाहिएको छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">I need a part-time job.</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंको फर्म भर्नुभयो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Have you filled your form?</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">व्यक्तिगत विवरण</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Personal details. (What they ask you to fill on the paper).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Notice Period ⏰</h3>
+                                <p style="margin-bottom: 1rem;">Formal labor laws exist in Nepal, but enforcement is weak in the private sector.</p>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏦</div>
+                                        <strong>Banks & Corporates</strong><br>
+                                        <span style="font-size: 0.85rem; color: #6b7280;">Strict 30-day notice period enforced</span>
+                                    </div>
+                                    <div style="background: #fefce8; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏪</div>
+                                        <strong>Smaller Companies</strong><br>
+                                        <span style="font-size: 0.85rem; color: #6b7280;">People resign and leave within a week</span>
+                                    </div>
+                                </div>
+                                <p style="margin-bottom: 0; font-style: italic;">If an interviewer asks when you can start, they often expect you to drop your current job <strong>almost immediately</strong> if they offer a better salary.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-51", title: "51 Starting a new job" },
                     { id: "lesson-52", title: "52 In the workplace" },
                     { id: "lesson-53", title: "53 Giving a presentation" },
