@@ -8986,7 +8986,153 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-49", title: "49 Applying for a job" },
+                    {
+                        id: "lesson-49",
+                        title: "49 Applying for a job",
+                        content: `
+                            <h2>49 Finding the Vacancy & Deadlines</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Job Portals, Bio-data, Interviews & The Printed File Folder</strong></p>
+                            
+                            <p>Forget looking for "Help Wanted" signs in windows. If you want an office job, you are looking at job search websites or massive Facebook groups like "Jobs in Kathmandu."</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <h3 style="margin: 0;">1. The Application Vocabulary</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">भ्याकेन्सी</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af;">Vacancy — Job opening</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">दरखास्त</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af;">Darakhast — Application</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.3rem; font-weight: 700;"><span class="nepali-font">अन्तिम मिति</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af;">Antim Miti — Deadline</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">म्याद सकियो।</span></strong> — The deadline has expired / time is up.
+                            </div>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">Talking About the Hunt:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मैले मेरोजबमा भ्याकेन्सी देखेँ।</span></strong><br>
+                                    <em>I saw a vacancy on MeroJob.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यसको अन्तिम मिति भोलि रहेछ।</span></strong><br>
+                                    <em>It turns out the deadline for this is tomorrow.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. The CV (Bio-data) & Cover Letter Reality</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"बायोडाटा अपडेट गर्यौ त?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Did you update your bio-data?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"गर्दैछु यार। कभर लेटर पनि"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"लेख्नुपर्ने रहेछ।"</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepal, your resume is called your <span class="nepali-font">बायोडाटा</span> or just CV. Unless you're applying for a high-level NGO or strict corporate job, nobody reads a "covering letter." Most places just want your CV emailed directly to the boss.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मलाई यो जबमा एप्लाई गर्न मन छ।</span></strong><br>
+                                    <em>I want to apply for this job.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मैले सीभी (CV) मेल गर्दिएको छु।</span></strong><br>
+                                    <em>I have emailed the CV.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कभर लेटर अनिवार्य छ?</span></strong><br>
+                                    <em>Is a cover letter compulsory?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">3. The Interview (Questions You Will Hear)</h3>
+                            </div>
+                            <p>If you secure the <span class="nepali-font">अन्तर्वार्ता</span> (Interview), the interviewers will speak in direct, practical terms. Here is how they actually ask the questions:</p>
+
+                            <div style="margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 4px;">Q1: "What experience have you got?"</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पहिला कतै काम गर्नुभएको छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">Have you worked anywhere before?</div>
+                                    <div style="margin-top: 8px; background: #ecfdf5; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem;">
+                                        <strong>✅ Answer:</strong> <span class="nepali-font">मैले दुई वर्ष बैंकमा काम गरेको छु।</span> — I have worked in a bank for two years.
+                                    </div>
+                                </div>
+
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 4px;">Q2: "What skills have you got?"</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">के-के काम गर्न आउँछ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">What work do you know how to do? (Literally: What work comes to you?)</div>
+                                </div>
+
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 4px;">Q3: "What hours can you work?"</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कति बजेदेखि कति बजेसम्म भ्याउनुहुन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">From what time to what time can you manage?</div>
+                                </div>
+
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 4px;">Q4: "What salary are you looking for?"</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तलब कति अपेक्षा गर्नुभएको छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">What salary are you expecting?</div>
+                                    <div style="margin-top: 8px; background: #ecfdf5; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem;">
+                                        <strong>✅ Safe Answer:</strong> <span class="nepali-font">बजारको चलन अनुसार नै होस्।</span> — Let it be according to the market trend. <em>(A very polite Nepali negotiation tactic).</em>
+                                    </div>
+                                </div>
+
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; margin-bottom: 4px;">Q5: "Why did you leave your last job?"</div>
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पहिलाको काम किन छोड्नुभएको?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280;">Why did you leave your previous work?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Printed File Folder 📂</h3>
+                                <p style="margin-bottom: 1rem;">Even though the world has gone digital, if you are called for a physical interview in Nepal, you <strong>must</strong> carry a "Clear Bag" (a transparent plastic file folder).</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                    <strong>📋 Inside the Clear Bag:</strong>
+                                    <ul style="margin: 0.5rem 0 0 1.2rem; padding: 0;">
+                                        <li>Freshly printed copy of your Bio-data</li>
+                                        <li>Physical passport-sized photo</li>
+                                        <li>Photocopy of your highest education degree</li>
+                                        <li>Photocopy of your citizenship card</li>
+                                    </ul>
+                                </div>
+                                <p style="margin-bottom: 0; font-style: italic;">If you show up empty-handed and say "I already emailed it to you," it is often considered <strong>highly unprepared</strong>.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-50", title: "50 Job interviews" },
                     { id: "lesson-51", title: "51 Starting a new job" },
                     { id: "lesson-52", title: "52 In the workplace" },
