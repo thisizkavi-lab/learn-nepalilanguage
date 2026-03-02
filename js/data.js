@@ -8866,7 +8866,126 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-48", title: "48 Looking for work" },
+                    {
+                        id: "lesson-48",
+                        title: "48 Looking for work",
+                        content: `
+                            <h2>48 Looking for Work, Bio-datas & The Manpower Hustle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Walk-Ins, Applications, Foreign Employment & The Bio-data System</strong></p>
+                            
+                            <p>If you are looking for a job in Nepal, forget formalized cover letters for most local gigs. The system runs on connections, direct questions, and dropping your "Bio-data" at the front desk. And for a massive percentage of Nepali youth, "looking for work" means looking for a visa.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                                <h3 style="margin: 0;">1. The Local Walk-In (Retail, Cafes & Trades)</h3>
+                            </div>
+                            <p>If you want a job at a local restaurant, hardware store, or shop, you don't look online. You walk in, find the <span class="nepali-font">साहुजी</span> (Owner), and ask them straight to their face.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यहाँ कामदार चाहिएको छ?</span></strong><br>
+                                    <em>Do you need workers here? (Kaamdar = Worker).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कुनै भ्याकेन्सी छ कि?</span></strong><br>
+                                    <em>Is there any vacancy? (Nepalis use the English word 'vacancy' heavily).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म काम खोज्दै छु।</span></strong><br>
+                                    <em>I am looking for work.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तलब कति दिनुहुन्छ?</span></strong><br>
+                                    <em>How much salary will you give? (Don't be shy — there are rarely set "pay bands" for local jobs; you negotiate).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                <h3 style="margin: 0;">2. The Formal Grind (Corporate & NGOs)</h3>
+                            </div>
+                            <p>For office jobs, banks, or NGOs, you find listings in national newspapers (like Kantipur) or on job portals like MeroJob. You'll need to submit a <span class="nepali-font">बायोडाटा</span> (Bio-data - CV/Resume).</p>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">📝 Applying:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बायोडाटा कहाँ बुझाउने?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Where do I submit the bio-data?</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अनुभव चाहिन्छ कि फ्रेसर पनि मिल्छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Is experience needed or are freshers okay?</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अन्तिम मिति कहिलेसम्म हो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Until when is the deadline/last date?</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">🎤 The Interview (<span class="nepali-font">अन्तर्वार्ता</span>):</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो भोलि इन्टरभ्यु छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b21a8; margin-top: 4px;">I have an interview tomorrow. (Nobody uses the formal 'Antarbarta' in casual speech).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">छनोट भयो कि भएन?</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b21a8; margin-top: 4px;">Were you selected or not?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                <h3 style="margin: 0;">3. The "Manpower" Reality (Going Abroad)</h3>
+                            </div>
+                            <p>Millions of young Nepalis use <span class="nepali-font">म्यानपावर</span> (Manpower - Recruitment Agencies) to find labor or hospitality jobs in the Gulf, Malaysia, and Europe. This has its own unique, heavy vocabulary.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कुन देशको डिमाण्ड आएको छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">Which country's demand (job quota) has come?</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म्यानपावरले कति पैसा माग्दैछ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">How much money is the manpower agency asking for? (Agencies charge heavy processing fees).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेडिकल पास भयो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">Did you pass the medical? (Workers must pass a strict physical exam before flying out).</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भिसा कहिले आउँछ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">When will the visa arrive?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Double Meaning of "Bio-data" 📄💒</h3>
+                                <p style="margin-bottom: 1rem;">In the West, a CV or Resume is strictly for your professional life. In Nepal, the word <strong><span class="nepali-font">बायोडाटा</span></strong> serves two completely different masters.</p>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+                                        <strong>Company Bio-data</strong><br>
+                                        <span style="font-size: 0.85rem; color: #6b7280;">Degrees, skills, work experience</span>
+                                    </div>
+                                    <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 1rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💒</div>
+                                        <strong>Marriage Bio-data</strong><br>
+                                        <span style="font-size: 0.85rem; color: #6b7280;">Height, caste, family background, astrological details</span>
+                                    </div>
+                                </div>
+                                <p style="margin-bottom: 0; font-style: italic;">If a family member asks for your "Bio-data," they are absolutely not looking to hire you. They are asking for your <strong>Marriage Bio-data</strong> for arranged marriage negotiations. Never mix up who you are sending your Bio-data to!</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-49", title: "49 Applying for a job" },
                     { id: "lesson-50", title: "50 Job interviews" },
                     { id: "lesson-51", title: "51 Starting a new job" },
