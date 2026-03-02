@@ -8733,7 +8733,139 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-47", title: "47 Further and higher education" },
+                    {
+                        id: "lesson-47",
+                        title: "47 Further and higher education",
+                        content: `
+                            <h2>47 College Life, Canteens & The IELTS Hustle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Courses, Campus Culture, Evening Classes & Student Unions</strong></p>
+                            
+                            <p>University life in Nepal revolves around picking a stream that guarantees a job (or a visa), surviving board exams, and drinking endless cups of sweet tea at the college canteen. Your support system is your seniors who give you their old notes, and your club is the group of friends you skip class with.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                                <h3 style="margin: 0;">1. Choosing a Course (The Interrogation)</h3>
+                            </div>
+                            <p>Students usually look at <span class="nepali-font">म्यानेजमेन्ट</span> (BBA/BBS), <span class="nepali-font">इन्जिनियरिङ</span>, or <span class="nepali-font">आईटी</span>. The most important question isn't about the curriculum — it's about whether the degree is recognized internationally.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">भर्ना हुन कति जीपीए (GPA) चाहिन्छ?</span></strong><br>
+                                    <em>What GPA is needed for admission?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति वर्षको कोर्स हो?</span></strong><br>
+                                    <em>How many years is the course? (Bachelor's recently transitioned from 3 to 4 years).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो पढेर विदेश जान मिल्छ नि?</span></strong><br>
+                                    <em>I can go abroad after studying this, right? (The ultimate deciding factor for 80% of Nepali youth).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong>🔧 Vocational Courses (CTEVT):</strong><br>
+                                <span class="nepali-font" style="font-weight: 700;">म प्राविधिक लाइन पढ्ने सोचमा छु।</span><br>
+                                <span style="font-size: 0.85rem; color: #065f46;">I'm thinking of studying the technical/vocational line. (Nursing, auto mechanics, agriculture, hotel management).</span>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">2. Campus Life & Finding Your Way</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f3f4f6" rx="15"/>
+                                <rect width="100%" height="60" fill="#1e3a8a" rx="15"/>
+                                <text x="50" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Bikash (Classmate)</text>
+                                <rect x="30" y="80" width="280" height="50" rx="10" fill="#ffffff"/>
+                                <text x="45" y="110" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">ओइ, क्लास जाने हो आज?</text>
+                                <path d="M 30 90 L 15 80 L 30 100 Z" fill="#ffffff"/>
+                                <rect x="180" y="150" width="290" height="70" rx="10" fill="#dbeafe"/>
+                                <text x="195" y="175" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">अल्छी लाग्यो यार। आज क्लास</text>
+                                <text x="195" y="200" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">बंक हान्ने हो। क्यान्टिन आइज।</text>
+                                <path d="M 470 160 L 485 150 L 470 170 Z" fill="#dbeafe"/>
+                                <rect x="30" y="240" width="220" height="50" rx="10" fill="#ffffff"/>
+                                <text x="45" y="270" font-family="Arial, sans-serif" font-size="15" fill="#1f2937">ल ल, म ५ मिनेटमा आएँ।</text>
+                                <path d="M 30 250 L 15 240 L 30 260 Z" fill="#ffffff"/>
+                            </svg>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">Essential Campus Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">दाइ, क्यान्टिन कता छ?</span></strong><br>
+                                    <em>Brother, where is the canteen? (The actual center of any Nepali college).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कुन सेमेस्टर हो तिम्रो?</span></strong><br>
+                                    <em>Which semester are you in?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज क्लास बंक हान्ने हो?</span></strong><br>
+                                    <em>Are we bunking (skipping) class today? (A universal college phrase).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <h3 style="margin: 0;">3. The "Evening Classes" (Language & Lok Sewa)</h3>
+                            </div>
+                            <p>If a 20-year-old in Kathmandu is taking an "evening class," it's almost never for a fun hobby. They're preparing to either <strong>leave the country</strong> or <strong>secure a government job</strong>.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म आइल्स (IELTS) गर्दैछु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">I am studying IELTS. (The most common extracurricular. Everyone wants the score for Australia, UK, or Canada).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म कोरियन भाषा सिक्दैछु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">I am learning the Korean language. (For the EPS employment visa to South Korea).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिहान लोक सेवाको क्लास जान्छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">I go to Public Service (government job) prep classes in the morning.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">4. Settling In & Making Friends</h3>
+                            </div>
+                            <p>Nepalis are highly social. You don't need a "Freshers Fair" to make friends. You just sit next to someone and ask about their hometown.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तिमी कुन ठाउँबाट हो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Where are you from? (The ultimate icebreaker since most students migrated from different districts).</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चिया खान जाने हो?</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Wanna go grab a tea? (How friendships are born in Nepal).</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाइ, पोहोर सालको नोट छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Brother, do you have last year's notes? (How you actually get "student support" to pass exams).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: Welcome Parties & Student Unions 🎉</h3>
+                                <p style="margin-bottom: 1rem;">Nepali colleges might not have a rowing team or a debate club, but they have two massive cultural events: The <strong>Welcome Program</strong> (for first-years) and the <strong>Farewell Program</strong> (for graduating students). These are huge, dress-up events involving dancing, speeches, and heavy socializing.</p>
+                                <p style="margin-bottom: 1rem;">Public campuses (like Tribhuvan University colleges) are heavily influenced by <strong><span class="nepali-font">विद्यार्थी संगठन</span> (Bidyarthi Sangathan - Student Political Unions)</strong>. These unions are tied to the major national political parties.</p>
+                                <p style="margin-bottom: 0;">If there is a political dispute, the unions will call a <strong><span class="nepali-font">हड्ताल</span> (Strike)</strong>, lock the campus gates, and classes will be canceled for days. It is a completely normal part of the public university experience.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-48", title: "48 Looking for work" },
                     { id: "lesson-49", title: "49 Applying for a job" },
                     { id: "lesson-50", title: "50 Job interviews" },
