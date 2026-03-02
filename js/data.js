@@ -8275,6 +8275,78 @@ const courseData = [
                                 <p style="margin-bottom: 1rem;">Because the private sector in Nepal is relatively small, securing a permanent government job is considered <strong>the ultimate golden ticket</strong> for financial security and social status.</p>
                                 <p style="margin-bottom: 0;">Hundreds of thousands of youths spend years studying in libraries from dawn to dusk to pass these highly competitive exams. <strong>The library isn't for leisure reading; it is a battleground for their future.</strong></p>
                             </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #dc2626;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                <h3 style="margin: 0;">4. The Reading List (Understanding the Nepali Soul)</h3>
+                            </div>
+                            <p>You can know how to order momos and bargain for a taxi, but if you want to actually understand how Nepali people <strong>think, love, and suffer</strong>, you have to read their literature.</p>
+
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin: 1.5rem 0;">
+
+                                <div style="background: linear-gradient(135deg, #fef2f2, #fff1f2); border: 1px solid #fecaca; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #dc2626; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">1</span>
+                                        <h4 style="margin: 0; color: #991b1b;">Muna Madan — Laxmi Prasad Devkota</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #be123c; margin-bottom: 0.5rem;">The Cultural Anchor</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">A short epic poem — the single most famous piece of literature in Nepali history. Written by the "Mahakavi" (Great Poet), it tells the tragic story of Madan, who leaves his beloved wife Muna to go to Lhasa to earn money, only to fall sick on the way back.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> It is the original story of the Nepali remittance worker. Every Nepali person knows the story, and quoting a line will instantly earn you the deepest respect.</div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, #fff7ed, #fffbeb); border: 1px solid #fed7aa; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #ea580c; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">2</span>
+                                        <h4 style="margin: 0; color: #9a3412;">Jaya Bhudi (Essays) — Bhairav Aryal</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #c2410c; margin-bottom: 0.5rem;">The King of Satire</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">"Hail to the Belly" — a collection of essays that absolutely rips apart the greed, corruption, and hypocrisy of Nepali politicians and society.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> Aryal twists the Nepali language to make fun of the system. If you can read Aryal and laugh, you have mastered Nepali.</div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, #eef2ff, #e0e7ff); border: 1px solid #c7d2fe; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #4f46e5; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">3</span>
+                                        <h4 style="margin: 0; color: #3730a3;">Ghumne Mech Mathi Andho Manche — Bhupi Sherchan</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #4338ca; margin-bottom: 0.5rem;">The Reality Check</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">"A Blind Man on a Revolving Chair." Sherchan used free verse to critique the blind, elite bureaucracy in Kathmandu and the struggles of the middle class.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> Sharp, modern vocabulary — not buried in ancient Sanskrit. It cuts straight to the bone and perfectly captures political absurdity.</div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 1px solid #a7f3d0; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #059669; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">4</span>
+                                        <h4 style="margin: 0; color: #065f46;">Karnali Blues — Buddhisagar</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #047857; margin-bottom: 0.5rem;">The Modern Masterpiece</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">A coming-of-age story about a boy growing up in Far-Western Nepal, detailing his relationship with his father as they move to the city.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> Buddhisagar writes exactly how people actually speak. Raw, funny, deeply localized dialogue that teaches the rhythm of everyday Nepali banter better than any textbook.</div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, #fdf2f8, #fce7f3); border: 1px solid #fbcfe8; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #db2777; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">5</span>
+                                        <h4 style="margin: 0; color: #9d174d;">Palpasa Café — Narayan Wagle</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #be185d; margin-bottom: 0.5rem;">The War & The Youth</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">The biggest bestselling modern novel. Set during the 10-year Maoist civil war, it follows an artist named Drishya who travels into war-torn villages and falls in love with Palpasa.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> Clean, journalistic prose accessible for intermediate learners. Provides critical context for the political trauma that shaped modern Nepal.</div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, #fefce8, #fef9c3); border: 1px solid #fef08a; padding: 1.5rem; border-radius: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem;">
+                                        <span style="background: #ca8a04; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">6</span>
+                                        <h4 style="margin: 0; color: #854d0e;">Cheena Harayeko Manche — Hari Bansha Acharya</h4>
+                                    </div>
+                                    <div style="font-size: 0.85rem; font-style: italic; color: #a16207; margin-bottom: 0.5rem;">The Reality of Humor</div>
+                                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">"The Man Who Lost His Horoscope" — the autobiography of half of the legendary "Maha Jodi" comedy duo. It details his rise from a struggling childhood to becoming the voice of political satire, while dealing with the devastating loss of his wife.</p>
+                                    <div style="background: white; padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem;"><strong>Why it's great:</strong> Comedians are the true philosophers of Nepal. A massive crash course in Kathmandu's culture, the caste system, radio history, and how Nepalis use dark humor to survive political instability.</div>
+                                </div>
+
+                            </div>
                         `
                     }
                 ]
