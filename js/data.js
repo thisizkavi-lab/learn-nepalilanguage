@@ -10491,7 +10491,113 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-61", title: "61 Home improvements" },
+                    {
+                        id: "lesson-61",
+                        title: "61 Home improvements",
+                        content: `
+                            <h2>61 Home Improvements, Dashain Paint Jobs & The "Mistri"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Festival Makeovers, Hiring Tradesmen, Thekka vs. Jyala & Bamboo Scaffolding</strong></p>
+                            
+                            <p>In the West, "DIY" (Do-It-Yourself) is a massive hobby. In Nepal, labor is relatively affordable, and tradesmen are highly specialized. You do not hang your own shelves or strip your own walls. You hire a guy.</p>
+                            <p>And as any Nepali knows, the entire country decides to renovate at the exact same time: right before the autumn festivals of Dashain and Tihar. Finding a painter in September is a brutal hustle. Here is how you actually manage home improvements in Kathmandu.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+                                <h3 style="margin: 0;">1. The Festival Makeover (Rong Lagaune)</h3>
+                            </div>
+                            <p>Whether it is putting fresh red mud (<span class="nepali-font">रातो माटो</span> - Rato Mato) on a village house or hiring a crew to spray Asian Paints on a Kathmandu concrete mansion, Dashain means it is time to clean and paint.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">रंग लगाउने</span> (Rong lagaune)</strong><br>
+                                    <em>To paint. (Literally: to apply color).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पेन्टर / रंग लगाउने मान्छे</span> (Painter / Rong lagaune manche)</strong><br>
+                                    <em>Painter.</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <div style="margin-bottom: 12px;">
+                                    <strong><span class="nepali-font" style="font-size: 1.1rem;">दशैं आउन लाग्यो, घरमा रंग लगाउनु पर्छ।</span></strong><br>
+                                    <span style="color: #3730a3; font-size: 0.95rem;">Dashain is about to come, we must paint the house.</span>
+                                </div>
+                                <div style="background: #eff6ff; padding: 8px; border-left: 3px solid #3b82f6;">
+                                    <strong><span class="nepali-font" style="font-size: 1.1rem;">अहिले त मिस्त्री पाउनै गाह्रो छ।</span></strong><br>
+                                    <span style="color: #1d4ed8; font-size: 0.95rem;">It's hard to even find a worker right now. <em>(What everyone says in the weeks leading up to Dashain).</em></span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="m14.7 13.5-3.4-3.4"/><path d="M17 11V5.5c0-.8-.7-1.5-1.5-1.5H5.5C4.7 4 4 4.7 4 5.5V11"/><path d="M4 11h13"/><path d="m4 11 1.7 1.7a3 3 0 0 0 4.2 0l1.2-1.2"/><path d="M12.4 12.4l1.2 1.2a3 3 0 0 0 4.2 0L19.5 12"/><path d="m19.5 12-2.3-2.3"/></svg>
+                                <h3 style="margin: 0;">2. Hiring a Professional (Forget the Formal "Quote")</h3>
+                            </div>
+                            <p>The textbook has people asking, "Are you able to come round and give us a quote?" In Nepal, you call the local handyman, show him the work, and immediately ask what his daily rate is.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मिस्त्री</span> (Mistri)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Mason / Handyman / Head Worker.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिकर्मी</span> (Sikarmi)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Carpenter. (For when you need shelves or wardrobes put up).</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0; margin-top: 1rem;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">दाइ, एउटा काम थियो।</span> (Dai, euta kaam thiyo.)</strong> - Brother, I had a job (for you).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">यो दराज बनाउन कति लिनुहुन्छ?</span> (Yo daraj banauna kati linuhuncha?)</strong> - How much will you take to make this wardrobe?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ज्याला कति हो?</span> (Jyala kati ho?)</strong> - What is the wage/labor charge?</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M2 12h20"/><path d="M12 2v20"/><path d="m4.9 4.9 14.2 14.2"/><path d="m4.9 19.1 14.2-14.2"/></svg>
+                                <h3 style="margin: 0;">3. The "Thekka" vs. "Jyala" Debate</h3>
+                            </div>
+                            <p>The textbook asks, "Will you supply the materials?" This is the single most important conversation you will have with a Nepali contractor. You have two choices:</p>
+
+                            <ol style="margin-bottom: 1.5rem; color: #475569;">
+                                <li><strong>Thekka (Contract)</strong>: Pay them to supply everything and do the job.</li>
+                                <li><strong>Jyala (Wage)</strong>: Buy the materials yourself and just pay their daily wage.</li>
+                            </ol>
+                            <p>Most Nepalis prefer to buy the materials themselves to ensure the workers don't use cheap cement or paint and pocket the difference.</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">ठेक्कामा गर्ने कि ज्यालामा?</span></strong><br>
+                                        <span style="color: #991b1b;">Will you do it on contract (materials included) or on a daily wage?</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">तपाईं ज्याला मात्र लिनुस्। सामान म आफैँ किन्छु।</span></strong><br>
+                                        <span style="color: #991b1b;">You just take the labor charge. I will buy the materials myself.</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">सामानको लिस्ट दिनुस् त।</span></strong><br>
+                                        <span style="color: #991b1b;">Please give me the list of materials. <em>(The Mistri will write down what you need to buy from the hardware store).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #047857;">The Cultural Insight: Bamboo Scaffolding 🎋</h3>
+                                <p style="margin-bottom: 1rem;">If you hire professionals to paint or plaster the outside of a multi-story Kathmandu house, do not expect them to show up with modern, OSHA-approved steel scaffolding.</p>
+                                <div style="background: #d1fae5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #065f46;">
+                                    They will arrive with a truckload of long bamboo poles and thick ropes, and within a few hours, they will have tied together a massive, terrifyingly high bamboo structure that they will casually climb up in flip-flops. It is an incredible, gravity-defying feat of traditional Nepali engineering.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-62", title: "62 Pets" },
                     { id: "lesson-63", title: "63 Home emergencies" },
                     { id: "lesson-64", title: "64 Home entertainment" }
