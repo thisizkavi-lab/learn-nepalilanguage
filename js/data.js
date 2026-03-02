@@ -7802,7 +7802,130 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-42", title: "42 Sending and receiving" },
+                    {
+                        id: "lesson-42",
+                        title: "42 Sending and receiving",
+                        content: `
+                            <h2>42 The Post Office, Couriers & Cargo</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Sending Parcels, Receiving Deliveries & The White Cloth Tradition</strong></p>
+                            
+                            <p>If you walk into a Nepali post office asking for a "second-class stamp" to send a letter to France, you are wasting your time. Nepal runs on <strong>private couriers, cargo shipments, and WhatsApp delivery calls</strong>.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"/><polyline points="1 9 12 15 23 9"/></svg>
+                                <h3 style="margin: 0;">1. The Courier Desk (Sending Abroad)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="320" height="60" rx="15" fill="#3b82f6"/>
+                                <text x="210" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"नमस्ते, यो पार्सल अष्ट्रेलिया पठाउनु छ।"</text>
+                                <path d="M 80 100 L 90 130 L 110 100 Z" fill="#3b82f6"/>
+                                <rect x="330" y="120" width="320" height="60" rx="15" fill="#f59e0b"/>
+                                <text x="490" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"भित्र के छ? आइडी लिएर आउनुभएको छ?"</text>
+                                <path d="M 620 180 L 610 210 L 590 180 Z" fill="#f59e0b"/>
+                                <rect x="50" y="200" width="320" height="60" rx="15" fill="#10b981"/>
+                                <text x="210" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"लुगा र किताब हो। एक्सप्रेसमा कति लाग्छ?"</text>
+                                <text x="210" y="245" font-family="Arial, sans-serif" font-size="13" fill="#ecfdf5" text-anchor="middle">(Clothes and books. How much for express?)</text>
+                                <path d="M 80 260 L 90 290 L 110 260 Z" fill="#10b981"/>
+                                <rect x="330" y="270" width="320" height="60" rx="15" fill="#64748b"/>
+                                <text x="490" y="305" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"५ देखि ७ दिन लाग्छ। यो फारम भर्नुस्।"</text>
+                            </svg>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">Essential Sending Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">यो पार्सल अष्ट्रेलिया पठाउनु छ।</span> (Yo parcel Australia pathaunu cha.)</strong><br>
+                                    <em>Meaning: I need to send this parcel to Australia.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">भित्र के छ?</span> (Bhitra ke cha?)</strong><br>
+                                    <em>Meaning: What is inside? (You must answer truthfully. Food, liquids, or electronics change the rules).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">एक्सप्रेस कि सामान्य?</span> (Express ki samanya?)</strong><br>
+                                    <em>Meaning: Express or standard?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कति दिन लाग्छ पुग्न?</span> (Kati din lagcha pugna?)</strong><br>
+                                    <em>Meaning: How many days will it take to arrive?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ट्र्याकिङ नम्बर पाइन्छ?</span> (Tracking number paincha?)</strong><br>
+                                    <em>Meaning: Do I get a tracking number? (Always demand one for international cargo).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                <h3 style="margin: 0;">2. The Paperwork (Filling the Form)</h3>
+                            </div>
+                            <p>They won't just scan a barcode on your phone. You have to physically write down the details.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">यो फारम कहाँ भर्ने?</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Yo faram kaha bharne?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Where do I fill this form?</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आइडी चाहिन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">ID chaincha?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Is an ID needed? (Yes, you almost always need a passport or citizenship card).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हस्ताक्षर यहाँ गर्ने हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Hastakshar yaha garne ho?</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 4px;">Do I sign here?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <h3 style="margin: 0;">3. Receiving a Parcel (The Phone Call)</h3>
+                            </div>
+                            <p>The delivery driver will not just drop it at your doorstep. Addresses in Nepal are notoriously difficult, so the driver will always call you.</p>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #22c55e; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">हेलो दाइ, तपाईंको पार्सल आएको छ। कता हुनुहुन्छ?</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Hello brother, your parcel has arrived. Where are you?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">म नबिल बैंकको ठ्याक्कै अगाडि छु।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">I am exactly in front of Nabil Bank. (Always use landmarks, not street names).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">आज डेलिभरी हुन्छ?</span> (Aaja delivery huncha?)</strong><br>
+                                    <em>Meaning: Will it be delivered today?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मेरो पार्सल कहाँ पुग्यो?</span> (Mero parcel kaha pugyo?)</strong><br>
+                                    <em>Meaning: Where has my parcel reached? (How you ask for a tracking update over the phone).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #faf5ff; border-left: 4px solid #a855f7; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #6b21a8;">The Cultural Insight: The "White Cloth" Government Post 📦</h3>
+                                <p style="margin-bottom: 1rem;">If you actually decide to use the official government <strong><span class="nepali-font">हुलाक</span> (Hulak - Post Office)</strong> to send a package cheaply, you cannot just drop off a cardboard box.</p>
+                                <p style="margin-bottom: 1rem;">Nepal Post requires an old-school security measure: <strong>Your cardboard box must be entirely sewn into a piece of white cloth, and the seams must be sealed with red wax stamps.</strong></p>
+                                <p style="margin-bottom: 0;">You usually have to pay a guy sitting outside the post office <strong>100 rupees</strong> to physically sew your box into a white fabric sack before the postal workers will accept it. It is an incredible, historic piece of bureaucracy that is still alive today.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-43", title: "43 Money and finance" },
                     { id: "lesson-44", title: "44 At the library" }
                 ]
