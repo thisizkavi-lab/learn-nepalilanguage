@@ -727,3 +727,115 @@ body,
         grid-template-columns: 1fr;
     }
 }
+
+/* ─── Tablet & Small Screens (≤ 600px) ─── */
+@media (max-width: 600px) {
+    .content {
+        padding: 24px 16px;
+    }
+
+    .content h1 {
+        font-size: 1.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.35rem;
+        margin: 28px 0 12px;
+    }
+
+    .content h3 {
+        font-size: 1.1rem;
+        margin: 18px 0 8px;
+    }
+
+    .section-divider {
+        margin: 36px 0;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .page-navigation a {
+        justify-content: center;
+    }
+
+    .nav-next {
+        margin-left: 0;
+    }
+
+    .nepali-font {
+        font-size: 1.05em;
+    }
+}
+
+/* ─── Phone Screens (≤ 480px) ─── */
+@media (max-width: 480px) {
+    .content {
+        padding: 20px 12px;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ─── Global: SVGs, Images & Inline Grids Responsive ─── */
+.content svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Force inline-styled grids to stack on small screens */
+@media (max-width: 600px) {
+    .content div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .content div[style*="display: flex"][style*="gap: 12px"],
+    .content div[style*="display: flex"][style*="gap: 16px"] {
+        flex-wrap: wrap;
+    }
+
+    /* Scale down inline SVG viewBoxes */
+    .content svg[viewBox] {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Cultural insight boxes */
+    .content div[style*="border-left: 4px solid"] {
+        padding: 1rem !important;
+    }
+
+    /* Reduce card padding on small screens */
+    .content div[style*="padding: 1.5rem"] {
+        padding: 1rem !important;
+    }
+
+    .content div[style*="padding: 0.8rem"] {
+        padding: 0.6rem !important;
+    }
+
+    /* H4 section headings with emojis */
+    .content h4 {
+        font-size: 1rem;
+    }
+
+    /* Stream badges on +2 crossroads */
+    .content span[style*="border-radius: 10px"][style*="font-size: 0.7rem"] {
+        font-size: 0.65rem !important;
+        padding: 1px 6px !important;
+    }
+}
