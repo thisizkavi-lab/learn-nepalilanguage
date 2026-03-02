@@ -9707,7 +9707,127 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-55", title: "55 Online meetings" }
+                    {
+                        id: "lesson-55",
+                        title: "55 Online meetings",
+                        content: `
+                            <h2>55 Online Meetings, "Mute Bhayo," & The Wi-Fi Struggle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Frozen Screens, Connection Disasters & The Symphony of Background Noise</strong></p>
+                            
+                            <p>Welcome to the digital hustle of Kathmandu. Whether you are on Zoom, Teams, or Google Meet, online meetings here are a chaotic mix of English corporate buzzwords and Nepali survival slang. You aren't just managing the agenda; you're managing unstable internet, sudden electricity cuts, and a lot of background noise.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><line x1="2" y1="2" x2="22" y2="22"/><path d="M18.89 13.23A7.12 7.12 0 0 0 19 12v-2"/><path d="M5 10v2a7 7 0 0 0 12 5"/><path d="M15 9.34V5a3 3 0 0 0-5.68-1.33"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                                <h3 style="margin: 0;">1. Getting Started & The "Mute" Crisis</h3>
+                            </div>
+                            <p>When a meeting starts, it usually takes five solid minutes just to make sure everyone's tech is actually functioning.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सुरु गरौं है?</span></strong><br>
+                                    <em>Let's start, okay? / Let's get going.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सबैले सुन्दै हुनुहुन्छ?</span></strong><br>
+                                    <em>Is everyone hearing me? / Can you all hear me?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सर, तपाईंको म्युट छ।</span></strong><br>
+                                    <em>Sir, you are on mute. (You will say this at least three times a week).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म मेरो स्क्रिन सेयर गर्छु है।</span></strong><br>
+                                    <em>I will share my screen, okay. (Nepalis just use the English words 'screen share').</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">स्क्रिन देखियो?</span></strong><br>
+                                    <em>Is the screen visible?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                <h3 style="margin: 0;">2. The Universal Excuses (Connection Disasters)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हेलो, भिडियो किन अड्कियो?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Hello, why did the video get stuck?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"सर, मेरो नेट लास्टै स्लो छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(Sir, my net is extremely slow.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepal, you blame your ISP, the power grid, or your frozen hardware.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो नेट लास्टै स्लो छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">My net is extremely slow. <em>(Using 'lastai' for 'extremely' is peak Kathmandu street slang).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आवाज काटिएर आइराछ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The voice is coming in cut up / Your voice is breaking.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ल्यापटप ह्याङ भयो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The laptop froze.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एकैछिन है, म लिभ गरेर फेरि जोइन गर्छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">Just a moment, I will leave and join again.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <div style="font-size: 0.75rem; font-weight: 700; color: #b45309; text-transform: uppercase; margin-bottom: 4px;">⚡ The Ultimate Crisis (Batti Gayo)</div>
+                                <div style="font-size: 1.15rem; font-weight: 700;"><span class="nepali-font">सर, बत्ती गयो। म डाटाबाट आउँदै छु।</span></div>
+                                <div style="font-size: 0.9rem; color: #92400e; margin-top: 8px;">Sir, the electricity went out. I am coming on (mobile) data.</div>
+                                <div style="font-size: 0.85rem; color: #b45309; margin-top: 8px; font-style: italic;">(This happens constantly. When the Wi-Fi router dies during a power cut, you quickly switch to your phone's 4G hotspot).</div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <h3 style="margin: 0;">3. Wrapping Up The Call</h3>
+                            </div>
+                            <p>When it's time to end, you don't say "Shall we put in another meeting?" You just check when everyone is free next.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आजलाई यति नै गरौं।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Let's do just this much for today. <em>(The standard way to wrap up).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अर्को मिटिङ कहिले बस्ने?</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">When should we sit for the next meeting?</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म भाइबरमा अपडेट गर्छु नि।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">I'll update you on Viber.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Symphony of Background Noise 📢</h3>
+                                <p style="margin-bottom: 1rem;">If you are on a Zoom call with someone working from home in Kathmandu, you are going to hear the city. Do not be offended or surprised if a colleague is giving a serious financial report while a pack of street dogs barks viciously outside their window.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <strong>🍲 The Iconic Sound:</strong> The other classic sound is the high-pitched <em>siti</em> (whistle) of a pressure cooker coming from their kitchen, which means their mom is cooking rice and lentils for the morning Dal Bhat. It is an accepted part of the Nepali remote-work soundtrack.
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
