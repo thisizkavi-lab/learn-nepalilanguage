@@ -10147,7 +10147,116 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-58", title: "58 Moving house" },
+                    {
+                        id: "lesson-58",
+                        title: "58 Moving house",
+                        content: `
+                            <h2>58 Moving Day, Tata Mobiles & The Heavy Lifting</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>DIY Moves, Wai-Wai Boxes, Haggling with Trucks & The Brutal Stairs</strong></p>
+                            
+                            <p>When you move in Nepal, you aren't moving "houses" (unless you are incredibly rich). If you are a student or working professional, you are moving rooms or flats. The process is entirely DIY, relying on local street transport and the physical strength of your friends.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                                <h3 style="margin: 0;">1. The Prep & The "Wai-Wai" Boxes</h3>
+                            </div>
+                            <p>You don't go to a hardware store to buy pristine moving boxes. You go to the local grocery shop and ask for their trash.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">डेरा सर्ने</span> (Dera sarne)</strong><br>
+                                    <em>Moving flats / changing rentals. (The absolute standard term).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कोठा सर्ने</span> (Kotha sarne)</strong><br>
+                                    <em>Moving rooms.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सामान प्याक गर्ने</span> (Saman pack garne)</strong><br>
+                                    <em>Packing stuff.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">सबै सामान प्याक भयो?</span> (Sabai saman pack bhayo?)</strong><br>
+                                    <em>Is all the stuff packed?</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <div style="font-size: 1.15rem; font-weight: 700;"><span class="nepali-font">दाइ, खाली कार्टुन छ?</span></div>
+                                <div style="font-size: 0.95rem; color: #3730a3; margin-top: 8px;">Brother, do you have any empty cardboard boxes?</div>
+                                <div style="font-size: 0.85rem; color: #4f46e5; margin-top: 8px; font-style: italic;">(Nepalis just use the English word 'cartoon' for boxes. Often, you'll be given empty Wai-Wai noodle boxes).</div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="2" y="7" width="20" height="11" rx="2" ry="2"/><path d="M18 7v4"/><path d="M12 7v4"/><path d="M6 7v4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 18H3"/><path d="M21 18h-2"/></svg>
+                                <h3 style="margin: 0;">2. The "Tata Mobile" & The Muscle</h3>
+                            </div>
+                            <p>You don't hire a professional moving company. You walk down to the main road and negotiate with the guys sitting on the tailgate of a small pickup truck (often called a Tata Mobile or a Bolero).</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #1e40af; margin-bottom: 0.5rem;">Hiring the Truck (<span class="nepali-font">गाडी / पिकअप</span>)</h4>
+                                    <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: #1e3a8a;">
+                                        <li><strong><span class="nepali-font" style="font-size: 1rem;">दाइ, सामान सार्नु पर्ने थियो।</span></strong><br>Brother, I need to shift some stuff.</li>
+                                        <li style="margin-top: 8px;"><strong><span class="nepali-font" style="font-size: 1rem;">कहाँदेखि कहाँसम्म?</span></strong><br>From where to where? <em>(They ask this immediately to calculate price).</em></li>
+                                        <li style="margin-top: 8px;"><strong><span class="nepali-font" style="font-size: 1rem;">कति लिने हो?</span></strong><br>How much will you take? <em>(Negotiate this before lifting a single box).</em></li>
+                                    </ul>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #1e40af; margin-bottom: 0.5rem;">Hiring Porters</h4>
+                                    <span style="display: block; font-size: 0.8rem; color: #1e40af; margin-bottom: 8px;">If you don't have friends, you must hire labor for the heavy Daraj.</span>
+                                    <div style="background: #dbeafe; padding: 10px; border-radius: 8px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">मान्छे चाहिन्छ कि आफैँ बोक्ने?</span></strong><br>
+                                        <span style="font-size: 0.9rem; color: #1e3a8a;">Do you need men (porters) or will you carry it yourself?</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                                <h3 style="margin: 0;">3. Moving the Goods & The Keys</h3>
+                            </div>
+                            <p>There is no "key pickup" from a front desk. You meet the new landlord, hand over the first month's cash, and get the key to the padlock.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ल, सामान लोड गरौं।</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Okay, let's load the stuff.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">साँचो दिनुस् त।</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Give me the keys.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">माथि छतमा राख्दिनुस्।</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Put it up on the roof.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <div style="font-size: 0.75rem; font-weight: 700; color: #991b1b; text-transform: uppercase; margin-bottom: 4px;">🛑 The Crucial Warning</div>
+                                <div style="font-size: 1.15rem; font-weight: 700;"><span class="nepali-font">बिस्तारै बोक्नुस् है, सिसा छ।</span></div>
+                                <div style="font-size: 0.9rem; color: #7f1d1d; margin-top: 8px;">Carry it slowly/carefully, there is glass.</div>
+                                <div style="font-size: 0.85rem; color: #991b1b; margin-top: 8px; font-style: italic;">(Essential wording for mirrors, TVs, and fragile items being jammed into stairwells).</div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Post-Move Feast 🥟🍻</h3>
+                                <p style="margin-bottom: 1rem;">Moving in Kathmandu usually means carrying heavy furniture up four flights of stairs because very few residential buildings have elevators. It is brutal, sweaty work.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    If your friends come to help you move, you do not offer them a polite cup of tea and a biscuit like the textbook suggests. You owe them a massive plate of <strong>Momos, chowmein, and possibly a cold beer or local Roksi</strong> once the final box is dropped on the floor. It is the unwritten law of the Nepali moving day.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-59", title: "59 Meeting the neighbours" },
                     { id: "lesson-60", title: "60 Household chores" },
                     { id: "lesson-61", title: "61 Home improvements" },
