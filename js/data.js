@@ -9505,7 +9505,110 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-53", title: "53 Giving a presentation" },
+                    {
+                        id: "lesson-53",
+                        title: "53 Giving a presentation",
+                        content: `
+                            <h2>53 Giving a Presentation & The Art of "Bhumika"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Formal Respect, Background Tying, Transitions & The Q&A Silence</strong></p>
+                            
+                            <p>In the West, presentations are designed to be fast, punchy, and get straight to the point. In Nepal, public speaking involves a lot of formal respect and <span class="nepali-font">भूमिका बाँध्ने</span> (Bhumika baadhne - Tying the background). You must give context and acknowledge the senior people in the room before making your actual point.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">1. The Exhaustive Greeting (Getting Started)</h3>
+                            </div>
+                            <p>Forget "First, I'm going to tell you about..." Your first 30 seconds must be dedicated to greeting everyone by their rank.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आदरणीय सर, म्याम, र सम्पूर्ण साथीहरू, नमस्ते।</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3; margin-top: 4px;">Respected Sir, Ma'am, and all friends, Namaste. <em>(The absolute standard opening. Do not skip this).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आज म [Topic] को बारेमा केही भन्न गइरहेको छु।</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3; margin-top: 4px;">Today I am going to say something about [Topic].</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो प्रिजेन्टेसनको मुख्य विषय हो...</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3; margin-top: 4px;">The main subject of my presentation is... <em>(Nepalis almost exclusively use the English word "presentation" in normal speech).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><polyline points="9 18 15 12 9 6"/></svg>
+                                <h3 style="margin: 0;">2. Changing the Subject (Keeping it Flowing)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अब कुरा गरौं..."</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Now let's talk about...)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अर्को मुख्य कुरा के हो भने..."</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">(The next main point is...)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepali, transitions are much more direct than things like "This leads me on to...". You just signal that you are moving on.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अब कुरा गरौं...</span></strong><br>
+                                    <em>Now let's talk about... (The most natural way to switch topics).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अर्को मुख्य कुरा के हो भने...</span></strong><br>
+                                    <em>The next main thing is that...</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तपाईंहरूले स्क्रिनमा देख्न सक्नुहुन्छ...</span></strong><br>
+                                    <em>You all can see on the screen... (Used when pointing to a PowerPoint slide).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <h3 style="margin: 0;">3. Finishing Up & The Q&A Silence</h3>
+                            </div>
+                            <p>When you wrap up, you must thank the audience for their patience.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अन्त्यमा, म के भन्न चाहन्छु भने...</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">In the end, what I want to say is...</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ध्यान दिएर सुनिदिनुभएकोमा धेरै धेरै धन्यवाद।</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Thank you very much for listening with attention.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">केही प्रश्नहरू छन् भने सोध्न सक्नुहुन्छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">If there are any questions, you can ask.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Without Much Delay" Paradox ⏳</h3>
+                                <p style="margin-bottom: 1rem;">There is a famous, slightly ironic public speaking habit in Nepal. A speaker will often say:</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; margin: 1rem 0; text-align: center;">
+                                    <strong><span class="nepali-font">धेरै भूमिका नबाँधीकन म सीधै विषयवस्तुमा प्रवेश गर्न चाहन्छु।</span></strong><br>
+                                    <span style="font-size: 0.85rem; color: #1e40af;">"Without tying too much background, I want to enter directly into the subject matter."</span>
+                                </div>
+                                <p style="margin-bottom: 0; font-style: italic;">Almost immediately after saying this, the speaker will proceed to talk about the deep history of the organization for another 20 minutes before making their actual point. If you hear someone say they are getting "straight to the point," settle in, because it's going to take a while.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-54", title: "54 Work meetings" },
                     { id: "lesson-55", title: "55 Online meetings" }
                 ]
