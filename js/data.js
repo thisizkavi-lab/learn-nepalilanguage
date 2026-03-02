@@ -9833,7 +9833,158 @@ const courseData = [
             {
                 title: "THE HOME",
                 lessons: [
-                    { id: "lesson-56", title: "56 The home" },
+                    {
+                        id: "lesson-56",
+                        title: "56 The home",
+                        content: `
+                            <h2>56 The Family Home, Renting a "Flat," & The Concrete Jungle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Joint Families, Minimalist Rooms, Flat Hunting & The Ultimate Status Symbol</strong></p>
+                            
+                            <p>Western textbooks teach you about "cottages," "lofts," and living alone. In Nepal, housing is tied directly to family, status, and survival. Almost everyone in Nepal ultimately owns a home, whether it’s a massive mansion in the city or a small traditional house in the village. Homelessness is extremely rare because the social safety net is the family.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <h3 style="margin: 0;">1. The House & The Joint Family Reality</h3>
+                            </div>
+                            <p>In Nepal, families are big. You don't typically move out when you turn 18. You live in a <span class="nepali-font" style="color: #6b21a8; font-weight: bold;">संयुक्त परिवार</span> (Sanyukta Pariwar - Joint Family) with your parents, siblings, and sometimes grandparents. You usually only move out if you get married, migrate for work, or if there is a massive family fight over property.</p>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">🏗️ The Build Types:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पक्की घर</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">Pakki Ghar — Concrete/Permanent house. (The modern standard in cities. Usually 3 to 4 stories high).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कच्ची घर</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">Kachhi Ghar — Mud, wood, or stone house. (Traditional village architecture).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">जग्गा</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">Jagga — Land / Plot. (The ultimate investment. People buy 'Jagga' first, then spend 10 years saving to build the 'Ghar').</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">🏢 The Floors (<span class="nepali-font">तला</span> - Tala):</h4>
+                            <p>Nepal uses the British system. The ground floor is not the first floor.</p>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">भुइँतला</span> (Bhui-tala)</strong> - Ground floor.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पहिलो तला</span> (Pahilo tala)</strong> - First floor. (One level up).</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">छत / कौसी</span> (Chhat / Kausi)</strong> - Flat Roof. (The most important part of the house for drying clothes, soaking up winter sun, and growing veg).</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <h3 style="margin: 0;">2. Inside the House (The Minimalist Reality)</h3>
+                            </div>
+                            <p>Burn the textbook terms like "dishwasher," "ottoman," and "sideboard." Most Nepali homes are highly practical.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #047857; margin-bottom: 0.5rem;">Rooms (<span class="nepali-font">कोठा</span>)</h4>
+                                    <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: #065f46;">
+                                        <li><strong><span class="nepali-font" style="font-size: 1rem;">भान्सा / किचेन</span></strong> - Kitchen.</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">सुत्ने कोठा</span></strong> - Bedroom (Sleeping room).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">बैठक कोठा / हल</span></strong> - Living room (Hall).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">बाथरुम / ट्वाइलेट</span></strong> - Toilet/Bathroom.</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">भर्याङ</span></strong> - Stairs.</li>
+                                    </ul>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <h4 style="margin-top: 0; color: #047857; margin-bottom: 0.5rem;">Furniture & Essentials</h4>
+                                    <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: #065f46;">
+                                        <li><strong><span class="nepali-font" style="font-size: 1rem;">खाट / ओछ्यान</span></strong> - Bed.</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">दराज</span> (Daraj)</strong> - Wardrobe (Heavy wood/steel).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">ग्यास चुलो</span></strong> - Gas stove (Runs on red LPG cylinders).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">बाल्टी र जग</span></strong> - Bucket & mug (For the famous bucket bath).</li>
+                                        <li style="margin-top: 4px;"><strong><span class="nepali-font" style="font-size: 1rem;">धारा</span></strong> - Tap / Faucet.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                <h3 style="margin: 0;">3. Flat Hunting & "Dera" (The Renter's Life)</h3>
+                            </div>
+                            <p>If you move to Kathmandu from a village, you don't "put in an offer" on a house. You wander around looking for "To-Let" signs and deal directly with the landlord.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डेरा / भाडाको कोठा</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Dera / Bhada ko kotha — Rented room/flat. (To "live in Dera" means you are a renter).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">घरबेटी</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Gharbeti — Landlord / Landlady. (A powerful figure; maintain a good relationship).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डेरावाल</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Derawala — Tenant.</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">💬 The Viewing Dialogue:</h4>
+                            <div style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font">अन्टी, फ्ल्याट खाली छ हो?</span></strong><br>
+                                        <span style="color: #475569;">Auntie, is the flat empty/available?</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font">दुइटा कोठा र एउटा किचेन हो।</span></strong><br>
+                                        <span style="color: #475569;">It's two rooms and one kitchen.</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font">भाडा कति हो?</span></strong><br>
+                                        <span style="color: #475569;">How much is the rent?</span>
+                                    </li>
+                                    <li style="background: #fffbeb; border: 1px dashed #f59e0b; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font">पानीको सुविधा कस्तो छ?</span></strong><br>
+                                        <span style="color: #92400e;">How is the water facility? <em>(The most critical question in Kathmandu!).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">4. Fixing Things (Home Improvement)</h3>
+                            </div>
+                            <p>Nepal does not have a "Do-It-Yourself" culture. If you need to "grout tiles," "strip walls," or fix a washing machine, you do not buy tools; you make a phone call to a <span class="nepali-font">मिस्त्री</span> (Mistri - Handyman/Technician).</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">धारा बिग्रियो, प्लम्बर बोलाउनुस् त।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The tap broke, call the plumber.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कोठामा पेन्ट लगाउनु छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The room needs to be painted.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बत्ती बिग्रियो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #991b1b; margin-top: 4px;">The electricity/light is broken. (Call the electrician).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Ultimate Status Symbol 🏠</h3>
+                                <p style="margin-bottom: 1rem;">In Nepal, spending your entire life earning money to build a permanent, concrete house (<span class="nepali-font">पक्की घर</span> - Pakki Ghar) is the ultimate goal.</p>
+                                <p style="margin-bottom: 1rem;">It is not just about having a place to sleep; it is the absolute peak of social status. When a family finally finishes building their house, they often host a massive <strong><span class="nepali-font">घर पूजा</span> (Ghar Puja - House Blessing Ceremony)</strong>.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    They invite the entire neighborhood and extended family to feast and celebrate the fact that they have finally "arrived."
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-57", title: "57 Finding a new home" },
                     { id: "lesson-58", title: "58 Moving house" },
                     { id: "lesson-59", title: "59 Meeting the neighbours" },
