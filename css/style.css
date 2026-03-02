@@ -595,6 +595,101 @@ body,
     color: var(--text-muted);
 }
 
+/* ─── Dark Mode: SVG Chat Dialogues ─── */
+/* Override hardcoded SVG rect backgrounds */
+[data-theme="dark"] .content svg rect[fill="#f8fafc"],
+[data-theme="dark"] .content svg rect[fill="#f3f4f6"] {
+    fill: #2b2d31 !important;
+}
+
+[data-theme="dark"] .content svg rect[fill="#ffffff"] {
+    fill: #383a40 !important;
+}
+
+[data-theme="dark"] .content svg rect[fill="#dbeafe"] {
+    fill: #1e3a5f !important;
+}
+
+/* Dark header bars in SVG chats */
+[data-theme="dark"] .content svg rect[fill="#1e3a8a"] {
+    fill: #1e1f22 !important;
+}
+
+/* SVG text readability in dark mode */
+[data-theme="dark"] .content svg text[fill="#1f2937"],
+[data-theme="dark"] .content svg text[fill="#1e293b"] {
+    fill: #dbdee1 !important;
+}
+
+[data-theme="dark"] .content svg text[fill="#64748b"],
+[data-theme="dark"] .content svg text[fill="#6b7280"] {
+    fill: #949ba4 !important;
+}
+
+[data-theme="dark"] .content svg text[fill="#fee2e2"] {
+    fill: #fca5a5 !important;
+}
+
+/* ─── Dark Mode: Inline-Styled Cards & Containers ─── */
+/* Override all hardcoded light background cards */
+[data-theme="dark"] .content div[style*="background: #f0fdf4"],
+[data-theme="dark"] .content div[style*="background: #ecfdf5"],
+[data-theme="dark"] .content div[style*="background: #eff6ff"],
+[data-theme="dark"] .content div[style*="background: #faf5ff"],
+[data-theme="dark"] .content div[style*="background: #fffbeb"],
+[data-theme="dark"] .content div[style*="background: #fef2f2"],
+[data-theme="dark"] .content div[style*="background: #fdf2f8"],
+[data-theme="dark"] .content div[style*="background: #eef2ff"],
+[data-theme="dark"] .content div[style*="background: #fefce8"],
+[data-theme="dark"] .content div[style*="background: #f8fafc"],
+[data-theme="dark"] .content div[style*="background: #f3f4f6"] {
+    background: #2b2d31 !important;
+    border-color: #3f4147 !important;
+}
+
+/* Override gradient backgrounds on reading list cards */
+[data-theme="dark"] .content div[style*="background: linear-gradient"] {
+    background: #2b2d31 !important;
+    border-color: #3f4147 !important;
+}
+
+/* White backgrounds used in 'Why it's great' boxes etc. */
+[data-theme="dark"] .content div[style*="background: white"],
+[data-theme="dark"] .content div[style*="background-color: white"],
+[data-theme="dark"] .content div[style*="background:#fff"] {
+    background: #383a40 !important;
+    color: var(--text-content) !important;
+}
+
+/* Cultural insight boxes with hardcoded backgrounds */
+[data-theme="dark"] .content div[style*="border-left: 4px solid"] {
+    background: #1e1f22 !important;
+}
+
+/* H4 headings with inline color */
+[data-theme="dark"] .content h4[style*="color:"] {
+    filter: brightness(1.3) !important;
+}
+
+/* Span tags with hardcoded colors inside cards (transliterations) */
+[data-theme="dark"] .content span[style*="color: #065f46"],
+[data-theme="dark"] .content span[style*="color: #1e40af"],
+[data-theme="dark"] .content span[style*="color: #92400e"],
+[data-theme="dark"] .content span[style*="color: #6b21a8"],
+[data-theme="dark"] .content span[style*="color: #991b1b"],
+[data-theme="dark"] .content span[style*="color: #9d174d"],
+[data-theme="dark"] .content span[style*="color: #3730a3"],
+[data-theme="dark"] .content span[style*="color: #854d0e"],
+[data-theme="dark"] .content span[style*="color: #6b7280"],
+[data-theme="dark"] .content span[style*="color: #9a3412"] {
+    color: var(--text-muted) !important;
+}
+
+/* Divs with inline font-style italic (subtitles) */
+[data-theme="dark"] .content div[style*="font-style: italic"][style*="color:"] {
+    filter: brightness(1.4) !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .sidebar-right {
