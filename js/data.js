@@ -8590,7 +8590,149 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-46", title: "46 At school" },
+                    {
+                        id: "lesson-46",
+                        title: "46 At school",
+                        content: `
+                            <h2>46 School, The "+2" Streams & The Parents' Meeting</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Admissions, Subjects, Streams & The Iron Gate</strong></p>
+                            
+                            <p>School in Nepal is serious business. The system is split into massive private schools (confusingly called "Boarding Schools," even if the kids go home at 4 PM) and government schools (<span class="nepali-font">सरकारी स्कुल</span>).</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                                <h3 style="margin: 0;">1. Choosing a School (The Admission Interrogation)</h3>
+                            </div>
+                            <p>When Nepali parents evaluate a school, they care about <strong>discipline, exam results, and fees</strong>.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">तपाईंको स्कुलको एस.ई.ई. (SEE) को नतिजा कस्तो छ?</span></strong><br>
+                                    <em>How are your school's SEE results? (The SEE is the massive national 10th-grade board exam — the ultimate metric for a school's reputation).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">मासिक शुल्क कति हो?</span></strong><br>
+                                    <em>What is the monthly fee?</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कक्षामा कति जना विद्यार्थी हुन्छन्?</span></strong><br>
+                                    <em>How many students are in the class? (In government schools, this can easily be 50+).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">होमवर्क कति दिनुहुन्छ?</span></strong><br>
+                                    <em>How much homework do you give? (Unlike in the West, Nepali parents WANT a lot of homework).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">युनिफर्म अनिवार्य छ नि?</span></strong><br>
+                                    <em>The uniform is compulsory, right? (Yes. Every single school has a strict uniform, down to the color of socks).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                <h3 style="margin: 0;">2. The Subjects & The "+2" Reality</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">गणित</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Ganit — Mathematics</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">विज्ञान</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Bigyan — Science</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">सामाजिक शिक्षा</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Social Studies</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">लेखा</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Lekha — Accountancy</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">अर्थशास्त्र</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Arthashastra — Economics</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">नैतिक शिक्षा</span><br><span style="font-size: 0.8rem; color: #6b21a8;">Moral Education</span>
+                                </div>
+                            </div>
+
+                            <div style="background: #eef2ff; border: 2px solid #c7d2fe; padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #3730a3;">🔀 The "+2" (Plus-Two) Crossroads</h4>
+                                <p style="margin-bottom: 1rem;">After 10th grade, students enter "+2" (Grades 11 & 12). This is the massive, life-defining split. You don't just "go to high school" — you choose a <strong>stream</strong>.</p>
+
+                                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 0.8rem;">
+                                        <strong><span class="nepali-font">प्लस-टु मा कुन स्ट्रिम छ?</span></strong><br>
+                                        <em style="font-size: 0.9rem;">Which streams are there in +2?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.8rem;">
+                                        <strong><span class="nepali-font">म साइन्स पढ्दै छु।</span></strong> — I'm studying Science. <span style="background: #dc2626; color: white; padding: 1px 8px; border-radius: 10px; font-size: 0.7rem;">HARDEST</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.8rem;">
+                                        <strong><span class="nepali-font">ऊ म्यानेजमेन्ट पढ्छ।</span></strong> — He studies Management. <span style="background: #f59e0b; color: white; padding: 1px 8px; border-radius: 10px; font-size: 0.7rem;">BUSINESS</span>
+                                    </li>
+                                    <li style="margin-bottom: 0;">
+                                        <strong><span class="nepali-font">मानविकी / ह्युम्यानिटीज</span></strong> — Humanities / Arts. <span style="background: #8b5cf6; color: white; padding: 1px 8px; border-radius: 10px; font-size: 0.7rem;">ARTS</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">3. The Parents-Teacher Meeting (PTM)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="50" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="80" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"गणितमा राम्रो छ, तर"</text>
+                                <text x="200" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अंग्रेजीमा अलि कमजोर छ।"</text>
+                                <path d="M 80 120 L 90 150 L 110 120 Z" fill="#3b82f6"/>
+                                <rect x="350" y="140" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"सर, यसले घरमा पढ्दै पढ्दैन।"</text>
+                                <text x="500" y="195" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(Sir, he doesn't study at home at all.)</text>
+                                <path d="M 620 210 L 610 240 L 590 210 Z" fill="#ef4444"/>
+                                <rect x="50" y="230" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="200" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अलि ध्यान दिनुपर्छ। अबदेखि"</text>
+                                <text x="200" y="285" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"ट्युसन पठाउनुस्।"</text>
+                                <path d="M 80 300 L 90 330 L 110 300 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The PTM in Nepal is usually <strong>highly critical</strong>. Teachers will be brutally honest, and parents will actively ask the teachers to be strict.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">पढाइ कस्तो छ यसको?</span></strong> (Padhai kasto cha yesko?)<br>
+                                    <em>How is his/her studying? ("Yesko" = casual, authoritative way parents refer to their kids).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अंग्रेजीमा अलि कमजोर छ।</span></strong><br>
+                                    <em>He/she is a bit weak in English.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">घरमा पढ्दै पढ्दैन।</span></strong><br>
+                                    <em>He/she doesn't study at home at all. (The most common parent complaint).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">अलि कडाइ गरिदिनुस् है सर।</span></strong><br>
+                                    <em>Please be a bit strict with them, sir.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #854d0e;">The Cultural Insight: The "Iron Gate" (SEE) 🚪</h3>
+                                <p style="margin-bottom: 1rem;">For decades, the 10th-grade national board exam (formerly called the <strong>SLC</strong>, now the <strong>SEE</strong>) has been known as the <strong>"Iron Gate"</strong> of a Nepali student's life.</p>
+                                <p style="margin-bottom: 1rem;">The entire country stops for these exams. Passing it with a high GPA dictates whether you are allowed to study <strong>Science</strong> or <strong>Management</strong> in the +2 years.</p>
+                                <p style="margin-bottom: 0;">When results are published, it is <strong>national news</strong>, and families will distribute sweets to their neighbors if their child scores an <strong>"A+"</strong>.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-47", title: "47 Further and higher education" },
                     { id: "lesson-48", title: "48 Looking for work" },
                     { id: "lesson-49", title: "49 Applying for a job" },
