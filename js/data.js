@@ -9252,7 +9252,141 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-51", title: "51 Starting a new job" },
+                    {
+                        id: "lesson-51",
+                        title: "51 Starting a new job",
+                        content: `
+                            <h2>51 The First Day, Office Hierarchy & The "Khaja" Break</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Introductions, The Dai/Didi Rule, Asking for Help & The Most Important Hour</strong></p>
+                            
+                            <p>Starting a new job in Nepal is all about navigating the social hierarchy. You won't get a formal orientation packet or a tour of the safety exits. You'll be judged entirely on how respectfully you speak to your seniors and whether you join them for the afternoon tea break.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <h3 style="margin: 0;">1. Introductions & The "Dai/Didi" Rule</h3>
+                            </div>
+                            <p>In Nepal, you never use your first name with a superior, and you never call a colleague by their first name unless they are strictly your age or younger.</p>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">🙏 The Introduction:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">नमस्ते, मेरो आज पहिलो दिन हो।</span></strong><br>
+                                    <em>Namaste, today is my first day.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म नयाँ स्टाफ हुँ।</span></strong><br>
+                                    <em>I am the new staff.</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">👔 The Hierarchy Titles:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.3rem; font-weight: 700; text-align: center;"><span class="nepali-font">सर / म्याम</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; text-align: center; margin-top: 4px;">Sir / Ma'am</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 8px;">Use for your boss, the owner, or anyone significantly higher in rank.</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.3rem; font-weight: 700; text-align: center;"><span class="nepali-font">दाइ / दिदी</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; text-align: center; margin-top: 4px;">Dai / Didi — Older Brother / Sister</div>
+                                    <div style="font-size: 0.8rem; color: #6b7280; margin-top: 8px;">Use for every single colleague who looks even slightly older than you. Builds instant respect and camaraderie.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. Surviving the Tasks & Asking for Help</h3>
+                            </div>
+                            <p>In Nepal, you just ask the person sitting next to you to save your life.</p>
+
+                            <div style="margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">केही पर्यो भने भन्नुस् है।</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af;">If anything comes up (if you need help), please tell me. <em>(A polite thing older colleagues will say to you).</em></div>
+                                </div>
+
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; margin-bottom: 12px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाइ, यो कसरी गर्ने हो? अलिकति सिकाउनुस् न।</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e40af;">Brother, how to do this? Please teach me a little bit. <em>(The ultimate survival phrase. Always ask politely).</em></div>
+                                </div>
+
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिस्तारै सिक्दै छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46;">I am learning slowly. <em>(A humble response when the boss asks how your first day is going).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h3 style="margin: 0;">3. The "Khaja" Break (The Most Important Hour)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#fef3c7" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"एक बज्यो, खाजा खान जाने होइन?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(It's 1 o'clock, aren't we going for snacks?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#f59e0b"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"जाने नि दाइ। आज चिया म खुवाउँछु।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ecfdf5" text-anchor="middle">(Of course! Today I'll treat you to tea.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepal, lunch (Dal Bhat) is eaten at home at 9:00 AM before work. At 1:00 PM or 2:00 PM, the entire office stops for <span class="nepali-font">खाजा</span> (Khaja — Snacks). This is usually tea, samosas, momos, or chowmein. <strong>If you want to survive the office politics, you must go to Khaja with your team.</strong></p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">खाजा खाने बेला भयो।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">It's time to eat snacks.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चिया खान जाने?</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Wanna go drink tea?</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आजको चिया मेरो तर्फबाट।</span></div>
+                                    <div style="font-size: 0.8rem; color: #065f46; margin-top: 4px;">Today's tea is from my side (my treat). <em>(A brilliant first-day move to win over the office).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: Khaja Politics ☕🥟</h3>
+                                <p style="margin-bottom: 1rem;">The <span class="nepali-font">खाजा</span> break isn't just about food. It's where office alliances are formed, gossip is exchanged, and your boss informally evaluates how well you "fit in." Skipping Khaja with your team is considered antisocial.</p>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 1.5rem;">☕</div>
+                                        <div style="font-size: 0.85rem; font-weight: 600;">Chiya</div>
+                                        <div style="font-size: 0.75rem; color: #6b7280;">Sweet milky tea</div>
+                                    </div>
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 1.5rem;">🥟</div>
+                                        <div style="font-size: 0.85rem; font-weight: 600;">Momo</div>
+                                        <div style="font-size: 0.75rem; color: #6b7280;">Steamed dumplings</div>
+                                    </div>
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 1.5rem;">🍜</div>
+                                        <div style="font-size: 0.85rem; font-weight: 600;">Chowmein</div>
+                                        <div style="font-size: 0.75rem; color: #6b7280;">Stir-fried noodles</div>
+                                    </div>
+                                    <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                        <div style="font-size: 1.5rem;">🔺</div>
+                                        <div style="font-size: 0.85rem; font-weight: 600;">Samosa</div>
+                                        <div style="font-size: 0.75rem; color: #6b7280;">Fried pastry</div>
+                                    </div>
+                                </div>
+                                <p style="margin-bottom: 0; font-style: italic;">On your first day, offering to pay for everyone's tea (<span class="nepali-font">आजको चिया मेरो तर्फबाट</span>) is the fastest way to earn respect and make friends.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-52", title: "52 In the workplace" },
                     { id: "lesson-53", title: "53 Giving a presentation" },
                     { id: "lesson-54", title: "54 Work meetings" },
