@@ -10712,7 +10712,130 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-63", title: "63 Home emergencies" },
+                    {
+                        id: "lesson-63",
+                        title: "63 Home emergencies",
+                        content: `
+                            <h2>63 Home Emergencies, Monsoon Leaks & The "Pahiro"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>"Batti Gayo", Flying Roofs, Landslides & The Neighbor Rescue Squad</strong></p>
+                            
+                            <p>If you live in Nepal, you have to be tough. The infrastructure is fragile, and the weather is unforgiving. A home emergency here rarely involves a broken appliance. It involves the electricity grid going down for hours, the monsoon rains trying to drown your flat, or a storm literally tearing the roof off your house.</p>
+                            <p>Here is the vocabulary you actually need when things go completely wrong.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M12 2v20"/><path d="m17 7-5-5-5 5"/><path d="m17 17-5 5-5-5"/></svg>
+                                <h3 style="margin: 0;">1. Everyday Crises (Water & Power)</h3>
+                            </div>
+                            <p>Forget checking the "fuse box." When the power goes out in Nepal, the whole neighborhood goes dark. It’s just a part of life.</p>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #3730a3; margin-bottom: 0.5rem;">The Power (<span class="nepali-font">बत्ती</span>)</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 1rem;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">बत्ती गयो।</span> (Batti gayo.)</strong><br>
+                                        <span style="color: #4f46e5;">The electricity went out. (You will say this constantly).</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">लाइन आयो?</span> (Line aayo?)</strong><br>
+                                        <span style="color: #4f46e5;">Did the power come back?</span>
+                                    </li>
+                                </ul>
+
+                                <h4 style="margin-top: 1rem; color: #3730a3; margin-bottom: 0.5rem;">The Water (<span class="nepali-font">पानी</span>)</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">ट्याङ्कीबाट पानी पोखियो।</span> (Tanki bata pani pokhiyo.)</strong><br>
+                                        <span style="color: #4f46e5;">Water is spilling from the rooftop tank. <em>(A classic Kathmandu emergency when you forget to turn off the water pump).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">धारामा पानी आएन।</span> (Dhara ma pani aayena.)</strong><br>
+                                        <span style="color: #4f46e5;">Water didn't come in the tap. <em>(Meaning the city supply is dry).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5.33"/><path d="M6 18a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5.33"/></svg>
+                                <h3 style="margin: 0;">2. The Monsoon Reality (Leaks & Flying Roofs)</h3>
+                            </div>
+                            <p>The textbook mentions a "leaking roof." In Nepal during the summer monsoon, this is a desperate battle to keep your belongings dry. And in the villages, severe winds are a massive threat to traditional housing.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">छाना चुहियो।</span> (Chhana chuhiyo.)</strong><br>
+                                    <em>The roof is leaking.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">जस्तापाता</span> (Jasta pata)</strong><br>
+                                    <em>Corrugated tin sheets. (The standard roofing material for millions of Nepali homes).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">खरको छाना</span> (Khar ko chhana)</strong><br>
+                                    <em>Straw/thatch roof. (Used in traditional village homes).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #fee2e2; border: 1px solid #fecaca; padding: 10px; border-radius: 8px; margin: 1rem 0;">
+                                <strong><span class="nepali-font" style="font-size: 1.1rem; color: #991b1b;">हुरीले जस्ता उडायो।</span> (Huri le jasta udayo.)</strong><br>
+                                <span style="font-size: 0.95rem; color: #7f1d1d;">The wind blew the tin roof away. <em>(A devastating, very real emergency during severe thunderstorms).</em></span>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                                <h3 style="margin: 0;">3. Extreme Natural Disasters</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"गाउँ जाने बाटो बन्द छ रे।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(They say the road to the village is closed.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#ef4444"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हो, हिजो राति ठूलो पहिरो खस्यो।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Yes, a huge landslide fell last night.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">You can't talk about emergencies in Nepal without talking about the geography. Mother Nature hits hard here, and every Nepali knows these words intimately.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पहिरो</span> (Pahiro)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Landslide. (The biggest killer during the monsoon. Wipes out roads & villages).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बाढी</span> (Baadhi)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Flood. (Massive problem in the southern Terai plains and river valleys).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भूकम्प / भुइँचालो</span> (Bhukampa / Bhuichalo)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Earthquake. (After 2015, this is deeply embedded in the national trauma).</div>
+                                </div>
+                            </div>
+                            
+                            <p style="background: #ecfdf5; padding: 10px; border-left: 3px solid #10b981; margin-top: 1rem;">
+                                <strong><span class="nepali-font">बाटो बन्द छ।</span> (Bato banda cha.)</strong><br>
+                                <span style="color: #047857;">The road is closed/blocked. (Usually due to a 'Pahiro'. If you are traveling, you will be stuck for hours or days waiting for a bulldozer).</span>
+                            </p>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Chhimeki" Rescue Squad 🤝</h3>
+                                <p style="margin-bottom: 1rem;">If a disaster strikes your house—whether a pipe bursts flooding your flat, or a storm rips off your Jasta pata—you do not wait for the government or a professional company. You step outside and yell.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    Within minutes, your <strong><span class="nepali-font">छिमेकी</span> (Chhimeki - Neighbors)</strong> will be in your house with buckets, ropes, hammers, and tea, working alongside you to fix the damage. In Nepal, community is the only reliable emergency service.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-64", title: "64 Home entertainment" }
                 ]
             },
