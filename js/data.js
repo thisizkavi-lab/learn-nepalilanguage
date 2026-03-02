@@ -7926,7 +7926,237 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-43", title: "43 Money and finance" },
+                    {
+                        id: "lesson-43",
+                        title: "43 Money and finance",
+                        content: `
+                            <h2>43 Money, Banking & The Street Economy</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Currency, QR Payments, Street Slang & The Remittance Machine</strong></p>
+                            
+                            <p>The Nepali economy is driven by <strong><span class="nepali-font">रेमिट्यान्स</span> (Remittance)</strong>—money sent home by millions of young Nepalis working in the Gulf, Korea, Japan, and elsewhere. Domestically, it runs on small businesses, importing goods, and a heavy culture of personal debt and saving for physical assets like land and gold.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">1. The Currency (Notes & The Indian Peg)</h3>
+                            </div>
+                            <p>The currency is the <strong>Nepalese Rupee (NPR)</strong>, but locals just call it <span class="nepali-font">रुपैयाँ</span> or <span class="nepali-font">पैसा</span>.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 2px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 800;">₨1000</div>
+                                    <div style="font-size: 0.75rem; color: #991b1b;">🐘 Elephant</div>
+                                </div>
+                                <div style="background: #fff7ed; border: 2px solid #fed7aa; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 800;">₨500</div>
+                                    <div style="font-size: 0.75rem; color: #9a3412;">🐅 Tiger</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 2px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 800;">₨100</div>
+                                    <div style="font-size: 0.75rem; color: #065f46;">🦏 Rhino</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 2px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 800;">₨50</div>
+                                    <div style="font-size: 0.75rem; color: #3730a3;">🐆 Snow Leopard</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fefce8; border: 1px solid #fef08a; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong>🔗 The INR Peg:</strong> The Nepalese Rupee is permanently pegged to the Indian Rupee at <strong>1 INR = 1.6 NPR</strong>. Indian currency is widely accepted in Nepal (though ₹500 and ₹2000 notes are often rejected due to counterfeit fears).
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <h3 style="margin: 0;">2. Banking & QR Dominance</h3>
+                            </div>
+                            <p>Urban Nepal has completely leapfrogged credit cards and gone straight to <strong>digital QR payments</strong> (Fonepay, eSewa). Even the guy selling corn on a bicycle will have a laminated QR code.</p>
+
+                            <h4 style="color: #3b82f6; margin-top: 1.5rem;">Opening an Account:</h4>
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">नमस्ते, खाता खोल्न चाहन्छु।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">I want to open an account.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        Savings कि current?
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">Savings। के-के चाहिन्छ?</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">नागरिकता / पासपोर्ट, २ फोटो, मोबाइल नम्बर।</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #3b82f6; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 80%;">
+                                        ATM card र mobile banking पनि चाहिन्छ।
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                                    <div style="background: #10b981; color: white; padding: 8px 14px; border-radius: 16px 16px 4px 16px; font-size: 0.95rem; max-width: 80%;">
+                                        <span class="nepali-font">हुन्छ। यो फारम भर्नुस्।</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #f59e0b; margin-top: 1.5rem;">Useful Banking Phrases:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px;">
+                                    <span class="nepali-font" style="font-weight: 700;">Minimum balance कति हो?</span><br><span style="font-size: 0.8rem; color: #6b7280;">What's the minimum balance?</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px;">
+                                    <span class="nepali-font" style="font-weight: 700;">Mobile banking कसरी activate गर्ने?</span><br><span style="font-size: 0.8rem; color: #6b7280;">How to activate mobile banking?</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px;">
+                                    <span class="nepali-font" style="font-weight: 700;">Statement कसरी निकाल्ने?</span><br><span style="font-size: 0.8rem; color: #6b7280;">How to get a statement?</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px;">
+                                    <span class="nepali-font" style="font-weight: 700;">QR payment चल्छ?</span><br><span style="font-size: 0.8rem; color: #6b7280;">Does QR payment work?</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #ef4444; margin-top: 1.5rem;">ATM Problems:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">मेरो कार्ड अड्कियो।</span></strong> — My card got stuck.</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">PIN बिर्सेँ।</span></strong> — I forgot my PIN.</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">Balance कति छ?</span></strong> — What's my balance?</li>
+                            </ul>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">Paying in Nepal:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">Cash दिन्छु।</span><br><span style="font-size: 0.8rem; color: #065f46;">I'll pay cash.</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">QR छ?</span><br><span style="font-size: 0.8rem; color: #065f46;">Do you have QR?</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">Transfer गरिदिन्छु।</span><br><span style="font-size: 0.8rem; color: #065f46;">I'll transfer it.</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">Fonepay चल्छ?</span><br><span style="font-size: 0.8rem; color: #065f46;">Does Fonepay work?</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">3. The Street Vocabulary of Money</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">पैसा</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Paisa)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Money</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">नगद</span><br><span style="font-size: 0.8rem; color: #6b7280;">Cash</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">सापटी</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Sapati)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Short-term loan</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">ऋण</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Rin)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Debt / Loan</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">ब्याज</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Byaj)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Interest</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">किस्ता</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Kista)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Installment</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">बचत</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Bachat)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Savings</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">आम्दानी</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Aamdani)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Income</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">खर्च</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Kharcha)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Expense</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">लगानी</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Lagani)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Investment</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">धितो</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Dhito)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Collateral</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">साहु</span> <span style="font-size: 0.8rem; color: #6b21a8;">(Sahu)</span><br><span style="font-size: 0.8rem; color: #6b7280;">Lender / Merchant</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">Common Money Phrases:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">पैसा छैन।</span></strong> — I'm broke.</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">अलि सस्तो गरिदिनुस्।</span></strong> — Make it cheaper.</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">उधारो मिल्छ?</span></strong> — Can I buy on credit?</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">हिसाब मिलाऔं।</span></strong> — Let's settle accounts.</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">4. The Gritty Reality (Inflation & Slang)</h3>
+                            </div>
+
+                            <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; margin: 1rem 0;">
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #ef4444; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 85%;">
+                                        <span class="nepali-font">आजकाल त महँगीले ढाड सेक्छ यार!</span><br><span style="font-size: 0.8rem; opacity: 0.9;">Inflation is breaking our backs these days, man!</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px; margin-bottom: 1rem;">
+                                    <div style="background: #f59e0b; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 85%;">
+                                        <span class="nepali-font">ऊ त लास्टै धनी छ, malik जस्तो हिँड्छ।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">He is crazy rich, walks around like a boss.</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="background: #64748b; color: white; padding: 8px 14px; border-radius: 16px 16px 16px 4px; font-size: 0.95rem; max-width: 85%;">
+                                        <span class="nepali-font">म त lukkha, गोजीमा एक रुपैयाँ छैन।</span><br><span style="font-size: 0.8rem; opacity: 0.9;">I'm dead broke, not a single rupee in my pocket. (Pure street slang).</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                <h3 style="margin: 0;">5. The Philosophy of Money (Proverbs)</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin: 1rem 0;">
+                                <div style="background: #f0fdf4; border-left: 3px solid #22c55e; padding: 1rem; border-radius: 0 10px 10px 0;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">पैसा भए पो संसार चल्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280; margin-top: 4px;">Only if there's money does the world move. (A common, slightly cynical truth).</div>
+                                </div>
+                                <div style="background: #f0fdf4; border-left: 3px solid #22c55e; padding: 1rem; border-radius: 0 10px 10px 0;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">थोरै थोरै गरेर थुप्रिन्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280; margin-top: 4px;">Little by little, it piles up. (The ultimate Nepali savings philosophy).</div>
+                                </div>
+                                <div style="background: #f0fdf4; border-left: 3px solid #22c55e; padding: 1rem; border-radius: 0 10px 10px 0;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">आम्दानी भन्दा खर्च बढी।</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b7280; margin-top: 4px;">Expenses greater than income. (The universal middle-class complaint).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #854d0e;">The Cultural Insight: Bargaining vs. Debt 💰</h3>
+                                <p style="margin-bottom: 1rem;">In Nepal, you will aggressively bargain over 50 rupees with a street vendor for a t-shirt. However, if a close friend or family member asks you for a <strong><span class="nepali-font">सापटी</span> (Sapati - short-term personal loan)</strong> of 50,000 rupees, it is considered deeply shameful to say no or ask for interest.</p>
+                                <p style="margin-bottom: 0;">Personal networks operate as informal safety nets, but <strong>lending money to friends is also the number one way relationships are destroyed in Nepal</strong>.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-44", title: "44 At the library" }
                 ]
             },
