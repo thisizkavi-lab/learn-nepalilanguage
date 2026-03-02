@@ -8354,7 +8354,242 @@ const courseData = [
             {
                 title: "WORK AND STUDY",
                 lessons: [
-                    { id: "lesson-45", title: "45 Work and study" },
+                    {
+                        id: "lesson-45",
+                        title: "45 Work and study",
+                        content: `
+                            <h2>45 Jobs, School & The "Lok Sewa" Dream</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Occupations, Education, Salaries & The Source-Force Reality</strong></p>
+                            
+                            <p>The ultimate dream for a Nepali parent isn't for their child to become a startup founder. The dream is for them to pass the brutal public service exams and get a <strong>permanent government job with a pension</strong>.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">1. <span class="nepali-font">पेशा र रोजगारी</span> (Jobs & Occupations)</h3>
+                            </div>
+
+                            <h4 style="color: #16a34a;">🌾 The Roots (Agriculture & Labor):</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 0.5rem 0 1.5rem;">
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">किसान</span><br><span style="font-size: 0.8rem; color: #065f46;">Kisan — Farmer</span>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">गोठाला</span><br><span style="font-size: 0.8rem; color: #065f46;">Gothala — Herder</span>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">दैनिक ज्यालादारी</span><br><span style="font-size: 0.8rem; color: #065f46;">Daily wage laborer</span>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">मिस्त्री</span><br><span style="font-size: 0.8rem; color: #065f46;">Mistri — Mason/Builder</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #3b82f6;">⭐ The Status Jobs (Government & Professional):</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 0.5rem 0 1.5rem;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">सरकारी जागिरे</span><br><span style="font-size: 0.8rem; color: #1e40af;">Govt Employee</span>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">प्रहरी / सेना</span><br><span style="font-size: 0.8rem; color: #1e40af;">Police / Army</span>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">डाक्टर</span><br><span style="font-size: 0.8rem; color: #1e40af;">Doctor ("Doctor Saab")</span>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">इन्जिनियर</span><br><span style="font-size: 0.8rem; color: #1e40af;">Engineer</span>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">शिक्षक</span><br><span style="font-size: 0.8rem; color: #1e40af;">Shikshak — Teacher</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #f59e0b;">🎭 The Urban Hustle & Entertainment:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 0.5rem 0 1.5rem;">
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">पसले / साहुजी</span><br><span style="font-size: 0.8rem; color: #92400e;">Shopkeeper</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">कलाकार</span><br><span style="font-size: 0.8rem; color: #92400e;">Kalakar — Artist/Actor</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">गायक / गायिका</span><br><span style="font-size: 0.8rem; color: #92400e;">Singer (M/F)</span>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">हास्य कलाकार</span><br><span style="font-size: 0.8rem; color: #92400e;">Comedian</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                <h3 style="margin: 0;">2. <span class="nepali-font">विद्यालय र कलेज</span> (School & College)</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">विद्यालय / स्कुल</span><br><span style="font-size: 0.8rem; color: #6b7280;">School</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">कलेज</span><br><span style="font-size: 0.8rem; color: #6b7280;">College (Grades 11-12 + Bachelor's)</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">विश्वविद्यालय</span><br><span style="font-size: 0.8rem; color: #6b7280;">Bishwovidyalaya — University</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">विद्यार्थी</span><br><span style="font-size: 0.8rem; color: #6b7280;">Bidyarthi — Student</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">कक्षा</span><br><span style="font-size: 0.8rem; color: #6b7280;">Kaksha — Class</span>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">गृहकार्य</span><br><span style="font-size: 0.8rem; color: #6b7280;">Grihakarya — Homework</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #ef4444;">The Exam Reality:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">परीक्षा</span></strong> (Pariksha) — Exam</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पास हुनु</span></strong> (Pass hunu) — To pass</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फेल हुनु</span></strong> (Fail hunu) — To fail</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <h3 style="margin: 0;">3. <span class="nepali-font">कामको संसार</span> (The World of Work)</h3>
+                            </div>
+
+                            <h4 style="color: #22c55e;">💰 Income & Time:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 0.5rem 0 1.5rem;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">तलब</span><br><span style="font-size: 0.8rem; color: #065f46;">Talab — Monthly Salary</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">ज्याला</span><br><span style="font-size: 0.8rem; color: #065f46;">Jyala — Daily Wages</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">बोनस</span><br><span style="font-size: 0.8rem; color: #065f46;">Bonus (before Dashain)</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700; font-size: 1.1rem;">बिदा</span><br><span style="font-size: 0.8rem; color: #065f46;">Bida — Leave/Holiday</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #3b82f6;">🏛️ Employment Types:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">सरकारी जागिर</span></strong> — Government Job (permanent, pension-backed)</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">निजी जागिर</span></strong> — Private Job (less secure)</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">पेन्सन</span></strong> — Pension (the main reason everyone wants a govt job)</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">राजीनामा</span></strong> — Resignation</li>
+                                <li style="margin-bottom: 0.8rem;"><strong><span class="nepali-font">अवकाश</span></strong> — Retirement</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Lok Sewa" Obsession & Respect Titles 🏛️</h3>
+                                <p style="margin-bottom: 1rem;">In Nepal, you rarely call a professional by their first name. Doctors are <strong>"Doctor Saab"</strong>, teachers are <strong>"Sir" or "Miss"</strong> (even outside the classroom), engineers are <strong>"Engineer Saab."</strong> Your job title becomes your identity.</p>
+                                <p style="margin-bottom: 0;">A <strong><span class="nepali-font">सरकारी जागिर</span></strong> isn't just an income; it is absolute job security, a guaranteed pension, and a massive upgrade in social standing and marriage prospects.</p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">4. The Trades, Tech & Specific Professions</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">वकिल</span><br><span style="font-size: 0.8rem; color: #991b1b;">Wakil — Lawyer</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">नर्स</span><br><span style="font-size: 0.8rem; color: #991b1b;">Nurse</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">दाँतको डाक्टर</span><br><span style="font-size: 0.8rem; color: #991b1b;">Dentist ("Doctor of teeth")</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">लेखापाल</span><br><span style="font-size: 0.8rem; color: #991b1b;">Accountant</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">सिकर्मी</span><br><span style="font-size: 0.8rem; color: #991b1b;">Sikarmi — Carpenter</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">प्लम्बर</span><br><span style="font-size: 0.8rem; color: #991b1b;">Plumber</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">सरसफाइ गर्ने</span><br><span style="font-size: 0.8rem; color: #991b1b;">Cleaner (just call her "Didi")</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">सेक्युरिटी गार्ड / पाले</span><br><span style="font-size: 0.8rem; color: #991b1b;">Security Guard</span>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">एयर होस्टेस</span><br><span style="font-size: 0.8rem; color: #991b1b;">Flight Attendant</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ec4899;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <h3 style="margin: 0;">5. The Corporate Grind (Leave, Overtime & Shifts)</h3>
+                            </div>
+
+                            <h4 style="color: #ec4899;">📅 Taking Leave (<span class="nepali-font">बिदा</span>):</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 0.5rem 0 1.5rem;">
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">बिरामी बिदा</span><br><span style="font-size: 0.8rem; color: #9d174d;">Sick leave</span>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">वार्षिक बिदा</span><br><span style="font-size: 0.8rem; color: #9d174d;">Annual leave</span>
+                                </div>
+                                <div style="background: #fdf2f8; border: 1px solid #fbcfe8; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">सुत्केरी बिदा</span><br><span style="font-size: 0.8rem; color: #9d174d;">Maternity leave</span>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #ec4899;">📈 Money & Movement:</h4>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">तलब बढ्नु</span></strong> — Pay rise</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">बढुवा हुनु</span></strong> — Promotion</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फ्रीलान्सर</span></strong> — Freelancer (massive growing sector for IT/design youth)</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सिफ्ट / ओभरटाइम</span></strong> — Shift / Overtime (English words used)</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                                <h3 style="margin: 0;">6. Higher Education (The University Grind)</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">थेसिस / सोधपत्र</span><br><span style="font-size: 0.8rem; color: #3730a3;">Thesis / Dissertation</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">दीक्षान्त समारोह</span><br><span style="font-size: 0.8rem; color: #3730a3;">Graduation Ceremony</span>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.8rem; border-radius: 10px; text-align: center;">
+                                    <span class="nepali-font" style="font-weight: 700;">डिग्री / डिप्लोमा</span><br><span style="font-size: 0.8rem; color: #3730a3;">Degree / Diploma</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fefce8; border-left: 4px solid #eab308; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #854d0e;">The Cultural Insight: The "Source-Force" Reality 🤝</h3>
+                                <p style="margin-bottom: 1rem;"><strong><span class="nepali-font">सोर्स-फोर्स</span> (Source-Force)</strong> is the Nepanglish term for nepotism, networking, or having a powerful connection.</p>
+                                <p style="margin-bottom: 1rem;">If someone gets a highly competitive job or promotion, you'll hear people quietly say: <em>"Usle source-force lagayo"</em> (They used their connections).</p>
+                                <p style="margin-bottom: 0;">While resumes and exams matter, <strong>knowing the right person — a politician, a CEO, an uncle in the ministry — is often the absolute deciding factor</strong> in landing a private or government job.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-46", title: "46 At school" },
                     { id: "lesson-47", title: "47 Further and higher education" },
                     { id: "lesson-48", title: "48 Looking for work" },
