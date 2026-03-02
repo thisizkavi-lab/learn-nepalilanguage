@@ -10257,7 +10257,130 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-59", title: "59 Meeting the neighbours" },
+                    {
+                        id: "lesson-59",
+                        title: "59 Meeting the neighbours",
+                        content: `
+                            <h2>59 The Neighbors, "Tole" Gossip & The Roof-to-Roof Chat</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Staircase Interrogation, The "Chiya" Invite & Nosy Loyalty</strong></p>
+                            
+                            <p>Moving into a new neighborhood (<span class="nepali-font">टोल</span> - Tole) in Nepal means immediately integrating into a tight-knit community. People will notice you the second you arrive with your Wai-Wai boxes.</p>
+                            <p>You do not need to bake a pie or bring a potted plant to introduce yourself. You just need to smile, use the correct family titles, and be prepared to answer highly personal questions.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">1. The Staircase Introduction</h3>
+                            </div>
+                            <p>You will usually meet your neighbors while walking up the narrow stairs, hanging clothes on the flat roof (Kausi), or at the local Kirana Pasal. You must immediately address them with respectful family titles.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">छिमेकी</span> (Chhimeki)</strong><br>
+                                    <em>Neighbor.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">नमस्ते अन्टी / अंकल।</span> (Namaste Aunty / Uncle.)</strong><br>
+                                    <em>Namaste Auntie / Uncle. (Use this for anyone your parents' age. Never use their first name).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">म नयाँ डेरावाल हुँ।</span> (Ma naya derawala hu.)</strong><br>
+                                    <em>I am the new tenant.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">हिजो मात्र सरेको।</span> (Hijo matra sareko.)</strong><br>
+                                    <em>I just moved yesterday.</em>
+                                </li>
+                            </ul>
+
+                            <h4 style="color: #8b5cf6; margin-top: 1.5rem;">The Immediate Interrogation:</h4>
+                            <p style="font-size: 0.9rem; color: #4b5563;">Within five minutes of meeting you, an older Nepali neighbor will ask you these exact questions. Do not be offended; it means they care about you.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंको घर कता हो नि?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">Where is your home/village? (They want to know your ancestral district).</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">के काम गर्नुहुन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">What work do you do?</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिहे भयो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #6b21a8; margin-top: 4px;">Are you married?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h3 style="margin: 0;">2. Socializing & The "Chiya" Invite</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#fef3c7" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"बाबु, एकदिन चिया खान आउनुस् है।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Son, come over for tea one day, okay?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#f59e0b"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हवस् अन्टी, म पक्कै आउँछु।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ecfdf5" text-anchor="middle">(Yes Auntie, I will definitely come.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The textbook asks, "Are you free for lunch on Sunday?" In Nepal, you invite people for tea (<span class="nepali-font">चिया</span> - Chiya) or drop by unannounced.</p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font">हाम्रो कोठामा पनि चिया खान आउनुस् है।</span></strong><br>
+                                        <span style="color: #047857;">Please come to our room to drink tea too. (Polite, standard invitation).</span>
+                                    </li>
+                                    <li style="margin-bottom: 1rem;">
+                                        <strong><span class="nepali-font">बेलुका फुर्सद छ?</span></strong><br>
+                                        <span style="color: #047857;">Do you have free time in the evening?</span>
+                                    </li>
+                                    <li style="background: #d1fae5; border: 1px dashed #10b981; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font">भोलि हाम्रो घर पूजा छ, आउनुस् है।</span></strong><br>
+                                        <span style="color: #065f46;">Tomorrow is our house blessing ceremony, please come. <em>(If invited to a Ghar Puja, you must go and eat the feast).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">3. The Tole Network (Getting Help)</h3>
+                            </div>
+                            <p>While urban youth use Messenger groups, the real neighborhood network is the local Kirana Pasal (grocery shop) or the community tap. If you need a plumber, you don't use an app; you ask the shopkeeper.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाइ, यहाँ वरपर राम्रो प्लम्बर कोही छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Brother, is there any good plumber around here?</div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ग्यास सकियो, कहाँ पाइन्छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">The gas is finished, where can it be found? (Your neighbors will literally lend you their heavy gas cylinder if you run out while cooking).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fff1f2; border-left: 4px solid #e11d48; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #be123c;">The Cultural Insight: The "Nosy but Loyal" Trade-off ❤️</h3>
+                                <p style="margin-bottom: 1rem;">Westerners often experience intense culture shock because Nepali neighbors will openly stare at who you bring home, comment on your weight ("Oho, you've become fat!"), and ask exactly how much rent you are paying.</p>
+                                <p style="margin-bottom: 1rem;">However, <strong>this lack of privacy comes with a massive safety net</strong>.</p>
+                                <div style="background: #ffe4e6; border: 1px solid #fecdd3; padding: 1rem; border-radius: 10px; color: #9f1239;">
+                                    If you fall down the stairs, get sick, or run out of food during a strike (Banda), those same nosy neighbors will carry you to the hospital, bring hot soup to your bed, and fight anyone who tries to mess with you. You trade privacy for absolute community loyalty.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-60", title: "60 Household chores" },
                     { id: "lesson-61", title: "61 Home improvements" },
                     { id: "lesson-62", title: "62 Pets" },
