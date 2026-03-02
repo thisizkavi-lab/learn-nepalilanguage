@@ -10381,7 +10381,116 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-60", title: "60 Household chores" },
+                    {
+                        id: "lesson-60",
+                        title: "60 Household chores",
+                        content: `
+                            <h2>60 Ghar ko Kaam Kaaj, The "Kucho," & Hand-Washing</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Morning Sweep, Handwashing, The Trash Tractor & The Jutho Rule</strong></p>
+                            
+                            <p>Western textbooks teach you about dishwashers, vacuums, and shared chore rotas. In a Nepali household, chores are done by hand, and there is no "rota." Usually, the mother runs the house like a general, and the kids do exactly what they are told when they are yelled at.</p>
+                            <p>If you are renting a flat or living with a Nepali family, you need to know the reality of the daily morning sweep and the heavy lifting of washing clothes.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M21 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/></svg>
+                                <h3 style="margin: 0;">1. Sweeping & Mopping (No Vacuums Allowed)</h3>
+                            </div>
+                            <p>Except for very wealthy urban homes, nobody uses a vacuum cleaner. Every Nepali house runs on the <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">कुचो</span> (Kucho - Grass Broom). The day starts early (often 6:00 AM) with sweeping the entire house and the front porch.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">कुचो लगाउने</span> (Kucho lagaune)</strong><br>
+                                    <em>To sweep the floor. (Done every single morning without fail).</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">भुइँ पुछ्ने / पोछा लगाउने</span> (Bhui puchne / Pocha lagaune)</strong><br>
+                                    <em>To mop the floor.</em>
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong><span class="nepali-font">ओछ्यान मिलाउने</span> (Ochhyan milaune)</strong><br>
+                                    <em>To make the bed. (Literally: To arrange the bedding).</em>
+                                </li>
+                                <li style="background: #eef2ff; border: 1px dashed #6366f1; padding: 10px; border-radius: 6px; margin-top: 1rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.1rem; color: #3730a3;">छिटो उठेर कुचो लगाऊ!</span></strong><br>
+                                    <span style="color: #312e81;">Get up early and sweep! <em>(The classic morning yell from a Nepali mother).</em></span>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/><path d="M12 7v4"/><path d="M9 9h6"/></svg>
+                                <h3 style="margin: 0;">2. The Dishwasher Fantasy vs. Reality</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"आज भाँडा माझ्ने पालो कसको हो?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(Whose turn is it to wash dishes today?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#ef4444"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"मैले हिजो माझेको, आज भाइको पालो।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(I washed them yesterday, today is little brother's turn.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#3b82f6"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The textbook politely asks, "Whose turn is it to empty the dishwasher?". In Nepal, dishes are hand-washed. You squat by a tap with a scrub pad and soap (or sometimes ash for heavy pots).</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भाँडा माझ्ने</span> (Bhada majhne)</div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">To wash the dishes. (Bhada = pots/pans/dishes).</div>
+                                </div>
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">लुगा धुने</span> (Luga dhune)</div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">To do the laundry. (Often scrubbed by hand in a bucket).</div>
+                                </div>
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">लुगा सुकाउने</span> (Luga sukaune)</div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">To dry the clothes. (Carried up to the Kausi/roof to hang).</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                                <h3 style="margin: 0;">3. The Trash & The "Dashain Safai"</h3>
+                            </div>
+
+                            <h4 style="color: #10b981; margin-top: 1.5rem;">🗑️ Taking Out the Trash:</h4>
+                            <p>In Kathmandu, you don't leave a bin on the curb. You wait for the municipality tractor to drive through the neighborhood playing a specific, loud, repetitive song from a loudspeaker. When you hear the music, you run outside with your bags.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फोहोर फाल्ने</span> (Fohor phalne)</strong> - To throw away the trash.</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फोहोरको गाडी आयो।</span> (Fohor ko gaadi aayo.)</strong> - The garbage truck has arrived.</li>
+                            </ul>
+
+                            <h4 style="color: #10b981; margin-top: 1.5rem;">✨ The "Spring Clean":</h4>
+                            <p>Nepalis do not do a "spring clean." They do the <strong><span class="nepali-font">दशैंको सरसफाइ</span> (Dashain ko sarasafai - Dashain cleaning)</strong>. Before the massive Dashain festival, every corner is scrubbed, repainted, and old junk is thrown away to welcome goddess Durga.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">घर सफा गर्ने</span> (Ghar safa garne)</strong> - To clean the house.</li>
+                                <li style="background: #ecfdf5; border: 1px dashed #10b981; padding: 8px; border-radius: 6px; margin-top: 1rem;">
+                                    <strong><span class="nepali-font">दशैं आउन लाग्यो, पूरै घर सफा गर्नुपर्छ।</span></strong><br>
+                                    <span style="color: #065f46;">Dashain is coming, the whole house must be cleaned.</span>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Jutho" Rule ⚠️</h3>
+                                <p style="margin-bottom: 1rem;">When doing chores in the kitchen, foreigners absolutely must understand the concept of <strong><span class="nepali-font">जुठो</span> (Jutho)</strong>. Jutho translates roughly to "ritually polluted" or "used."</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    If a dish has been eaten from, or if a cooking spoon touches your mouth, it becomes Jutho. You cannot place a Jutho plate near fresh cooking ingredients, and you definitely cannot wash Jutho dishes right next to the sacred drinking water filter. Kitchen hygiene in Nepal is deeply tied to these traditional rules of purity.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-61", title: "61 Home improvements" },
                     { id: "lesson-62", title: "62 Pets" },
                     { id: "lesson-63", title: "63 Home emergencies" },
