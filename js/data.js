@@ -9609,7 +9609,104 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-54", title: "54 Work meetings" },
+                    {
+                        id: "lesson-54",
+                        title: "54 Work meetings",
+                        content: `
+                            <h2>54 Work Meetings, "Yes Sir", & Tea-Stall Networking</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The Meeting Hierarchy, Agreeing Safely, The "Chiya" Protocol & The Meeting After the Meeting</strong></p>
+                            
+                            <p>Western corporate culture teaches you to be bold, speak up, and hand out business cards. Nepali corporate culture teaches you to respect the hierarchy, agree with the boss in public, and do all your actual networking over a cup of sweet tea outside the office.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #8b5cf6;"><circle cx="12" cy="7" r="4"/><path d="M5.4 19a8 8 0 0 1 13.2 0"/><path d="M12 21v-4"/><path d="M15 16H9"/></svg>
+                                <h3 style="margin: 0;">1. The Hierarchy of the Meeting Room</h3>
+                            </div>
+                            <p>In Nepal, meetings are rarely a free-for-all brainstorming session. The boss or senior manager speaks first, sets the tone, and everyone else listens.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ल, सबै जना आउनुभयो? सुरु गरौं है त।</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b21a8; margin-top: 4px;">Okay, has everyone arrived? Let's get started. <em>(The boss will almost always open with this).</em></div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आजको मुख्य एजेन्डा के हो भने...</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b21a8; margin-top: 4px;">Today's main agenda is...</div>
+                                </div>
+                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">यसमा तपाईंको के विचार छ?</span></div>
+                                    <div style="font-size: 0.8rem; color: #6b21a8; margin-top: 4px;">What are your thoughts on this? <em>(Wait to be asked this before jumping in with your opinion).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #22c55e;"><polyline points="20 6 9 17 4 12"/></svg>
+                                <h3 style="margin: 0;">2. Agreeing & (Safely) Disagreeing</h3>
+                            </div>
+                            <p>In Nepal, blunt disagreement is seen as highly disrespectful, especially to a senior. You must wrap your disagreement in a compliment.</p>
+
+                            <h4 style="color: #22c55e; margin-top: 1.5rem;">👍 Agreeing Safely:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हजुर सर, एकदम सही कुरा।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Yes Sir, absolutely right. <em>(The safest, most common response).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म पनि यसमा सहमत छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I also agree with this.</div>
+                                </div>
+                            </div>
+
+                            <h4 style="color: #ef4444; margin-top: 1.5rem;">🛑 Disagreeing (The Safe Way):</h4>
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <div style="font-size: 1.2rem; font-weight: 700;"><span class="nepali-font">सरको कुरा ठिकै हो, तर मेरो विचारमा...</span></div>
+                                <div style="font-size: 0.95rem; color: #92400e; margin-top: 8px;">Sir's point is fine, but in my opinion...</div>
+                                <div style="font-size: 0.85rem; color: #b45309; margin-top: 8px; font-style: italic;">(The ultimate diplomatic transition. You validate them first, then gently offer an alternative).</div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h3 style="margin: 0;">3. Networking (The "Chiya" Protocol)</h3>
+                            </div>
+                            <p>Physical business cards exist in Nepal, but actual networking happens by establishing personal ties, usually by finding common ground regarding your hometowns or mutual friends.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंको घर कता हो नि?</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Where is your home/village? <em>(The most important networking question. It builds instant trust).</em></div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ए, मेरो मामाघर पनि त्यहीँ हो!</span></div>
+                                    <div style="font-size: 0.8rem; color: #b45309; margin-top: 4px;">Oh, my maternal uncle's house is also there! <em>(If you find a geographic connection, you're instantly friends).</em></div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भाइबरमा एड गरौं है।</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">Let's add each other on Viber. <em>(Nobody exchanges cards; they instantly scan QR codes on Viber/Facebook).</em></div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एकदिन चिया खान बस्नुपर्छ।</span></div>
+                                    <div style="font-size: 0.8rem; color: #1e40af; margin-top: 4px;">We must sit down for tea one day. <em>(The universal sign that the networking was successful).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Meeting After the Meeting" ☕</h3>
+                                <p style="margin-bottom: 1rem;">Because no one wants to openly disagree with the boss during the official meeting, the real decisions are often made during the "meeting after the meeting."</p>
+                                <p style="margin-bottom: 1rem;">As soon as the formal meeting ends, small groups of colleagues will gather at the local tea stall (<span class="nepali-font">चिया पसल</span> - Chiya Pasal) or step out onto the balcony to smoke and actually debate the issues candidly.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <strong>💡 The Golden Rule:</strong> If you want to know what the team actually thinks, you must be invited to the tea stall.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-55", title: "55 Online meetings" }
                 ]
             },
