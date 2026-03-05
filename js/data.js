@@ -12719,7 +12719,132 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-81", title: "81 At the pharmacy" },
+                    {
+                        id: "lesson-81",
+                        title: "81 At the pharmacy",
+                        content: `
+                            <h2>81 At the Pharmacy: Health, Pharmacies & Emergencies</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Symptoms, Pharmacy Conversations, Dosage Instructions & Hospital Vocabulary</strong></p>
+                            
+                            <p>Living or traveling in Nepal will eventually test your immune system. Between the dust of the city roads, sudden mountain weather changes, and questionable tap water, you need to know how to navigate local healthcare.</p>
+                            <p>This lesson deepens your medical vocabulary with the phrases you'll actually use at the pharmacy counter and in a hospital.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                <h3 style="margin: 0;">1. Pointing to the Problem: Body Parts & Symptoms</h3>
+                            </div>
+                            <p>While medical professionals may speak English, knowing local terms is critical when explaining symptoms to pharmacy staff.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">टाउको</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Tauko — Head</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">पेट</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Pet — Stomach</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">हात</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Haat — Hand/Arm</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">खुट्टा</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Khutta — Foot/Leg</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">🤒 Describing Common Illnesses:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">टाउको दुख्यो</span></strong> — Headache / My head hurts.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">रुघा खोकी</span></strong> — Cold and Cough.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">ज्वरो आयो</span></strong> — Got a fever.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पेट बिग्रियो</span></strong> — Upset stomach / Food poisoning.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">पखाला लाग्यो</span></strong> — Got diarrhea.</li>
+                                    <li><strong><span class="nepali-font">मलाई सन्चो छैन</span></strong> — I am not feeling well.</li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                <h3 style="margin: 0;">2. The "Medical" (Your First Line of Defense)</h3>
+                            </div>
+                            <p>For minor issues, walk straight into a neighborhood <strong><span class="nepali-font">औषधि पसल</span> (Aushadhi Pasal)</strong> — the "Medical." The pharmacist acts as your frontline doctor, cutting pills from blister packs to give you exactly what you need.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">औषधि</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Medicine / Medication.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दुखाइ कम गर्ने औषधि</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Painkillers.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मलम</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Ointment / Cream. <em>(For rashes or grazes).</em></div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border-left: 3px solid #10b981; padding: 1.25rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #047857;">💬 Conversations at the Pharmacy:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">तपाईंलाई केही कुराको एलर्जी छ?</span></strong><br>
+                                        <em style="color: #047857;">Do you have any allergies?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">कहिलेदेखि यस्तो भयो?</span></strong><br>
+                                        <em style="color: #047857;">How long have you had symptoms?</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">यो औषधि दिनमा दुई पटक खानुस्।</span></strong><br>
+                                        <em style="color: #047857;">Take these tablets twice a day.</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">3. Hospitals, Accidents & Emergencies</h3>
+                            </div>
+                            <p>If things go seriously wrong — a broken bone, a severe burn, or an animal bite — bypass the pharmacy and head straight to a hospital.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अस्पताल</span> (Hospital)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Hospital. <em>(Pronounced "Hospitaal").</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डाक्टर</span> (Doctor)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Doctor.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">नर्स</span> (Nurse)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Nurse.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इमर्जेन्सी कता छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Where is the emergency room?</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक्स-रे गर्नुपर्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">An X-ray needs to be done.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुई</span> (Sui)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Injection / Jab. <em>(Critical for rabies shots after dog bites).</em></div>
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-82", title: "82 Booking an appointment" },
                     { id: "lesson-83", title: "83 Seeing the doctor" },
                     { id: "lesson-84", title: "84 Injuries and emergencies" },
