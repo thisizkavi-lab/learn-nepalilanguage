@@ -12098,7 +12098,128 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-75", title: "75 City sightseeing" },
+                    {
+                        id: "lesson-75",
+                        title: "75 City sightseeing",
+                        content: `
+                            <h2>75 Sightseeing, Durbar Squares & The "Guide Dai"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Ancient Heritage Sites, Dual Pricing, Local Guides & The "Living" Museum</strong></p>
+                            
+                            <p>When Westerners go "sightseeing," they look for structured tours, audio headsets, and hop-on buses. In Nepal, sightseeing means plunging into the living, breathing, chaotic heritage of ancient cities.</p>
+                            <p>There are no red tour buses. The temples aren't just museums; they are active places of worship where goats roam free, incense burns constantly, and locals sit on ancient carved steps to drink tea. Here is the vocabulary you actually need to navigate the sights.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>
+                                <h3 style="margin: 0;">1. The Sights & The Dual Pricing System</h3>
+                            </div>
+                            <p>You don't just visit a generic "castle" or "museum." You visit the ancient royal plazas.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दरबार स्क्वायर</span> (Durbar Square)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">The historical palace squares (Kathmandu, Patan, and Bhaktapur).</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मन्दिर</span> (Mandir)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Temple.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border: 1px dashed #94a3b8; padding: 10px; border-radius: 8px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">टिकट काउन्टर कता छ?</span></strong> — Where is the ticket counter?
+                            </div>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #b45309;">💰 The answer depends on your passport:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">विदेशीको लागि कति हो?</span></strong><br>
+                                        <span style="color: #b45309;">How much is it for a foreigner? <em>(Usually 1000-1500 Rupees).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">सार्क (SAARC) को कति हो?</span></strong><br>
+                                        <span style="color: #b45309;">How much for SAARC nationals? <em>(India, Bangladesh, etc. pay a discounted rate).</em></span>
+                                    </li>
+                                    <li style="background: #fef3c7; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">नेपालीलाई पैसा लाग्दैन।</span></strong><br>
+                                        <span style="color: #92400e;">It doesn't cost money for Nepalis. <em>(Locals walk through for free — it's their neighborhood).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+                                <h3 style="margin: 0;">2. The "Audio Guide" vs. The Local Hustle</h3>
+                            </div>
+                            <p>Forget asking, "Could I have an audio guide?" The moment you step into a major tourist site, you will be approached by local guides wearing official ID badges.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">गाइड चाहियो?</span> (Guide chahiyo?)</strong><br>
+                                    <em>Do you need a guide?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">म यहाँको लोकल गाइड हुँ।</span> (Ma yaha ko local guide hu.)</strong><br>
+                                    <em>I am a local guide here.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कति लिने हो?</span> (Kati line ho?)</strong><br>
+                                    <em>How much will you take? (Always agree on the flat fee before starting the tour).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                <h3 style="margin: 0;">3. Souvenirs & The Street "Museum"</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"सर, पश्मिना हेर्ने हो? राम्रो छ।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="13" fill="#fef3c7" text-anchor="middle">(Sir, want to look at Pashmina? It's good.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#f59e0b"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"अहिले पर्दैन, घुमेर आउँछु।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">(Not right now, I'll come back after walking around.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#3b82f6"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The streets surrounding the sights are packed with vendors selling singing bowls, Thangka paintings, and prayer flags.</p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">चिनो / सोभेनियर</span></strong> — Memento / Souvenir.
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem; background: #d1fae5; padding: 8px; border-left: 3px solid #10b981; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem; color: #047857;">हेरौं मात्र है त?</span></strong><br>
+                                        <span style="color: #065f46;">Let's just look, okay? <em>(Use this when entering a shop so the owner knows you aren't committed).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">अलि महँगो भयो।</span></strong><br>
+                                        <span style="color: #047857;">It's a bit expensive. <em>(The mandatory opening to any souvenir negotiation).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Living" Museum 🛕🙏</h3>
+                                <p style="margin-bottom: 1rem;">When you visit the Narayanhiti Palace Museum or the ancient courtyards of Patan, remember that these aren't just dead historical artifacts.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    You are walking through spaces that carry immense, modern emotional and spiritual weight for the locals. <strong>Never climb on statues for a photo</strong>, always walk around Buddhist stupas in a <strong>clockwise direction</strong>, and be prepared to take your shoes off frequently.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-76", title: "76 Going camping" },
                     { id: "lesson-77", title: "77 At the beach" },
                     { id: "lesson-78", title: "78 Finding your way" },
