@@ -12583,7 +12583,142 @@ const courseData = [
             {
                 title: "HEALTH AND MEDICINE",
                 lessons: [
-                    { id: "lesson-80", title: "80 Health and medicine" },
+                    {
+                        id: "lesson-80",
+                        title: "80 Health and medicine",
+                        content: `
+                            <h2>80 Health, "Medical" Shops & Surviving the Kathmandu Cough</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Body Parts, Common Illnesses, The Pharmacy Frontline, Hospitals & The Ambulance Reality</strong></p>
+                            
+                            <p>When you are living or traveling in Nepal, the environment will eventually test your immune system. Whether it's the thick dust giving you a sore throat, a questionable plate of street momos upsetting your stomach, or a minor motorbike scrape, you need to know how to navigate the local medical system.</p>
+                            <p>In Nepal, healthcare is highly privatized, and the way you seek treatment depends entirely on how serious the issue is.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                <h3 style="margin: 0;">1. Body Parts & Common Illnesses</h3>
+                            </div>
+                            <p>Before you can get treatment, you need to be able to point to what hurts.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">टाउको</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Tauko — Head</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">पेट</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Pet — Stomach</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">हात</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Haat — Hand/Arm</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">खुट्टा</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Khutta — Foot/Leg</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">🤒 The Common Sicknesses:</h4>
+                                <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #7f1d1d;">Because of the dust, sudden weather changes, and tap water:</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">टाउको दुख्यो</span></strong> — Headache / My head hurts.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">रुघा खोकी</span></strong> — Cold and Cough. <em>(Incredibly common in Kathmandu's dry winter).</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">ज्वरो आयो</span></strong> — Got a fever.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">पेट बिग्रियो</span></strong> — Upset stomach / Food poisoning. <em>(Literally: "The stomach went bad").</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">पखाला लाग्यो</span></strong> — Got diarrhea.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 9h1"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+                                <h3 style="margin: 0;">2. The "Medical" (Your First Line of Defense)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, मलाई रुघा लाग्यो।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, I caught a cold.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"यो औषधि दिनमा दुई पटक खानुस्।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">(Take this medication two times a day.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">For minor issues, you walk straight into a neighborhood <strong><span class="nepali-font">औषधि पसल</span> (Aushadhi Pasal - Pharmacy)</strong>. Locals simply call these shops the <strong>"Medical."</strong> The pharmacist acts as the frontline doctor — you explain your symptoms and they hand you the exact pills, often cutting a few from a blister pack.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">औषधि</span> (Aushadhi)</strong> — Medicine / Medication.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मलाई सन्चो छैन।</span> (Malai sancho chaina.)</strong><br>
+                                    <em>I am not feeling well.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यो घाउमा मलम लगाइदिनुस्।</span> (Yo ghau ma malam lagaidinus.)</strong><br>
+                                    <em>Please put some ointment on this cut/graze.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">3. Hospitals, Accidents & Emergencies</h3>
+                            </div>
+                            <p>If things go seriously wrong — a broken bone, a burn, or a motorbike accident — you need a hospital. Private hospitals in Kathmandu are fast and efficient if you can pay cash or have good insurance.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अस्पताल</span> (Hospital)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Hospital. <em>(Locals use the English word, pronounced "Hospitaal").</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डाक्टरसाब</span> (Doctor Saab)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Doctor. <em>(Adding 'Saab' is a sign of respect).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इमर्जेन्सी कता छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Where is the emergency room?</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक्स-रे गर्नुपर्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">An X-ray needs to be done.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुई</span> (Sui)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Injection / Jab. <em>(You'll hear this if you need a rabies shot from a dog bite).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Ambulance Reality 🚑🏍️</h3>
+                                <p style="margin-bottom: 1rem;">While ambulances exist in Nepal (dial <strong>102</strong>), Kathmandu's legendary traffic jams mean they often get stuck.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    It is incredibly common for locals to just load an injured person into the backseat of a taxi or even balance them between two people on a motorbike to rush them to the nearest emergency ward. When seconds count, you take whatever wheels are available.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-81", title: "81 At the pharmacy" },
                     { id: "lesson-82", title: "82 Booking an appointment" },
                     { id: "lesson-83", title: "83 Seeing the doctor" },
