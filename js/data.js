@@ -13893,7 +13893,138 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-90", title: "90 Informal phone calls" },
+                    {
+                        id: "lesson-90",
+                        title: "90 Informal phone calls",
+                        content: `
+                            <h2>90 Informal Phone Calls, "La La" & Dropped Connections</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Checking In, Phone Problems, Quick Sign-Offs & The "La La" Culture</strong></p>
+
+                            <p>When talking to friends and family, conversations are fast, direct, and frequently interrupted by poor mountain signal or dying batteries during power cuts.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">1. Checking In & Finding Friends</h3>
+                            </div>
+                            <p>Nepalis often skip the "hello" and jump straight to asking about your location or well-being.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">के छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">How's it going? / What's up?</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ओए, कता छस्?</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Hey mate, whereabouts are you? <em>(Close friends only).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म यतै छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">I'm right here!</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अहिले कुरा गर्न मिल्दैन।</span></strong> — Sorry, I can't talk now.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">म पछि म्यासेज गर्छु।</span></strong> — I'll message you back.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">स्पिकरमा राखेको छु है।</span></strong> — I'll put you on speaker.
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. Phone Problems & Hardware Disasters</h3>
+                            </div>
+                            <p>Network reliability is completely unpredictable. Dropped calls and hardware issues are daily occurrences.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुन्दै हुनुहुन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Can you hear me?</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आवाज काटेर आइरहेछ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">You're breaking up. <em>(Literally: "The voice is coming cut").</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">यहाँ नेटवर्क नै छैन।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">The signal is terrible here.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो डाटा सकियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I'm out of data.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मोबाइलको ब्याट्री सकियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">My phone has died. <em>(Battery is finished).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मोबाइल ह्याङ भयो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">My screen has frozen.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">फोन खस्यो, स्क्रिन फुट्यो।</span></strong><br>
+                                    <em>I dropped my phone and the screen is cracked.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><polyline points="20 6 9 17 4 12"/></svg>
+                                <h3 style="margin: 0;">3. Ending the Call Fast</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" width="100%" style="max-width: 700px; margin: 1rem 0;">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="30" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="60" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"मेरो गाडी आयो, म जानुपर्छ।"</text>
+                                <text x="200" y="82" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">(My bus is here, I need to go now.)</text>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"ल ल, पछि भेटौंला।"</text>
+                                <text x="500" y="172" font-family="Arial, sans-serif" font-size="13" fill="#d1fae5" text-anchor="middle">(Okay okay, see you later!)</text>
+                            </svg>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">कुरा गर्ने फुर्सद छ?</span></strong> — Have you got time for a chat?
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">छैन यार, ब्याट्री ५ पर्सेन्ट मात्र छ।</span></strong> — Sorry, I'm only on 5% battery.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">म जानुपर्छ।</span></strong> — I need to go now.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">पछि भेटौंला।</span></strong> — See you later! / Catch you then!
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "La La" Sign-Off 📞✌️</h3>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center; margin-bottom: 1rem;">
+                                    <strong style="font-size: 1.3rem;"><span class="nepali-font">ल ल</span></strong><br>
+                                    <em>(La la — "Okay, okay")</em>
+                                </div>
+                                <p style="color: #92400e; margin-bottom: 0;">The most common sound at the end of any informal call. It functions as the ultimate rapid-fire sign-off. As a call winds down, both parties exchange a volley of "La la la" before abruptly hanging up. You don't wait for a formal goodbye — once the "La la" exchange begins, the conversation is officially over.</p>
+                            </div>
+                        `
+                    },
                     { id: "lesson-91", title: "91 Using the internet" },
                     { id: "lesson-92", title: "92 Digital problems" },
                     { id: "lesson-93", title: "93 Emails" },
