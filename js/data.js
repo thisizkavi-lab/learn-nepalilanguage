@@ -11070,7 +11070,111 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-66", title: "66 Buses and coaches" },
+                    {
+                        id: "lesson-66",
+                        title: "66 Buses and coaches",
+                        content: `
+                            <h2>66 The Night Bus, Crumpled Notes & Roadside Dal Bhat</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Local Fares, The Student Discount, Highway Pit Stops & The "Deluxe" Illusion</strong></p>
+                            
+                            <p>Western public transit is quiet, heavily regulated, and runs on digital tickets. In Nepal, the bus system is loud, physical, and runs entirely on cash, negotiation, and the iron will of the driver.</p>
+                            <p>Whether you are squeezing into a city Microbus or taking a 12-hour overnight ride through the Himalayas, here is the street-level vocabulary you actually need to survive the journey.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M17 11V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v6"/><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="7.5" cy="15.5" r="1.5"/><circle cx="16.5" cy="15.5" r="1.5"/></svg>
+                                <h3 style="margin: 0;">1. Local Fares & The "Student Card" Fight</h3>
+                            </div>
+                            <p>You do not "tap in." When you are on a city bus, the <strong><span class="nepali-font">खलासी</span> (Khalasi - Conductor)</strong> will push through the crowded aisle clinking a stack of coins, demanding the fare (<span class="nepali-font">भाडा</span> - Bhada).</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाइ, भाडा कति हो?</span> (Dai, bhada kati ho?)</strong><br>
+                                    <em>Brother, how much is the fare?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कहाँबाट चढेको?</span> (Kaha bata chadheko?)</strong><br>
+                                    <em>Where did you get on from? (The Khalasi asks this to calculate the distance).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अगाडि पास गर्दिनुस् न।</span> (Agadi pass gardinus na.)</strong><br>
+                                    <em>Please pass this forward. (When stuck in the back, you hand your money to the person in front and it gets passed up to the conductor).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #3730a3;">🎓 The Student Discount:</h4>
+                                <p style="font-size: 0.9rem; color: #4338ca; margin-bottom: 8px;">If you are a student, you never pay full price. By law, students get a 45% discount on local transit.</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">विद्यार्थी कार्ड छ।</span></strong><br>
+                                        <span style="color: #4338ca;">I have a student card.</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">छुट दिनुस् न।</span></strong><br>
+                                        <span style="color: #4338ca;">Please give the discount.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                                <h3 style="margin: 0;">2. The "Night Bus" Experience (Long-Distance Travel)</h3>
+                            </div>
+                            <p>In Nepal, long-distance travel means taking a <span class="nepali-font" style="font-weight: bold; color: #b45309;">नाइट बस</span> (Night Bus) from Kathmandu to places like Pokhara, Chitwan, or Jhapa. You buy a paper ticket at a chaotic counter in the Bus Park.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पोखराको टिकट कति हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">How much is the ticket to Pokhara?</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अन्तिम सिट मात्र बाँकी छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Only the last seat is remaining. <em>(Avoid the back seat: the bumpy roads will launch you into the ceiling).</em></div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">वाइफाइ छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Is there Wi-Fi? <em>(Standard reply: "Chha, tara chaldeina" — Yes, but it doesn't work).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h3 style="margin: 0;">3. The Highway Stops (Toilets & Food)</h3>
+                            </div>
+                            <p>There are no toilets on the bus. When you are driving through the winding mountain highways, the driver will occasionally stop at roadside rest areas called "Line Hotels."</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाइ, पिसाब फेर्ने ठाउँ कता छ?</span></strong><br>
+                                    <em>Brother, where is the place to pee? (A very direct, completely normal way to ask for the toilet during a pit stop).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">बस कति बेर रोक्छ?</span></strong><br>
+                                    <em>How long will the bus stop?</em>
+                                </li>
+                                <li style="background: #ecfdf5; border: 1px dashed #10b981; padding: 10px; border-radius: 6px;">
+                                    <strong><span class="nepali-font" style="font-size: 1.1rem; color: #047857;">खाना खाने ठाउँ आयो!</span></strong><br>
+                                    <span style="color: #065f46;">The food place has arrived! <em>(Around 9-10 PM the bus stops for 30 mins so everyone can inhale a massive plate of Dal Bhat before sleeping).</em></span>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #991b1b;">The Cultural Insight: The "Deluxe" Illusion ⚠️</h3>
+                                <p style="margin-bottom: 1rem;">When buying a ticket for a long-distance journey, the ticket agent will always try to sell you the <strong><span class="nepali-font">डिलक्स</span> (Deluxe)</strong> or <strong><span class="nepali-font">सुपर डिलक्स</span> (Super Deluxe)</strong> bus. In the West, this implies luxury.</p>
+                                <div style="background: #fee2e2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; color: #7f1d1d;">
+                                    In Nepal, "Deluxe" usually just means the bus has a working air conditioner (sometimes) and seats that recline slightly. "Tourist Buses" are the actual comfortable options, but if you ride the local "Super Deluxe," expect loud Nepali pop music blaring until midnight and the driver aggressively overtaking trucks on blind mountain corners.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-67", title: "67 Train and metro travel" },
                     { id: "lesson-68", title: "68 At the airport" },
                     { id: "lesson-69", title: "69 Cycling" },
