@@ -11868,7 +11868,119 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-73", title: "73 Booking a holiday" },
+                    {
+                        id: "lesson-73",
+                        title: "73 Booking a holiday",
+                        content: `
+                            <h2>73 Booking a Trip, "Packages" & The Visa Struggle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Travel Agencies, Domestic Packages, The Weak Passport & The Picnic Phenomenon</strong></p>
+                            
+                            <p>In the West, booking a holiday is as simple as clicking a button on a website. In Nepal, "Travel and Tours" agencies are everywhere, but they aren't selling cruises or camper vans. They are selling domestic weekend getaways, expensive international labor flights, and hope.</p>
+                            <p>Here is the vocabulary you actually need when trying to book a getaway (or escape) in Kathmandu.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                <h3 style="margin: 0;">1. The Travel Agency & "Packages"</h3>
+                            </div>
+                            <p>You don't usually book an "all-inclusive spa break." You go to a local agency and ask about a <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">प्याकेज</span> (Package) for a domestic tourist destination like Pokhara or Chitwan.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">ट्राभल एजेन्सी</span> (Travel Agency)</strong><br>
+                                    <em>Travel Agency.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">पोखराको प्याकेज कस्तो छ?</span> (Pokhara ko package kasto cha?)</strong><br>
+                                    <em>How is the package for Pokhara? (Usually covers the bus, a budget hotel, and maybe breakfast).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कति दिनको टुर हो?</span> (Kati din ko tour ho?)</strong><br>
+                                    <em>How many days is the tour?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">खान र बस्न सबै इन्क्लुड हो?</span> (Khana ra basna sabai include ho?)</strong><br>
+                                    <em>Is food and stay all included? (Nepalis heavily mix English words like 'include' and 'tour' into travel conversations).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                                <h3 style="margin: 0;">2. The Brutal Reality of the Visa</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"थाइल्याण्ड जाने हो भने भिसा लगाउनुपर्छ।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">(If going to Thailand, you must get a visa.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"भिसा आउन कति समय लाग्छ नि?"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="13" fill="#fee2e2" text-anchor="middle">(How long will the visa take to arrive?)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The Nepali passport is consistently ranked as one of the weakest in the world. For a normal citizen, casually traveling abroad for a holiday is almost impossible without demonstrating massive bank balances and enduring months of paperwork.</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">भिसा लाग्यो?</span> (Visa laagyo?)</strong><br>
+                                        <span style="color: #991b1b;">Was the visa applied/approved? <em>(The most loaded, stressful question a young Nepali can be asked).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem; background: #fee2e2; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">रिजेक्ट भयो।</span> (Reject bhayo.)</strong><br>
+                                        <span style="color: #7f1d1d;">It got rejected. <em>(A tragically common outcome).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">बैंक ब्यालेन्स कति देखाउनुपर्छ?</span></strong><br>
+                                        <span style="color: #991b1b;">How much bank balance do I need to show? <em>(The first hurdle to getting a tourist visa to Europe or the US).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="m8 3 4 8 5-5 5 15H2L8 3Z"/></svg>
+                                <h3 style="margin: 0;">3. Real "Holiday" Types</h3>
+                            </div>
+                            <p>Instead of a "winter sports holiday" or a "city break," these are the actual ways Nepalis categorize travel:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">वनभोज / पिकनिक</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Picnic. <em>(Entire offices rent buses with giant speakers and cook meat at the forest edge).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हाइकिङ</span> (Hiking)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">A one-day walk. <em>(Often just a few hours walking up a hill surrounding the Kathmandu valley).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ट्रेकिङ</span> (Trekking)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Multi-day mountain hiking. <em>(The Annapurna Circuit or Everest Base Camp).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दर्शन</span> (Darshan)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Religious pilgrimage. <em>(Traveling specifically to visit a holy temple).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "Picnic" Phenomenon 🐐🔊</h3>
+                                <p style="margin-bottom: 1rem;">If a group of Nepali friends or coworkers says they are going on a <strong><span class="nepali-font">पिकनिक</span></strong>, do not picture a quiet afternoon on a checkered blanket with sandwiches.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    A Nepali picnic is a full-scale, incredibly loud operation. They will rent a bus, bring massive cooking pots, a live goat (to butcher and cook on-site), and giant sound systems. They will blast Nepali pop music and dance in a dusty field from 10:00 AM until sunset. It is the ultimate domestic group holiday experience.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-74", title: "74 Staying in a hotel" },
                     { id: "lesson-75", title: "75 City sightseeing" },
                     { id: "lesson-76", title: "76 Going camping" },
