@@ -11175,7 +11175,115 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-67", title: "67 Train and metro travel" },
+                    {
+                        id: "lesson-67",
+                        title: "67 Train and metro travel",
+                        content: `
+                            <h2>67 The Train Myth, Cable Cars & Domestic Flights</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>No Rails, Aerial Temples, Weather Delays & The VIP Queue Jump</strong></p>
+                            
+                            <p>Western countries rely heavily on trains and underground metros to connect their cities. In Nepal, the topography makes this impossible. If you ask a local where the train station is, they will think you are joking.</p>
+                            <p>To travel comfortably between major cities like Kathmandu, Pokhara, or Chitwan, you rely on a massive network of small domestic flights. Here is the vocabulary you actually need when you want to skip the highway traffic.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                                <h3 style="margin: 0;">1. The Missing Trains & The "Cable Car"</h3>
+                            </div>
+                            <p>While there are no metros, Nepal does have an aerial transport system that people love: the <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">केबुलकार</span> (Cable Car). These are mostly used to reach high-altitude Hindu temples without hiking for two days.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">रेल / ट्रेन</span> (Rail / Train)</strong><br>
+                                    <em>Train. (You will almost never use this word in Nepal).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">केबुलकारको टिकट कति हो?</span></strong><br>
+                                    <em>How much is the cable car ticket?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">माथि जान कति समय लाग्छ?</span></strong><br>
+                                    <em>How much time does it take to go up?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0ea5e9;"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                                <h3 style="margin: 0;">2. Domestic Flights (The Real Fast Travel)</h3>
+                            </div>
+                            <p>If you are skipping the Night Bus, you are booking a flight on Buddha Air, Yeti Airlines, or Shree Airlines. You do not go to a ticket office; you just open your digital wallet app (like eSewa) on your phone.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फ्लाइट / उडान</span></div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">Flight. (Everyone uses the English word 'Flight').</div>
+                                </div>
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पोखराको फ्लाइट कति बजे छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">What time is the flight to Pokhara?</div>
+                                </div>
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">टिकट काट्नुभयो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">Did you cut (buy) the ticket? <em>(In Nepali, you "cut" a ticket, you don't "book" it).</em></div>
+                                </div>
+                                <div style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बोर्डिङ पास</span></div>
+                                    <div style="font-size: 0.85rem; color: #0369a1; margin-top: 4px;">Boarding Pass.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                                <h3 style="margin: 0;">3. The Reality of "Mausam" (Weather Delays)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"फ्लाइट किन ढिला भयो?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Why is the flight delayed?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"पोखरामा मौसम खराब छ, सर।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(The weather is bad in Pokhara, Sir.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The textbook warns about "engineering works." In Nepal, the domestic airport is entirely at the mercy of the mountains and the clouds. If you fly in Nepal, you <em>will</em> experience a delay.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">फ्लाइट डिले भयो।</span> (Flight delay bhayo.)</strong><br>
+                                        <span style="color: #b45309;">The flight got delayed.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem; background: #fef3c7; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">मौसम खराब छ।</span> (Mausam kharab cha.)</strong><br>
+                                        <span style="color: #92400e;">The weather is bad. <em>(The absolute most common phrase you will hear at a domestic terminal).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">उडान रद्द भयो।</span> (Udan radda bhayo.)</strong><br>
+                                        <span style="color: #b45309;">The flight got canceled. <em>(If the fog doesn't clear by 3 PM, everyone goes home and tries again tomorrow).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The "VIP" Queue Jump 🛫</h3>
+                                <p style="margin-bottom: 1rem;">At the domestic airport in Kathmandu, you will often see long, chaotic lines for security checks. However, you will also notice certain people casually walking past the entire line, chatting with the security guards, and heading straight to the front.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    This goes back to the <strong><span class="nepali-font">सोर्स-फोर्स</span> (Source-Force)</strong> culture. Knowing the right manager at the airline or having a government connection means the normal rules of the queue do not apply to you.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-68", title: "68 At the airport" },
                     { id: "lesson-69", title: "69 Cycling" },
                     { id: "lesson-70", title: "70 Taxis" },
