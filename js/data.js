@@ -13372,7 +13372,129 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-86", title: "86 Dental care" },
+                    {
+                        id: "lesson-86",
+                        title: "86 Dental care",
+                        content: `
+                            <h2>86 Dental Care, "Daat Dukhyo" & The Neighborhood Clinic</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Describing Dental Pain, The Chair Examination, Cavities, Fillings, Braces & The "Scaling" Routine</strong></p>
+
+                            <p>Dental care in Nepal is entirely privatized. Almost every commercial street has a small, independent clinic marked by a brightly lit sign featuring a giant, smiling tooth.</p>
+                            <p>Walk-in appointments are standard, and you deal directly with the dentist for everything from extractions to basic cleanings — there is no separate "dental hygienist" role.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h3 style="margin: 0;">1. Describing the Pain</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाँत साह्रै दुख्यो।</span></strong><br>
+                                    <em>I've got a really bad toothache.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">भरेको सिमेन्ट निस्कियो।</span></strong><br>
+                                    <em>My filling has come out. (Locals call a filling "cement").</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाँतको खोल हल्लियो जस्तो छ।</span></strong><br>
+                                    <em>I think my crown has come loose. (A crown is a "khol" — cover).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">छोराको नयाँ दाँत आउँदैछ।</span></strong><br>
+                                    <em>My son's first teeth are coming through.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                                <h3 style="margin: 0;">2. In the Chair: The Examination</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">अलि ठूलो मुख खोल्नुस् त।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Open a bit wider for me, please.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दुख्यो भने भन्नुस् है।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Let me know if you feel any pain.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मुख कुल्ला गर्नुहुन्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Would you like to rinse your mouth out? <em>(To rinse = "kulla garne").</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                <h3 style="margin: 0;">3. Diagnoses & Treatments</h3>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">🪱 Dealing with Cavities:</h4>
+                                <p style="font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0.75rem;">When a dentist tells you that you have a cavity, they will say the tooth has been "eaten by a bug."</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">सानो किराले खाएको रहेछ।</span></strong><br>
+                                        <em>You've got a small cavity. (Literally: "A small bug has eaten it").</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">थोरै भर्नुपर्ने जस्तो छ।</span></strong> — It looks like you need a small filling.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">यो दाँत निकाल्नुपर्छ।</span></strong> — You'll need this tooth taken out.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #047857;">🪥 Cleaning & Maintenance:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">दाँतमा फोहोर जमेको छ।</span></strong> — You've got a build-up of plaque. <em>(Plaque = "fohor" / dirt).</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">म दिनमा दुई पटक दाँत माझ्छु।</span></strong> — I brush my teeth twice a day.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">धेरै कडा गरेर नमाझ्नुस् है।</span></strong> — Make sure you don't brush too hard.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">धागोले सफा गर्न नबिर्सनुस्।</span></strong> — Remember to floss regularly. <em>(Floss = "cleaning with thread / dhago").</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #4f46e5;">✨ Cosmetics & Orthodontics:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">दाँत सेतो बनाउन मिल्छ?</span></strong> — Can I have my teeth whitened?
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">तार हाल्नुपर्छ र?</span></strong> — Do I need braces? <em>(Braces = "taar" / wire).</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Scaling" Routine 🦷✨</h3>
+                                <p style="margin-bottom: 1rem;">In many Western countries, a routine cleaning is handled by a hygienist. In Nepal, this procedure is universally known by its English medical term: <strong><span class="nepali-font">स्केलिङ</span> (Scaling)</strong>.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    You don't ask for a "cleaning." You simply walk up to the receptionist and say, <strong>"Malai scaling garaunu thiyo"</strong> (I needed to get a scaling done). It is one of the most common and affordable services offered by the thousands of private dental clinics scattered across the valley.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-87", title: "87 Mental health support" }
                 ]
             },
