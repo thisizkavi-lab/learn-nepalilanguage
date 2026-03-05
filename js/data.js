@@ -11516,7 +11516,125 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-70", title: "70 Taxis" },
+                    {
+                        id: "lesson-70",
+                        title: "70 Taxis",
+                        content: `
+                            <h2>70 Taxis, The "Meter" War & The Pathao Escape</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Haggling with Drivers, Ride-Sharing Apps, Cash & QR Payments & Rainy Day Extortion</strong></p>
+                            
+                            <p>In the West, taking a taxi is a quiet, metered, regulated experience. In Kathmandu, the iconic white Maruti Suzuki taxis dominate the streets, but locals approach them with caution because every ride starts with a negotiation.</p>
+                            <p>Because of the daily struggle with taxi fares, the entire city has largely shifted to ride-sharing apps. Here is the actual street-level vocabulary you need to get a ride without getting ripped off.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-2-2.2-3.3C12.9 5.5 12 5 11 5H5C3.3 5 2.2 6.2 2 7.5L1.5 11H1v3c0 .6.4 1 1 1h1"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                                <h3 style="margin: 0;">1. The "Meter" War (Haggling)</h3>
+                            </div>
+                            <p>You do not politely ask, "How long will it take to get there?" You immediately establish the financial terms of the ride. By law, taxis are supposed to use the meter. In reality, they almost never do.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">
+                                    <strong><span class="nepali-font">दाइ, ठमेल जाने हो?</span> (Dai, Thamel jane ho?)</strong><br>
+                                    <em>Brother, going to Thamel?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मिटरमा जाने?</span> (Meter ma jane?)</strong><br>
+                                    <em>Will you go on the meter? (Expect the driver to say "No" and quote a high flat rate).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #3730a3;">💰 The Negotiation:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">कति लिने?</span> (Kati line?)</strong><br>
+                                        <span style="color: #3730a3;">How much will you take?</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem; background: #eff6ff; padding: 8px; border-left: 3px solid #6366f1;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">धेरै भयो, अलि मिलाएर भन्नुस् न।</span></strong><br>
+                                        <span style="color: #1e40af;">That's too much, please adjust the price a bit. <em>(The classic Nepali haggling phrase).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">पर्दैन, म अर्कोमा जान्छु।</span></strong><br>
+                                        <span style="color: #3730a3;">No need, I will go in another one. <em>(Walking away is your best negotiating tactic).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <h3 style="margin: 0;">2. Ride-Sharing (The Modern Savior)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हेलो दाइ, म्याप हेरेर आउनुस् है।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Hello brother, please look at the map and come.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हवस्, म दुई मिनेटमा आइपुग्छु।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">(Okay, I will arrive in two minutes.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepal, this is how 90% of the youth travel. You use apps like Pathao or inDrive (mostly for motorbikes, but also cabs).</p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">पठाओ गर्ने हो?</span></strong><br>
+                                        <span style="color: #047857;">Shall we get a Pathao?</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">लोकेसन कहाँ छ तपाईंको?</span></strong><br>
+                                        <span style="color: #047857;">Where is your location? <em>(The rider will always call to confirm, because GPS in Kathmandu's narrow alleys is terrible).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">म चोकमा छु।</span></strong><br>
+                                        <span style="color: #047857;">I am at the intersection/square.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <h3 style="margin: 0;">3. Payment (Cash & QR)</h3>
+                            </div>
+                            <p>The textbook asks about "contactless." In Nepal, credit cards are rarely used in transit. You pay with torn cash or by scanning a digital wallet code.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">खुद्रा छ?</span> (Khudra cha?)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Do you have change? <em>(Always ask before handing a 1000 Rs note — drivers never have change).</em></div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">क्युआर छ?</span> (QR cha?)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Do you have a QR code?</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इसेवा गर्ने?</span> (eSewa garne?)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Shall I do eSewa? <em>(Most taxis have a laminated QR code hanging from the dashboard).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #991b1b;">The Cultural Insight: The "Rainy Day" Extortion 🌧️💸</h3>
+                                <p style="margin-bottom: 1rem;">While taxi drivers in Nepal are hardworking people dealing with high fuel prices, there is a notorious unwritten rule on the streets:</p>
+                                <div style="background: #fee2e2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; color: #7f1d1d;">
+                                    If it starts raining heavily, or if there is a political strike (<strong>Banda</strong>) shutting down public buses, the taxi fares instantly double or triple. They know you are stranded and desperate. During a monsoon downpour, do not expect mercy on the price.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-71", title: "71 At the garage" }
                 ]
             },
