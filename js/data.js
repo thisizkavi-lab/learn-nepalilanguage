@@ -12337,7 +12337,131 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-78", title: "78 Finding your way" },
+                    {
+                        id: "lesson-78",
+                        title: "78 Finding your way",
+                        content: `
+                            <h2>78 Finding Your Way, "Chowks" & The Landmark Hustle</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Asking for Directions, Landmark Navigation, The Distance Trap & Pointing with Lips</strong></p>
+                            
+                            <p>If you use Google Maps in the ancient, winding alleys of Patan or Kathmandu, it will eventually lead you straight into a brick wall or someone's courtyard. You have to rely on asking the locals.</p>
+                            <p>When you ask for directions, throw away the map and listen for landmarks. Here is how you actually navigate the labyrinth of a Nepali city.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                                <h3 style="margin: 0;">1. Asking for the "Bato" (The Way)</h3>
+                            </div>
+                            <p>You don't just say, "Excuse me, do you know the way..." You lead with respect and ask where the road is going.</p>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">दाइ / दिदी</span> (Dai / Didi)</strong> — Older brother / Older sister. <em>(Never ask a stranger for directions without saying this first).</em>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">...जाने बाटो कता हो?</span> (...jane bato kata ho?)</strong><br>
+                                    <em>Which way is the road to [Place]?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">बसपार्क जाने बाटो कता हो?</span> (Bus park jane bato kata ho?)</strong><br>
+                                    <em>Which way is the road to the bus park?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यहाँबाट कति टाढा छ?</span> (Yaha bata kati tadha cha?)</strong><br>
+                                    <em>How far is it from here?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <h3 style="margin: 0;">2. Giving Directions (Landmarks, not Street Names)</h3>
+                            </div>
+                            <p>A Nepali will tell you to go straight until you hit a specific landmark, and then turn.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिधा जानुस्</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Go straight ahead.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दायाँ</span> (Daya)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Right.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बायाँ</span> (Baya)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Left.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चोक</span> (Chowk)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Intersection / Square. <em>(Replaces "roundabout").</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मन्दिरको पछाडि</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Behind the temple.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पिपलको बोट</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">The Peepal tree. <em>(Ancient trees are standard navigation points).</em></div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border-left: 3px solid #6366f1; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #4f46e5;">🗺️ The Classic Nepali Direction:</h4>
+                                <p style="margin-bottom: 0;"><strong><span class="nepali-font">सिधा जानुस्, अनि एउटा चोक आउँछ। त्यहाँबाट दायाँ लाग्नुस्।</span></strong><br>
+                                <em>Go straight, then a Chowk (intersection) will come. From there, take a right.</em></p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <h3 style="margin: 0;">3. The Distance Trap</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, अस्पताल कति टाढा छ?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, how far is the hospital?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"नजिकै छ, अलि अगाडि गएर सोध्नुस्।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="13" fill="#fee2e2" text-anchor="middle">(It's nearby, go a little ahead and ask.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">Nepalis are notoriously optimistic about distances. You have to learn the code.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">नजिकै छ</span> (Najikai cha)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">It's nearby. <em>(Warning: Could mean a 2-minute walk or a 20-minute hike).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">अलि अगाडि</span> (Ali agadi)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Just a little ahead.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">त्यहाँ गएर सोध्नुस्</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Go there and ask. <em>(They give you one landmark at a time, then tell you to ask again).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: Pointing with the Lips 👄👉</h3>
+                                <p style="margin-bottom: 1rem;">In Western cultures, a person will clearly point with their index finger. In Nepal, it is very common for people to point using their lips.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    They will thrust their chin forward and purse their lips in the direction you need to go while saying, <strong>"Teta"</strong> (That way). Don't wait for a hand gesture; just follow the chin!
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-79", title: "79 Holiday problems" }
                 ]
             },
