@@ -13069,7 +13069,156 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-84", title: "84 Injuries and emergencies" },
+                    {
+                        id: "lesson-84",
+                        title: "84 Injuries and emergencies",
+                        content: `
+                            <h2>84 Medical Consultations, Injuries & Emergencies</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>OPD Clinics, Doctor Consultations, Minor Scrapes to Major Injuries & Calling for Help</strong></p>
+                            
+                            <p>When home remedies or the local pharmacy aren't enough, you will need to understand how to get in front of a doctor, explain exactly what is happening, and handle sudden emergencies.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <h3 style="margin: 0;">1. The OPD Clinic & Dental Checks</h3>
+                            </div>
+                            <p>Walk into the clinic, pay to "cut a ticket" at reception, and wait your turn. For emergencies, bypass the OPD queue entirely and head straight to the Emergency Ward.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">टिकट काट्ने</span> (Ticket katne)</strong> — To register for an appointment. <em>(Literally: "To cut a ticket").</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मलाई छातीमा इन्फेक्सन भएको जस्तो छ।</span></strong><br>
+                                    <em>I think I might have a chest infection.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">चेक-अप गराउनु थियो।</span></strong><br>
+                                    <em>I needed to get a check-up done.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाँत साह्रै दुख्यो।</span></strong><br>
+                                    <em>I've got a really bad toothache.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">नयाँ बिरामी हेर्नुहुन्छ?</span></strong><br>
+                                    <em>Are you taking on new patients?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. Inside the Cabin: Symptoms & Treatments</h3>
+                            </div>
+                            <p>The doctor will expect a clear, direct explanation of your symptoms.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">के भयो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">What seems to be the problem?</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">धेरै टाउको दुख्यो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I keep getting splitting headaches.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एक हप्तादेखि खोकी लागिरहेको छ, र झन् बढ्यो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Bad cough for a week and it's getting worse.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंको छाती जाँच्छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Let me listen to your chest.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border-left: 3px solid #10b981; padding: 1.25rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #047857;">💉 Medical Interventions:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">घाउ निको हुँदैछ, पट्टी फेरौं।</span></strong><br>
+                                        <em style="color: #047857;">It's healing up nicely, I'll just change your bandage.</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">सुई लगाउनुपर्छ।</span></strong><br>
+                                        <em style="color: #047857;">We need to give an injection.</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #eef2ff; border-left: 3px solid #6366f1; padding: 1.25rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #4f46e5;">📋 The Diagnosis & Advice:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">सामान्य इन्फेक्सन जस्तो छ।</span></strong> — It looks like a mild infection.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">एन्टीबायोटिक खानुपर्छ।</span></strong> — You will need antibiotics.</li>
+                                    <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">आराम गर्नुस् र झोल कुरा धेरै पिउनुस्।</span></strong> — Rest and drink plenty of fluids.</li>
+                                    <li><strong><span class="nepali-font">दुई हप्तापछि फेरि आउनुस्।</span></strong> — Come back in two weeks.</li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">3. Minor Injuries to Major Emergencies</h3>
+                            </div>
+                            <p>Accidents happen, especially on rough mountain treks or crowded city streets.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #b45309;">🩹 Minor Bumps & Scrapes:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">घुँडाबाट रगत आयो!</span></strong> — My knee's bleeding!
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">यो नराम्रो घाउ हो, यसलाई सफा गरेर ब्यान्डेज लगाउँछु।</span></strong><br>
+                                        <em>That's a nasty graze. Let me clean it, then I'll get a plaster.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">मैले कुम ठोकें!</span></strong> — I just banged my shoulder!
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">यो सुन्निएको ठाउँमा चिसो प्याक राख्नुस्।</span></strong><br>
+                                        <em>Hold this cold pack over the bump.</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">नाकबाट रगत आयो।</span></strong> — I've got a nosebleed.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 2px solid #ef4444; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">🚨 Serious Injuries:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">पोलेको घाउ साह्रै दुख्छ।</span></strong><br>
+                                        <em>I burned my hand... It's really painful.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">मेरो गोलीगाँठो भाँचिएको हो कि मर्किएको मात्र हो?</span></strong><br>
+                                        <em>Is my ankle broken or just sprained?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">पक्का छैन... एक्स-रे गर्न पठाउँछु।</span></strong><br>
+                                        <em>Not sure... I'm sending you for an X-ray.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">छोरीको हात काटियो, टाँका लगाउनुपर्छ जस्तो छ।</span></strong><br>
+                                        <em>My daughter's gashed her arm, it looks like she may need stitches.</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fee2e2; border: 2px solid #dc2626; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #7f1d1d;">📞 Calling for Help:</h4>
+                                <strong><span class="nepali-font" style="font-size: 1.1rem;">मलाई एम्बुलेन्स चाहियो।</span></strong><br>
+                                <span style="color: #991b1b; font-size: 1rem;">I need an ambulance.</span>
+                            </div>
+                        `
+                    },
                     { id: "lesson-85", title: "85 The hospital" },
                     { id: "lesson-86", title: "86 Dental care" },
                     { id: "lesson-87", title: "87 Mental health support" }
