@@ -11981,7 +11981,123 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-74", title: "74 Staying in a hotel" },
+                    {
+                        id: "lesson-74",
+                        title: "74 Staying in a hotel",
+                        content: `
+                            <h2>74 Hotel Survival, The "Nagarikta" & Hot Water Checks</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Lodge Check-In, Citizenship Cards, Solar Showers, The "Bhai" Ecosystem & Breakfast Illusions</strong></p>
+                            
+                            <p>Unless you are staying at a five-star luxury resort in Kathmandu, the Nepali hotel experience is completely different from the West. If you are traveling locally, you are staying in a <span class="nepali-font" style="font-weight: bold;">लज</span> (Lodge) or a <span class="nepali-font" style="font-weight: bold;">गेस्ट हाउस</span> (Guest House).</p>
+                            <p>There are no key cards, and there is no online booking. You walk in, haggle for the room rate, and pray the solar water heater actually works. Here is the real vocabulary.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                                <h3 style="margin: 0;">1. Arrival, The Ledger & The ID</h3>
+                            </div>
+                            <p>In Nepal, locals do not travel with passports. They use their citizenship card, and the receptionist fills out the ledger for you.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कोठा खाली छ?</span> (Kotha khali cha?)</strong><br>
+                                    <em>Is a room empty/available?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">एक रातको कति हो?</span> (Ek raat ko kati ho?)</strong><br>
+                                    <em>How much for one night? (Always negotiate — do not accept the first price).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">नागरिकता दिनुस् त।</span> (Nagarikta dinus ta.)</strong><br>
+                                    <em>Please give your citizenship card. (The standard ID requested instead of a passport).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">रजिस्टरमा नाम लेख्दिनुस्।</span> (Register ma naam lekhdinus.)</strong><br>
+                                    <em>Please write your name in the register.</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">साँचो</span> (Sacho)</strong> — Key. <em>You won't get a plastic "key card"; you will get a physical metal key attached to a giant, heavy wooden block so you don't lose it.</em>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636-2.871L13.637 3.591a1.914 1.914 0 0 0-3.274 0z"/><path d="M12 17h.01"/></svg>
+                                <h3 style="margin: 0;">2. The Real Room Problems (Hot Water & Wi-Fi)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, बाथरुममा तातो पानी आउँछ?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">(Brother, does hot water come in the bathroom?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"आउँछ सर, ग्याँस गिजर छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(It comes Sir, there is a gas geyser.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">The only things that truly matter are the internet and the shower.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">तातो पानी आउँछ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Does hot water come? <em>(Check before you pay — solar heaters fail on cloudy days).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">वाइफाइको पासवर्ड के हो?</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">What is the Wi-Fi password? <em>(Cell reception in concrete lodges can be terrible).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">टिभी चलेन।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The TV didn't work. <em>(A very common reality).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">बत्ती कहिले आउँछ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">When will the electricity come back? <em>(Power cuts happen, not every lodge has a backup).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                                <h3 style="margin: 0;">3. Room Service (The "Bhai" Ecosystem)</h3>
+                            </div>
+                            <p>You don't call the front desk for a "club sandwich." Nepali lodges are entirely run by young staff boys, universally called <strong><span class="nepali-font">भाइ</span> (Bhai - Little Brother)</strong>.</p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">भाइ, दुई कप कालो चिया ल्याइदेऊ त।</span></strong><br>
+                                        <span style="color: #047857;">Brother, bring two cups of black tea.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">तातो पानी पिउने ल्याइदिनुस् न।</span></strong><br>
+                                        <span style="color: #047857;">Please bring hot drinking water. <em>(Usually brought in a large thermos flask).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">खाना कति बजे पाक्छ?</span></strong><br>
+                                        <span style="color: #047857;">What time will the food be cooked? <em>(Asking about the evening Dal Bhat — they don't have a 24/7 menu).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: Breakfast is an Illusion ☕🍪</h3>
+                                <p style="margin-bottom: 1rem;">Outside of heavy tourist hubs like Thamel, "breakfast" in Nepal is usually just a cup of sweet milk tea and a couple of biscuits.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    The culture simply does not prioritize a massive morning meal because everyone is waiting for the heavy, mountainous plate of <strong>Dal Bhat</strong> at 9:30 AM. If you want a Western breakfast, you have to leave the lodge and find a bakery.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-75", title: "75 City sightseeing" },
                     { id: "lesson-76", title: "76 Going camping" },
                     { id: "lesson-77", title: "77 At the beach" },
