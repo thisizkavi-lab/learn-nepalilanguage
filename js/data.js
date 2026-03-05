@@ -11749,7 +11749,125 @@ const courseData = [
             {
                 title: "ON HOLIDAY",
                 lessons: [
-                    { id: "lesson-72", title: "72 On holiday" },
+                    {
+                        id: "lesson-72",
+                        title: "72 On holiday",
+                        content: `
+                            <h2>72 On Holiday, "Ghumn Jane" & The Village Exodus</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Festival Leave, Village Trips, Domestic Tourism & The "Koseli" Obligation</strong></p>
+                            
+                            <p>Western holidays are about escaping to a beach resort or a European capital. In Nepal, the concept of a "holiday" is deeply tied to family obligations, religious pilgrimage, and the booming domestic tourism scene.</p>
+                            <p>Forget the "bed and breakfast" or the "campsite." Here is the vocabulary you actually need when taking a break in Nepal.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <h3 style="margin: 0;">1. Taking Leave & The Village Trip</h3>
+                            </div>
+                            <p>Most working Nepalis don't take random weeks off to go to a "water park." They save their leave for major festivals or family events.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिदा / छुट्टी</span> (Bida / Chhutti)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Holiday / Leave.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिदा मनाउने</span> (Bida manaune)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">To celebrate a holiday.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दशैंको बिदा</span> (Dashain ko bida)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Dashain holidays. <em>(The longest and most important national holiday).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #047857;"><span class="nepali-font">गाउँ जाने</span> (Gaun jane)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Going to the village. <em>(The answer 80% of the time when asked "What are you doing for the holidays?").</em></div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border: 1px dashed #94a3b8; padding: 10px; border-radius: 8px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">म बिदामा छु।</span></strong> — I am on leave/holiday.
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                <h3 style="margin: 0;">2. Domestic Tourism (Pokhara & Homestays)</h3>
+                            </div>
+                            <p>If young Nepalis or families do travel for leisure, they say they are going <span class="nepali-font" style="font-weight: bold; color: #b45309;">घुम्न</span> (Ghumn - to wander/travel). They don't rent "caravans" or "cabins."</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">घुम्न जाने</span> (Ghumn jane)</strong><br>
+                                    <em>To go travelling/sightseeing.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">होटल / लज</span> (Hotel / Lodge)</strong><br>
+                                    <em>Hotel / Lodge. (Cheaper accommodations are almost always called "Lodges" or "Guest Houses").</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">होमस्टे</span> (Homestay)</strong><br>
+                                    <em>Homestay. (Extremely popular in villages like Ghandruk. You stay in a local's home and eat their organic food).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कोठा बुक गर्नुभयो?</span> (Kotha book garnubhayo?)</strong><br>
+                                    <em>Did you book a room?</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="m8 3 4 8 5-5 5 15H2L8 3Z"/></svg>
+                                <h3 style="margin: 0;">3. The Real Activities (Trekking & Darshan)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"बिदामा कता घुम्न जाने?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Where are you going travelling during the holiday?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"यसपालि मुस्ताङ जाने विचार छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">(This time I'm thinking of going to Mustang.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">You can ignore "water-skiing" and "windsurfing." Here is what people actually do when they play tourist in Nepal.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ट्रेकिङ</span> (Trekking)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Trekking. <em>(Even locals use the English word for multi-day mountain walks).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दर्शन गर्ने</span> (Darshan garne)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To worship / pay homage. <em>(Instead of "castles," older Nepalis visit temples like Muktinath).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डुंगा चढ्ने</span> (Dunga chadhne)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To ride a boat. <em>(Mandatory at Fewa Lake in Pokhara — replacing the "yacht" fantasy).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">जंगल सफारी</span> (Jungle Safari)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Wildlife safari. <em>(Very popular at Chitwan National Park to see rhinos).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Koseli" 🎁</h3>
+                                <p style="margin-bottom: 1rem;">When you return from a holiday or a trip to your village, you cannot just walk back into the office empty-handed. You are culturally obligated to bring back a <strong><span class="nepali-font">कोसेली</span> (Koseli - Gift/Souvenir)</strong> for your friends and coworkers.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    If you went to the village, this might be fresh ghee, local honey, or organic apples. If you went abroad, it's usually chocolates. Failing to bring a Koseli is considered slightly selfish and will absolutely be noticed by your neighbors and colleagues.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-73", title: "73 Booking a holiday" },
                     { id: "lesson-74", title: "74 Staying in a hotel" },
                     { id: "lesson-75", title: "75 City sightseeing" },
