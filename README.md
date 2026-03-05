@@ -66,6 +66,4 @@ No contribution is too small. Even pointing out "nobody says it like that" is us
 
 Plain HTML, CSS, JavaScript. Vite for dev server. No frameworks. Deployed on GitHub Pages.
 
-## License
-
-MIT — use it, fork it, make it better.
+ use it, fork it, make it better.
