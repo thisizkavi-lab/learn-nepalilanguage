@@ -11284,7 +11284,125 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-68", title: "68 At the airport" },
+                    {
+                        id: "lesson-68",
+                        title: "68 At the airport",
+                        content: `
+                            <h2>68 Tribhuvan International, "Bhansar" & The Taxi Mob</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The "Bidesh" Farewell, Customs Gold Checks, Arrival Chaos & Cotton Ball In-Flight Service</strong></p>
+                            
+                            <p>Flying in or out of Kathmandu's Tribhuvan International Airport (TIA) is an intense, chaotic, and deeply cultural experience. You aren't just navigating security; you are navigating massive crowds, strict customs officers looking for smuggled gold or extra smartphones, and the reality of Nepali migration.</p>
+                            <p>Forget the polite "car hire" desks and the self-service "bag drops." Here is the street-level vocabulary you need to survive the airport.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                                <h3 style="margin: 0;">1. Departures & The "Bidesh" Farewell</h3>
+                            </div>
+                            <p>In Kathmandu, the departure area is a sea of emotion. Because millions of Nepali youth leave for the Gulf, Malaysia, or Australia for work and study, going to the airport is a massive family event.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बिदेश जाने</span> (Bidesh jane)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Going abroad. <em>(The ultimate goal or necessity for many young Nepalis).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">खादा</span> (Khada)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">A traditional silk scarf. <em>(Family members put a Khada around your neck and a red Tika on your forehead for safe travels).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ब्याग प्याक गर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">To pack the bag. <em>(At TIA, people pay to have suitcases wrapped in layers of green plastic film).</em></div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0; margin-top: 1rem;">
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">फ्लाइट कति बजेको छ?</span></strong> — What time is the flight?</li>
+                                <li style="margin-bottom: 0.5rem;"><strong><span class="nepali-font">चेक-इन काउन्टर कता छ?</span></strong> — Where is the check-in counter?</li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <h3 style="margin: 0;">2. Customs (The "Bhansar" Interrogation)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"कतिवटा फोन ल्याउनुभएको छ?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(How many phones have you brought?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"एउटा मात्र हो सर, आफ्नै चलाउने।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Only one Sir, my own for using.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">In Nepal, the <strong><span class="nepali-font">भन्सार</span> (Bhansar - Customs)</strong> officers are specifically looking for two things from returning migrant workers: undeclared raw gold and excess electronics (like multiple iPhones or flat-screen TVs).</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">भन्सार</span> (Bhansar)</strong><br>
+                                        <span style="color: #991b1b;">Customs / Customs Duty.</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">टिभी ल्याउनुभएको छ?</span></strong><br>
+                                        <span style="color: #991b1b;">Have you brought a TV? <em>(Returning workers frequently bring 32-inch TVs from Dubai, which are strictly taxed).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem; background: #fee2e2; padding: 8px; border-radius: 6px;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">सुन छ कि छैन?</span></strong><br>
+                                        <span style="color: #7f1d1d;">Is there gold or not?</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">यो मेरो व्यक्तिगत सामान हो।</span></strong><br>
+                                        <span style="color: #991b1b;">This is my personal luggage. <em>(Use this to avoid getting taxed on your own laptop).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>
+                                <h3 style="margin: 0;">3. Arrivals & The Taxi Mob (Forget Car Hire)</h3>
+                            </div>
+                            <p>When you walk out of the sliding doors at Arrivals, you do not look for a "car hire" sign. You will immediately be hit by a wall of taxi drivers yelling at you.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">ट्याक्सी चाहियो सर?</span></strong><br>
+                                    <em>Need a taxi, Sir? (They will grab your bags and try to lead you to their Suzuki Maruti).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem; background: #ecfdf5; padding: 10px; border-left: 3px solid #10b981; border-radius: 6px;">
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem; color: #047857;">पर्दैन, मेरो मान्छे लिन आउँदै हुनुहुन्छ।</span></strong><br>
+                                    <span style="color: #065f46;">No need, my people are coming to pick me up. <em>(The best phrase to make the crowd leave you alone).</em></span>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">प्रिपेड ट्याक्सी कता छ?</span></strong><br>
+                                    <em>Where is the prepaid taxi? (Go to the official counter inside the terminal to avoid scams).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <p style="margin: 0; font-size: 0.9rem; color: #92400e;">If you do "hire a car" in Nepal, you are actually renting a vehicle that comes with its own driver (<strong><span class="nepali-font">गाडी रिजर्भ गर्ने</span></strong>).</p>
+                                <p style="margin: 8px 0 0;"><strong><span class="nepali-font">मलाई पोखरा जान गाडी रिजर्भ गर्नु छ।</span></strong><br><span style="color: #92400e; font-size: 0.9rem;">I need to reserve a vehicle to go to Pokhara.</span></p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: Domestic Flights & The Cotton Balls 🛩️🍬</h3>
+                                <p style="margin-bottom: 1rem;">If you take a domestic flight (like Buddha Air or Yeti Airlines), the "in-flight service" is legendary.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    Instead of a beverage cart, the flight attendant will walk down the aisle with a plastic tray holding two things: a handful of <strong>hard candies</strong> (to help your ears pop) and a bowl of <strong>raw cotton balls</strong> (to stuff in your ears because the twin-engine turboprop planes are deafeningly loud). It is a uniquely Nepali aviation experience.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-69", title: "69 Cycling" },
                     { id: "lesson-70", title: "70 Taxis" },
                     { id: "lesson-71", title: "71 At the garage" }
