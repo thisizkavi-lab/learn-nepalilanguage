@@ -10941,7 +10941,135 @@ const courseData = [
             {
                 title: "GETTING AROUND",
                 lessons: [
-                    { id: "lesson-65", title: "65 Getting around" },
+                    {
+                        id: "lesson-65",
+                        title: "65 Getting around",
+                        content: `
+                            <h2>65 Getting Around, The Microbus Hustle & Pathao</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Bikes, Micros, Khalasis, Ride-Hailing Apps & The Legendary "Jam"</strong></p>
+                            
+                            <p>In other countries, textbooks teach you how to buy a "return ticket" for a train or a polite "coach." In Nepal, public transport is a contact sport.</p>
+                            <p>There are no subways or trams. The city runs on two-wheelers, three-wheeled electric tempos, and heavily modified vans packed with twice the legal limit of passengers. Here is the actual vocabulary you need to navigate the dust, the traffic jams, and the conductors.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                                <h3 style="margin: 0;">1. The Real Vehicles of Nepal</h3>
+                            </div>
+                            <p>Forget the "ferry" and the "lorry." Here is what is actually on the road.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बाइक / स्कुटर</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Motorbike / Scooter. <em>(The absolute kings of Kathmandu roads).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">माइक्रो</span> (Micro)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Microbus. Usually a white Toyota HiAce. <em>(The chaotic backbone of city public transport).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सफा टेम्पो</span> (Safa Tempo)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">An electric, three-wheeled public transit vehicle unique to Kathmandu.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ट्याक्सी</span> (Taxi)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Taxi. <em>(Always small, white Suzuki Marutis).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">रात्रिकालीन बस / नाइट बस</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Long-distance night bus. <em>(No trains = 12-hour overnight buses through terrifying mountain roads).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>
+                                <h3 style="margin: 0;">2. Surviving the "Micro" (No Tapping In)</h3>
+                            </div>
+                            <p>You do not "wait in a queue" at a bus stop. You stand on the side of the dusty ring road until a Microbus flies past, and you listen to the <strong><span class="nepali-font">खलासी</span> (Khalasi - Conductor)</strong> hanging out the door rapidly shouting the destinations.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कहाँ जाने हो?</span> (Kaha jane ho?)</strong><br>
+                                    <em>Where are you going?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">भाडा कति हो?</span> (Bhada kati ho?)</strong><br>
+                                    <em>How much is the fare? (You hand the Khalasi crumpled cash while squeezed against five other people).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अलिकति पर सर्दिनुस् न।</span> (Alikati para sardinus na.)</strong><br>
+                                    <em>Please move over a little bit. (Standard phrase for making room on a crowded seat).</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <div style="font-size: 0.75rem; font-weight: 700; color: #991b1b; text-transform: uppercase; margin-bottom: 4px;">🚏 Getting Off (The Most Important Phrase)</div>
+                                <div style="font-size: 0.85rem; color: #7f1d1d; margin-bottom: 8px;">You don't push a polite stop button. You have to yell over the loud music.</div>
+                                <div style="margin-bottom: 8px;">
+                                    <strong><span class="nepali-font" style="font-size: 1.15rem; color: #991b1b;">दाइ, यतै रोक्दिनुस्!</span></strong><br>
+                                    <span style="color: #7f1d1d;">Brother, please stop right here!</span>
+                                </div>
+                                <div>
+                                    <strong><span class="nepali-font" style="font-size: 1.15rem; color: #991b1b;">ओराल्दिनुस्!</span></strong><br>
+                                    <span style="color: #7f1d1d;">Please drop me off!</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <h3 style="margin: 0;">3. Taxis & The "Pathao" Revolution</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, ठमेल जाने हो? मिटरमा जाऔं।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, going to Thamel? Let's go on the meter.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"मिटरमा त घाटा हुन्छ। ५०० लाग्छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(I'll take a loss on the meter. It will cost 500.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">You do not go to a "taxi rank." If you want a regular taxi, you prepare for a brutal negotiation.</p>
+                            <p><strong><span class="nepali-font">मिटरमा जाने हो?</span> (Meter ma jane ho?)</strong> — Will you go on the meter? <em>(Almost every taxi driver will say no and demand a flat, inflated rate).</em></p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #047857; margin-bottom: 0.5rem;">📱 The App Era:</h4>
+                                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #065f46;">Nowadays, almost everyone under the age of 40 uses ride-sharing apps like Pathao or InDrive. It is so common that "Pathao" has become a verb.</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">पठाओ गर्ने हो?</span></strong><br>
+                                        <span style="color: #047857;">Shall we get a Pathao?</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">दाइ, मेरो लोकेसनमा आउनुस्।</span></strong><br>
+                                        <span style="color: #047857;">Brother, come to my location.</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">हेल्मेट छ?</span></strong><br>
+                                        <span style="color: #047857;">Do you have a helmet? <em>(If you book a bike ride, you must wear the spare helmet they carry).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Art of the "Jam" 🚗🚕🛵</h3>
+                                <p style="margin-bottom: 1rem;">If you are late in Kathmandu, you do not talk about missed train connections or flight delays. There is only one universal, unquestionable excuse for being late: <strong><span class="nepali-font">जाम</span> (Jam - Traffic Jam)</strong>.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    Because of ongoing road constructions, VIP political motorcades, and a sheer excess of vehicles, Kathmandu's traffic is legendary. If you say, <em>"Mero ta jam le garda dhila bhayo"</em> (I am late because of the jam), nobody will ever question you. It is a shared, collective trauma.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-66", title: "66 Buses and coaches" },
                     { id: "lesson-67", title: "67 Train and metro travel" },
                     { id: "lesson-68", title: "68 At the airport" },
