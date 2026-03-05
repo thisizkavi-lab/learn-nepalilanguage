@@ -11403,7 +11403,119 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-69", title: "69 Cycling" },
+                    {
+                        id: "lesson-69",
+                        title: "69 Cycling",
+                        content: `
+                            <h2>69 Cycling, The "Panchar" Guy & Dust Masks</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Renting Mountain Bikes, Roadside Tube Repairs, The Saaikal Pasal & Pollution Masks</strong></p>
+                            
+                            <p>In Western cities, cycling is a clean, organized commuter lifestyle. In Nepal, if you are cycling on the main roads, you are either a hardcore tourist, a local laborer, or completely out of your mind.</p>
+                            <p>If you do decide to ride, you don't use an app to rent a bike, and you definitely don't fix your own chain. You go to a street-side <strong>Saaikal Pasal</strong> (bicycle shop) where a mechanic with a bucket of water and a hand pump will fix your problems for less than a dollar. Here is the actual vocabulary.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                                <h3 style="margin: 0;">1. Renting a Bike (Thamel & Pokhara)</h3>
+                            </div>
+                            <p>You won't find "commuter e-bikes" easily. If you are renting a bicycle, it is almost certainly a mountain bike.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">साइकल</span> (Saaikal)</strong><br>
+                                    <em>Bicycle. (Just say it with a slightly Nepali accent).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">साइकल भाडामा पाइन्छ?</span> (Saaikal bhada ma paincha?)</strong><br>
+                                    <em>Can I get a bicycle on rent?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">एक दिनको कति हो?</span> (Ek din ko kati ho?)</strong><br>
+                                    <em>How much for one day? (You will usually need to leave your passport or citizen ID as a deposit).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यसको गियर बिग्रिएको छ।</span> (Yesko gear bigriyeko cha.)</strong><br>
+                                    <em>Its gears are broken. (Always test ride the bike before paying).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">2. The Roadside Breakdown (Flat Tires & Chains)</h3>
+                            </div>
+                            <p>In Nepal, the roads are rough, and your bike will inevitably break. You don't carry a repair kit; you push it until you find a guy sitting on the side of the road surrounded by old tires.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">टायर पन्चर भयो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The tire got a puncture. <em>('Panchar' is the universal term).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">हावा फुस्कियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The air leaked out / It went flat.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">चेन खुस्कियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The chain slipped off. <em>('Khuskiyo' — great street word for something slipping out of place).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">ब्रेक लाग्दैन।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The brakes don't work/catch.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h3 style="margin: 0;">3. The "Mistri" (Getting it Fixed)</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, अलिकति हावा हाल्दिनुस् न।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, please put a little air in.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"हावा मात्र होइन, पन्चर टाल्नुपर्छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Not just air, the puncture needs patching.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">When you find the <strong><span class="nepali-font">साइकल पसल</span> (Saaikal Pasal)</strong>, the dialogue is quick and transactional. The mechanic will submerge the inner tube in a bucket of water to find the bubbles, scuff it with a piece of metal, and glue a patch on it.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">साइकल बनाउने ठाउँ कता छ?</span></strong><br>
+                                        <span style="color: #b45309;">Where is the bicycle repair place?</span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">हावा हाल्दिनुस् न।</span></strong><br>
+                                        <span style="color: #b45309;">Please put some air in.</span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">टाल्न कति लाग्छ?</span></strong><br>
+                                        <span style="color: #b45309;">How much does it cost to patch it? <em>(Usually around 50 to 100 Rupees).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #047857;">The Cultural Insight: The "Mask" 😷🚴</h3>
+                                <p style="margin-bottom: 1rem;">If you ride a bicycle in Kathmandu, your most important piece of equipment is not your helmet—it is a heavy-duty <strong>pollution mask</strong>.</p>
+                                <div style="background: #d1fae5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #065f46;">
+                                    Because of the dust from unpaved roads and the heavy exhaust fumes from aging trucks and microbuses, riding without a mask will leave your throat burning in minutes. You will often see locals cycling with simple cloth masks or thick scarves wrapped completely around their faces.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-70", title: "70 Taxis" },
                     { id: "lesson-71", title: "71 At the garage" }
                 ]
