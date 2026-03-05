@@ -11635,7 +11635,115 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-71", title: "71 At the garage" }
+                    {
+                        id: "lesson-71",
+                        title: "71 At the garage",
+                        content: `
+                            <h2>71 At the Garage, The "Work-shop" & Mistri Dai</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Finding the Mechanic, Oil Changes, Real Faults & The Art of the "Jugaad" Fix</strong></p>
+                            
+                            <p>If you try to "book your car in" for a service in Nepal, people will think you are a diplomat. Regular people ride bikes and scooters, and when they break down on the chaotic roads of Kathmandu, they rely on the vast, informal network of local roadside mechanics.</p>
+                            <p>Here is the vocabulary you actually need when your engine starts making a weird sound.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                <h3 style="margin: 0;">1. The "Gyeraj" & Finding the Mechanic</h3>
+                            </div>
+                            <p>You don't look for a branded "garage." You look for a <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">ग्यारेज</span> (Gyeraj) or a <span class="nepali-font" style="font-weight: bold; color: #4f46e5;">वर्कसप</span> (Work-shop). The head mechanic is always called the <strong><span class="nepali-font">मिस्त्री</span> (Mistri)</strong>.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">वर्कसप कता छ?</span> (Work-shop kata cha?)</strong><br>
+                                    <em>Where is the workshop? (You will ask this while pushing your dead bike down the road).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दाइ, स्कुटर बिग्रियो।</span> (Dai, scooter bigriyo.)</strong><br>
+                                    <em>Brother, the scooter broke down. (The universal opening line).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">हेर्दिनुस् न, के भयो।</span> (Herdinus na, ke bhayo.)</strong><br>
+                                    <em>Please look at it, what happened. (You don't diagnose it; you tell the Mistri to figure it out).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                                <h3 style="margin: 0;">2. "Servicing" vs. Actual Repairs</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, सर्भिसिङ गर्नुपर्ने थियो।"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, I needed to get a servicing done.)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#f59e0b"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"मोबिल मात्र फेर्ने कि फुल सर्भिसिङ?"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fef3c7" text-anchor="middle">(Just changing the oil, or a full servicing?)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#f59e0b"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">If you are just doing routine maintenance (<span class="nepali-font" style="font-weight: bold;">सर्भिसिङ</span> - Servicing), you sit on a plastic stool, drink tea, and wait 30 minutes while they do it right in front of you.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">मोबिल फेर्ने</span> (Mobil pherne)</strong><br>
+                                        <span style="color: #b45309;">To change the engine oil. <em>(Nepalis universally call engine oil "Mobil," regardless of the brand).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">ब्रेक टाइट गर्दिनुस्।</span></strong><br>
+                                        <span style="color: #b45309;">Please tighten the brakes. <em>(Essential for surviving Kathmandu traffic).</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.1rem;">कति समय लाग्छ?</span></strong><br>
+                                        <span style="color: #b45309;">How much time will it take?</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                <h3 style="margin: 0;">3. Real Faults & Local Jargon</h3>
+                            </div>
+                            <p>Forget the "radiator" and the "bonnet." Here are the parts and problems that actually matter on a Nepali commute.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">टायर पन्चर भयो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The tire got a puncture. <em>(The most common problem due to rough roads).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">क्लच चुँडियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The clutch wire snapped.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">स्टार्ट नै भएन।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">It just didn't start. <em>(Often a dead battery or a flooded carburetor).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डिक्की</span> (Dikki)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">The boot / trunk. <em>(Whether scooter storage or the back of a taxi, it's always "Dikki").</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Art of the "Jugaad" Fix 🔧🔩</h3>
+                                <p style="margin-bottom: 1rem;">In other countries' garages, if a part is slightly broken, the mechanic will order a brand new replacement part, which is expensive and takes days.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    In Nepal, the Mistri is a master of improvisation. Before they ever tell you to buy a new part, they will try to <strong>weld it, hammer it back into shape, or tie it together with metal wire</strong> to save you money. It might not look pretty, but it will absolutely get you home.
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
