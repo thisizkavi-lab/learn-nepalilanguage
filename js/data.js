@@ -13776,7 +13776,123 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-89", title: "89 Formal phone calls" },
+                    {
+                        id: "lesson-89",
+                        title: "89 Formal phone calls",
+                        content: `
+                            <h2>89 Formal Phone Calls, Customer Service & "System Down"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Making the Call, Customer Service, Leaving Messages & Ending the Call</strong></p>
+
+                            <p>Making a formal phone call in Nepal requires navigating the strict social hierarchy using terms of respect, while being assertive enough to get your problem solved. There are no automated voicemails, and "customer service" often involves calling a direct mobile number.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <h3 style="margin: 0;">1. Making the Call & Showing Respect</h3>
+                            </div>
+                            <p>You lead with a polite "Namaste" and clearly state who you are trying to reach.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">हेलो, नमस्ते।</span></strong><br>
+                                    <em>Hello, greetings. (The mandatory start to any formal call).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">[Name] सर / म्याडम हुनुहुन्छ?</span></strong><br>
+                                    <em>Is [Name] Sir / Madam there? (Always append "Sir" or "Madam" in formal settings).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मलाई अलिकति सहयोग चाहिएको थियो।</span></strong><br>
+                                    <em>I needed a little bit of help. (Polite version of "I wonder if you can help me...").</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मैले मेरो इन्टरनेटको बारेमा फोन गरेको।</span></strong><br>
+                                    <em>I am calling about my internet. (Use "...ko barema phone gareko" for "calling regarding...").</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                                <h3 style="margin: 0;">2. Customer Service & The "System" Excuse</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">एकछिन होल्डमा बस्नुस् है।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Please stay on hold for a moment.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हामी चेक गरेर खबर गर्छौं।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">We will check and inform you.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 2px solid #ef4444; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">⚠️ The Infamous Excuse:</h4>
+                                <div style="text-align: center; margin: 0.75rem 0;">
+                                    <strong style="font-size: 1.15rem;"><span class="nepali-font">अहिले सिस्टम डाउन छ।</span></strong><br>
+                                    <em style="color: #7f1d1d;">The system is down right now.</em>
+                                </div>
+                                <p style="color: #7f1d1d; margin-bottom: 0; font-size: 0.9rem;">The most infamous excuse in Nepali institutions. If the server is slow or the power goes out, you will be told to call back later. You will hear this phrase at banks, ISPs, and government offices.</p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">3. Leaving Messages (The Human Voicemail)</h3>
+                            </div>
+                            <p>Because automated voicemail doesn't exist, leaving a message means dictating your request to whoever picked up the phone.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">उहाँ अहिले हुनुहुन्न। केही भन्नु थियो कि?</span></strong><br>
+                                        <em>He/she isn't available right now. Can I take a message?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">मेरो फोन आएको थियो भनिदिनुस् है।</span></strong><br>
+                                        <em>Please tell them that my call had come. (Standard way to ask for a callback).</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">उहाँलाई तुरुन्तै फोन गर्न भनिदिनुस्।</span></strong><br>
+                                        <em>Please ask him to call as soon as possible.</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><polyline points="20 6 9 17 4 12"/></svg>
+                                <h3 style="margin: 0;">4. Ending the Call Politely</h3>
+                            </div>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">अरु केही सहयोग गर्न सक्छु?</span></strong> — Is there anything else I can help with?
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">पर्दैन, त्यति नै हो।</span></strong> — No need, that's all.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">सहयोगको लागि धेरै धन्यवाद।</span></strong> — Thank you very much for your help.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">फेरि कुरा गरौंला।</span></strong> — Let's speak again soon.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">हुन्छ, म फोन राख्छु है त।</span></strong><br>
+                                        <em>Okay, I am putting the phone down now. (The universal, polite way to officially end the conversation).</em>
+                                    </li>
+                                </ul>
+                            </div>
+                        `
+                    },
                     { id: "lesson-90", title: "90 Informal phone calls" },
                     { id: "lesson-91", title: "91 Using the internet" },
                     { id: "lesson-92", title: "92 Digital problems" },
