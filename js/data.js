@@ -14283,10 +14283,467 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-93", title: "93 Emails" },
-                    { id: "lesson-94", title: "94 Messaging and video calls" },
-                    { id: "lesson-95", title: "95 Social media" },
-                    { id: "lesson-96", title: "96 Reading" }
+                    { 
+                        id: "lesson-93", 
+                        title: "93 Emails",
+                        content: `
+                            <h2>93 Emails, Office Comms & The "Spam" Folder</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Sending & Receiving, Spam & Trash, Office Vocabulary & The "Viber Override"</strong></p>
+
+                            <p>In Nepal, personal conversations happen on messaging apps. If you are using email, you are almost certainly dealing with official office work, university assignments, or banking.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <h3 style="margin: 0;">1. Sending, Receiving & The Follow-Up</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मेरो इमेल पाउनुभयो?</span></strong><br>
+                                    <em>Did you get my email?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">पाएँ, धन्यवाद। रिप्लाई गर्न अलि ढिला भयो।</span></strong><br>
+                                    <em>I did, thanks. Sorry I haven't got back to you.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अन्नाले ट्रिपको डिटेल पठाइन्?</span></strong><br>
+                                    <em>Has Anna sent you the trip details?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अँ, म उनको म्यासेज फरवार्ड गर्दिन्छु।</span></strong><br>
+                                    <em>Yeah, I'll forward you her message.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मैले फाइल अट्याच गरेर पठाएको छु।</span></strong><br>
+                                    <em>I've sent the file as an attachment.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                                <h3 style="margin: 0;">2. Email Issues: Spam, Trash & Suspicious Links</h3>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">तपाईंको इमेल मेरो जङ्क फोल्डरमा गएछ।</span></strong><br>
+                                        <em>Your email went to my junk folder.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">मलाई कति धेरै जङ्क मेल आएको!</span></strong><br>
+                                        <em>I'm getting so much junk mail!</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">यो अट्याचमेन्ट शंकास्पद छ, डाउनलोड नगर्नुस्।</span></strong><br>
+                                        <em>It looks suspicious — I wouldn't download it.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">मैले कन्सर्टको टिकट भएको इमेल झुक्किएर डिलिट गरें जस्तो छ!</span></strong><br>
+                                        <em>I think I deleted the email with the concert tickets!</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">ट्र्यासमा चेक गर्नुस् त। सायद त्यहीं छ कि।</span></strong><br>
+                                        <em>Check your trash. Maybe it's still there.</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                <h3 style="margin: 0;">3. Core Office Vocabulary</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">इनबक्स</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3;">Inbox</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">आउटबक्स</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3;">Outbox</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">ड्राफ्ट</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3;">Draft</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700;"><span class="nepali-font">ट्र्यास</span></div>
+                                    <div style="font-size: 0.8rem; color: #3730a3;">Trash</div>
+                                </div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">इमेल पठाउने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— To send</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">फरवार्ड गर्ने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— To forward</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">रिप्लाई गर्ने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— To reply</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">सबैलाई रिप्लाई गर्ने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— Reply all</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">डिलिट गर्ने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— To delete</span>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px;">
+                                    <strong><span class="nepali-font">डाउनलोड / अपलोड गर्ने</span></strong> <span style="font-size: 0.85rem; color: #065f46;">— Download / Upload</span>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Viber/WhatsApp" Override 📧➡️📱</h3>
+                                <p style="margin-bottom: 1rem; color: #92400e;">Even when communicating formally via email for business, Nepali work culture demands an immediate follow-up on a messaging app.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center;">
+                                    <strong style="font-size: 1rem;">"Sir, maile email pathaeko chu, ekchoti check garnus na"</strong><br>
+                                    <em>(Sir, I have sent the email, please check it once)</em><br>
+                                    <span style="font-size: 0.85rem;">Email is the official paper trail, but the instant messaging app is the actual trigger for action.</span>
+                                </div>
+                            </div>
+                        `
+                    },
+                    { 
+                        id: "lesson-94", 
+                        title: "94 Messaging and video calls",
+                        content: `
+                            <h2>94 Messaging, Group Chats & "Text Speak"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Group Chats, Text Speak, Video Calls & The Punctuation "Rules"</strong></p>
+
+                            <p>In modern Nepal, traditional phone calls and emails have been largely superseded by instant messaging. Everything happens in the "Group Chat."</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <h3 style="margin: 0;">1. Coordinating via Group Chats</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ग्रुप च्याटमा एड गर्छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">I'll add you to the group chat!</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ट्राफिक धेरै छ, मलाई ढिला हुन्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Traffic is awful. We're going to be late!</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हामीलाई नपर्खी सुरु गर्नुस्।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Tell them to start without us.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मैले लिङ्क पठाएको छु, चेक गर्नुस्।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">I messaged you the link.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                                <h3 style="margin: 0;">2. "Text Speak" & Abbreviations</h3>
+                            </div>
+                            <p>Nepali text speak is a fascinating hybrid — Nepali in Romanized English letters, peppered with universal internet slang.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700; font-size: 1.1rem;">LOL</div>
+                                    <div style="font-size: 0.8rem; color: #065f46;">Laughing out loud</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700; font-size: 1.1rem;">OMG</div>
+                                    <div style="font-size: 0.8rem; color: #065f46;">Oh my god</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700; font-size: 1.1rem;">BTW</div>
+                                    <div style="font-size: 0.8rem; color: #065f46;">By the way</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700; font-size: 1.1rem;">IDK</div>
+                                    <div style="font-size: 0.8rem; color: #065f46;">I don't know</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-weight: 700; font-size: 1.1rem;">TBH</div>
+                                    <div style="font-size: 0.8rem; color: #065f46;">To be honest</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1.25rem; border-radius: 10px; margin: 1rem 0; font-family: monospace; font-size: 0.9rem;">
+                                <strong>A:</strong> OMG, that video is hilarious! 😂<br>
+                                <strong>B:</strong> I know, right? LOL<br>
+                                <strong>A:</strong> BTW, RU coming out with us tonight?<br>
+                                <strong>B:</strong> IDK, will have to see how I feel TBH.
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                                <h3 style="margin: 0;">3. Video Calls & The "Network" Struggle</h3>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">आवाज सुनिएको छ?</span></strong> — Can you hear me okay?
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">अँ, देखिरहेको छु।</span></strong> — I can see you!
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">तपाईंको टाउको मात्र देखियो!</span></strong> — I can only see the top of your head!
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">क्यामेरा अलि मिलाउनुस् त।</span></strong> — Try moving your phone/tablet.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Punctuation "Rules" ✍️</h3>
+                                <p style="margin-bottom: 1rem; color: #92400e;">In informal Nepali digital writing, punctuation is almost entirely optional. Using a full stop (.) at the end of a message is often perceived as being overly formal, cold, or even <em>angry</em>.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center;">
+                                    <span style="font-size: 0.9rem;">Most people end messages with emojis or leave them open. Capital letters are rarely used for emphasis — instead, words are <strong>repeated</strong> for effect:<br><em>"khusi khusi" = very happy</em></span>
+                                </div>
+                            </div>
+                        `
+                    },
+                    { 
+                        id: "lesson-95", 
+                        title: "95 Social media",
+                        content: `
+                            <h2>95 Social Media, Notifications & Going Viral</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Staying in Touch, Going Viral, Building a Business & Essential Phrases</strong></p>
+
+                            <p>In modern Nepal, social media is the primary way news travels, businesses grow, and friends stay connected. Whether sharing a trip photo or building a business following, social media has a specific language.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                <h3 style="margin: 0;">1. Using Social Media & Staying in Touch</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">फोटो कस्तो राम्रो!</span></strong> — Did you get any good photos?
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">सबै मेरो प्रोफाइलमा छ, हेर्नुस् न।</span></strong> — They're all up on my profile.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मैले भर्खर तपाईंलाई फलो गरें।</span></strong> — I've just given you a follow.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मैले नोटिफिकेसनमा देखिसकें।</span></strong> — Cool, I can see you in my notifications.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">त्यो केटाले मलाई 'डिएम' (DM) पठायो।</span></strong> — That boy just DM'd me.
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font">ब्लक गर्दिउँ?</span></strong> — Just block him.
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                <h3 style="margin: 0;">2. Going Viral & "Likes"</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो भिडियो त भाइरल भयो!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">My videos have gone viral!</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">हो नि, कति धेरै फलोअर्स बढेछन्!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">You've got loads of followers!</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ठूला अकाउन्टहरूले पनि सेयर गरिरहेका छन्।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">A few big accounts have been sharing my posts.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कति धेरै 'लाइक्स' आएको!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">It's got hundreds of "likes"!</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                                <h3 style="margin: 0;">3. Building a Business & Social Reach</h3>
+                            </div>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">हाम्रो सोसल मिडिया पहुँच बढाउनुपर्छ।</span></strong> — We need to grow our social reach.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">भिडियो कन्टेन्टले धेरै सहयोग गर्छ।</span></strong> — More video content would help.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">महिनावारी पडकास्ट सुरु गर्ने कि?</span></strong> — Or how about a monthly podcast?
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">इन्फ्लुएन्सर सँग काम गरौं न।</span></strong> — Maybe hook up with an influencer.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">लन्च पार्टी लाइभस्ट्रिम गरौं।</span></strong> — We could livestream the launch party.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                                <h3 style="margin: 0;">4. Essential Social Media Phrases</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मेरो पोस्टमा धेरै कमेन्टहरू छन्।</span></strong> — There are loads of comments on my post.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">त्यो त 'ट्रोल' मात्र हो, ब्लक गर्दिनुस्।</span></strong> — That's just a troll, I'm blocking them.
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font">नयाँ अपडेटको लागि 'फलो' बटन थिच्नुस्!</span></strong> — Click follow for all our updates!
+                                </li>
+                            </ul>
+                        `
+                    },
+                    { 
+                        id: "lesson-96", 
+                        title: "96 Reading",
+                        content: `
+                            <h2>96 Reading, Bookshops & Magazines</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Discussing Books, At the Bookshop, Magazines & Newspapers & The "Chiya" Ritual</strong></p>
+
+                            <p>The reading culture in Nepal is vibrant. While digital reading is growing, physical bookshops in areas like Bagbazar and New Road remain iconic hubs for students and literature lovers.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                <h3 style="margin: 0;">1. Discussing Books</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यो मैले वर्षौंदेखि पढेको सबैभन्दा राम्रो किताब हो।</span></strong><br>
+                                    <em>It's the best book I've read in ages.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">एकदमै चाखलाग्दो छ, किताब छोड्नै सकिँदैन!</span></strong><br>
+                                    <em>I couldn't put it down!</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अन्तिमसम्म के होला भनेर कौतुहलता जगाइरह्यो।</span></strong><br>
+                                    <em>It had me on the edge of my seat!</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अन्त्य चाहिँ सोचेजस्तो भएन, अलि खल्लो लाग्यो।</span></strong><br>
+                                    <em>The ending was a bit of a letdown.</em>
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font">मलाई त यो अलि पढ्न गाह्रो लाग्यो।</span></strong><br>
+                                    <em>I found it quite hard-going, actually.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                <h3 style="margin: 0;">2. At the Bookshop</h3>
+                            </div>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">बिदामा पढ्नको लागि कुनै राम्रो किताब सिफारिस गरिदिनुहुन्छ?</span></strong><br>
+                                        <em>Can you recommend a good holiday read?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">हुन्छ, यो किताब एकदमै रोचक छ।</span></strong><br>
+                                        <em>Yes, this one is a real page-turner.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">पर्दैन, म त यसो हेर्दै मात्र छु।</span></strong><br>
+                                        <em>No thanks. I'm just browsing.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">माफ गर्नुहोला, त्यो किताब अहिले सकिएको छ।</span></strong><br>
+                                        <em>I'm afraid that book's out of stock.</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">हुन्छ, मेरो लागि अर्डर गरिदिन सक्नुहुन्छ?</span></strong><br>
+                                        <em>Could you order it in for me, please?</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">3. Magazines & Newspapers</h3>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">फेसन मन्थली एकचोटि सरसरती हेर्नुहुन्छ?</span></strong> — Want a flick through Fashion Monthly?
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">हुन्छ, तपाईंले पढिसकेपछि मलाई दिनुस् न।</span></strong> — Yes please, if you've finished with it.
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">आजको मुख्य समाचार के के छन्, हेर्नुभयो?</span></strong> — Have you seen today's headlines?
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">छैन, के भइरहेको छ?</span></strong> — No, what's been going on?
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">के तपाईंले वल्र्ड विक्ली को ग्राहक सदस्यता नवीकरण गर्नुभयो?</span></strong><br>
+                                    <em>Did you renew our subscription to World Weekly?</em>
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font">माफ गर्नुहोला, अहिलेसम्म गरेको छैन—म अहिल्यै गर्छु!</span></strong><br>
+                                    <em>Sorry, not yet — I'll do it now!</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Morning "Chiya" Ritual ☕📰</h3>
+                                <p style="margin-bottom: 1rem; color: #92400e;">In Nepal, reading the newspaper is inseparable from the morning <strong><span class="nepali-font">चिया</span></strong> (Chiya — Tea). Whether at home or a local tea stall, people gather to discuss the <span class="nepali-font">हेडलाइन</span> (Headline) and the latest political developments.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center;">
+                                    <span style="font-size: 0.9rem;">While young people scroll through an <span class="nepali-font">आर्टिकल</span> (Article) on their phones, the physical paper still serves as a cornerstone of daily social interaction.</span>
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             }
         ]
