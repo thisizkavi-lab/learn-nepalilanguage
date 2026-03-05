@@ -13627,7 +13627,155 @@ const courseData = [
             {
                 title: "MEDIA AND COMMUNICATIONS",
                 lessons: [
-                    { id: "lesson-88", title: "88 Media and communications" },
+                    {
+                        id: "lesson-88",
+                        title: "88 Media and communications",
+                        content: `
+                            <h2>88 Phones, "Data Packs" & The Missed Call Culture</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Devices & Connections, Calls & The Missed Call, Social Media & Computers</strong></p>
+
+                            <p>Nepal is a mobile-first country. The entire social and communication infrastructure runs on smartphones. Forget about leaving a voicemail — communication here is all about WhatsApp, Messenger, and buying "Data."</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                                <h3 style="margin: 0;">1. The Device & The Connection</h3>
+                            </div>
+                            <p>The first thing anyone asks when they walk into a cafe or a friend's house is not for a glass of water, but for the Wi-Fi password.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मोबाइल</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Mobile phone. <em>(Never "cell phone" — just "mobile").</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ब्याट्री सकियो</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">The battery died.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चार्जर छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Do you have a charging cable?</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">नेट स्लो छ</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">The internet is slow.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिग्नल आएन</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">There is no signal.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">वाइफाइको पासवर्ड के हो?</span></strong><br>
+                                    <em>What is the Wi-Fi password?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">डाटा अन गर्नुस्</span></strong><br>
+                                    <em>Turn on mobile data. (When Wi-Fi fails, you buy a "Data Pack" from your provider).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <h3 style="margin: 0;">2. Calls, Texts & "The Missed Call"</h3>
+                            </div>
+                            <p>Standard SMS texts are mostly reserved for bank alerts and spam. Real communication happens over Messenger, WhatsApp, or Viber.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फोन गर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To call.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म्यासेज गर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To send a text / message.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भिडियो कल</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Video call. <em>(Common for families abroad).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">स्पिकरमा राख्नुस्</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Put on speaker.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फोन काटियो</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">The call got disconnected.</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.25rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #b45309;">📞 The Voicemail Myth:</h4>
+                                <p style="color: #92400e; margin-bottom: 0;">You will never need to leave a voicemail in Nepal. The service is practically non-existent. Instead, if someone doesn't answer, you leave a <strong>"Missed Call"</strong> — an intentional single ring used as a free signal to say, "Call me back," "I've arrived outside," or "I'm thinking of you."</p>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                <h3 style="margin: 0;">3. Social Media & Going "Viral"</h3>
+                            </div>
+                            <p>Social media usage in Nepal is massive. The terminology is almost entirely borrowed from English, but localized with Nepali verbs.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">फेसबुक चलाउने</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">To use/browse Facebook. <em>("Chalaune" = to operate/drive).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सेयर गर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">To share.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">लाइक गर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">To like.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भाइरल भयो!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">It went viral!</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सेल्फी खिच्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">To take a selfie.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #64748b;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                <h3 style="margin: 0;">4. Computers & "Hanging"</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ल्यापटप</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569; margin-top: 4px;">Laptop.</div>
+                                </div>
+                                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">कम्प्युटर ह्याङ भयो</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569; margin-top: 4px;">The computer froze / crashed.</div>
+                                </div>
+                                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">किबोर्ड</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569; margin-top: 4px;">Keyboard.</div>
+                                </div>
+                                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">माउस</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569; margin-top: 4px;">Mouse.</div>
+                                </div>
+                                <div style="background: #f1f5f9; border: 1px solid #cbd5e1; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इमेल पठाउनुस्</span></div>
+                                    <div style="font-size: 0.85rem; color: #475569; margin-top: 4px;">Send an email.</div>
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-89", title: "89 Formal phone calls" },
                     { id: "lesson-90", title: "90 Informal phone calls" },
                     { id: "lesson-91", title: "91 Using the internet" },
