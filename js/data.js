@@ -14025,8 +14025,240 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-91", title: "91 Using the internet" },
-                    { id: "lesson-92", title: "92 Digital problems" },
+                    {
+                        id: "lesson-91",
+                        title: "91 Using the internet",
+                        content: `
+                            <h2>91 Using the Internet, Wi-Fi Passwords & The Hotspot Savior</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Hunting for Wi-Fi, Home Broadband, Digital Safety & The "Red Light" on the Router</strong></p>
+
+                            <p>Nepal is incredibly connected, but getting online isn't always seamless. Between power cuts, overloaded towers, and fiber cables getting cut during road construction, internet access can drop without warning.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                                <h3 style="margin: 0;">1. Hunting for Wi-Fi & The Hotspot</h3>
+                            </div>
+                            <p>Wi-Fi is heavily password-protected, even in small tea shops. You simply ask the staff directly.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">वाइफाइ चलाउन मिल्छ?</span></strong><br>
+                                    <em>Is it okay if I use your Wi-Fi?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">इन्टरनेट कसरी कनेक्ट गर्ने?</span></strong><br>
+                                    <em>How do I connect to the internet?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कुन नेटवर्कमा कनेक्ट गर्ने?</span></strong><br>
+                                    <em>Which network do I join?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">हुन्छ, पासवर्ड राउटरमा छ।</span></strong><br>
+                                    <em>Sure, the code's on the router.</em>
+                                </li>
+                            </ul>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिग्नल नै आएन!</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I can't get a signal!</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">मेरो हटस्पट चलाउनुस्।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">You can join my hotspot if you like.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                <h3 style="margin: 0;">2. Home Broadband & Hardware</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" width="100%" style="max-width: 700px; margin: 1rem 0;">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="30" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="58" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"इन्टरनेट कसरी जोड्ने?"</text>
+                                <text x="200" y="80" font-family="Arial, sans-serif" font-size="12" fill="#dbeafe" text-anchor="middle">(How do I set up a broadband contract?)</text>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="148" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"कुन इन्टरनेट प्रोभाइडरको राख्ने?"</text>
+                                <text x="500" y="170" font-family="Arial, sans-serif" font-size="12" fill="#d1fae5" text-anchor="middle">(Which provider should I go with?)</text>
+                            </svg>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">राउटर कसरी अन गर्ने?</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">How do I turn on the router?</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भान्सामा सिग्नल बढाउनुपर्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">We need to boost the signal in the kitchen.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h3 style="margin: 0;">3. Digital Safety & "Dodgy" Links</h3>
+                            </div>
+                            <p>Phishing links sent through Messenger or WhatsApp are incredibly common. Protecting your data is essential.</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">यो लिङ्क क्लिक गरौं? अलि शंकास्पद छ।</span></strong><br>
+                                        <em>Should I click this link? It looks a bit weird.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">हो, यो लिङ्क नक्कली जस्तो छ, नखोल्नुस्।</span></strong><br>
+                                        <em>Yeah, that URL seems dodgy, don't open it. (Literally: "This link looks fake").</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">आफ्नो व्यक्तिगत जानकारी सेयर नगर्नुस्।</span></strong><br>
+                                        <em>Don't share any personal details.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">तपाईंले पासवर्ड चेन्ज गर्नुपर्छ।</span></strong> — You should change your password.
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">सेटिङ्समा गएर सेक्युरिटीमा थिच्नुस्।</span></strong> — Go to "settings", then tap "security".
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Red Light" on the Router 🔴📡</h3>
+                                <p style="margin-bottom: 1rem; color: #92400e;">When your home internet stops working, the first troubleshooting step is always to look at the physical router. Locals don't log into IP addresses — they look for the dreaded red "LOS" (Loss of Signal) light.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center;">
+                                    <strong style="font-size: 1.1rem;"><span class="nepali-font">राउटरमा रातो बत्ती बल्यो</span></strong><br>
+                                    <em>(Raouter ma rato batti balyo — "A red light is showing on the router")</em><br>
+                                    <span style="font-size: 0.85rem;">The universal code that your fiber optic cable has probably been cut by a passing truck.</span>
+                                </div>
+                            </div>
+                        `
+                    },
+                    {
+                        id: "lesson-92",
+                        title: "92 Digital problems",
+                        content: `
+                            <h2>92 Digital Errands, eSewa & Online "Timepass"</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Digital Wallets, Work & Study, Socials & Streaming & The "Location Pathaunus" Dance</strong></p>
+
+                            <p>Urban Nepal is deeply integrated with digital wallets, apps, and group chats. You don't write checks or mail forms — you scan QR codes, transfer funds on your phone, and rely on delivery riders who navigate without street names.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                <h3 style="margin: 0;">1. Digital Wallets & Everyday Errands</h3>
+                            </div>
+                            <p>Traditional banking has been entirely replaced by digital wallets like <strong>eSewa</strong>, <strong>Khalti</strong>, and <strong>Fonepay</strong>.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पैसा पठाउँदै छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I'm transferring some money.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">इसेवा गर्ने?</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Shall I eSewa you? <em>(eSewa is used as a verb!).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बत्तीको बिल तिर्दैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I'm paying the electricity bill. <em>(Just tap "NEA" in your wallet).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डाक्टरको टिकट काट्दैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I'm booking a doctor's appointment.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">सामान कहाँ आइपुग्यो हेर्दैछु।</span></strong><br>
+                                    <em>I'm looking at where the delivery has arrived.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                <h3 style="margin: 0;">2. Work, Study & The "Online Class"</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" width="100%" style="max-width: 700px; margin: 1rem 0;">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="30" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="58" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"आजको सेड्युल के छ?"</text>
+                                <text x="200" y="80" font-family="Arial, sans-serif" font-size="12" fill="#dbeafe" text-anchor="middle">(What's on your agenda for today?)</text>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="148" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"दिउँसो एउटा अनलाइन क्लास छ।"</text>
+                                <text x="500" y="170" font-family="Arial, sans-serif" font-size="12" fill="#d1fae5" text-anchor="middle">(I've got an online class this afternoon.)</text>
+                            </svg>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म इमेल चेक गर्दैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">I need to check my emails.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">असाइनमेन्ट बुझाउँदैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">I'm submitting/uploading my essay.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                                <h3 style="margin: 0;">3. Socials, Streaming & "Timepass"</h3>
+                            </div>
+                            <p>When work is done, digital devices are used for what Nepalis call <strong>"Timepass"</strong> — killing time scrolling.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">साथीलाई म्यासेज गर्दैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I'm messaging my friend.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ग्रुप च्याटमा पठाउँछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I'll share it on our group chat.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सिरिज हेर्दैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I'm streaming a new series.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">गेम खेल्दैछौं।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">We're gaming! <em>(Usually means PUBG or Mobile Legends).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">गीत बजाउँदैछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">I'm putting some new tunes on my playlist.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Location Pathaunus" Dance 📍🛵</h3>
+                                <p style="margin-bottom: 1rem; color: #92400e;">Whether tracking a delivery or getting food, you will almost never rely purely on an in-app map. GPS mapping in Kathmandu is notoriously tricky due to unmarked alleys.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; text-align: center;">
+                                    <strong style="font-size: 1.05rem;">"Viber/WhatsApp ma location pathaunus na"</strong><br>
+                                    <em>(Please send your location on Viber/WhatsApp)</em><br>
+                                    <span style="font-size: 0.85rem;">You drop a pin, and then usually still have to walk to the nearest main Chowk (intersection) to wave them down.</span>
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-93", title: "93 Emails" },
                     { id: "lesson-94", title: "94 Messaging and video calls" },
                     { id: "lesson-95", title: "95 Social media" },
