@@ -13219,7 +13219,159 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-85", title: "85 The hospital" },
+                    {
+                        id: "lesson-85",
+                        title: "85 The hospital",
+                        content: `
+                            <h2>85 The Hospital, Admissions & The "Bharna" Process</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Emergency Diagnostics, Hospital Admission, Operations, Recovery & The Kuruwa Caretaker</strong></p>
+                            
+                            <p>If an illness or injury requires more than a quick clinic visit, you will need to navigate a full hospital. Major hospitals in Nepal — both government and private — are large, bustling ecosystems.</p>
+                            <p>You will spend time moving between the doctor's cabin, the billing counters, and the laboratories.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">1. Urgency, Scans & Diagnostics</h3>
+                            </div>
+                            <p>Communicate the timeline and severity of symptoms immediately.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">हाम्रो मेडिकल इमर्जेन्सी छ।</span></strong><br>
+                                    <em>We have a medical emergency.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मैले डाक्टरलाई तुरुन्तै देखाउनु छ।</span></strong><br>
+                                    <em>I need to see someone urgently.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कस्तो भइरहेको कति समय भयो?</span></strong><br>
+                                    <em>How long have you been feeling like this?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दुख्न थालेको दुई घण्टा जति भयो।</span></strong><br>
+                                    <em>The pain started about two hours ago.</em>
+                                </li>
+                            </ul>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म रगत जाँच गर्न पठाउँछु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">I'm going to take a blood test.</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">म स्क्यानको लागि आएको हुँ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">I'm here for my scan.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">2. Medical History & Being Admitted ("Bharna")</h3>
+                            </div>
+                            <p>Nurses will ask for your medical background when checking into a ward.</p>
+
+                            <div style="background: #f1f5f9; border-left: 3px solid #6366f1; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
+                                <h4 style="margin-top: 0; color: #4f46e5;">💬 Medical History Questions:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">तपाईंलाई केही कुराको एलर्जी छ?</span></strong><br>
+                                        <em style="color: #4f46e5;">Are you allergic to anything?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">हो, मलाई पेनिसिलिनको एलर्जी छ।</span></strong><br>
+                                        <em style="color: #4f46e5;">Yes, I'm allergic to penicillin.</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">तपाईंले नियमित खाने औषधि केही छ?</span></strong><br>
+                                        <em style="color: #4f46e5;">Are you taking any regular medications?</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong>In Nepali, being admitted to the hospital is universally called <span class="nepali-font">भर्ना</span> (Bharna).</strong>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंलाई अब्जरभेसनको लागि राति अस्पतालमै राख्नुपर्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">We need to keep you overnight for observation.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंलाई अर्को वार्डमा सार्छौं।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">We'll move you to another ward.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">आइसियु</span> (ICU)</div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Intensive Care Unit. <em>(Locals use the English abbreviation).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">भेट्ने समय</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Bhetne samaya — Visiting hours.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                <h3 style="margin: 0;">3. Operations & Recovery</h3>
+                            </div>
+                            <p>If the situation requires surgery, you will be prepped for the <span class="nepali-font" style="font-weight: bold;">अप्रेसन</span> (Operation).</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">के मैले अप्रेसन गर्नुपर्छ?</span></strong><br>
+                                    <em>Do I need to have an operation?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">म तपाईंको ज्वरो र पल्स जाँच्छु, अनि अप्रेसनको लागि तयार गर्छौं।</span></strong><br>
+                                    <em>I'll check your temperature and pulse... then we'll prep you for the operation.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">अप्रेसन करिब एक घण्टा लाग्छ।</span></strong><br>
+                                    <em>The operation will last about an hour.</em>
+                                </li>
+                            </ul>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #047857;">✅ Post-Surgery:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">अप्रेसन सफल भयो। कुनै समस्या भएन।</span></strong><br>
+                                        <em style="color: #047857;">The operation was a success. No complications.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">कस्तो महसुस भइरहेको छ?</span></strong> — How are you feeling?
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">अलि रिंगटा लागेजस्तो छ।</span></strong> — Still a bit groggy / light-headed.
+                                    </li>
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">दुखेको कम गर्ने केही दिन सक्नुहुन्छ?</span></strong> — Can you give me something for the pain?
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">म पहिला तपाईंको ब्लड प्रेसर जाँच्छु।</span></strong> — I'll just take your blood pressure first.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Kuruwa" (The Caretaker) 👨‍👩‍👧🏥</h3>
+                                <p style="margin-bottom: 1rem;">If you are admitted to a ward, the medical staff handles clinical treatments, but the daily care — feeding, washing, and fetching medicines — falls entirely on the family.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    Every admitted patient will have a <strong><span class="nepali-font">कुरुवा</span> (Kuruwa)</strong>, a designated family member or friend who stays by the bedside 24/7. Hospitals even provide small sleeping cots or chairs specifically for the Kuruwa. You do not go through a hospital stay alone in Nepal; it is a communal, family-managed effort.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-86", title: "86 Dental care" },
                     { id: "lesson-87", title: "87 Mental health support" }
                 ]
