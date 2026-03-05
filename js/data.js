@@ -12221,7 +12221,122 @@ const courseData = [
                         `
                     },
                     { id: "lesson-76", title: "76 Going camping" },
-                    { id: "lesson-77", title: "77 At the beach" },
+                    {
+                        id: "lesson-77",
+                        title: "77 At the beach",
+                        content: `
+                            <h2>77 The "Beach" Myth, Trishuli Riversides & White-Water</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Sandy Riverbanks, White-Water Rafting, Freezing Himalayan Water & The Riverside Resort</strong></p>
+                            
+                            <p>In the West, going to the beach means working on your tan and lazily floating in salt water. In Nepal, going to the water means driving down treacherous mountain highways to sit by a roaring river, eat spicy meat, and maybe strap yourself into a raft to fight class-4 rapids.</p>
+                            <p>Forget the "pedalo" and the "deck chair." Here is the vocabulary you actually need when you hit the water in Nepal.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M2 12h20"/><path d="M2 12c2-3 4-6 10-6s8 3 10 6"/><path d="M2 12c2 3 4 6 10 6s8-3 10-6"/></svg>
+                                <h3 style="margin: 0;">1. Finding the "Beach" (The Bagar)</h3>
+                            </div>
+                            <p>If someone says let's go to the "beach," they mean driving out of the Kathmandu valley to sit by the river, or heading to the famous Fewa Lake in Pokhara.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">बगर</span> (Bagar)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Sandy riverbank. <em>(This is our beach).</em></div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">नदीको किनार</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">River bank.</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ताल</span> (Taal)</div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Lake.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">पौडी खेल्न जाने?</span> (Paudi khelne jane?)</strong><br>
+                                    <em>Wanna go swimming?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">पानी गहिरो छ, धेरै पर नजानु।</span> (Pani gahiro cha, dherai para najanu.)</strong><br>
+                                    <em>The water is deep, don't go too far. (There are no flags in a wild river — you swim where the current won't sweep you away).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 22c5.5-3.5 7-8.5 7-13V5l-7-3-7 3v4c0 4.5 1.5 9.5 7 13z"/></svg>
+                                <h3 style="margin: 0;">2. Forget Surfing, We Raft</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"यहाँ सर्फिङ गर्न मिल्छ?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Can we do surfing here?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"सर्फिङ होइन सर, र्याफ्टिङ गर्ने हो।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="14" fill="#fee2e2" text-anchor="middle">(Not surfing Sir, we do rafting.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">If you are doing water sports in Nepal, it's mostly extreme white-water rafting or serene lake boating.</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">र्याफ्टिङ गर्ने हो?</span> (Rafting garne ho?)</strong><br>
+                                        <span style="color: #991b1b;">Shall we do rafting? <em>(Nepal has some of the best white-water rafting in the world).</em></span>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">डुंगा चढ्ने</span> (Dunga chadhne)</strong><br>
+                                        <span style="color: #991b1b;">To ride a boat. <em>(What you do in Pokhara instead of renting a "pedalo").</em></span>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">लाइफ ज्याकेट लाउनुस् है।</span></strong><br>
+                                        <span style="color: #991b1b;">Wear a life jacket, okay. <em>(The one textbook vocab word that is actually vital here).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 3 11 3s2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5z"/></svg>
+                                <h3 style="margin: 0;">3. The Setup (Chilling, Not Tanning)</h3>
+                            </div>
+                            <p>Nobody is renting a "sun lounger" or hiding under a pristine beach umbrella.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चटाई</span> (Chatai)</div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Straw mat. <em>(You lay this on the sand or grass to sit on).</em></div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चिसो बियर छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #b45309; margin-top: 4px;">Is there cold beer? <em>(The most important riverside question).</em></div>
+                                </div>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #1e40af;"><span class="nepali-font">पानी लास्टै चिसो छ!</span></div>
+                                    <div style="font-size: 0.85rem; color: #1e3a8a; margin-top: 4px;">The water is extremely cold! <em>(Himalayan river water is literally melted snow).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #047857;">The Cultural Insight: The "Riverside Resort" Escape 🏕️🍺🔥</h3>
+                                <p style="margin-bottom: 1rem;">Since Kathmandu is a dusty, crowded valley, the ultimate weekend escape for young professionals is booking a "Riverside Resort" along the Trishuli or Bhotekoshi highway.</p>
+                                <div style="background: #d1fae5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #065f46;">
+                                    You don't go there to get a tan. You go there to eat roasted local chicken, drink till 2 AM by a bonfire, and wake up hungover the next morning to be thrown into a freezing river on a yellow rubber raft. That is the true Nepali beach holiday.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-78", title: "78 Finding your way" },
                     { id: "lesson-79", title: "79 Holiday problems" }
                 ]
