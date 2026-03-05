@@ -12845,7 +12845,95 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-82", title: "82 Booking an appointment" },
+                    {
+                        id: "lesson-82",
+                        title: "82 Booking an appointment",
+                        content: `
+                            <h2>82 Medical Appointments, OPD Tickets & The Dental Clinic</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>The OPD "Ticket" System, Consultation Fees, Dental Care & Emergency Ward Access</strong></p>
+                            
+                            <p>When you need to see a doctor in Nepal, the process is very different from highly regimented appointment systems abroad. You do not usually call ahead to book a specific 4:30 PM time slot.</p>
+                            <p>Instead, the medical system runs on the <strong>"OPD" (Outpatient Department)</strong> model. You go to the hospital, stand in line, pay a consultation fee to "cut a ticket," and wait on a bench until it is your turn.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <h3 style="margin: 0;">1. The OPD & "Cutting a Ticket"</h3>
+                            </div>
+                            <p>Locals go to a <span class="nepali-font" style="font-weight: bold;">क्लिनिक</span> (Clinic) for minor issues or the <span class="nepali-font" style="font-weight: bold;">अस्पताल</span> (Hospital) for specialists. Your first stop is always the reception counter.</p>
+
+                            <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">टिकट काट्ने</span> (Ticket katne)</strong> — To register for an appointment. <em>(Literally: "To cut a ticket." You pay the fee — usually 400-800 Rupees — and receive a paper slip with your queue number).</em>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">डाक्टरसाबलाई भेट्न कति लाग्छ?</span></strong><br>
+                                    <em>How much does it cost to see the doctor?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मेरो पालो कहिले आउँछ?</span></strong><br>
+                                    <em>When will my turn come? (Ask this to the nurse managing the queue outside the doctor's cabin).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मलाई छातीमा इन्फेक्सन भएको जस्तो छ।</span></strong><br>
+                                    <em>I think I might have a chest infection.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <h3 style="margin: 0;">2. Visiting the Dentist</h3>
+                            </div>
+                            <p>Dental care is entirely privatized. Every neighborhood has small dental clinics with signs featuring giant, smiling teeth. It's common to call ahead for a check-up.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाँतको डाक्टर</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Daat ko doctor — Dentist.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाँत साह्रै दुख्यो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I've got a really bad toothache.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">चेक-अप गराउनु थियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I needed to get a check-up done.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाँत निकाल्नुपर्छ?</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Does the tooth need to be pulled?</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">3. Handling Urgent Issues (No Triage Calls)</h3>
+                            </div>
+                            <p>If you have a genuine medical emergency, do not call a clinic and ask to be put on a "triage list." The phone system is not designed for remote triage.</p>
+
+                            <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">इमर्जेन्सी</span> (Emergency)</strong> — Emergency.
+                            </div>
+
+                            <div style="background: #fee2e2; border: 2px solid #ef4444; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font" style="font-size: 1.05rem;">बिरामीलाई गाह्रो भयो, इमर्जेन्सीमा लैजाऊँ!</span></strong><br>
+                                <span style="color: #991b1b;">The patient is very sick, let's take them to the emergency room!</span>
+                            </div>
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">How It Actually Works 🏥</h3>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    If the situation is serious but not immediately life-threatening (a deep cut, sudden high fever), you go directly to the hospital's <strong>Emergency Ward</strong>. They treat you immediately, and the family members handle "cutting the ticket" and paying the bills at the counter while the patient receives care.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-83", title: "83 Seeing the doctor" },
                     { id: "lesson-84", title: "84 Injuries and emergencies" },
                     { id: "lesson-85", title: "85 The hospital" },
