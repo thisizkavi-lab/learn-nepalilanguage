@@ -13495,7 +13495,133 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-87", title: "87 Mental health support" }
+                    {
+                        id: "lesson-87",
+                        title: "87 Mental health support",
+                        content: `
+                            <h2>87 Mental Health, "Tension" & The Changing Conversation</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Emotional Vocabulary, Opening Up, Professional Therapy & The "Dherai Nasocha" Trap</strong></p>
+
+                            <p>Historically in Nepal, mental health has been deeply misunderstood — often brushed off as "overthinking" or blamed on bad karma. But things are shifting rapidly. Urban youth are breaking the stigma, going to counseling, and learning to talk about their internal battles.</p>
+                            <p>In Nepal, your therapy group is usually just you and your closest friends sitting around a tea shop, pouring your hearts out.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                                <h3 style="margin: 0;">1. The Reality of "Stressed" & "Depressed"</h3>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">खुसी</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Khusi — Happy</div>
+                                </div>
+                                <div style="background: #eef2ff; border: 1px solid #c7d2fe; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">शान्त</span></div>
+                                    <div style="font-size: 0.85rem; color: #3730a3; margin-top: 4px;">Shanta — Calm</div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px; text-align: center;">
+                                    <div style="font-size: 1.1rem; font-weight: 700;"><span class="nepali-font">रिस उठेको</span></div>
+                                    <div style="font-size: 0.85rem; color: #991b1b; margin-top: 4px;">Ris utheko — Angry</div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fef2f2; border: 2px solid #ef4444; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #991b1b;">The Heavy Stuff:</h4>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">टेन्सन भयो</span> (Tension bhayo)</strong> — I'm stressed.<br>
+                                        <em style="font-size: 0.85rem; color: #7f1d1d;">The most heavily used phrase in the country. Covers everything from a minor headache to severe anxiety.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">डिप्रेसन भयो</span> (Depression bhayo)</strong> — I am depressed.<br>
+                                        <em style="font-size: 0.85rem; color: #7f1d1d;">The English word is used universally, as the formal Nepali "Bishad" is too academic.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">मलाई एकदम आत्तिएको जस्तो भइरहेछ।</span></strong><br>
+                                        <em>I'm anxious all the time. ("Aattinu" perfectly captures the physical feeling of panic).</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">दिमाग खराब भयो!</span></strong><br>
+                                        <em>My mind is ruined! (The gritty, everyday slang for being completely overwhelmed).</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h3 style="margin: 0;">2. Opening Up to a Friend</h3>
+                            </div>
+                            <p>Because professional therapy is still growing, the first line of defense is a face-to-face conversation with someone you trust.</p>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">यार, एकदम गाह्रो भइरहेको छ। कुरा गरौं न।</span></strong><br>
+                                        <em>Man, I'm having a really tough time. Can I talk to you?</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">म एकदम निराश छु।</span></strong><br>
+                                        <em>I'm feeling very low.</em>
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font">टेन्सन नलिऊ, म छु नि।</span></strong><br>
+                                        <em>Don't take tension, I'm here. (The ultimate reassurance from a Nepali friend — replaces "You don't have to go through this alone").</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">कुरा गर्दा हल्का हुन्छ।</span></strong><br>
+                                        <em>Talking about it really helps. (Literally: "Talking makes it lighter").</em>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">3. Seeking Professional Therapy</h3>
+                            </div>
+                            <p>If "tension" turns into something that needs a professional, younger people are now actively seeking out psychologists and counselors.</p>
+
+                            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">काउन्सिलिङ</span> (Counseling)</strong> — Therapy / Counseling. <em>(The English word is used directly in Kathmandu).</em>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मलाई डाक्टरलाई भेट्नु छ।</span></strong><br>
+                                    <em>I need to see a doctor. (Referring to a psychiatrist).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यसले तिमीलाई कस्तो असर गरिरहेको छ?</span></strong><br>
+                                    <em>How is this affecting you? (A counselor's question).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">तपाईंले भनेको कुरा जायज छ।</span></strong><br>
+                                    <em>Your feelings are valid.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">यो हप्ता अलि ठीक छ।</span></strong><br>
+                                    <em>I'm doing better this week.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The "Dherai Nasocha" Trap 🧠💭</h3>
+                                <p style="margin-bottom: 1rem;">If you open up to an older Nepali relative about feeling depressed or anxious, their immediate, well-meaning response will likely be:</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e; margin-bottom: 1rem; text-align: center;">
+                                    <strong style="font-size: 1.2rem;"><span class="nepali-font">धेरै नसोच</span></strong><br>
+                                    <em>(Dherai nasocha — "Don't overthink")</em>
+                                </div>
+                                <p style="color: #92400e; margin-bottom: 0;">Because survival and putting food on the table have historically been the primary concerns, the older generation often views emotional struggles as a luxury of having too much free time to think. While they mean well, understanding this generational divide is crucial. You won't get a clinical validation of your "triggers" from a village uncle, but you will get a hot plate of food and a reminder to keep pushing forward.</p>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
