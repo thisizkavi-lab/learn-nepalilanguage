@@ -12934,7 +12934,141 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-83", title: "83 Seeing the doctor" },
+                    {
+                        id: "lesson-83",
+                        title: "83 Seeing the doctor",
+                        content: `
+                            <h2>83 Seeing the Doctor, Symptoms & The "Jhol Kura" Cure</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Describing Symptoms, Tests & Treatments, Doctor's Advice & The Magic of Jhol Kura</strong></p>
+                            
+                            <p>Once you have "cut your ticket" and waited your turn at the clinic, you will enter the doctor's cabin. Appointments are generally quick and highly practical.</p>
+                            <p>The doctor will want direct, clear answers. Here is the vocabulary you need to explain what is happening to your body and understand the diagnosis.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                <h3 style="margin: 0;">1. Describing Your Symptoms</h3>
+                            </div>
+
+                            <div style="background: #f1f5f9; border: 1px dashed #94a3b8; padding: 10px; border-radius: 8px; margin: 1rem 0;">
+                                <strong><span class="nepali-font">के भयो?</span> (Ke bhayo?)</strong> — What happened? / What seems to be the problem?
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">धेरै टाउको दुख्यो।</span></strong><br>
+                                    <em>I keep getting splitting headaches.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">एक हप्तादेखि खोकी लागिरहेको छ।</span></strong><br>
+                                    <em>I've had a bad cough for a week.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">खोकी झन् बढ्यो।</span></strong><br>
+                                    <em>The cough is getting worse.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">रातभरि बान्ता भयो।</span></strong><br>
+                                    <em>I've been throwing up all night. (You can also use 'Ulti' instead of 'Banta').</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">छोरालाई ज्वरो आयो।</span></strong><br>
+                                    <em>My son has got a fever.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">कुम दुखेको छ।</span></strong><br>
+                                    <em>My shoulder has been hurting.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                <h3 style="margin: 0;">2. General Care, Tests & Treatments</h3>
+                            </div>
+                            <p>During the examination, the doctor might perform basic checks or refer you to the hospital laboratory.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंको छाती जाँच्छु।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Let me listen to your chest.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">ज्वरो नापौं।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Let's take your temperature.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तपाईंलाई केही टेस्ट गर्नुपर्छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">I'll refer you for some tests. <em>(Usually blood or stool test).</em></div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुई लगाउने</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To give an injection.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">पट्टी फेर्ने</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">To change a bandage.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">घाउ निको हुँदैछ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">It seems to be healing up nicely.</div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                <h3 style="margin: 0;">3. Advice, Diagnosis & Prescriptions</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"अब के गर्ने डाक्टरसाब?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(What do you advise, Doctor?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="500" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">"एन्टीबायोटिक खानुपर्छ,</text>
+                                <text x="500" y="162" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">अनि झोल कुरा धेरै पिउनुस्।"</text>
+                                <text x="500" y="182" font-family="Arial, sans-serif" font-size="13" fill="#d1fae5" text-anchor="middle">(Antibiotics + drink plenty of fluids.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#10b981"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">Before you leave to collect your medication, the doctor will give their final assessment.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">सामान्य इन्फेक्सन जस्तो छ।</span></strong><br>
+                                    <em>It looks like a mild infection.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">एन्टीबायोटिक खानुपर्छ?</span></strong><br>
+                                    <em>Will I need antibiotics?</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">आराम गर्नुस् र झोल कुरा धेरै पिउनुस्।</span></strong><br>
+                                    <em>You need to rest and drink plenty of fluids.</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">दुई हप्तापछि फेरि आउनुस्।</span></strong><br>
+                                    <em>Come back in two weeks and we'll see how it's looking.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #b45309;">The Cultural Insight: The Magic of "Jhol Kura" 🍲🥣</h3>
+                                <p style="margin-bottom: 1rem;">When a Nepali doctor advises you to "drink plenty of fluids," they will almost always use the specific phrase <strong><span class="nepali-font">झोल कुरा</span> (Jhol Kura - Soupy/Liquid things)</strong>.</p>
+                                <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px; color: #92400e;">
+                                    In Nepali culture, Jhol Kura is treated as a universal medicine. Whether you have a cold, a fever, an upset stomach, or are recovering from surgery, you will be relentlessly told to consume hot meat broth, warm lentil soup (Dal), and boiled water. Solid, dry foods are strictly avoided during illness in favor of the healing power of <strong>Jhol</strong>.
+                                </div>
+                            </div>
+                        `
+                    },
                     { id: "lesson-84", title: "84 Injuries and emergencies" },
                     { id: "lesson-85", title: "85 The hospital" },
                     { id: "lesson-86", title: "86 Dental care" },
