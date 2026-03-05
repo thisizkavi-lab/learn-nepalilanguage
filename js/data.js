@@ -12462,7 +12462,122 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-79", title: "79 Holiday problems" }
+                    {
+                        id: "lesson-79",
+                        title: "79 Holiday problems",
+                        content: `
+                            <h2>79 Holiday Disasters, "Pet Bigriyo" & The Highway Breakdown</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Food Poisoning, Altitude Sickness, Landslides, Lost Bags & The Helicopter Rescue</strong></p>
+                            
+                            <p>When things go wrong on a Nepali holiday, it is usually a dramatic clash with nature or infrastructure. You aren't dealing with missing a connecting train; you are dealing with extreme mountain altitudes, unpredictable roads, and strict rules about drinking water.</p>
+                            <p>Here is the street-level vocabulary you need when the trip goes south.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ef4444;"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636-2.871L13.637 3.591a1.914 1.914 0 0 0-3.274 0z"/><path d="M12 17h.01"/></svg>
+                                <h3 style="margin: 0;">1. Illness & The "Kathmandu Quickstep"</h3>
+                            </div>
+                            <p>Gastrointestinal issues from unhygienic street food or tap water are a massive rite of passage for travelers.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">पेट बिग्रियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">My stomach went bad / is upset. <em>(The universal, slightly polite way to say you have food poisoning).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">पखाला लाग्यो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">Got diarrhea.</div>
+                                </div>
+                                <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #047857;"><span class="nepali-font">उमालेको पानी</span></div>
+                                    <div style="font-size: 0.85rem; color: #065f46; margin-top: 4px;">Boiled water. <em>(The only thing you should be drinking if you're sick).</em></div>
+                                </div>
+                            </div>
+
+                            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <h4 style="margin-top: 0; color: #b45309;">🏔️ Trekking Injuries:</h4>
+                                <p style="margin-bottom: 0.5rem;">The main danger on a Nepali holiday isn't pulling your back out — it's the altitude.</p>
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;">
+                                        <strong><span class="nepali-font">लेक लाग्यो।</span> (Lek lagyo.)</strong> — Got altitude sickness. <em>(Potentially fatal if you trek too high too fast).</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font">मलाई सन्चो छैन।</span> (Malai sancho chaina.)</strong> — I am not feeling well.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                                <h3 style="margin: 0;">2. Delays, Breakdowns & The "Banda"</h3>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f1f5f9" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">"दाइ, गाडी किन रोकेको?"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#dbeafe" text-anchor="middle">(Brother, why is the vehicle stopped?)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#3b82f6"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#ef4444"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">"अगाडि पहिरो गएको छ, बाटो बन्द छ।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="13" fill="#fee2e2" text-anchor="middle">(There's a landslide ahead, the road is closed.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#ef4444"/>
+                            </svg>
+
+                            <p style="margin-top: 1rem;">Your delays in Nepal will come from treacherous highways or sudden political strikes.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">गाडी बिग्रियो।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The vehicle broke down. <em>(Very common on long rides — you just get out and wait).</em></div>
+                                </div>
+                                <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #991b1b;"><span class="nepali-font">बाटो बन्द छ।</span></div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">The road is closed/blocked. <em>(Usually due to a Pahiro / landslide).</em></div>
+                                </div>
+                                <div style="background: #fee2e2; border: 2px solid #ef4444; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700; color: #7f1d1d;"><span class="nepali-font">नेपाल बन्द</span> (Nepal Banda)</div>
+                                    <div style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px;">A nationwide general strike. <em>(No vehicles allowed on the road at all).</em></div>
+                                </div>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #6366f1;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                <h3 style="margin: 0;">3. Lost Items (Harayo vs. Choryo)</h3>
+                            </div>
+                            <p>When dealing with lost belongings, Nepalis rarely jump straight to "stolen." They assume it was lost or left behind first.</p>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">मेरो झोला हरायो!</span> (Mero jhola harayo!)</strong><br>
+                                    <em>My bag got lost! (Much more common than saying it was stolen).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">सामान छुट्यो।</span> (Saman chhutyo.)</strong><br>
+                                    <em>Stuff got left behind. (Perfect for when you forget your phone at a tea shop).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font">पर्यटक प्रहरी</span> (Paryatak Prahari)</strong><br>
+                                    <em>Tourist Police. (If your passport is genuinely stolen, this is who you call).</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #eef2ff; border-left: 4px solid #6366f1; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #3730a3;">The Cultural Insight: The Helicopter Rescue 🚁🏔️</h3>
+                                <p style="margin-bottom: 1rem;">If you have a real accident while trekking in the remote Himalayas, a doctor's note won't save you. You need a <strong><span class="nepali-font">हेलिकप्टर उद्धार</span> (Helicopter Uddhar - Helicopter Rescue)</strong>.</p>
+                                <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1rem; border-radius: 10px; color: #1e3a8a;">
+                                    Because there are no roads in the high mountains, severe injuries or altitude sickness require an emergency chopper evacuation. It is notoriously expensive, so having <strong>specialized trekking insurance</strong> before you hit the trails is an absolute requirement, not an afterthought.
+                                </div>
+                            </div>
+                        `
+                    }
                 ]
             },
             {
