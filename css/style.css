@@ -699,7 +699,53 @@ body,
     filter: brightness(1.4) !important;
 }
 
-/* Responsive Design */
+/* ─────────────────────────────────────────────────────── */
+/*  RESPONSIVE DESIGN                                     */
+/* ─────────────────────────────────────────────────────── */
+
+/* ─── Global: SVGs, Images & Overflow ─── */
+.content svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Keep page navigation arrows at fixed small size */
+.page-navigation svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    max-width: 18px !important;
+    flex-shrink: 0;
+}
+
+/* Prevent ANY horizontal overflow on main content */
+.content,
+.content-inner {
+    overflow-x: hidden;
+}
+
+/* Inline-styled boxes: contain them properly */
+.content-inner div[style] {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tables need horizontal scroll wrapper */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nepali-table {
+    min-width: 320px;
+}
+
+/* ─── Desktop → Tablet (≤ 1200px) ─── */
 @media (max-width: 1200px) {
     .sidebar-right {
         display: none;
@@ -710,6 +756,7 @@ body,
     }
 }
 
+/* ─── Tablet (≤ 800px) ─── */
 @media (max-width: 800px) {
     .menu-toggle {
         display: block;
@@ -718,11 +765,14 @@ body,
     .sidebar-left {
         position: fixed;
         left: -100%;
+        top: var(--topbar-height);
+        bottom: 0;
         background: var(--sidebar-bg);
         z-index: 90;
         transition: left 0.3s ease;
-        box-shadow: 2px 0 8px var(--shadow-color);
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
         width: 280px;
+        overflow-y: auto;
     }
 
     .sidebar-left.open {
@@ -731,22 +781,25 @@ body,
 
     /* Backdrop overlay for sidebar */
     .sidebar-backdrop {
-        display: none;
         position: fixed;
         top: var(--topbar-height);
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.45);
         z-index: 89;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .sidebar-backdrop.visible {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .content {
-        padding: 32px 24px;
+        padding: 32px 20px;
     }
 
     .lesson-list {
@@ -754,10 +807,10 @@ body,
     }
 }
 
-/* ─── Tablet & Small Screens (≤ 600px) ─── */
+/* ─── Small Screens (≤ 600px) ─── */
 @media (max-width: 600px) {
 
-    /* Header: hide text nav links, reduce spacing */
+    /* ── Header ── */
     .topbar {
         padding: 0 12px;
     }
@@ -767,6 +820,7 @@ body,
         gap: 10px;
     }
 
+    /* Hide text links from topbar */
     .topbar-right .icon-link[href="practice.html"],
     .topbar-right .icon-link[href="reading.html"] {
         display: none;
@@ -788,12 +842,13 @@ body,
         height: 18px;
     }
 
+    /* ── Sidebar ── */
     .sidebar-left {
-        width: 85vw;
+        width: 82vw;
         max-width: 300px;
     }
 
-    /* Mobile sidebar links for Writing/Reading */
+    /* Show mobile sidebar links */
     .sidebar-mobile-links {
         display: flex;
         gap: 8px;
@@ -822,32 +877,44 @@ body,
         text-decoration: none;
     }
 
+    /* ── Content Area ── */
     .content {
-        padding: 24px 16px;
+        padding: 20px 16px;
     }
 
     .content h1 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        word-break: break-word;
     }
 
     .content h2 {
-        font-size: 1.35rem;
-        margin: 28px 0 12px;
+        font-size: 1.3rem;
+        margin: 24px 0 10px;
     }
 
     .content h3 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         margin: 18px 0 8px;
     }
 
-    .section-divider {
-        margin: 36px 0;
+    .content h4 {
+        font-size: 0.95rem;
     }
 
+    .content p {
+        font-size: 0.95rem;
+    }
+
+    .section-divider {
+        margin: 32px 0;
+    }
+
+    /* ── Page Navigation ── */
     .page-navigation {
         flex-direction: column;
         gap: 12px;
         align-items: stretch;
+        margin-top: 40px;
     }
 
     .page-navigation a {
@@ -858,12 +925,115 @@ body,
         margin-left: 0;
     }
 
+    /* ── Alphabet Grid: 3 columns on small phones ── */
+    .alphabet-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px;
+    }
+
+    .nepali-char {
+        font-size: 1.8rem;
+    }
+
+    .roman-char {
+        font-size: 0.8rem;
+    }
+
+    .alphabet-cell {
+        padding: 10px 6px;
+    }
+
+    /* ── Tables ── */
+    .nepali-table {
+        font-size: 0.85rem;
+        min-width: 280px;
+    }
+
+    .nepali-table th,
+    .nepali-table td {
+        padding: 8px 6px;
+    }
+
+    .nepali-table td:nth-child(1),
+    .nepali-table td:nth-child(2),
+    .nepali-table td:nth-child(3) {
+        font-size: 0.95rem;
+    }
+
+    /* ── Inline-styled content overrides ── */
+
+    /* Force inline grids to single column */
+    .content div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Wrap inline flex containers */
+    .content div[style*="display: flex"] {
+        flex-wrap: wrap !important;
+    }
+
+    /* Override hardcoded widths */
+    .content div[style*="min-width"] {
+        min-width: 0 !important;
+    }
+
+    .content div[style*="width:"][style*="px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Constrain inline margins */
+    .content div[style*="margin: 2rem"],
+    .content div[style*="margin: 1.5rem"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* SVG containment — prevent overflow but don't force small SVGs to grow */
+    .content-inner svg {
+        max-width: 100%;
+    }
+
+    /* Only large diagram SVGs (with wide viewBox) should fill container */
+    .content-inner>svg[viewBox] {
+        width: 100%;
+        height: auto;
+    }
+
+    .page-navigation svg,
+    .page-navigation svg[viewBox] {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    /* Cultural insight boxes */
+    .content div[style*="border-left: 4px solid"] {
+        padding: 0.8rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Reduce card padding */
+    .content div[style*="padding: 1.5rem"] {
+        padding: 0.8rem !important;
+    }
+
+    .content div[style*="padding: 0.8rem"] {
+        padding: 0.6rem !important;
+    }
+
+    /* Badge/tag sizing */
+    .content span[style*="border-radius: 10px"][style*="font-size: 0.7rem"] {
+        font-size: 0.65rem !important;
+        padding: 1px 6px !important;
+    }
+
     .nepali-font {
-        font-size: 1.05em;
+        font-size: 1em;
     }
 }
 
-/* ─── Phone Screens (≤ 480px) ─── */
+/* ─── Budget Phones (≤ 480px) ─── */
 @media (max-width: 480px) {
     :root {
         --topbar-height: 52px;
@@ -884,85 +1054,63 @@ body,
     }
 
     .content {
-        padding: 20px 12px;
+        padding: 16px 12px;
     }
 
     .content h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .content h2 {
-        font-size: 1.2rem;
-    }
-}
-
-/* ─── Global: SVGs, Images & Inline Grids Responsive ─── */
-.content svg {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Keep page navigation arrows at fixed small size */
-.page-navigation svg {
-    width: 18px !important;
-    height: 18px !important;
-    min-width: 18px;
-    max-width: 18px !important;
-    flex-shrink: 0;
-}
-
-.content img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Force inline-styled grids to stack on small screens */
-@media (max-width: 600px) {
-    .content div[style*="display: grid"] {
-        grid-template-columns: 1fr !important;
+        font-size: 1.15rem;
     }
 
-    .content div[style*="display: flex"][style*="gap: 12px"],
-    .content div[style*="display: flex"][style*="gap: 16px"] {
-        flex-wrap: wrap;
-    }
-
-    /* Scale down inline SVG viewBoxes — lesson content only */
-    .content-inner>svg[viewBox],
-    .content-inner svg[viewBox] {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* But keep nav arrow SVGs pinned */
-    .page-navigation svg,
-    .page-navigation svg[viewBox] {
-        width: 18px !important;
-        height: 18px !important;
-    }
-
-    /* Cultural insight boxes */
-    .content div[style*="border-left: 4px solid"] {
-        padding: 1rem !important;
-    }
-
-    /* Reduce card padding on small screens */
-    .content div[style*="padding: 1.5rem"] {
-        padding: 1rem !important;
-    }
-
-    .content div[style*="padding: 0.8rem"] {
-        padding: 0.6rem !important;
-    }
-
-    /* H4 section headings with emojis */
-    .content h4 {
+    .content h3 {
         font-size: 1rem;
     }
 
-    /* Stream badges on +2 crossroads */
-    .content span[style*="border-radius: 10px"][style*="font-size: 0.7rem"] {
-        font-size: 0.65rem !important;
-        padding: 1px 6px !important;
+    .content p,
+    .content li {
+        font-size: 0.9rem;
+    }
+
+    /* Even smaller alphabet grid */
+    .alphabet-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px;
+    }
+
+    .alphabet-cell {
+        padding: 8px 4px;
+    }
+
+    .nepali-char {
+        font-size: 1.5rem;
+    }
+
+    /* Tighter table cells */
+    .nepali-table th,
+    .nepali-table td {
+        padding: 6px 4px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ─── Tiny Phones (≤ 360px — Redmi Go, etc.) ─── */
+@media (max-width: 360px) {
+    .content {
+        padding: 12px 8px;
+    }
+
+    .content h1 {
+        font-size: 1.25rem;
+    }
+
+    .sidebar-left {
+        width: 90vw;
+    }
+
+    .alphabet-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
