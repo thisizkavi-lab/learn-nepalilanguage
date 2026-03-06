@@ -902,6 +902,15 @@ body,
     height: auto;
 }
 
+/* Keep page navigation arrows at fixed small size */
+.page-navigation svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    max-width: 18px !important;
+    flex-shrink: 0;
+}
+
 .content img {
     max-width: 100%;
     height: auto;
@@ -918,10 +927,18 @@ body,
         flex-wrap: wrap;
     }
 
-    /* Scale down inline SVG viewBoxes */
-    .content svg[viewBox] {
+    /* Scale down inline SVG viewBoxes — lesson content only */
+    .content-inner>svg[viewBox],
+    .content-inner svg[viewBox] {
         width: 100% !important;
         height: auto !important;
+    }
+
+    /* But keep nav arrow SVGs pinned */
+    .page-navigation svg,
+    .page-navigation svg[viewBox] {
+        width: 18px !important;
+        height: 18px !important;
     }
 
     /* Cultural insight boxes */
