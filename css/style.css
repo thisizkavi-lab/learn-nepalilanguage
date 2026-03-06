@@ -242,6 +242,15 @@ a:hover {
     min-height: 100vh;
 }
 
+/* Mobile-only elements — hidden on desktop */
+.sidebar-mobile-links {
+    display: none;
+}
+
+.sidebar-backdrop {
+    display: none;
+}
+
 /* Sidebars */
 .sidebar-left,
 .sidebar-right {
@@ -713,10 +722,27 @@ body,
         z-index: 90;
         transition: left 0.3s ease;
         box-shadow: 2px 0 8px var(--shadow-color);
+        width: 280px;
     }
 
     .sidebar-left.open {
         left: 0;
+    }
+
+    /* Backdrop overlay for sidebar */
+    .sidebar-backdrop {
+        display: none;
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 89;
+    }
+
+    .sidebar-backdrop.visible {
+        display: block;
     }
 
     .content {
@@ -730,6 +756,72 @@ body,
 
 /* ─── Tablet & Small Screens (≤ 600px) ─── */
 @media (max-width: 600px) {
+
+    /* Header: hide text nav links, reduce spacing */
+    .topbar {
+        padding: 0 12px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        gap: 10px;
+    }
+
+    .topbar-right .icon-link[href="practice.html"],
+    .topbar-right .icon-link[href="reading.html"] {
+        display: none;
+    }
+
+    .theme-toggle {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .theme-toggle svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .sidebar-left {
+        width: 85vw;
+        max-width: 300px;
+    }
+
+    /* Mobile sidebar links for Writing/Reading */
+    .sidebar-mobile-links {
+        display: flex;
+        gap: 8px;
+        padding: 12px 0;
+        margin-bottom: 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-mobile-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 8px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.2s;
+    }
+
+    .sidebar-mobile-links a:hover {
+        background: var(--bg-surface-hover);
+        text-decoration: none;
+    }
+
     .content {
         padding: 24px 16px;
     }
@@ -773,6 +865,24 @@ body,
 
 /* ─── Phone Screens (≤ 480px) ─── */
 @media (max-width: 480px) {
+    :root {
+        --topbar-height: 52px;
+    }
+
+    .topbar {
+        padding: 0 8px;
+        height: 52px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
     .content {
         padding: 20px 12px;
     }

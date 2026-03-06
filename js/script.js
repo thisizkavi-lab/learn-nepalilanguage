@@ -269,15 +269,44 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', handleRoute);
 
     // 6. Mobile Menu Toggle
+    const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+
+    function openSidebar() {
+        sidebarLeft.classList.add('open');
+        if (sidebarBackdrop) sidebarBackdrop.classList.add('visible');
+    }
+
+    function closeSidebar() {
+        sidebarLeft.classList.remove('open');
+        if (sidebarBackdrop) sidebarBackdrop.classList.remove('visible');
+    }
+
     if (menuToggle && sidebarLeft) {
         menuToggle.addEventListener('click', () => {
-            sidebarLeft.classList.toggle('open');
+            if (sidebarLeft.classList.contains('open')) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
         });
 
+        // Close sidebar when backdrop is clicked
+        if (sidebarBackdrop) {
+            sidebarBackdrop.addEventListener('click', closeSidebar);
+        }
+
+        // Close sidebar when a navigation link is clicked (mobile)
+        sidebarLeft.addEventListener('click', (e) => {
+            if (e.target.closest('.nav-links a') && window.innerWidth <= 800) {
+                closeSidebar();
+            }
+        });
+
+        // Fallback: close on outside click
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 800) {
                 if (!sidebarLeft.contains(e.target) && !menuToggle.contains(e.target)) {
-                    sidebarLeft.classList.remove('open');
+                    closeSidebar();
                 }
             }
         });
