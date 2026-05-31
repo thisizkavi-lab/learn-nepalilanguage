@@ -1,0 +1,25 @@
+name: Feature or lesson request
+description: Suggest a new feature, lesson, topic, or learning flow.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help learners?
+      description: Describe the feature, lesson, or content you want to see.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this useful?
+      description: Explain the learner need or real-life situation.
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or references
+      description: Add sample words, phrases, scenarios, screenshots, or links if helpful.

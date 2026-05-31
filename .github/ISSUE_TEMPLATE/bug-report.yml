@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a broken interaction, layout problem, or app behavior issue.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser/device
+      placeholder: "Chrome on Android, Safari on iPhone, Firefox on desktop..."
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
