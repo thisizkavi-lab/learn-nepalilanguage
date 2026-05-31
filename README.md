@@ -6,6 +6,12 @@ A free, open-source tool for learning spoken Nepali — the way people actually 
 
 ---
 
+## Project Status
+
+Learn Nepali is an early public project maintained as a free resource for learners, Nepali speakers, teachers, and contributors who want better open materials for everyday spoken Nepali.
+
+The project is open source under the MIT License. Contributions are welcome through issues and pull requests, especially corrections from native/fluent speakers and practical examples from real conversations.
+
 ## Why This Exists
 
 30 million people speak Nepali. Good free resources for learning it — especially for speaking and listening — are hard to find. Most material out there is either textbook grammar or scattered across random PDFs.
@@ -55,15 +61,21 @@ This is an open project. If you speak Nepali and want to help:
 
 No contribution is too small. Even pointing out "nobody says it like that" is useful.
 
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for setup steps, content guidelines, and pull request expectations.
+
 ## Roadmap
 
 - [ ] Tadoku-style illustrated stories (short stories with images)
 - [ ] Real audio recordings (native speaker clips instead of TTS)
 - [ ] Conversation practice (dialogue-based scenarios)
 - [ ] More vocabulary themes (travel, food, family, work)
+- [ ] Public lesson review checklist for native/fluent speaker feedback
+- [ ] Accessibility pass for keyboard navigation and screen reader labels
 
 ## Tech
 
 Plain HTML, CSS, JavaScript. Vite for dev server. No frameworks. Deployed on GitHub Pages.
 
- use it, fork it, make it better.
+## License
+
+MIT License. Use it, fork it, make it better.

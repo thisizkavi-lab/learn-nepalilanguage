@@ -1,4 +1,4 @@
-/* CSS Variables for consistent theming */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
 /* Kalimati — standard Nepali textbook font for all Devanagari text */
 @font-face {
@@ -7,9 +7,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/* Noto Sans Devanagari fallback if Kalimati doesn't load */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
 
 :root {
     --topbar-height: 60px;

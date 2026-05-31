@@ -1,0 +1,38 @@
+name: Language/content correction
+description: Report a translation, romanization, pronunciation, or cultural context issue.
+title: "[Content]: "
+labels:
+  - content
+  - help wanted
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: What is currently shown?
+      description: Paste the word, phrase, translation, or page section.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say instead?
+      description: Include Devanagari, romanization, English meaning, and context if possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: basis
+    attributes:
+      label: What is the basis for this correction?
+      options:
+        - Native/fluent speaker knowledge
+        - Learner observation
+        - Teacher/tutor feedback
+        - Source-backed correction
+        - Not sure, needs review
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add notes about formality, region, common usage, or why the current version sounds wrong.
