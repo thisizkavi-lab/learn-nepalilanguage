@@ -1,0 +1,166 @@
+/* About Nepal is an illustrated notebook inside the existing lesson shell. */
+body.about-nepal {
+    --sidebar-width: 232px;
+    --bg-color: #faf8f2;
+    --sidebar-bg: #faf8f2;
+    --bg-surface: #f3f0e8;
+    --bg-surface-hover: #efebe2;
+    --text-main: #292c26;
+    --text-content: #41443c;
+    --text-muted: #696b62;
+    --link-color: #a34732;
+    --border-color: #dedbd2;
+    --guide-paper: #faf8f2;
+    --font-sans: 'Inter', 'Noto Sans Devanagari', sans-serif;
+    font-family: var(--font-sans);
+}
+[data-theme="dark"] body.about-nepal {
+    --bg-color: #242621;
+    --sidebar-bg: #242621;
+    --bg-surface: #30332c;
+    --bg-surface-hover: #383c33;
+    --text-main: #f0eee6;
+    --text-content: #d0d0c5;
+    --text-muted: #b0b4a6;
+    --link-color: #efaa8d;
+    --border-color: #4a4e42;
+}
+.about-nepal .topbar { background: var(--bg-color); border-bottom: 1px solid var(--border-color); color: var(--text-main); }
+.about-nepal .logo { color: var(--text-main); font: 600 27px Georgia, serif; }
+.about-nepal .topbar .icon-link, .about-nepal .menu-toggle, .about-nepal .theme-toggle { color: var(--text-main) !important; }
+.about-nepal .theme-toggle { border-color: var(--border-color); }
+.about-nepal .topbar a[aria-label="Search"] { display: none; }
+.about-nepal .sidebar-left { padding: 30px 20px; }
+.about-nepal .nav-links a { padding: 7px 12px; margin-left: -8px; border-left: 2px solid transparent; font-size: 13px; }
+.about-nepal .nav-links a.active { color: var(--link-color); background: var(--bg-surface); border-left-color: var(--link-color); }
+.about-nepal .nav-category { color: var(--text-main); font-size: 13px; margin: 4px 0 15px; }
+.about-nepal .nav-group + .nav-group { border-top: 1px solid var(--border-color); padding-top: 24px; }
+.about-nepal .sidebar-right { display: none; }
+.about-nepal .content { padding: 40px 48px 56px; overflow: visible; }
+.about-nepal .content-inner { max-width: 1250px; overflow: visible; }
+.about-nepal .content h1 { font: 500 clamp(36px, 3.8vw, 52px)/1.13 Georgia, serif; letter-spacing: -1.4px; margin: 0 0 16px; }
+.nepal-explorer .content h1 { color: var(--link-color); }
+.about-nepal .content h2 { font: 400 30px/1.2 Georgia, serif; letter-spacing: -.45px; margin: 28px 0 14px; }
+.about-nepal .content h3 { font: 400 22px/1.25 Georgia, serif; margin: 24px 0 10px; }
+.about-nepal .content p { font-size: 15px; line-height: 1.75; }
+.about-nepal .content .guide-lead { color: var(--text-content); font-size: 18px; line-height: 1.6; max-width: 740px; margin: 0 0 26px; }
+.about-nepal .page-navigation { max-width: 1250px; margin: 44px auto 0; padding-top: 24px; border-top: 1px solid var(--border-color); }
+.about-nepal .page-navigation a { max-width: 48%; font-size: 14px; }
+.guide-tabs { display: flex; gap: 32px; border-bottom: 1px solid var(--border-color); margin: 0 0 26px; }
+.guide-tabs a { color: var(--text-muted); font-size: 14px; padding: 10px 0 13px; border-bottom: 2px solid transparent; }
+.guide-tabs a[aria-current] { color: var(--link-color); border-bottom-color: var(--link-color); }
+.guide-tabs a:hover { text-decoration: none; color: var(--link-color); }
+.guide-browser { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr); gap: 32px; align-items: start; }
+.guide-catalog { min-width: 0; }
+.guide-search { display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: 3px; height: 44px; gap: 10px; padding: 0 14px; background: var(--bg-color); }
+.guide-search svg { width: 18px; height: 18px; flex-shrink: 0; fill: none; stroke: var(--text-muted); stroke-width: 1.6; }
+.guide-search input { border: 0; outline: 0; background: transparent; color: var(--text-main); width: 100%; min-width: 0; font: 14px var(--font-sans); }
+.guide-search input::placeholder { color: var(--text-muted); }
+.guide-search:focus-within { outline: 2px solid var(--link-color); outline-offset: 3px; }
+.guide-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin: 15px 0 18px; }
+.guide-filters button { border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--text-muted); padding: 9px 0; min-height: 40px; font: 12px var(--font-sans); cursor: pointer; }
+.guide-filters button[aria-pressed="true"] { color: var(--link-color); border-bottom-color: var(--link-color); }
+.guide-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px; align-items: start; }
+.guide-item { display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 0 0 12px; background: transparent; border: 0; color: var(--text-main); cursor: pointer; position: relative; }
+.guide-item::after { content: ''; position: absolute; bottom: 0; width: 46px; height: 2px; border-radius: 50%; background: transparent; }
+.guide-item[aria-pressed="true"]::after { background: var(--link-color); }
+.guide-item[aria-pressed="true"] .guide-item-name { color: var(--link-color); }
+.guide-art { display: block; width: 100%; aspect-ratio: 1; background-image: var(--atlas); background-size: 300% 200%; background-position: var(--art-x) var(--art-y); background-repeat: no-repeat; mix-blend-mode: darken; }
+.guide-item { appearance: none; mix-blend-mode: darken; }
+.guide-item .guide-art { transition: transform 180ms ease; }
+.guide-item:hover .guide-art { transform: translateY(-3px); }
+.guide-item-name { font: 400 22px/1.2 Georgia, serif; margin: 0 0 5px; overflow-wrap: anywhere; }
+.guide-item-native { font: 14px/1.5 'Noto Sans Devanagari', sans-serif; color: var(--text-muted); }
+[data-theme="dark"] .guide-item { mix-blend-mode: normal; }
+[data-theme="dark"] .guide-art { mix-blend-mode: normal; border-radius: 8px; margin-bottom: 12px; background-color: var(--guide-paper); }
+.guide-detail { position: sticky; top: 88px; border-left: 1px solid var(--border-color); padding: 0 0 6px 30px; min-width: 0; max-height: calc(100dvh - 112px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border-color) transparent; }
+.guide-detail[hidden] { display: none; }
+.guide-detail-art { max-width: 350px; margin: -8px auto -12px; }
+.about-nepal .guide-detail h2 { margin: 0 0 7px; font-size: 36px; color: var(--link-color); }
+.about-nepal .guide-detail h3 { font: 400 20px/1.3 Georgia, serif; color: var(--link-color); margin: 21px 0 6px; }
+.about-nepal .guide-detail p { font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+.about-nepal .guide-detail .guide-native { font: 16px/1.6 'Noto Sans Devanagari', sans-serif; color: var(--text-muted); margin-bottom: 18px; }
+.guide-detail-close { display: none; }
+.guide-related a { display: inline-flex; align-items: center; gap: 7px; margin: 0 16px 6px 0; font-size: 13px; }
+.guide-arrow { width: 17px !important; height: 17px !important; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; flex-shrink: 0; }
+.about-nepal .guide-result-count { font-size: 12px; color: var(--text-muted); margin-top: 28px; }
+.guide-endnote { border-top: 1px solid var(--border-color); margin-top: 36px; padding-top: 22px; }
+.about-nepal .guide-endnote p, .about-nepal .guide-editorial-note { font-size: 13px; color: var(--text-muted); max-width: 830px; }
+.guide-sources { padding: 15px 0; color: var(--text-muted); font-size: 12px; }
+.guide-sources summary { cursor: pointer; width: fit-content; min-height: 28px; }
+.guide-sources ul { padding-left: 18px; margin-top: 9px; }
+.guide-sources li { margin-bottom: 8px; }
+.guide-sources a { text-underline-offset: 3px; text-decoration: underline; }
+.about-nepal .guide-sources p { margin-top: 10px; font-size: 12px; }
+.guide-empty { grid-column: 1 / -1; padding: 45px 0; }
+.guide-reset { font: 13px var(--font-sans); padding: 12px 16px; background: var(--bg-surface); color: var(--link-color); border: 1px solid var(--border-color); cursor: pointer; border-radius: 3px; }
+.about-nepal :focus-visible { outline: 2px solid var(--link-color); outline-offset: 5px; }
+.guide-overview-hero { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); align-items: start; min-height: 240px; }
+.guide-overview-hero img { width: 100%; margin-top: -68px; mix-blend-mode: darken; }
+.about-nepal .guide-overview-hero .guide-lead { font: 400 25px/1.55 Georgia, serif; margin-top: 10px; padding-right: 28px; }
+[data-theme="dark"] .guide-overview-hero img { mix-blend-mode: normal; background: var(--guide-paper); border-radius: 8px; }
+.guide-intro-links, .guide-three-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.about-nepal .guide-intro-links h2 { margin: 10px 0 12px; font-size: 27px; }
+.guide-intro-links a { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; text-underline-offset: 4px; text-decoration: underline; }
+.guide-geography { border-top: 1px solid var(--border-color); margin-top: 36px; padding-top: 10px; }
+.about-nepal .guide-geography h2 { font-size: 36px; margin-top: 22px; }
+.about-nepal .guide-three-columns h3 { margin-top: 18px; }
+.guide-timeline { margin: 32px 0; }
+.guide-timeline > section { display: grid; grid-template-columns: 130px 1fr; gap: 28px; border-top: 1px solid var(--border-color); padding: 24px 0 14px; }
+.about-nepal .guide-timeline h2 { margin: 0 0 12px; font-size: 26px; }
+.guide-timeline > section > div { max-width: 760px; }
+.about-nepal .guide-timeline .guide-date { color: var(--link-color); font-size: 14px; padding-top: 5px; }
+.about-nepal .guide-inline-source { font-size: 12px; }
+.guide-government { border-block: 1px solid var(--border-color); padding: 34px 0 18px; margin: 30px 0; }
+.guide-number { font: italic 28px Georgia, serif; color: var(--link-color); }
+.about-nepal .guide-government h2 { margin-top: 12px; }
+
+@media (min-width: 1500px) { .guide-item-name { font-size: 24px; } .guide-filters button { font-size: 13px; } }
+@media (max-width: 1100px) {
+    .about-nepal .content { padding: 32px 28px; }
+    .guide-browser { grid-template-columns: minmax(0, 1.3fr) minmax(220px, 1fr); gap: 20px; }
+    .guide-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .guide-detail { padding-left: 20px; }
+    .guide-item-name { font-size: 20px; }
+    .guide-overview-hero { min-height: 210px; }
+    .guide-overview-hero img { margin-top: -20px; }
+    .about-nepal .guide-overview-hero .guide-lead { font-size: 21px; }
+}
+@media (max-width: 800px) {
+    .about-nepal .sidebar-left { width: 280px; visibility: hidden; }
+    .about-nepal .sidebar-left.open { visibility: visible; }
+    .about-nepal .content { padding: 30px 24px 40px; }
+    .about-nepal .topbar { padding: 0 18px; }
+    .about-nepal .logo { font-size: 23px; }
+    .about-nepal .sidebar-mobile-links a { color: var(--text-main); }
+}
+@media (max-width: 700px) {
+    .about-nepal .content h1 { font-size: 38px; letter-spacing: -.9px; }
+    .about-nepal .content .guide-lead { font-size: 16px; }
+    .guide-tabs { gap: 24px; margin-bottom: 22px; }
+    .guide-tabs a { font-size: 13px; }
+    .guide-browser { display: block; }
+    .guide-search input { font-size: 16px; }
+    .guide-filters { gap: 0 19px; margin-bottom: 15px; }
+    .guide-filters button { font-size: 12px; min-height: 44px; }
+    .guide-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; }
+    .guide-detail { position: static; grid-column: 1 / -1; max-height: none; border-left: 0; border-block: 1px solid var(--border-color); padding: 18px 0 24px; scroll-margin-top: 12px; }
+    .guide-detail-art { width: 75%; max-width: 290px; }
+    .guide-detail-close { display: flex; align-items: center; gap: 8px; padding: 10px 0; min-height: 44px; background: transparent; border: 0; color: var(--link-color); font: 13px var(--font-sans); cursor: pointer; }
+    .guide-detail-close svg { transform: rotate(180deg); }
+    .about-nepal .guide-detail h2 { font-size: 32px; }
+    .guide-overview-hero { display: flex; flex-direction: column; }
+    .about-nepal .guide-overview-hero .guide-lead { font: 400 23px/1.45 Georgia, serif; padding-right: 0; max-width: 380px; }
+    .guide-overview-hero img { margin: -4px 0 18px; }
+    .guide-intro-links { grid-template-columns: 1fr; gap: 24px; }
+    .guide-intro-links section { border-bottom: 1px solid var(--border-color); padding-bottom: 24px; }
+    .guide-intro-links section:last-child { border-bottom: 0; padding-bottom: 0; }
+    .guide-three-columns { grid-template-columns: 1fr; gap: 8px; }
+    .guide-timeline > section { grid-template-columns: 1fr; gap: 3px; }
+    .about-nepal .guide-timeline .guide-date { margin-bottom: 8px; }
+    .guide-government { gap: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html:has(body.about-nepal) { scroll-behavior: auto; }
+    .about-nepal *, .about-nepal *::before, .about-nepal *::after { transition: none !important; }
+}

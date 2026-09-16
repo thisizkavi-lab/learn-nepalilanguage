@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarLeft = document.getElementById('sidebar-left');
     const menuToggle = document.getElementById('menu-toggle');
     const themeToggle = document.getElementById('theme-toggle');
+    let disposeGuide = () => {};
 
     // Theme Toggle
     if (themeToggle) {
@@ -72,9 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Render Main Content
-    function renderContent(lessonId) {
+    function renderContent(lessonId, route = {}) {
+        disposeGuide();
         const lessonIndex = allLessons.findIndex(l => l.id === lessonId);
         const lesson = lessonIndex !== -1 ? allLessons[lessonIndex] : allLessons[0];
+        document.body.classList.toggle('about-nepal', Boolean(lesson.about));
+        document.body.classList.toggle('nepal-explorer', Boolean(lesson.explorer));
+        document.title = `${lesson.title} — Learn Nepali`;
 
         // Update active link in sidebar
         document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
@@ -96,12 +101,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Render content
         let contentHtml = `<h1 id="${lesson.id}">${lesson.title}</h1>`;
-        if (lesson.content) {
+        if (lesson.explorer) {
+            // The shared guide renderer fills this surface after the heading.
+        } else if (lesson.content) {
             contentHtml += lesson.content;
         } else {
             contentHtml += `<p>Coming soon...</p>`;
         }
         mainContentInner.innerHTML = contentHtml;
+        if (lesson.explorer) {
+            disposeGuide = NepalGuide.mount(mainContentInner, lesson.explorer, route);
+        } else {
+            disposeGuide = () => {};
+        }
 
         // Render TOC
         renderTOC();
@@ -111,6 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Scroll to top
         window.scrollTo(0, 0);
+        // A shared item link should open at its details on a narrow screen.
+        if (lesson.explorer && route.item && window.matchMedia('(max-width: 700px)').matches) {
+            const detail = mainContentInner.querySelector('.guide-detail');
+            if (detail && !detail.hidden) detail.scrollIntoView({ block: 'start', behavior: 'instant' });
+        }
     }
 
     let scrollTimeout;
@@ -243,10 +260,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Handle Routing
     function handleRoute() {
         const hash = window.location.hash.substring(1);
-        const lessonExists = allLessons.some(l => l.id === hash);
+        const route = NepalGuide.parseRoute(hash);
+        const aliases = { geography: 'nepal-at-a-glance', 'interesting-facts': 'nepal-at-a-glance' };
+        const lessonId = aliases[route.lesson] || route.lesson;
+        const lessonExists = allLessons.some(l => l.id === lessonId);
 
         if (lessonExists) {
-            renderContent(hash);
+            renderContent(lessonId, route);
         } else if (hash === '') {
             // Default to first lesson
             renderContent(allLessons[0].id);
@@ -273,15 +293,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openSidebar() {
         sidebarLeft.classList.add('open');
+        menuToggle?.setAttribute('aria-expanded', 'true');
         if (sidebarBackdrop) sidebarBackdrop.classList.add('visible');
     }
 
     function closeSidebar() {
         sidebarLeft.classList.remove('open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
         if (sidebarBackdrop) sidebarBackdrop.classList.remove('visible');
     }
 
     if (menuToggle && sidebarLeft) {
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && sidebarLeft.classList.contains('open')) {
+                closeSidebar();
+                menuToggle.focus();
+            }
+        });
         menuToggle.addEventListener('click', () => {
             if (sidebarLeft.classList.contains('open')) {
                 closeSidebar();
