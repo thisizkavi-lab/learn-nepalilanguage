@@ -8,6 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nepal-guide.css">
     <script>
         // Load theme before render to prevent flash
         (function () {
@@ -18,10 +19,16 @@
 </head>
 
 <body>
+    <script>
+        // Apply the notebook theme before the first paint, including old deep links.
+        if (/^(|nepal-at-a-glance|geography|history|government-structure|the-people|places|food|interesting-facts)$/.test(location.hash.slice(1).split(/[/?]/)[0])) {
+            document.body.classList.add('about-nepal');
+        }
+    </script>
     <!-- Top Navigation Bar -->
     <header class="topbar">
         <div class="topbar-left">
-            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebar-left">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -122,7 +129,9 @@
         </aside>
     </div>
 
+    <script src="js/nepal-guide-data.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/nepal-guide.js"></script>
     <script src="js/script.js"></script>
 </body>
 
