@@ -123,6 +123,47 @@
     </div>
 
     <script src="js/data.js"></script>
+    <script>
+        // Part 1: About Nepal navigation structure
+        (function () {
+            const category = courseData?.[0]?.categories?.[0];
+            if (!category) return;
+
+            const lessonsById = Object.fromEntries(category.lessons.map(lesson => [lesson.id, lesson]));
+            const geography = lessonsById['geography'];
+            const history = lessonsById['history'];
+            const government = lessonsById['government-structure'];
+            const people = lessonsById['the-people'];
+
+            if (geography) geography.title = 'Nepal at a Glance';
+            if (history) history.title = 'A Short History';
+            if (government) government.title = 'Government';
+            if (people) people.title = 'The People and Cultures';
+
+            category.lessons = [
+                geography,
+                history,
+                government,
+                people,
+                { id: 'places-to-explore', title: 'Places to Explore', content: '' },
+                { id: 'food-to-try', title: 'Food to Try', content: '' }
+            ].filter(Boolean);
+
+            // allLessons is created in data.js, so rebuild it after changing Part 1.
+            allLessons.length = 0;
+            courseData.forEach(part => {
+                part.categories.forEach(cat => {
+                    cat.lessons.forEach(lesson => {
+                        allLessons.push({
+                            ...lesson,
+                            partTitle: part.part,
+                            categoryTitle: cat.title
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
     <script src="js/script.js"></script>
 </body>
 
