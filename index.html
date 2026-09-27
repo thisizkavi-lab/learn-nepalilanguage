@@ -8,6 +8,250 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .people-cultures-page {
+            --pc-border: rgba(90, 98, 108, 0.18);
+            --pc-soft: rgba(90, 98, 108, 0.06);
+            --pc-muted: #68707b;
+        }
+
+        html[data-theme="dark"] .people-cultures-page {
+            --pc-border: rgba(230, 234, 239, 0.16);
+            --pc-soft: rgba(255, 255, 255, 0.055);
+            --pc-muted: #a7adb6;
+        }
+
+        .people-cultures-page .pc-lede {
+            font-size: 1.08rem;
+            line-height: 1.78;
+            margin-bottom: 1.5rem;
+        }
+
+        .people-cultures-page p {
+            line-height: 1.75;
+        }
+
+        .pc-mosaic {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin: 1.6rem 0 0.55rem;
+        }
+
+        .pc-mosaic figure,
+        .pc-photo,
+        .pc-photo-pair figure {
+            margin: 0;
+        }
+
+        .pc-mosaic img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .pc-mosaic-caption,
+        .pc-credit {
+            color: var(--pc-muted);
+            font-size: 0.72rem;
+            line-height: 1.45;
+        }
+
+        .pc-mosaic-caption {
+            margin: 0 0 1.8rem;
+        }
+
+        .pc-credit {
+            margin-top: 0.42rem;
+        }
+
+        .pc-credit a,
+        .pc-source-details a {
+            color: inherit;
+        }
+
+        .pc-stats {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            margin: 1rem 0 1.8rem;
+        }
+
+        .pc-stat {
+            border: 1px solid var(--pc-border);
+            border-radius: 9px;
+            padding: 0.9rem 0.8rem;
+            background: var(--pc-soft);
+        }
+
+        .pc-stat strong {
+            display: block;
+            font-size: 1.12rem;
+            margin-bottom: 0.18rem;
+        }
+
+        .pc-stat span {
+            display: block;
+            color: var(--pc-muted);
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .pc-note {
+            border-left: 3px solid #1f6feb;
+            background: var(--pc-soft);
+            padding: 0.9rem 1rem;
+            margin: 1.2rem 0 1.8rem;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.65;
+        }
+
+        .pc-profiles {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin: 1rem 0 1.7rem;
+        }
+
+        .pc-profile {
+            border: 1px solid var(--pc-border);
+            border-radius: 9px;
+            padding: 1rem;
+            background: var(--pc-soft);
+        }
+
+        .pc-profile-title {
+            font-weight: 650;
+            margin-bottom: 0.38rem;
+        }
+
+        .pc-profile p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.62;
+        }
+
+        .pc-photo {
+            margin: 1.4rem 0 1.8rem;
+        }
+
+        .pc-photo img {
+            display: block;
+            width: 100%;
+            max-height: 430px;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .pc-photo-pair {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin: 1.4rem 0 1.8rem;
+        }
+
+        .pc-photo-pair img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .pc-social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .pc-social-item {
+            border-top: 1px solid var(--pc-border);
+            padding-top: 0.8rem;
+        }
+
+        .pc-social-item strong {
+            display: block;
+            margin-bottom: 0.28rem;
+        }
+
+        .pc-social-item p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.62;
+        }
+
+        .pc-language-line {
+            display: flex;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+            margin: 0.9rem 0 1.4rem;
+        }
+
+        .pc-pill {
+            border: 1px solid var(--pc-border);
+            background: var(--pc-soft);
+            padding: 0.38rem 0.62rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+        }
+
+        .pc-ending {
+            font-size: 1.04rem;
+            line-height: 1.75;
+            margin: 1.4rem 0;
+            padding: 1rem 1.05rem;
+            background: var(--pc-soft);
+            border-radius: 9px;
+        }
+
+        .pc-source-details {
+            border-top: 1px solid var(--pc-border);
+            margin-top: 2.1rem;
+            padding-top: 1rem;
+            color: var(--pc-muted);
+            font-size: 0.78rem;
+            line-height: 1.6;
+        }
+
+        .pc-source-details summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: inherit;
+            margin-bottom: 0.7rem;
+        }
+
+        .pc-source-details ul {
+            margin: 0.5rem 0 1rem;
+            padding-left: 1.15rem;
+        }
+
+        .pc-source-details li {
+            margin-bottom: 0.38rem;
+        }
+
+        @media (max-width: 720px) {
+            .pc-stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .pc-profiles,
+            .pc-social-grid,
+            .pc-photo-pair {
+                grid-template-columns: 1fr;
+            }
+
+            .pc-mosaic {
+                gap: 5px;
+            }
+
+            .pc-mosaic img {
+                aspect-ratio: 1 / 1;
+            }
+        }
+    </style>
     <script>
         // Load theme before render to prevent flash
         (function () {
@@ -58,9 +302,7 @@
                 aria-label="GitHub" class="icon-link">
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0 9.94 9.58A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a>
             <a href="#" aria-label="Search" class="icon-link">
@@ -74,46 +316,29 @@
     </header>
 
     <div class="layout">
-        <!-- Backdrop overlay for mobile sidebar -->
         <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-        <!-- Left Sidebar Navigation -->
         <aside class="sidebar-left" id="sidebar-left">
             <div class="sidebar-mobile-links">
                 <a href="practice.html">✏️ Writing</a>
                 <a href="reading.html">📖 Reading</a>
             </div>
-            <nav class="nav-left" id="nav-left-container">
-                <!-- Dynamically populated by JS -->
-            </nav>
+            <nav class="nav-left" id="nav-left-container"></nav>
         </aside>
 
-        <!-- Main Content Area -->
         <main class="content">
-            <div class="content-inner" id="main-content-inner">
-                <!-- Dynamically populated by JS -->
-            </div>
-
-            <div class="page-navigation" id="page-navigation">
-                <!-- Dynamically populated by JS -->
-            </div>
+            <div class="content-inner" id="main-content-inner"></div>
+            <div class="page-navigation" id="page-navigation"></div>
         </main>
 
-        <!-- Right Sidebar Table of Contents -->
         <aside class="sidebar-right">
             <div class="toc">
                 <div class="toc-header">On this page</div>
-                <ul class="toc-links" id="toc-links">
-                    <!-- Dynamically populated by JS -->
-                </ul>
+                <ul class="toc-links" id="toc-links"></ul>
                 <div class="toc-footer">
-                    <a href="https://github.com/thisizkavi-lab/learn-nepalilanguage/issues" target="_blank"
-                        rel="noopener">
-                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
+                    <a href="https://github.com/thisizkavi-lab/learn-nepalilanguage/issues" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
                         Report an issue
                     </a>
@@ -138,7 +363,141 @@
             if (geography) geography.title = 'Nepal at a Glance';
             if (history) history.title = 'A Short History';
             if (government) government.title = 'Government';
-            if (people) people.title = 'The People and Cultures';
+
+            if (people) {
+                people.title = 'The People and Cultures';
+                people.content = `
+                    <div class="people-cultures-page">
+                        <p class="pc-lede">Nepal has roughly <strong>29 million people</strong>, but there is no single “Nepali people” in an ethnic sense. The 2021 census recorded <strong>142 caste and ethnic groups</strong> and <strong>124 mother tongues</strong>. No single group, language, religion, or way of life can stand in for the whole country.</p>
+                        <p>That diversity makes more sense once you look at the geography. Nepal sits between the Gangetic plains of South Asia and the Tibetan Plateau, with mountains, valleys and old trade routes in between. Different peoples settled, migrated, traded, fought, mixed and built kingdoms here long before the modern border existed. Modern Nepal is what happened when many of those historical worlds gradually became one country.</p>
+
+                        <div class="pc-mosaic" aria-label="Cultural celebrations in Nepal">
+                            <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Tamang_Sonam_Losar_2019.jpg/1280px-Tamang_Sonam_Losar_2019.jpg" alt="Crowd at a Tamang Sonam Lhosar celebration in Kathmandu"></figure>
+                            <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gurung_Tamu_Lhosar_2018_01.jpg/1280px-Gurung_Tamu_Lhosar_2018_01.jpg" alt="Gurung people during Tamu Lhosar in Kathmandu"></figure>
+                            <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Kirat_Rai_ethnic_womens_in_Sakela_Ubhauli_festival.jpg/1280px-Kirat_Rai_ethnic_womens_in_Sakela_Ubhauli_festival.jpg" alt="Rai women during the Sakela festival"></figure>
+                            <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tharu_Dance_during_Maghi.jpg/1280px-Tharu_Dance_during_Maghi.jpg" alt="Tharu dance during Maghi in Nepal"></figure>
+                        </div>
+                        <p class="pc-mosaic-caption">Four celebrations, four cultural worlds, one country. Sonam Lhosar, Tamu Lhosar, Sakela and Maghi.</p>
+
+                        <div class="pc-stats">
+                            <div class="pc-stat"><strong>29.16M</strong><span>population in the 2021 census</span></div>
+                            <div class="pc-stat"><strong>142</strong><span>recorded caste / ethnic groups</span></div>
+                            <div class="pc-stat"><strong>124</strong><span>recorded mother tongues</span></div>
+                            <div class="pc-stat"><strong>44.9%</strong><span>reported Nepali as mother tongue</span></div>
+                        </div>
+
+                        <div class="pc-note"><strong>Read this first:</strong> caste, ethnicity, language, religion and region are not the same thing. A Tamang is not simply a position in the Hindu caste system. Madhesi is not one caste. Dalit is not one community. Janajati includes dozens of very different peoples. These labels overlap, and real lives are messier than census boxes.</div>
+
+                        <h2>Many histories, one country</h2>
+                        <p>People did not arrive in Nepal through one door. The southern plains connect naturally with the old cultural regions of Mithila, Bhojpuri and Awadh. The northern valleys connect with the Tibetan and wider Himalayan world. The middle hills developed their own kingdoms, languages and communities. Kathmandu Valley became a major meeting point between them. Nepal therefore did not begin as one homogeneous people who later became diverse. It was already diverse when the modern state expanded around it.</p>
+
+                        <div class="pc-profiles">
+                            <div class="pc-profile"><div class="pc-profile-title">Khas-Arya</div><p>Kshetri, Hill Brahman or Bahun, Thakuri and Sanyasi/Dasnami make up a large part of the hill population. The old Khas world was especially important in western Nepal, and the language once called Khas Kura eventually developed into modern Nepali. Bahuns were historically associated with priestly and scholarly roles, Kshetris with warrior and ruling traditions, and Thakuris with royal lineages. Those are historical patterns, not modern job descriptions.</p></div>
+                            <div class="pc-profile"><div class="pc-profile-title">Adivasi Janajati</div><p>Nepal officially recognizes 60 Indigenous Nationalities. This umbrella includes peoples as different as Magar, Tamang, Gurung, Newar, Rai, Limbu, Sherpa and Tharu. Many had their own languages, ritual systems and political traditions before incorporation into the modern Nepali state. There is no single “Janajati culture.”</p></div>
+                            <div class="pc-profile"><div class="pc-profile-title">Magar, Tamang and Gurung</div><p>Magars are Nepal's largest Janajati population and have deep roots in the central and western hills. Tamangs are strongly concentrated around the hills surrounding Kathmandu and retain important Buddhist and local ritual traditions. Gurungs, or Tamu, are historically associated with the Gandaki region. Magars and Gurungs also became prominent in Gurkha military history. <strong>Gurkha is not an ethnicity.</strong></p></div>
+                            <div class="pc-profile"><div class="pc-profile-title">Kirati east</div><p>Eastern Nepal contains Rai, Limbu or Yakthung, Yakkha, Sunuwar and other communities linked broadly with Kirati histories. “Rai” itself contains numerous linguistic groups rather than one single language. Rai and Limbu traditions are strongly connected with <em>Mundhum</em>, orally transmitted bodies of ritual knowledge, genealogy, cosmology and story.</p></div>
+                        </div>
+
+                        <h2>Newars and Kathmandu Valley</h2>
+                        <p>The Newars, or Newa, developed much of the historic urban civilization of Kathmandu Valley. Kathmandu, Patan and Bhaktapur grew through Newar trade, agriculture, architecture, metalwork, woodcarving, temples, Buddhist monasteries and dense networks of festivals. Newar society itself is highly diverse, containing Hindu and Buddhist traditions, internal caste groups, merchants, farmers, artisans and priests. Their historic language is <strong>Nepal Bhasa</strong>, which is different from modern Nepali despite the confusing name.</p>
+
+                        <figure class="pc-photo">
+                            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Indra_Jatra,_Kathmandu_Durbar_Square.jpg/1280px-Indra_Jatra,_Kathmandu_Durbar_Square.jpg" alt="Crowds during Indra Jatra at Kathmandu Durbar Square">
+                            <figcaption class="pc-credit">Indra Jatra, Kathmandu Durbar Square. Photo: Shadow Ayush, CC BY-SA 4.0.</figcaption>
+                        </figure>
+
+                        <h2>From the high Himalaya to Madhesh</h2>
+                        <p>Climb north and the cultural landscape changes again. Sherpa society developed in close connection with Tibetan Buddhism and the high Himalayan world, especially around Solukhumbu. The international use of “sherpa” for a guide hides a basic fact: <strong>Sherpa is a people, not an occupation.</strong> Other northern communities include Thakali, Lopa of Mustang, Dolpo peoples, Hyolmo, Lhomi, Walung and others whose histories were shaped by high-altitude agriculture and trade across Himalayan passes.</p>
+
+                        <figure class="pc-photo">
+                            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Tengboche_Buddhist_Monastery,_Nepal.jpg/1280px-Tengboche_Buddhist_Monastery,_Nepal.jpg" alt="Tengboche Buddhist Monastery in Nepal">
+                            <figcaption class="pc-credit">Tengboche Buddhist Monastery. Photo: Vyacheslav Argenberg, CC BY 4.0.</figcaption>
+                        </figure>
+
+                        <p>Descend into the Tarai and another Nepal appears. The <strong>Tharu</strong> are one of the country's largest Indigenous populations, with several distinct regional cultures. Twentieth-century malaria eradication, forest clearance and migration from the hills transformed the plains. Development opened roads and farmland, but many Tharu families also lost land and some became trapped in systems such as Kamaiya bonded labour, later abolished.</p>
+                        <p><strong>Madhesh</strong> is broader still. Madhesi is not one ethnicity or caste. Southern Nepal contains Yadav, Teli, Kushwaha/Koiri, Kurmi, Kayastha, Tarai Brahman, Dalit, Muslim and many other communities. Maithili, Bhojpuri, Bajjika and Awadhi cultural regions continue across the Nepal-India border. Political borders can be precise on a map while culture remains continuous across them.</p>
+
+                        <div class="pc-photo-pair">
+                            <figure>
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tharu_Dance_during_Maghi.jpg/1280px-Tharu_Dance_during_Maghi.jpg" alt="Tharu dance during Maghi">
+                                <figcaption class="pc-credit">Maghi celebration. Photo: Sussidip, CC BY-SA 4.0.</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Janaki_Mandir_Janakpur_Nepal.jpg/1280px-Janaki_Mandir_Janakpur_Nepal.jpg" alt="Janaki Mandir in Janakpur, Nepal">
+                                <figcaption class="pc-credit">Janaki Mandir, Janakpur. Photo: Baap8969, CC0.</figcaption>
+                            </figure>
+                        </div>
+
+                        <p>Nepal's Muslim population is concentrated especially in the Tarai but is present across the country. Nepali Muslims may speak Urdu, Maithili, Bhojpuri, Awadhi, Nepali or several languages. Islam has been part of Nepal's social landscape for centuries, not an outside footnote to it.</p>
+
+                        <h2>Language: another map of Nepal</h2>
+                        <p>The 2021 census recorded 124 mother tongues, yet only about <strong>44.9% of Nepalis reported Nepali as their mother tongue</strong>. Nepali nevertheless functions far more widely as the country's common language through government, school, media, migration and everyday communication between communities.</p>
+                        <div class="pc-language-line">
+                            <span class="pc-pill">Nepali 44.9%</span><span class="pc-pill">Maithili 11.0%</span><span class="pc-pill">Bhojpuri 6.2%</span><span class="pc-pill">Tharu 5.9%</span><span class="pc-pill">Tamang ≈4.9%</span><span class="pc-pill">Bajjika 3.9%</span><span class="pc-pill">Awadhi 3.0%</span><span class="pc-pill">Nepal Bhasa ≈3.0%</span>
+                        </div>
+                        <p>Most languages belong to two large families: <strong>Indo-Aryan</strong>, including Nepali, Maithili, Bhojpuri and Awadhi, and <strong>Sino-Tibetan</strong>, including Tamang, Nepal Bhasa, Gurung, Sherpa, Limbu and many Kirati languages. Nepal also contains smaller linguistic families and the remarkable Kusunda language isolate. A person may use one ancestral language at home, Nepali with strangers, Hindi through media and English at school or work. Multilingualism is ordinary.</p>
+                        <p>Some communities now have far more people identifying with an ancestry than actively speaking its language. A language can disappear from the mouth before it disappears from memory.</p>
+
+                        <h2>Religion and festivals</h2>
+                        <p>The census records Nepal as roughly <strong>81% Hindu, 8% Buddhist, 5% Muslim, 3% Kirat and 2% Christian</strong>, with smaller Bon, Prakriti, Jain, Sikh and Baha'i populations. Lived religion is less tidy. Hindu and Buddhist practices overlap deeply in Kathmandu Valley. Tamang and Himalayan traditions can combine Buddhism with older local ritual practices. Rai and Limbu worlds include Mundhum, ancestor and nature traditions. Religion can be belief, but it can also be inheritance, family ritual and place.</p>
+                        <p>The festival calendar is equally layered. Dashain and Tihar dominate much of Hindu Nepal; Chhath is central across much of the plains; Newar communities celebrate Indra Jatra, Bisket Jatra, Gai Jatra and Mha Puja; Rai communities celebrate Sakela; Tamangs Sonam Lhosar; Gurungs Tamu Lhosar; Tharus Maghi; Buddhists Buddha Jayanti; Muslims Eid. “Nepali festivals” is therefore slightly misleading. They are <strong>festivals celebrated by Nepalis</strong>.</p>
+
+                        <h2>Caste, family and everyday social life</h2>
+                        <p>The familiar Hindu model of Brahmin, Kshatriya, Vaishya and Shudra is only a theoretical starting point. Actual Nepali society developed through many <em>jati</em> and regional hierarchies. The <strong>1854 Muluki Ain</strong> went further and legally ranked much of Nepal's diverse population inside a national caste order, including peoples who had not originally belonged to a Hindu caste system. Legal caste hierarchy was later abolished, and caste-based untouchability and discrimination are now crimes. Social habits changed more slowly.</p>
+                        <p><strong>Dalit</strong> is therefore not one caste. It is a broad term covering historically oppressed caste communities, including Hill groups such as Bishwokarma/Kami, Pariyar/Damai and Mijar/Sarki and Tarai groups such as Chamar/Ram, Musahar and Dusadh/Paswan. Hereditary occupations historically included metalwork, tailoring, music, leatherwork and agricultural labour. Those histories should not be mistaken for what individuals do today.</p>
+
+                        <div class="pc-social-grid">
+                            <div class="pc-social-item"><strong>Family & respect</strong><p>Kinship remains powerful. Age and relationship often affect behavior and speech. Nepali itself encodes this through forms such as तँ, तिमी and तपाईं. All can translate as “you,” but they do not describe the same relationship. Grammar becomes sociology.</p></div>
+                            <div class="pc-social-item"><strong>Marriage</strong><p>Family-arranged marriage remains common, but there is a wide spectrum from introductions with free choice to independent dating and elopement. Caste, ethnicity, religion and family reputation can still matter, especially when marriage turns abstract tolerance into a family decision.</p></div>
+                            <div class="pc-social-item"><strong>Gender</strong><p>Patriarchal structures remain influential but vary greatly by region, class and community. Child marriage persists despite being illegal. Chhaupadi, menstrual seclusion associated especially with parts of western Nepal, is also illegal but has not vanished completely. Neither practice should be generalized to every Nepali household.</p></div>
+                            <div class="pc-social-item"><strong>Class</strong><p>Money, education, land, English, migration and urban networks increasingly rearrange older hierarchies. A wealthy Dalit professional and a poor high-caste farmer cannot be understood by the old caste ladder alone. Modern Nepal added new inequalities before the older ones fully disappeared.</p></div>
+                        </div>
+
+                        <h2>Modern Nepal is part of the culture too</h2>
+                        <p>The Nepal photographed for tourists is real: temples, terraces, prayer flags, village houses and traditional dress. It is simply incomplete. Modern Nepal is also motorbikes, private schools, TikTok, K-pop, IELTS institutes, cafés, engineering colleges, language schools, smartphones and migration agencies. Tradition did not disappear. It acquired Wi-Fi.</p>
+
+                        <figure class="pc-photo">
+                            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Thamel_Kathmandu_(1).jpg/1280px-Thamel_Kathmandu_(1).jpg" alt="A street in Thamel, Kathmandu in 2023">
+                            <figcaption class="pc-credit">Thamel, Kathmandu, 2023. Photo: Radosław Botev / Fundacja Nomos, CC BY 3.0 PL.</figcaption>
+                        </figure>
+
+                        <p>Migration may be one of the strongest cultural forces in Nepal today. The 2021 census counted about <strong>2.19 million members of Nepali households living abroad</strong>, and roughly 23% of households had at least one absent member overseas under the census definition. India, the Gulf, Malaysia, Australia, Britain, the United States, Japan, South Korea and many other destinations now sit inside Nepali family life through work, study, money and video calls.</p>
+                        <p>Migration changes more than income. Villages lose young adults. Grandparents raise children. Concrete houses appear. Foreign words enter everyday speech. Marriage networks cross continents. People return with different expectations, while others never return. The diaspora is not separate from modern Nepali culture. It is helping remake it.</p>
+
+                        <h2>What is changing?</h2>
+                        <p>Some languages are shrinking as families shift toward Nepali or English. Some rituals survive mainly as public festivals. Caste boundaries are weaker in some places and stubborn in others. Inter-caste and inter-ethnic marriage is more visible. Cities mix populations that once lived farther apart. At the same time, communities are reviving languages, recovering histories, teaching scripts and asserting identities that older versions of the national story often pushed aside.</p>
+                        <p>Nepal once pursued national unity largely through a dominant hill-Hindu, Nepali-speaking model. Democracy, federalism, Madhesh movements, Janajati activism, Dalit movements and secularism forced a broader question: <strong>who gets to define what “Nepali” means?</strong> That argument is still alive.</p>
+
+                        <div class="pc-ending">So what is Nepali culture? It is Hindu and Buddhist, Kirati and Muslim; Himalayan and South Asian; caste history and resistance to caste; Dashain and Chhath, Sakela and Losar. It is a Newar courtyard in Bhaktapur, a Tharu village in the Tarai, and a twenty-year-old in Kathmandu preparing for IELTS while eating momo and watching Korean television. Nepal did not become a country because everyone was the same. It became a country while never being the same.</div>
+
+                        <details class="pc-source-details">
+                            <summary>Sources and image credits</summary>
+                            <p><strong>Core references</strong></p>
+                            <ul>
+                                <li><a href="https://censusnepal.cbs.gov.np/results/files/result-folder/Final%20Population%20Composition.pdf" target="_blank" rel="noopener">National Population and Housing Census 2021: Population Composition</a></li>
+                                <li><a href="https://censusnepal.cbs.gov.np/results/files/result-folder/Language%20in%20Nepal.pdf" target="_blank" rel="noopener">National Population and Housing Census 2021: Language in Nepal</a></li>
+                                <li><a href="https://censusnepal.cbs.gov.np/results/files/result-folder/Religion%20in%20Nepal.pdf" target="_blank" rel="noopener">National Population and Housing Census 2021: Religion in Nepal</a></li>
+                                <li><a href="https://nfdin.gov.np/pages/introduction/" target="_blank" rel="noopener">National Foundation for Development of Indigenous Nationalities (NFDIN)</a></li>
+                                <li><a href="https://repository.lawcommission.gov.np/np/category/documents/prevailing-law/%E0%A4%B8%E0%A4%82%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8/constitution-of-nepal/" target="_blank" rel="noopener">Constitution of Nepal, Nepal Law Commission</a></li>
+                                <li><a href="https://www.unesco.org/en/articles/launch-national-initiative-development-inventory-intangible-cultural-heritage-nepal" target="_blank" rel="noopener">UNESCO: national inventory of Nepal's intangible cultural heritage</a></li>
+                                <li><a href="https://publications.iom.int/books/mapping-nepalese-diaspora" target="_blank" rel="noopener">IOM: Mapping the Nepalese Diaspora</a></li>
+                            </ul>
+                            <p><strong>Photographs</strong></p>
+                            <ul>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Tamang_Sonam_Losar_2019.jpg" target="_blank" rel="noopener">Tamang Sonam Lhosar 2019</a> — S Pakhrin, CC BY 2.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Gurung_Tamu_Lhosar_2018_01.jpg" target="_blank" rel="noopener">Gurung Tamu Lhosar 2018</a> — S Pakhrin, CC BY 2.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Kirat_Rai_ethnic_womens_in_Sakela_Ubhauli_festival.jpg" target="_blank" rel="noopener">Rai Sakela / Ubhauli</a> — Kathmandu Post, CC BY-SA 4.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Tharu_Dance_during_Maghi.jpg" target="_blank" rel="noopener">Tharu dance during Maghi</a> — Sussidip, CC BY-SA 4.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Indra_Jatra,_Kathmandu_Durbar_Square.jpg" target="_blank" rel="noopener">Indra Jatra, Kathmandu Durbar Square</a> — Shadow Ayush, CC BY-SA 4.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Tengboche_Buddhist_Monastery,_Nepal.jpg" target="_blank" rel="noopener">Tengboche Buddhist Monastery</a> — Vyacheslav Argenberg, CC BY 4.0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Janaki_Mandir_Janakpur_Nepal.jpg" target="_blank" rel="noopener">Janaki Mandir, Janakpur</a> — Baap8969, CC0</li>
+                                <li><a href="https://commons.wikimedia.org/wiki/File:Thamel_Kathmandu_(1).jpg" target="_blank" rel="noopener">Thamel, Kathmandu, 2023</a> — Radosław Botev / Fundacja Nomos, CC BY 3.0 PL</li>
+                            </ul>
+                            <p>Numbers are rounded for readability. Cultural categories overlap and are used here as an orientation, not as fixed biological divisions.</p>
+                        </details>
+                    </div>
+                `;
+            }
 
             category.lessons = [
                 geography,
@@ -149,7 +508,6 @@
                 { id: 'food-to-try', title: 'Food to Try', content: '' }
             ].filter(Boolean);
 
-            // allLessons is created in data.js, so rebuild it after changing Part 1.
             allLessons.length = 0;
             courseData.forEach(part => {
                 part.categories.forEach(cat => {
