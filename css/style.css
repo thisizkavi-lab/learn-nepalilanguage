@@ -1154,3 +1154,29 @@ body,
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
+/* Short History — commissioned teaching illustrations */
+.history-illustration {
+    margin: 1.4rem auto 2.1rem;
+    width: min(100%, 640px);
+    text-align: center;
+}
+.history-illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+}
+.history-illustration figcaption {
+    max-width: 560px;
+    margin: 0.6rem auto 0;
+    font-size: 0.79rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+@media (max-width: 600px) {
+    .history-illustration { margin: 1rem auto 1.6rem; }
+    .history-illustration img { border-radius: 6px; }
+}

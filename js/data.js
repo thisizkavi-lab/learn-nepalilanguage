@@ -62,8 +62,16 @@ const courseData = [
                         content: `
                             <h2>History — From Land to Nation</h2>
                             <p>Fast forward to prehistoric times. Humans lived in the hills and valleys that would become Nepal. Archaeological tools show early settlements long before written history.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/prehistoric_village_by_the_mountain_river.webp" loading="lazy" decoding="async" width="720" height="720" alt="An artistic reconstruction of early human communities in Nepal’s hills and valleys.">
+                                <figcaption>Early life in the region that became Nepal — an artistic reconstruction.</figcaption>
+                            </figure>
                             <p>And then comes the myth.</p>
                             <p>The Kathmandu Valley was once a giant lake. According to legend, Manjushri cut open the hills to drain it and make the land habitable. Geology says the valley really was an ancient lake basin that naturally drained over time.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/manjushri_drains_the_kathmandu_valley_lake.webp" loading="lazy" decoding="async" width="720" height="720" alt="A mythological illustration of Manjushri opening the valley and draining the ancient lake.">
+                                <figcaption>Manjushri and the valley lake — a legend, not a documented historical event.</figcaption>
+                            </figure>
                             <p>Myth and science overlap here.</p>
                             
                             <hr class="section-divider">
@@ -71,6 +79,10 @@ const courseData = [
                             <h3>Early States</h3>
                             <p>Over centuries, different groups migrated into the region — Indo-Aryan Khas groups in the hills, Tibeto-Burman communities across mountains and valleys.</p>
                             <p>The Licchavis (around 4th–9th century CE) established organized rule in the Kathmandu Valley. They left inscriptions, trade networks, temples. Early statecraft began here.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/ancient_kathmandu_market_square.webp" loading="lazy" decoding="async" width="720" height="720" alt="An imagined ancient Kathmandu Valley marketplace during the Licchavi era, with traders and carved inscriptions.">
+                                <figcaption>An imagined Licchavi-era marketplace; the visual details are illustrative.</figcaption>
+                            </figure>
                             <p>After them came the Malla period (c. 1200–1768).</p>
                             <p>The Kathmandu Valley split into three rival city-states:</p>
                             <ul>
@@ -79,6 +91,10 @@ const courseData = [
                                 <li>Bhaktapur</li>
                             </ul>
                             <p>They competed constantly — politically, economically, culturally. They built extraordinary temples and palaces that still define the valley today. But they were divided.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/malla_era_kathmandu_courtyard_festival.webp" loading="lazy" decoding="async" width="720" height="720" alt="An imagined Malla-era Kathmandu courtyard, with temple architecture, performers, and artisans.">
+                                <figcaption>Malla-era cultural life — an artistic reconstruction.</figcaption>
+                            </figure>
                             <p>Outside the valley, dozens of small kingdoms ruled their own territories.</p>
                             <p>Nepal was not yet one country.</p>
                             
@@ -88,6 +104,10 @@ const courseData = [
                             <p>Enter Prithvi Narayan Shah in 1743.</p>
                             <p>King of the small hill state of Gorkha.</p>
                             <p>He saw the wealthy but divided valley kingdoms — and moved strategically. Through siege, diplomacy, blockades, and force, he conquered the Kathmandu Valley by 1769.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/prithvi_narayan_shah_overlooks_kathmandu_valley.webp" loading="lazy" decoding="async" width="720" height="720" alt="A symbolic illustration of Prithvi Narayan Shah and Gorkhali soldiers overlooking the Kathmandu Valley during unification.">
+                                <figcaption>The Gorkha unification campaign — a symbolic reconstruction.</figcaption>
+                            </figure>
                             <p>Modern Nepal begins here.</p>
                             <p>He famously described Nepal as a “yam between two boulders” — referring to India and China. That geopolitical reality still shapes Nepal’s foreign policy.</p>
                             <p>After unification, the Gorkhali state expanded aggressively — until it collided with the British East India Company.</p>
@@ -125,6 +145,10 @@ const courseData = [
                             <h3>Republic</h3>
                             <p>In 2006, another people’s movement forced the king to give up direct rule.</p>
                             <p>In 2008, Nepal abolished the monarchy and became a <strong>Federal Democratic Republic</strong>.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/nepal_united_for_democracy.webp" loading="lazy" decoding="async" width="720" height="720" alt="A conceptual illustration of Nepalese citizens, representation, democracy, and the 2008 republican transition.">
+                                <figcaption>Nepal’s republican transition — a symbolic illustration, not a depiction of one event.</figcaption>
+                            </figure>
                             <p>The Maoists entered mainstream politics. A new constitution was eventually adopted in 2015.</p>
                             
                             <hr class="section-divider">
