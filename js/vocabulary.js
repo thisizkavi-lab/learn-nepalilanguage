@@ -2,7 +2,11 @@
  * ══════════════════════════════════════════════════════════════════════
  * Learn Nepali — Scalable Nepali Vocabulary Builder (App Engine)
  * Manifests DK Visual Presentation Inventory:
- * Unit Markers, Module Frames, Write-on Lines, Pairings, Practice Spread
+ * 1. Visual Book Spread Viewer (All 78 Lessons, 156 Teaching Spreads)
+ * 2. Visual Modules & Specialized Diagrams (World Map, Numbers Table,
+ *    Calendar, Routines, Colors, Body Map, Family Tree)
+ * 3. Interactive Practice Arena (Match-Up, Listening Quiz, Flashcards)
+ * 4. Searchable Word Index Table & Persistence
  * ══════════════════════════════════════════════════════════════════════
  */
 
@@ -52,9 +56,9 @@
         getPrefs() {
             try {
                 const data = localStorage.getItem(PREFS_KEY);
-                return data ? JSON.parse(data) : { viewMode: 'grid', speed: 1.0, activeTheme: 'all', spreadMode: 'teaching' };
+                return data ? JSON.parse(data) : { viewMode: 'spread', speed: 1.0, activeTheme: 'all', spreadPage: 'p1' };
             } catch (e) {
-                return { viewMode: 'grid', speed: 1.0, activeTheme: 'all', spreadMode: 'teaching' };
+                return { viewMode: 'spread', speed: 1.0, activeTheme: 'all', spreadPage: 'p1' };
             }
         },
 
@@ -159,14 +163,23 @@
             }
         },
 
-        playSingle(entry) {
+        playSingle(entryOrText) {
             if (!this.synth) {
                 alert('Audio synthesis is not supported on this browser.');
                 return;
             }
             this.synth.cancel();
 
-            let cleanText = entry.nepaliText.replace(/\(.*?\)/g, '').trim();
+            let textToSpeak = '';
+            if (typeof entryOrText === 'string') {
+                textToSpeak = entryOrText;
+            } else if (entryOrText && entryOrText.nepaliText) {
+                textToSpeak = entryOrText.nepaliText;
+            } else if (entryOrText && entryOrText.nep) {
+                textToSpeak = entryOrText.nep;
+            }
+
+            let cleanText = textToSpeak.replace(/\(.*?\)/g, '').trim();
             if (cleanText.includes(';')) cleanText = cleanText.split(';')[0].trim();
             if (cleanText.includes('/')) cleanText = cleanText.split('/')[0].trim();
 
@@ -266,7 +279,7 @@
 
         highlightCard(id) {
             this.clearActiveHighlight();
-            const el = document.querySelector(`.vocab-card[data-entry-id="${id}"]`);
+            const el = document.querySelector(`[data-entry-id="${id}"]`);
             if (el) {
                 el.classList.add('playing-audio');
                 this.activeCardEl = el;
@@ -309,7 +322,7 @@
             if (statusText) {
                 if (this.isPlayingSequence && this.currentIndex >= 0 && this.currentIndex < this.sequenceQueue.length) {
                     const cur = this.sequenceQueue[this.currentIndex];
-                    statusText.textContent = `Playing ${this.currentIndex + 1} of ${this.sequenceQueue.length}: ${cur.englishHeadword}`;
+                    statusText.textContent = `Playing ${this.currentIndex + 1} of ${this.sequenceQueue.length}: ${cur.englishHeadword || cur.eng}`;
                 } else {
                     statusText.textContent = `Sequence ready (${this.sequenceQueue.length} items)`;
                 }
@@ -323,8 +336,10 @@
         activeThemeId: 'all',
         activeTab: 'all',          // 'all' | 'main' | 'practical' | 'variants'
         activeStatusFilter: 'all', // 'all' | 'unsorted' | 'difficult' | 'learning' | 'known'
-        viewMode: 'grid',          // 'grid' | 'rows'
-        spreadMode: 'teaching',    // 'teaching' (modules) | 'practice' (exercises)
+        viewMode: 'spread',        // 'spread' | 'modules' | 'practice' | 'rows'
+        spreadPage: 'p1',          // 'p1' | 'p2' | 'dual'
+        spreadZoom: 1.0,           // 1.0, 1.25, 1.5, etc.
+        spreadModuleFilter: 'all', // filter companion deck by module
         practiceSubmode: 'match',  // 'match' | 'listening' | 'flashcard'
         showPairingView: false,    // Lesson 1 country ➔ nationality conversion view
         searchQuery: '',
@@ -540,28 +555,29 @@
             </div>
 
             <div class="vocab-control-bar">
-                <!-- Book Rhythm Mode Switcher -->
+                <!-- 4 Core View Modes -->
                 <div class="vocab-rhythm-switcher" role="group" aria-label="Book rhythm mode">
-                    <button class="vocab-rhythm-btn ${State.spreadMode === 'teaching' && !State.showPairingView ? 'active' : ''}" id="mode-teaching-btn">
-                        📖 Teaching Modules
+                    <button class="vocab-rhythm-btn ${State.viewMode === 'spread' ? 'active' : ''}" id="mode-spread-btn" title="Authentic illustrated book spreads with interactive Devanagari companion">
+                        🎨 Visual Book Spread
                     </button>
-                    <button class="vocab-rhythm-btn ${State.spreadMode === 'practice' ? 'active' : ''}" id="mode-practice-btn">
-                        ✍️ Practice Spread
+                    <button class="vocab-rhythm-btn ${State.viewMode === 'modules' ? 'active' : ''}" id="mode-modules-btn" title="Visual modules, interactive maps & structured diagram components">
+                        📦 Visual Modules
                     </button>
-                    ${lesson.number === 1 ? `
-                        <button class="vocab-rhythm-btn ${State.showPairingView ? 'active' : ''}" id="toggle-pairing-btn" title="Country ➔ Nationality Conversion Pairs">
-                            🗺️ Conversion Table
-                        </button>
-                    ` : ''}
+                    <button class="vocab-rhythm-btn ${State.viewMode === 'practice' ? 'active' : ''}" id="mode-practice-btn" title="Interactive match-up, listening quiz & flashcard recall">
+                        ✍️ Practice Arena
+                    </button>
+                    <button class="vocab-rhythm-btn ${State.viewMode === 'rows' ? 'active' : ''}" id="mode-rows-btn" title="Compact searchable table view">
+                        📋 Word List
+                    </button>
                 </div>
 
-                <!-- Section Tabs (Only relevant in teaching mode) -->
-                ${State.spreadMode === 'teaching' && !State.showPairingView ? `
+                <!-- Section Tabs & Learning Status Filters -->
+                ${(State.viewMode === 'spread' || State.viewMode === 'modules') ? `
                     <div class="vocab-tabs" role="tablist">
                         <button class="vocab-tab-btn ${State.activeTab === 'all' ? 'active' : ''}" data-tab="all">All (${lesson.entriesCount})</button>
                         <button class="vocab-tab-btn ${State.activeTab === 'main' ? 'active' : ''}" data-tab="main">Main List (${lesson.mainCount})</button>
                         <button class="vocab-tab-btn ${State.activeTab === 'practical' ? 'active' : ''}" data-tab="practical">Practical Additions (${lesson.practicalCount})</button>
-                        ${lesson.variantsCount > 0 ? `<button class="vocab-tab-btn ${State.activeTab === 'variants' ? 'active' : ''}" data-tab="variants">Recognition Variants (${lesson.variantsCount})</button>` : ''}
+                        ${lesson.variantsCount > 0 ? `<button class="vocab-tab-btn ${State.activeTab === 'variants' ? 'active' : ''}" data-tab="variants">Variants (${lesson.variantsCount})</button>` : ''}
                     </div>
 
                     <!-- Learning Status Filter -->
@@ -580,16 +596,6 @@
                             <span class="status-dot status-dot-known"></span> Known (${counts.known})
                         </button>
                     </div>
-
-                    <!-- View Switcher -->
-                    <div class="vocab-view-toggle">
-                        <button class="vocab-view-btn ${State.viewMode === 'grid' ? 'active' : ''}" id="view-grid-btn" title="Cards Grid View" aria-label="Cards Grid View">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                        </button>
-                        <button class="vocab-view-btn ${State.viewMode === 'rows' ? 'active' : ''}" id="view-rows-btn" title="Compact Table View" aria-label="Compact Table View">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-                        </button>
-                    </div>
                 ` : ''}
             </div>
         `;
@@ -602,26 +608,31 @@
             if (lesson.number < VOCABULARY_DATA.lessons.length) selectActiveLesson(lesson.number + 1);
         });
 
-        headerEl.querySelector('#mode-teaching-btn')?.addEventListener('click', () => {
-            State.spreadMode = 'teaching';
-            State.showPairingView = false;
-            VocabularyStorage.savePrefs({ spreadMode: 'teaching' });
+        headerEl.querySelector('#mode-spread-btn')?.addEventListener('click', () => {
+            State.viewMode = 'spread';
+            VocabularyStorage.savePrefs({ viewMode: 'spread' });
+            renderWorkspaceHeader();
+            renderVocabularyContent();
+        });
+
+        headerEl.querySelector('#mode-modules-btn')?.addEventListener('click', () => {
+            State.viewMode = 'modules';
+            VocabularyStorage.savePrefs({ viewMode: 'modules' });
             renderWorkspaceHeader();
             renderVocabularyContent();
         });
 
         headerEl.querySelector('#mode-practice-btn')?.addEventListener('click', () => {
-            State.spreadMode = 'practice';
-            State.showPairingView = false;
-            VocabularyStorage.savePrefs({ spreadMode: 'practice' });
+            State.viewMode = 'practice';
+            VocabularyStorage.savePrefs({ viewMode: 'practice' });
             initPracticeMode();
             renderWorkspaceHeader();
             renderVocabularyContent();
         });
 
-        headerEl.querySelector('#toggle-pairing-btn')?.addEventListener('click', () => {
-            State.showPairingView = !State.showPairingView;
-            State.spreadMode = 'teaching';
+        headerEl.querySelector('#mode-rows-btn')?.addEventListener('click', () => {
+            State.viewMode = 'rows';
+            VocabularyStorage.savePrefs({ viewMode: 'rows' });
             renderWorkspaceHeader();
             renderVocabularyContent();
         });
@@ -641,28 +652,24 @@
                 renderVocabularyContent();
             });
         });
-
-        headerEl.querySelector('#view-grid-btn')?.addEventListener('click', () => {
-            State.viewMode = 'grid';
-            VocabularyStorage.savePrefs({ viewMode: 'grid' });
-            renderWorkspaceHeader();
-            renderVocabularyContent();
-        });
-
-        headerEl.querySelector('#view-rows-btn')?.addEventListener('click', () => {
-            State.viewMode = 'rows';
-            VocabularyStorage.savePrefs({ viewMode: 'rows' });
-            renderWorkspaceHeader();
-            renderVocabularyContent();
-        });
     }
 
     function renderVocabularyContent() {
         const container = document.getElementById('vocab-content-container');
         if (!container) return;
 
-        // 1. Practice Spread Mode
-        if (State.spreadMode === 'practice') {
+        // 1. If actively searching (2+ chars), display instant search results
+        if (State.searchQuery.trim().length >= 2) {
+            document.getElementById('vocab-audio-player-bar').style.display = 'flex';
+            const entries = State.getFilteredEntries();
+            VocabularyAudio.sequenceQueue = entries;
+            VocabularyAudio.updatePlayerUI();
+            renderGridView(container, entries);
+            return;
+        }
+
+        // 2. Practice Arena Mode
+        if (State.viewMode === 'practice') {
             document.getElementById('vocab-audio-player-bar').style.display = 'none';
             renderPracticeSpread(container);
             return;
@@ -670,50 +677,1008 @@
 
         document.getElementById('vocab-audio-player-bar').style.display = 'flex';
 
-        // 2. Country ➔ Nationality Pairing View (Lesson 1)
-        if (State.showPairingView && State.activeLessonNum === 1) {
-            renderPairingView(container);
+        // 3. Word List Mode
+        if (State.viewMode === 'rows') {
+            const entries = State.getFilteredEntries();
+            VocabularyAudio.sequenceQueue = entries;
+            VocabularyAudio.updatePlayerUI();
+            renderRowsView(container, entries);
             return;
         }
 
-        // 3. Variants Tab
+        // 4. Recognition Variants Tab
         if (State.activeTab === 'variants') {
             renderVariantsTab(container);
             return;
         }
 
+        // 5. Visual Book Spread View
+        if (State.viewMode === 'spread') {
+            renderVisualBookSpreadView(container);
+            return;
+        }
+
+        // 6. Visual Modules & Specialized Diagrams View
+        renderVisualModulesView(container);
+    }
+
+    // ── 5.0 Visual Book Spread View Implementation ──
+    function renderVisualBookSpreadView(container) {
+        const lesson = State.getLesson(State.activeLessonNum);
+        const spreads = lesson.visualSpreads || {
+            page1: `assets/visuals/spreads/lesson_${String(lesson.number).padStart(2, '0')}_p1.webp`,
+            page2: `assets/visuals/spreads/lesson_${String(lesson.number).padStart(2, '0')}_p2.webp`,
+            printedPages: `${10 + (lesson.number - 1) * 4}–${11 + (lesson.number - 1) * 4}`
+        };
+
+        const curPage = State.spreadPage || 'p1';
+        const zoom = State.spreadZoom || 1.0;
         const entries = State.getFilteredEntries();
 
         // Feed entries to Audio controller
         VocabularyAudio.sequenceQueue = entries;
         VocabularyAudio.updatePlayerUI();
 
-        if (entries.length === 0) {
-            container.innerHTML = `
-                <div class="vocab-empty-state">
-                    <div class="vocab-empty-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                    </div>
-                    <div class="vocab-empty-title">No vocabulary entries found</div>
-                    <p>Try clearing your search query or switching the learning status filter.</p>
+        let stageHtml = '';
+        if (curPage === 'p1') {
+            stageHtml = `
+                <div class="vocab-spread-page-frame" style="transform: scale(${zoom}); transform-origin: top center;">
+                    <img src="${spreads.page1}" class="vocab-spread-img" alt="Lesson ${lesson.number} Teaching Spread Page 1" loading="eager">
+                    <span class="vocab-spread-page-badge">Spread 1 (Page ${spreads.printedPages.split('–')[0] || '1'})</span>
                 </div>
             `;
-            return;
+        } else if (curPage === 'p2') {
+            stageHtml = `
+                <div class="vocab-spread-page-frame" style="transform: scale(${zoom}); transform-origin: top center;">
+                    <img src="${spreads.page2}" class="vocab-spread-img" alt="Lesson ${lesson.number} Teaching Spread Page 2" loading="eager">
+                    <span class="vocab-spread-page-badge">Spread 2 (Page ${spreads.printedPages.split('–')[1] || '2'})</span>
+                </div>
+            `;
+        } else {
+            // Dual Spread Side-by-Side
+            stageHtml = `
+                <div style="display: flex; gap: 16px; width: 100%; max-width: 1400px; transform: scale(${zoom}); transform-origin: top center;">
+                    <div class="vocab-spread-page-frame" style="flex: 1;">
+                        <img src="${spreads.page1}" class="vocab-spread-img" alt="Lesson ${lesson.number} Spread Page 1" loading="eager">
+                        <span class="vocab-spread-page-badge">Spread 1</span>
+                    </div>
+                    <div class="vocab-spread-page-frame" style="flex: 1;">
+                        <img src="${spreads.page2}" class="vocab-spread-img" alt="Lesson ${lesson.number} Spread Page 2" loading="eager">
+                        <span class="vocab-spread-page-badge">Spread 2</span>
+                    </div>
+                </div>
+            `;
         }
 
-        // If in table row mode, or in active search mode, render flat list
-        if (State.viewMode === 'rows') {
-            renderRowsView(container, entries);
-            return;
-        }
+        container.innerHTML = `
+            <div class="vocab-spread-wrapper">
+                <!-- Spread Toolbar -->
+                <div class="vocab-spread-toolbar">
+                    <div class="vocab-spread-toolbar-group">
+                        <span class="vocab-spread-toolbar-title">Spread:</span>
+                        <button class="vocab-spread-btn ${curPage === 'p1' ? 'active' : ''}" id="spread-p1-btn">📄 Page 1</button>
+                        <button class="vocab-spread-btn ${curPage === 'p2' ? 'active' : ''}" id="spread-p2-btn">📄 Page 2</button>
+                        <button class="vocab-spread-btn ${curPage === 'dual' ? 'active' : ''}" id="spread-dual-btn">📖 Dual Spread</button>
+                    </div>
 
-        if (State.searchQuery.trim().length >= 2 || State.activeStatusFilter !== 'all' || State.activeTab !== 'all') {
-            renderGridView(container, entries);
-            return;
-        }
+                    <div class="vocab-spread-toolbar-group">
+                        <span class="vocab-spread-toolbar-title" style="display: none;">Zoom:</span>
+                        <button class="vocab-spread-btn" id="spread-zoom-in-btn" title="Zoom In (+)">🔍+</button>
+                        <button class="vocab-spread-btn" id="spread-zoom-out-btn" title="Zoom Out (-)">🔍-</button>
+                        <button class="vocab-spread-btn" id="spread-zoom-reset-btn" title="Reset Zoom">↺ ${Math.round(zoom * 100)}%</button>
+                        <button class="vocab-spread-btn" id="spread-fullscreen-btn" title="Toggle Fullscreen View">⛶ Fullscreen</button>
+                        <button class="vocab-spread-btn" id="spread-play-all-btn" title="Play Sequential Audio for this Spread">
+                            ${Icons.sound} Play Audio (${entries.length})
+                        </button>
+                    </div>
+                </div>
 
-        // 4. Default Teaching Spread: Grouped by DK Module Frames!
-        renderModuleFramesView(container);
+                <!-- Spread Viewport -->
+                <div class="vocab-spread-viewport" id="vocab-spread-viewport">
+                    <button class="vocab-spread-fullscreen-close" id="spread-fs-close-btn">&times; Close Fullscreen (Esc)</button>
+                    <div class="vocab-spread-stage" id="vocab-spread-stage">
+                        ${stageHtml}
+                    </div>
+                </div>
+
+                <!-- Interactive Devanagari Companion Deck -->
+                <div class="vocab-spread-companion">
+                    <div class="vocab-spread-companion-header">
+                        <div class="vocab-companion-title-area">
+                            <h3>
+                                <span>🎨 सचित्र पुस्तक शब्दावली साथी</span>
+                                <span style="font-size: 0.8rem; font-weight: 500; color: var(--vocab-sage-primary); background: var(--vocab-sage-light); padding: 2px 8px; border-radius: 6px;">
+                                    Devanagari Companion Deck
+                                </span>
+                            </h3>
+                            <p>Click any card to pronounce with natural audio, write notes, or track your learning progress.</p>
+                        </div>
+                        <div class="vocab-companion-module-tabs">
+                            <button class="vocab-companion-tab-btn ${State.spreadModuleFilter === 'all' ? 'active' : ''}" data-mod-filter="all">All Modules (${entries.length})</button>
+                            ${lesson.modules.map(m => `
+                                <button class="vocab-companion-tab-btn ${State.spreadModuleFilter === m.id ? 'active' : ''}" data-mod-filter="${m.id}">
+                                    Mod ${m.id} (${m.count})
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Cards Grid -->
+                    <div class="vocab-cards-grid">
+                        ${(State.spreadModuleFilter === 'all' ? entries : entries.filter(e => e.moduleId === State.spreadModuleFilter))
+                            .map(e => renderCardHtml(e)).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        bindCardEvents(container);
+
+        // Bind spread controls
+        container.querySelector('#spread-p1-btn')?.addEventListener('click', () => {
+            State.spreadPage = 'p1';
+            VocabularyStorage.savePrefs({ spreadPage: 'p1' });
+            renderVisualBookSpreadView(container);
+        });
+
+        container.querySelector('#spread-p2-btn')?.addEventListener('click', () => {
+            State.spreadPage = 'p2';
+            VocabularyStorage.savePrefs({ spreadPage: 'p2' });
+            renderVisualBookSpreadView(container);
+        });
+
+        container.querySelector('#spread-dual-btn')?.addEventListener('click', () => {
+            State.spreadPage = 'dual';
+            VocabularyStorage.savePrefs({ spreadPage: 'dual' });
+            renderVisualBookSpreadView(container);
+        });
+
+        container.querySelector('#spread-zoom-in-btn')?.addEventListener('click', () => {
+            State.spreadZoom = Math.min(2.0, (State.spreadZoom || 1.0) + 0.15);
+            renderVisualBookSpreadView(container);
+        });
+
+        container.querySelector('#spread-zoom-out-btn')?.addEventListener('click', () => {
+            State.spreadZoom = Math.max(0.6, (State.spreadZoom || 1.0) - 0.15);
+            renderVisualBookSpreadView(container);
+        });
+
+        container.querySelector('#spread-zoom-reset-btn')?.addEventListener('click', () => {
+            State.spreadZoom = 1.0;
+            renderVisualBookSpreadView(container);
+        });
+
+        const viewport = container.querySelector('#vocab-spread-viewport');
+        container.querySelector('#spread-fullscreen-btn')?.addEventListener('click', () => {
+            if (viewport) {
+                viewport.classList.toggle('fullscreen');
+                document.body.style.overflow = viewport.classList.contains('fullscreen') ? 'hidden' : '';
+            }
+        });
+
+        container.querySelector('#spread-fs-close-btn')?.addEventListener('click', () => {
+            if (viewport) {
+                viewport.classList.remove('fullscreen');
+                document.body.style.overflow = '';
+            }
+        });
+
+        container.querySelector('#spread-play-all-btn')?.addEventListener('click', () => {
+            VocabularyAudio.togglePlayPause();
+        });
+
+        container.querySelectorAll('[data-mod-filter]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                State.spreadModuleFilter = btn.getAttribute('data-mod-filter');
+                renderVisualBookSpreadView(container);
+            });
+        });
+    }
+
+    // ── 5.1 Visual Modules & Specialized Visual Renderers ──
+    function renderVisualModulesView(container) {
+        const lesson = State.getLesson(State.activeLessonNum);
+
+        // Feed entries to Audio controller
+        VocabularyAudio.sequenceQueue = State.getFilteredEntries();
+        VocabularyAudio.updatePlayerUI();
+
+        if (lesson.number === 1) {
+            renderSpecializedLesson1(container, lesson);
+        } else if (lesson.number === 2) {
+            renderSpecializedLesson2(container, lesson);
+        } else if (lesson.number === 3) {
+            renderSpecializedLesson3(container, lesson);
+        } else if (lesson.number === 4) {
+            renderSpecializedLesson4(container, lesson);
+        } else if (lesson.number === 5) {
+            renderSpecializedLesson5(container, lesson);
+        } else if (lesson.number === 14) {
+            renderSpecializedLesson14(container, lesson);
+        } else if (lesson.number === 20) {
+            renderSpecializedLesson20(container, lesson);
+        } else {
+            renderModuleFramesView(container);
+        }
+    }
+
+    // ── Specialized Lesson 1: Interactive World Map & Flag Grid ──
+    const WORLD_MAP_COUNTRIES = [
+        { country: 'Nepal', nepali: 'नेपाल', flag: '🇳🇵', x: 68.5, y: 44, nat: 'नेपाली (Nepali)' },
+        { country: 'United Kingdom', nepali: 'बेलायत', flag: '🇬🇧', x: 48, y: 26, nat: 'बेलायती (British)' },
+        { country: 'United States', nepali: 'संयुक्त राज्य अमेरिका', flag: '🇺🇸', x: 21, y: 35, nat: 'अमेरिकी (American)' },
+        { country: 'Canada', nepali: 'क्यानाडा', flag: '🇨🇦', x: 20, y: 24, nat: 'क्यानेडियन (Canadian)' },
+        { country: 'Japan', nepali: 'जापान', flag: '🇯🇵', x: 84, y: 37, nat: 'जापानी (Japanese)' },
+        { country: 'Australia', nepali: 'अष्ट्रेलिया', flag: '🇦🇺', x: 84, y: 72, nat: 'अष्ट्रेलियन (Australian)' },
+        { country: 'China', nepali: 'चीन', flag: '🇨🇳', x: 73, y: 38, nat: 'चिनियाँ (Chinese)' },
+        { country: 'India', nepali: 'भारत', flag: '🇮🇳', x: 67, y: 46, nat: 'भारतीय (Indian)' },
+        { country: 'France', nepali: 'फ्रान्स', flag: '🇫🇷', x: 48.5, y: 31, nat: 'फ्रान्सेली (French)' },
+        { country: 'Germany', nepali: 'जर्मनी', flag: '🇩🇪', x: 50.5, y: 28, nat: 'जर्मन (German)' },
+        { country: 'Italy', nepali: 'इटाली', flag: '🇮🇹', x: 51.5, y: 33, nat: 'इटालियन (Italian)' },
+        { country: 'Spain', nepali: 'स्पेन', flag: '🇪🇸', x: 47, y: 34, nat: 'स्पेनिस (Spanish)' },
+        { country: 'Brazil', nepali: 'ब्राजिल', flag: '🇧🇷', x: 34, y: 64, nat: 'ब्राजिलियन (Brazilian)' },
+        { country: 'Mexico', nepali: 'मेक्सिको', flag: '🇲🇽', x: 17, y: 44, nat: 'मेक्सिकन (Mexican)' },
+        { country: 'South Africa', nepali: 'दक्षिण अफ्रिका', flag: '🇿🇦', x: 53.5, y: 74, nat: 'दक्षिण अफ्रिकी (South African)' },
+        { country: 'Egypt', nepali: 'इजिप्ट', flag: '🇪🇬', x: 55, y: 40, nat: 'इजिप्सियन (Egyptian)' },
+        { country: 'Russia', nepali: 'रसिया', flag: '🇷🇺', x: 70, y: 20, nat: 'रसियन (Russian)' },
+        { country: 'Argentina', nepali: 'अर्जेन्टिना', flag: '🇦🇷', x: 30, y: 76, nat: 'अर्जेन्टिनी (Argentine)' },
+        { country: 'Colombia', nepali: 'कोलम्बिया', flag: '🇨🇴', x: 26, y: 52, nat: 'कोलम्बियन (Colombian)' }
+    ];
+
+    function renderSpecializedLesson1(container, lesson) {
+        let html = `
+            <div class="vocab-worldmap-wrapper">
+                <div class="vocab-worldmap-header">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main);">
+                            🌍 सचित्र विश्व नक्सा (Illustrated World Map)
+                        </h3>
+                        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted);">
+                            Interactive Country & Nationality Exploration — Tap any flag pin on the world map to listen to natural Nepali pronunciation.
+                        </p>
+                    </div>
+                    <button class="vocab-btn vocab-btn-sage" id="l1-play-all-map-btn">
+                        ${Icons.sound} Pronounce Countries
+                    </button>
+                </div>
+
+                <!-- Stylized SVG World Canvas with Pins -->
+                <div class="vocab-worldmap-canvas">
+                    <svg class="vocab-svg-map" viewBox="0 0 1000 500" preserveAspectRatio="none">
+                        <!-- North America -->
+                        <path class="vocab-map-landmass" d="M120,70 Q220,50 300,90 Q340,150 260,220 Q190,260 160,210 Q90,140 120,70 Z"/>
+                        <!-- South America -->
+                        <path class="vocab-map-landmass" d="M250,260 Q340,280 370,360 Q320,450 270,440 Q240,350 250,260 Z"/>
+                        <!-- Europe -->
+                        <path class="vocab-map-landmass" d="M450,110 Q540,90 570,160 Q520,200 460,190 Q430,150 450,110 Z"/>
+                        <!-- Africa -->
+                        <path class="vocab-map-landmass" d="M470,210 Q580,220 590,320 Q540,430 490,410 Q450,310 470,210 Z"/>
+                        <!-- Asia -->
+                        <path class="vocab-map-landmass" d="M580,90 Q820,70 880,180 Q820,290 680,270 Q590,220 580,90 Z"/>
+                        <!-- Australia -->
+                        <path class="vocab-map-landmass" d="M780,330 Q880,320 890,410 Q810,430 780,330 Z"/>
+                    </svg>
+
+                    ${WORLD_MAP_COUNTRIES.map(c => `
+                        <div class="vocab-map-pin" style="left: ${c.x}%; top: ${c.y}%;" data-map-country="${c.country}" data-speak="${c.nepali}">
+                            <div class="vocab-map-pin-flag">${c.flag}</div>
+                            <div class="vocab-map-pin-pill">
+                                <span class="vocab-map-pin-nepali">${c.nepali}</span>
+                                <span style="font-size: 0.65rem; color: var(--text-muted); margin-left: 2px;">(${c.country})</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- National Flag & Leader Line Grid -->
+                <div style="margin-top: 24px;">
+                    <h4 style="margin: 0 0 10px; font-size: 1rem; color: var(--text-main);">National Flags & Nepali Equivalents (राष्ट्रिय झन्डा र देशहरू)</h4>
+                    <div class="vocab-flags-showcase">
+                        ${WORLD_MAP_COUNTRIES.map(c => `
+                            <div class="vocab-flag-card" data-speak="${c.nepali}">
+                                <div class="vocab-flag-card-flag">${c.flag}</div>
+                                <div>
+                                    <div class="vocab-flag-card-nepali">${c.nepali}</div>
+                                    <div class="vocab-flag-card-eng">${c.country} ➔ ${c.nat}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Country ➔ Nationality Conversion Board -->
+                <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <h4 style="margin: 0 0 12px; font-size: 1rem; color: var(--text-main);">Country ➔ Nationality Conversion Board (देश र नागरिकता रूपान्तरण)</h4>
+                    <div class="vocab-pairing-grid">
+                        ${(VOCABULARY_DATA.countryNationalityPairs || []).map(p => `
+                            <div class="vocab-pairing-card" data-speak="${p.nationalityNepali}">
+                                <div class="vocab-pairing-side">
+                                    <div class="vocab-pairing-nepali">${p.flag} ${p.countryNepali}</div>
+                                    <div class="vocab-pairing-eng">${p.country}</div>
+                                </div>
+                                <div class="vocab-pairing-arrow">➔</div>
+                                <div class="vocab-pairing-side" style="text-align: right;">
+                                    <div class="vocab-pairing-nepali" style="color: var(--vocab-sage-primary);">${p.nationalityNepali}</div>
+                                    <div class="vocab-pairing-eng">${p.nationality}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        container.innerHTML = html;
+
+        // Click on map pin or flag card to speak
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+
+        container.querySelector('#l1-play-all-map-btn')?.addEventListener('click', () => {
+            VocabularyAudio.togglePlayPause();
+        });
+    }
+
+    // ── Specialized Lesson 2: Structured Numbers & Ordinals (Image 2 Match) ──
+    const NUMBERS_1_100 = [
+        { num: 1, devNum: '१', eng: 'one', nep: 'एक', rom: 'ek' },
+        { num: 2, devNum: '२', eng: 'two', nep: 'दुई', rom: 'duee' },
+        { num: 3, devNum: '३', eng: 'three', nep: 'तीन', rom: 'teen' },
+        { num: 4, devNum: '४', eng: 'four', nep: 'चार', rom: 'chaar' },
+        { num: 5, devNum: '५', eng: 'five', nep: 'पाँच', rom: 'paanch' },
+        { num: 6, devNum: '६', eng: 'six', nep: 'छ', rom: 'chh' },
+        { num: 7, devNum: '७', eng: 'seven', nep: 'सात', rom: 'saat' },
+        { num: 8, devNum: '८', eng: 'eight', nep: 'आठ', rom: 'aath' },
+        { num: 9, devNum: '९', eng: 'nine', nep: 'नौ', rom: 'nau' },
+        { num: 10, devNum: '१०', eng: 'ten', nep: 'दस', rom: 'das' },
+        { num: 11, devNum: '११', eng: 'eleven', nep: 'एघार', rom: 'eghaar' },
+        { num: 12, devNum: '१२', eng: 'twelve', nep: 'बाह्र', rom: 'baahr' },
+        { num: 13, devNum: '१३', eng: 'thirteen', nep: 'तेह्र', rom: 'tehr' },
+        { num: 14, devNum: '१४', eng: 'fourteen', nep: 'चौध', rom: 'chaudh' },
+        { num: 15, devNum: '१५', eng: 'fifteen', nep: 'पन्ध्र', rom: 'pandhr' },
+        { num: 16, devNum: '१६', eng: 'sixteen', nep: 'सोह्र', rom: 'sohr' },
+        { num: 17, devNum: '१७', eng: 'seventeen', nep: 'सत्र', rom: 'satr' },
+        { num: 18, devNum: '१८', eng: 'eighteen', nep: 'अठार', rom: 'athaar' },
+        { num: 19, devNum: '१९', eng: 'nineteen', nep: 'उन्नाइस', rom: 'unnaais' },
+        { num: 20, devNum: '२०', eng: 'twenty', nep: 'बीस', rom: 'bees' },
+        { num: 21, devNum: '२१', eng: 'twenty-one', nep: 'एक्काइस', rom: 'ekkaais' },
+        { num: 22, devNum: '२२', eng: 'twenty-two', nep: 'बाइस', rom: 'baais' },
+        { num: 30, devNum: '३०', eng: 'thirty', nep: 'तीस', rom: 'tees' },
+        { num: 40, devNum: '४०', eng: 'forty', nep: 'चालीस', rom: 'chaalees' },
+        { num: 50, devNum: '५०', eng: 'fifty', nep: 'पचास', rom: 'pachaas' },
+        { num: 60, devNum: '६०', eng: 'sixty', nep: 'साठी', rom: 'saathee' },
+        { num: 70, devNum: '७०', eng: 'seventy', nep: 'सत्तरी', rom: 'sattaree' },
+        { num: 80, devNum: '८०', eng: 'eighty', nep: 'असी', rom: 'asee' },
+        { num: 90, devNum: '९०', eng: 'ninety', nep: 'नब्बे', rom: 'nabbe' },
+        { num: 100, devNum: '१००', eng: 'one hundred', nep: 'एक सय', rom: 'ek saya' }
+    ];
+
+    const ORDINALS_LIST = [
+        { ord: '1st', devOrd: '१औं', eng: 'first', nep: 'पहिलो', rom: 'pahilo' },
+        { ord: '2nd', devOrd: '२औं', eng: 'second', nep: 'दोस्रो', rom: 'dosro' },
+        { ord: '3rd', devOrd: '३औं', eng: 'third', nep: 'तेस्रो', rom: 'tesro' },
+        { ord: '4th', devOrd: '४औं', eng: 'fourth', nep: 'चौथो', rom: 'chautho' },
+        { ord: '5th', devOrd: '५औं', eng: 'fifth', nep: 'पाँचौँ', rom: 'paanchaun' },
+        { ord: '6th', devOrd: '६औं', eng: 'sixth', nep: 'छैटौँ', rom: 'chhaitaun' },
+        { ord: '7th', devOrd: '७औं', eng: 'seventh', nep: 'सातौँ', rom: 'saataun' },
+        { ord: '8th', devOrd: '८औं', eng: 'eighth', nep: 'आठौँ', rom: 'aathaun' },
+        { ord: '9th', devOrd: '९औं', eng: 'ninth', nep: 'नवौँ', rom: 'nawaun' },
+        { ord: '10th', devOrd: '१०औं', eng: 'tenth', nep: 'दसौँ', rom: 'dasaun' },
+        { ord: '11th', devOrd: '११औं', eng: 'eleventh', nep: 'एघारौँ', rom: 'eghaaraun' },
+        { ord: '12th', devOrd: '१२औं', eng: 'twelfth', nep: 'बाह्रौँ', rom: 'baahraun' },
+        { ord: '13th', devOrd: '१३औं', eng: 'thirteenth', nep: 'तेह्रौँ', rom: 'tehraun' },
+        { ord: '14th', devOrd: '१४औं', eng: 'fourteenth', nep: 'चौधौँ', rom: 'chaudhaun' },
+        { ord: '15th', devOrd: '१५औं', eng: 'fifteenth', nep: 'पन्ध्रौँ', rom: 'pandhraun' },
+        { ord: '16th', devOrd: '१६औं', eng: 'sixteenth', nep: 'सोह्रौँ', rom: 'sohraun' },
+        { ord: '17th', devOrd: '१७औं', eng: 'seventeenth', nep: 'सत्रौँ', rom: 'satraun' },
+        { ord: '18th', devOrd: '१८औं', eng: 'eighteenth', nep: 'अठारौँ', rom: 'athaaraun' },
+        { ord: '19th', devOrd: '१९औं', eng: 'nineteenth', nep: 'उन्नाइसौँ', rom: 'unnaaisaun' },
+        { ord: '20th', devOrd: '२०औं', eng: 'twentieth', nep: 'बीसौँ', rom: 'beesaun' },
+        { ord: '21st', devOrd: '२१औं', eng: 'twenty-first', nep: 'एक्काइसौँ', rom: 'ekkaaisaun' },
+        { ord: '30th', devOrd: '३०औं', eng: 'thirtieth', nep: 'तीसौँ', rom: 'teesaun' },
+        { ord: '100th', devOrd: '१००औं', eng: 'one hundredth', nep: 'सयौँ', rom: 'sayaun' }
+    ];
+
+    function renderSpecializedLesson2(container, lesson) {
+        let html = `
+            <!-- Module 2.1 Numbers Grid -->
+            <div class="vocab-numbers-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 0.05em;">MODULE 2.1</div>
+                        <h3 style="margin: 2px 0 0; font-size: 1.3rem; color: var(--text-main);">🔢 Numbers (सङ्ख्याहरू: १ देखि १०० सम्म)</h3>
+                        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted);">
+                            Structured number tables matching DK visual layout with blue digits, Devanagari numerals, and write-on lines.
+                        </p>
+                    </div>
+                    <button class="vocab-module-play-btn" data-play-module="2.1">
+                        ${Icons.sound} Play Module 2.1
+                    </button>
+                </div>
+
+                <div class="vocab-numbers-grid">
+                    ${NUMBERS_1_100.map(item => {
+                        const entry = lesson.entries.find(e => e.englishHeadword.toLowerCase() === item.eng.toLowerCase()) || { id: `num-${item.num}`, nepaliText: item.nep };
+                        const note = VocabularyNotes.get(entry.id);
+                        return `
+                            <div class="vocab-number-item" data-speak="${item.nep}">
+                                <div>
+                                    <div class="vocab-number-header-row">
+                                        <span class="vocab-number-digit">${item.num}</span>
+                                        <span class="vocab-number-dev-digit">${item.devNum}</span>
+                                    </div>
+                                    <div class="vocab-number-nepali-word">${item.nep}</div>
+                                    <div class="vocab-number-eng-word">${item.eng} • <em>${item.rom}</em></div>
+                                </div>
+                                <div class="vocab-number-writeon">
+                                    <input type="text" class="vocab-number-writeon-input" data-writeon-id="${entry.id}" placeholder="✎ Note / translation..." value="${escapeHtml(note)}">
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+
+            <!-- Module 2.2 Ordinal Numbers Strip -->
+            <div class="vocab-numbers-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.05em;">MODULE 2.2</div>
+                        <h3 style="margin: 2px 0 0; font-size: 1.3rem; color: var(--text-main);">🥇 Ordinal Numbers (क्रमवाचक सङ्ख्याहरू: १औं देखि १००औं सम्म)</h3>
+                        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted);">
+                            Order, sequence, rankings, and calendar dates in natural spoken Nepali.
+                        </p>
+                    </div>
+                    <button class="vocab-module-play-btn" data-play-module="2.2">
+                        ${Icons.sound} Play Module 2.2
+                    </button>
+                </div>
+
+                <div class="vocab-ordinals-strip">
+                    ${ORDINALS_LIST.map(item => {
+                        const entry = lesson.entries.find(e => e.englishHeadword.toLowerCase() === item.eng.toLowerCase()) || { id: `ord-${item.ord}`, nepaliText: item.nep };
+                        const note = VocabularyNotes.get(entry.id);
+                        return `
+                            <div class="vocab-ordinal-card" data-speak="${item.nep}">
+                                <div>
+                                    <div class="vocab-ordinal-badge">${item.ord} • ${item.devOrd}</div>
+                                    <div class="vocab-number-nepali-word">${item.nep}</div>
+                                    <div class="vocab-number-eng-word">${item.eng} • <em>${item.rom}</em></div>
+                                </div>
+                                <div class="vocab-number-writeon">
+                                    <input type="text" class="vocab-number-writeon-input" data-writeon-id="${entry.id}" placeholder="✎ Note..." value="${escapeHtml(note)}">
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+
+            <!-- Modules 2.3, 2.4, 2.5 -->
+            ${lesson.modules.filter(m => ['2.3', '2.4', '2.5'].includes(m.id)).map(mod => {
+                const modEntries = lesson.entries.filter(e => e.moduleId === mod.id);
+                if (!modEntries.length) return '';
+                return `
+                    <section class="vocab-module-frame" id="module-${mod.id}">
+                        <div class="vocab-module-header">
+                            <div class="vocab-module-tag">
+                                <span class="vocab-module-badge">${mod.id}</span>
+                                <h3 class="vocab-module-title">${escapeHtml(mod.title)}</h3>
+                            </div>
+                            <button class="vocab-module-play-btn" data-play-module="${mod.id}">
+                                ${Icons.sound} Play Module (${mod.count})
+                            </button>
+                        </div>
+                        <div class="vocab-cards-grid">
+                            ${modEntries.map(e => renderCardHtml(e)).join('')}
+                        </div>
+                    </section>
+                `;
+            }).join('')}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', (e) => {
+                if (e.target.tagName === 'INPUT') return;
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+
+        container.querySelectorAll('[data-play-module]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modId = btn.getAttribute('data-play-module');
+                VocabularyAudio.playModule(modId);
+            });
+        });
+    }
+
+    // ── Specialized Lesson 3: Calendar & Seasons ──
+    const CALENDAR_MONTHS = [
+        { eng: 'January', nep: 'जनवरी', rom: 'janawaree', num: 1 },
+        { eng: 'February', nep: 'फेब्रुअरी', rom: 'phebruwaree', num: 2 },
+        { eng: 'March', nep: 'मार्च', rom: 'maarch', num: 3 },
+        { eng: 'April', nep: 'अप्रिल', rom: 'april', num: 4 },
+        { eng: 'May', nep: 'मे', rom: 'me', num: 5 },
+        { eng: 'June', nep: 'जुन', rom: 'jun', num: 6 },
+        { eng: 'July', nep: 'जुलाई', rom: 'julaaee', num: 7 },
+        { eng: 'August', nep: 'अगस्ट', rom: 'agasta', num: 8 },
+        { eng: 'September', nep: 'सेप्टेम्बर', rom: 'septembar', num: 9 },
+        { eng: 'October', nep: 'अक्टोबर', rom: 'aktobar', num: 10 },
+        { eng: 'November', nep: 'नोभेम्बर', rom: 'nobhembar', num: 11 },
+        { eng: 'December', nep: 'डिसेम्बर', rom: 'disembar', num: 12 }
+    ];
+
+    const DAYS_OF_WEEK = [
+        { eng: 'Sunday', nep: 'आइतबार', rom: 'aaitabaar' },
+        { eng: 'Monday', nep: 'सोमबार', rom: 'somabaar' },
+        { eng: 'Tuesday', nep: 'मंगलबार', rom: 'mangalabaar' },
+        { eng: 'Wednesday', nep: 'बुधबार', rom: 'budhabaar' },
+        { eng: 'Thursday', nep: 'बिहीबार', rom: 'biheebaar' },
+        { eng: 'Friday', nep: 'शुक्रबार', rom: 'shukrabaar' },
+        { eng: 'Saturday', nep: 'शनिबार', rom: 'shanibaar' }
+    ];
+
+    const SEASONS_DATA = [
+        { eng: 'spring', nep: 'वसन्त ऋतु', icon: '🌸', cls: 'season-spring', desc: 'Blooming & warm' },
+        { eng: 'summer', nep: 'ग्रीष्म ऋतु', icon: '☀️', cls: 'season-summer', desc: 'Sunny & hot' },
+        { eng: 'autumn', nep: 'शरद ऋतु', icon: '🍂', cls: 'season-autumn', desc: 'Crisp & festival time' },
+        { eng: 'winter', nep: 'हिउँद ऋतु', icon: '❄️', cls: 'season-winter', desc: 'Chilly & frosty' }
+    ];
+
+    function renderSpecializedLesson3(container, lesson) {
+        let html = `
+            <div class="vocab-numbers-section">
+                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main);">📅 The 12 Months of the Year (१२ महिनाहरू)</h3>
+                <p style="margin: 4px 0 16px; font-size: 0.85rem; color: var(--text-muted);">
+                    Gregorian calendar months widely used in business, international communication, and urban spoken Nepali.
+                </p>
+                <div class="vocab-calendar-board">
+                    ${CALENDAR_MONTHS.map(m => `
+                        <div class="vocab-calendar-month-tile" data-speak="${m.nep}">
+                            <div class="vocab-month-banner">${m.eng} • Month ${m.num}</div>
+                            <div class="vocab-month-body">
+                                <div class="vocab-month-nepali">${m.nep}</div>
+                                <div class="vocab-month-english">${m.rom}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Days of Week Strip -->
+                <div style="margin-top: 24px;">
+                    <h4 style="margin: 0 0 10px; font-size: 1rem; color: var(--text-main);">Days of the Week (हप्ताका दिनहरू)</h4>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        ${DAYS_OF_WEEK.map(d => `
+                            <div class="vocab-flag-card" style="flex: 1; min-width: 130px; text-align: center; justify-content: center;" data-speak="${d.nep}">
+                                <div>
+                                    <div style="font-weight: 700; color: var(--text-main); font-size: 1rem;">${d.nep}</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-muted);">${d.eng}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- 4 Seasons Wheel -->
+                <div style="margin-top: 28px;">
+                    <h4 style="margin: 0 0 10px; font-size: 1rem; color: var(--text-main);">The 4 Seasons (चार ऋतुहरू)</h4>
+                    <div class="vocab-seasons-grid">
+                        ${SEASONS_DATA.map(s => `
+                            <div class="vocab-season-card" data-speak="${s.nep}">
+                                <div class="vocab-season-icon-wrap ${s.cls}">${s.icon}</div>
+                                <div>
+                                    <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">${s.nep}</div>
+                                    <div style="font-size: 0.8125rem; color: var(--text-muted); text-transform: capitalize;">${s.eng} • ${s.desc}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Modules -->
+            ${lesson.modules.map(mod => {
+                const modEntries = lesson.entries.filter(e => e.moduleId === mod.id);
+                if (!modEntries.length) return '';
+                return `
+                    <section class="vocab-module-frame" id="module-${mod.id}">
+                        <div class="vocab-module-header">
+                            <div class="vocab-module-tag">
+                                <span class="vocab-module-badge">${mod.id}</span>
+                                <h3 class="vocab-module-title">${escapeHtml(mod.title)}</h3>
+                            </div>
+                            <button class="vocab-module-play-btn" data-play-module="${mod.id}">
+                                ${Icons.sound} Play Module (${mod.count})
+                            </button>
+                        </div>
+                        <div class="vocab-cards-grid">
+                            ${modEntries.map(e => renderCardHtml(e)).join('')}
+                        </div>
+                    </section>
+                `;
+            }).join('')}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+
+        container.querySelectorAll('[data-play-module]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modId = btn.getAttribute('data-play-module');
+                VocabularyAudio.playModule(modId);
+            });
+        });
+    }
+
+    // ── Specialized Lesson 4: Daily Routines Timeline ──
+    const DAILY_ROUTINES_DATA = [
+        { time: '06:30 AM', eng: 'wake up', nep: 'ब्युँझनु', icon: '⏰', period: 'Morning' },
+        { time: '07:00 AM', eng: 'brush teeth', nep: 'दाँत माझ्नु', icon: '🪥', period: 'Morning' },
+        { time: '07:30 AM', eng: 'take a shower', nep: 'नुहाउनु', icon: '🚿', period: 'Morning' },
+        { time: '08:00 AM', eng: 'have breakfast', nep: 'बिहानको खाजा खानु', icon: '🍳', period: 'Morning' },
+        { time: '08:45 AM', eng: 'go to work / school', nep: 'काममा / विद्यालय जानु', icon: '🚌', period: 'Daytime' },
+        { time: '01:00 PM', eng: 'have lunch', nep: 'दिउँसोको खाना खानु', icon: '🍱', period: 'Daytime' },
+        { time: '05:30 PM', eng: 'come home', nep: 'घर फर्कनु', icon: '🏠', period: 'Evening' },
+        { time: '07:30 PM', eng: 'cook dinner', nep: 'बेलुकीको खाना पकाउनु', icon: '🍲', period: 'Evening' },
+        { time: '08:15 PM', eng: 'have dinner', nep: 'बेलुकीको खाना खानु', icon: '🍽️', period: 'Evening' },
+        { time: '10:30 PM', eng: 'go to bed', nep: 'सुत्न जानु', icon: '🛏️', period: 'Night' }
+    ];
+
+    function renderSpecializedLesson4(container, lesson) {
+        let html = `
+            <div class="vocab-timeline-container">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main);">
+                            ⏳ 24-Hour Chronological Routine Flow (दैनिक तालिका)
+                        </h3>
+                        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted);">
+                            Follow daily actions from dawn to bedtime in everyday spoken Nepali.
+                        </p>
+                    </div>
+                    <button class="vocab-btn vocab-btn-sage" id="l4-play-routines-btn">
+                        ${Icons.sound} Play Routines Sequence
+                    </button>
+                </div>
+
+                <div class="vocab-routine-track">
+                    ${DAILY_ROUTINES_DATA.map(step => `
+                        <div class="vocab-routine-step" data-speak="${step.nep}">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <span style="font-size: 1.6rem;">${step.icon}</span>
+                                <div>
+                                    <div style="font-size: 1.15rem; font-weight: 700; color: var(--text-main);">${step.nep}</div>
+                                    <div style="font-size: 0.85rem; color: var(--text-muted);">${step.eng}</div>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="font-size: 0.75rem; font-weight: 700; color: var(--vocab-sage-primary); background: var(--vocab-sage-light); padding: 3px 8px; border-radius: 6px;">
+                                    ${step.time}
+                                </span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            ${renderStandardModulesHtml(lesson)}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+
+        container.querySelector('#l4-play-routines-btn')?.addEventListener('click', () => {
+            VocabularyAudio.togglePlayPause();
+        });
+    }
+
+    // ── Specialized Lesson 5: Colors Palette & Materials ──
+    const COLORS_DATA = [
+        { eng: 'red', nep: 'रातो', rom: 'raato', hex: '#ef4444' },
+        { eng: 'blue', nep: 'नीलो', rom: 'neelo', hex: '#3b82f6' },
+        { eng: 'green', nep: 'हरियो', rom: 'hariyo', hex: '#22c55e' },
+        { eng: 'yellow', nep: 'पहेँलो', rom: 'pahenlo', hex: '#eab308' },
+        { eng: 'orange', nep: 'सुन्तला रङ', rom: 'suntalaa rang', hex: '#f97316' },
+        { eng: 'purple', nep: 'बैजनी', rom: 'baijanee', hex: '#a855f7' },
+        { eng: 'pink', nep: 'गुलाबी', rom: 'gulaabee', hex: '#ec4899' },
+        { eng: 'brown', nep: 'खैरो', rom: 'khairo', hex: '#78350f' },
+        { eng: 'black', nep: 'कालो', rom: 'kaalo', hex: '#0f172a' },
+        { eng: 'white', nep: 'सेतो', rom: 'seto', hex: '#ffffff' },
+        { eng: 'gray', nep: 'फुस्रो / खैरो', rom: 'phusro', hex: '#64748b' },
+        { eng: 'gold', nep: 'सुनौलो', rom: 'sunaulo', hex: '#d97706' },
+        { eng: 'silver', nep: 'चाँदी जस्तो', rom: 'chaandee jasto', hex: '#94a3b8' }
+    ];
+
+    const MATERIALS_DATA = [
+        { eng: 'cotton', nep: 'सुती', icon: '🧵' },
+        { eng: 'wool', nep: 'ऊन', icon: '🧶' },
+        { eng: 'silk', nep: 'रेशम', icon: '🧣' },
+        { eng: 'leather', nep: 'छाला', icon: '👞' },
+        { eng: 'wood', nep: 'काठ', icon: '🪵' },
+        { eng: 'glass', nep: 'सिसा', icon: '🪟' },
+        { eng: 'metal', nep: 'धातु', icon: '⚙️' },
+        { eng: 'plastic', nep: 'प्लास्टिक', icon: '🥤' }
+    ];
+
+    function renderSpecializedLesson5(container, lesson) {
+        let html = `
+            <div class="vocab-numbers-section">
+                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main);">🎨 Color Palette Swatches (रङहरू)</h3>
+                <p style="margin: 4px 0 16px; font-size: 0.85rem; color: var(--text-muted);">
+                    Interactive visual color chips with spoken Nepali terms.
+                </p>
+                <div class="vocab-color-palette-grid">
+                    ${COLORS_DATA.map(c => `
+                        <div class="vocab-color-tile" data-speak="${c.nep}">
+                            <div class="vocab-color-tile-preview" style="background-color: ${c.hex};"></div>
+                            <div class="vocab-color-tile-info">
+                                <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">${c.nep}</div>
+                                <div style="font-size: 0.8125rem; color: var(--text-muted); text-transform: capitalize;">${c.eng} • <em>${c.rom}</em></div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Materials & Textures Grid -->
+                <div style="margin-top: 28px;">
+                    <h4 style="margin: 0 0 12px; font-size: 1rem; color: var(--text-main);">Materials & Substances (सामग्री तथा वस्तुहरू)</h4>
+                    <div class="vocab-flags-showcase">
+                        ${MATERIALS_DATA.map(m => `
+                            <div class="vocab-flag-card" data-speak="${m.nep}">
+                                <div style="font-size: 1.6rem;">${m.icon}</div>
+                                <div>
+                                    <div class="vocab-flag-card-nepali">${m.nep}</div>
+                                    <div class="vocab-flag-card-eng">${m.eng}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+
+            ${renderStandardModulesHtml(lesson)}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+    }
+
+    // ── Specialized Lesson 14: The Body ──
+    const BODY_PARTS_DATA = [
+        { eng: 'head', nep: 'टाउको', rom: 'taauko', icon: '🗣️' },
+        { eng: 'hair', nep: 'कपाल', rom: 'kapaal', icon: '💇' },
+        { eng: 'eye', nep: 'आँखा', rom: 'aankhaa', icon: '👁️' },
+        { eng: 'ear', nep: 'कान', rom: 'kaan', icon: '👂' },
+        { eng: 'nose', nep: 'नाक', rom: 'naak', icon: '👃' },
+        { eng: 'mouth', nep: 'मुख', rom: 'mukh', icon: '👄' },
+        { eng: 'neck', nep: 'घाँटी', rom: 'ghaantee', icon: '🧣' },
+        { eng: 'shoulder', nep: 'काँध', rom: 'kaandh', icon: '💪' },
+        { eng: 'arm', nep: 'हात / बाहु', rom: 'baahu', icon: '🦾' },
+        { eng: 'hand', nep: 'हात', rom: 'haat', icon: '✋' },
+        { eng: 'finger', nep: 'औंला', rom: 'aunlaa', icon: '☝️' },
+        { eng: 'chest', nep: 'छाती', rom: 'chhaatee', icon: '🫁' },
+        { eng: 'leg', nep: 'खुट्टा', rom: 'khuttaa', icon: '🦵' },
+        { eng: 'knee', nep: 'घुँडा', rom: 'ghundaa', icon: '🦵' },
+        { eng: 'foot', nep: 'पैताला / खुट्टा', rom: 'paitaalaa', icon: '🦶' },
+        { eng: 'toe', nep: 'खुट्टाको औंला', rom: 'khuttaako aunlaa', icon: '👣' }
+    ];
+
+    function renderSpecializedLesson14(container, lesson) {
+        let html = `
+            <div class="vocab-body-diagram-wrap">
+                <div class="vocab-body-silhouette-box">
+                    <svg class="vocab-body-silhouette-svg" viewBox="0 0 200 400" fill="none" stroke="currentColor">
+                        <!-- Head -->
+                        <circle cx="100" cy="45" r="28" stroke-width="2.5" fill="var(--vocab-sage-light)"/>
+                        <!-- Neck -->
+                        <rect x="94" y="73" width="12" height="18" stroke-width="2" fill="var(--vocab-sage-light)"/>
+                        <!-- Torso -->
+                        <path d="M70,92 L130,92 L120,210 L80,210 Z" stroke-width="2.5" fill="var(--vocab-sage-light)"/>
+                        <!-- Left Arm -->
+                        <path d="M70,95 L40,170 L30,220" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Right Arm -->
+                        <path d="M130,95 L160,170 L170,220" stroke-width="3" stroke-linecap="round"/>
+                        <!-- Left Leg -->
+                        <path d="M85,210 L80,310 L75,380" stroke-width="3.5" stroke-linecap="round"/>
+                        <!-- Right Leg -->
+                        <path d="M115,210 L120,310 L125,380" stroke-width="3.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main);">
+                        🧍 Human Anatomy & Body Parts (मानव शरीरका अङ्गहरू)
+                    </h3>
+                    <p style="margin: 4px 0 16px; font-size: 0.85rem; color: var(--text-muted);">
+                        Tap any body part to listen and review spoken Nepali terms.
+                    </p>
+                    <div class="vocab-body-parts-list">
+                        ${BODY_PARTS_DATA.map(b => `
+                            <div class="vocab-flag-card" data-speak="${b.nep}">
+                                <div style="font-size: 1.4rem;">${b.icon}</div>
+                                <div>
+                                    <div class="vocab-flag-card-nepali">${b.nep}</div>
+                                    <div class="vocab-flag-card-eng">${b.eng} • <em>${b.rom}</em></div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+
+            ${renderStandardModulesHtml(lesson)}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+    }
+
+    // ── Specialized Lesson 20: The Family ──
+    const FAMILY_TREE_DATA = {
+        grandparents: [
+            { eng: 'grandfather', nep: 'हजुरबुबा / बाजे', icon: '👴' },
+            { eng: 'grandmother', nep: 'हजुरआमा / बज्यै', icon: '👵' }
+        ],
+        parents: [
+            { eng: 'father', nep: 'बुबा / बुवा', icon: '👨' },
+            { eng: 'mother', nep: 'आमा', icon: '👩' },
+            { eng: 'uncle', nep: 'काका / मामा', icon: '🧔' },
+            { eng: 'aunt', nep: 'काकी / माइजु', icon: '👱‍♀️' }
+        ],
+        siblings: [
+            { eng: 'elder brother', nep: 'दाजु', icon: '👦' },
+            { eng: 'younger brother', nep: 'भाइ', icon: '🧒' },
+            { eng: 'elder sister', nep: 'दिदी', icon: '👧' },
+            { eng: 'younger sister', nep: 'बहिनी', icon: '👶' },
+            { eng: 'cousin', nep: 'काकाको छोरा/छोरी', icon: '🧑' }
+        ],
+        children: [
+            { eng: 'son', nep: 'छोरा', icon: '👦' },
+            { eng: 'daughter', nep: 'छोरी', icon: '👧' }
+        ]
+    };
+
+    function renderSpecializedLesson20(container, lesson) {
+        let html = `
+            <div class="vocab-family-tree-wrap">
+                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-main); text-align: center;">
+                    🌳 Genealogical Family Tree (पारिवारिक वंशावली)
+                </h3>
+                <p style="margin: 4px 0 20px; font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+                    Kinship terms across 4 generations in everyday spoken Nepali.
+                </p>
+
+                <!-- Generation 1: Grandparents -->
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--vocab-sage-primary); text-transform: uppercase; text-align: center; margin-bottom: 8px;">
+                    Generation 1 • हजुरबुबा / हजुरआमा
+                </div>
+                <div class="vocab-family-generation">
+                    ${FAMILY_TREE_DATA.grandparents.map(m => `
+                        <div class="vocab-family-card" data-speak="${m.nep}">
+                            <div class="vocab-family-card-icon">${m.icon}</div>
+                            <div class="vocab-family-card-nepali">${m.nep}</div>
+                            <div class="vocab-family-card-eng">${m.eng}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Generation 2: Parents & Uncles/Aunts -->
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--vocab-sage-primary); text-transform: uppercase; text-align: center; margin-bottom: 8px;">
+                    Generation 2 • बुबा / आमा / काका / काकी
+                </div>
+                <div class="vocab-family-generation">
+                    ${FAMILY_TREE_DATA.parents.map(m => `
+                        <div class="vocab-family-card" data-speak="${m.nep}">
+                            <div class="vocab-family-card-icon">${m.icon}</div>
+                            <div class="vocab-family-card-nepali">${m.nep}</div>
+                            <div class="vocab-family-card-eng">${m.eng}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Generation 3: Siblings & Cousins -->
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--vocab-sage-primary); text-transform: uppercase; text-align: center; margin-bottom: 8px;">
+                    Generation 3 • दाजु / भाइ / दिदी / बहिनी
+                </div>
+                <div class="vocab-family-generation">
+                    ${FAMILY_TREE_DATA.siblings.map(m => `
+                        <div class="vocab-family-card" data-speak="${m.nep}">
+                            <div class="vocab-family-card-icon">${m.icon}</div>
+                            <div class="vocab-family-card-nepali">${m.nep}</div>
+                            <div class="vocab-family-card-eng">${m.eng}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Generation 4: Children -->
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--vocab-sage-primary); text-transform: uppercase; text-align: center; margin-bottom: 8px;">
+                    Generation 4 • छोरा / छोरी
+                </div>
+                <div class="vocab-family-generation" style="margin-bottom: 0;">
+                    ${FAMILY_TREE_DATA.children.map(m => `
+                        <div class="vocab-family-card" data-speak="${m.nep}">
+                            <div class="vocab-family-card-icon">${m.icon}</div>
+                            <div class="vocab-family-card-nepali">${m.nep}</div>
+                            <div class="vocab-family-card-eng">${m.eng}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            ${renderStandardModulesHtml(lesson)}
+        `;
+
+        container.innerHTML = html;
+        bindCardEvents(container);
+
+        container.querySelectorAll('[data-speak]').forEach(el => {
+            el.addEventListener('click', () => {
+                const text = el.getAttribute('data-speak');
+                VocabularyAudio.playSingle(text);
+            });
+        });
+    }
+
+    function renderStandardModulesHtml(lesson) {
+        return lesson.modules.map(mod => {
+            const modEntries = lesson.entries.filter(e => e.moduleId === mod.id);
+            if (!modEntries.length) return '';
+            return `
+                <section class="vocab-module-frame" id="module-${mod.id}">
+                    <div class="vocab-module-header">
+                        <div class="vocab-module-tag">
+                            <span class="vocab-module-badge">${mod.id}</span>
+                            <h3 class="vocab-module-title">${escapeHtml(mod.title)}</h3>
+                        </div>
+                        <div class="vocab-module-actions">
+                            <button class="vocab-module-play-btn" data-play-module="${mod.id}" title="Play Module ${mod.id} Audio (${mod.count} words)">
+                                ${Icons.sound}
+                                <span>Play Module (${mod.count})</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="vocab-cards-grid">
+                        ${modEntries.map(e => renderCardHtml(e)).join('')}
+                    </div>
+                </section>
+            `;
+        }).join('');
     }
 
     function renderCardHtml(entry) {
@@ -881,48 +1846,6 @@
         bindCardEvents(container);
     }
 
-    function renderPairingView(container) {
-        const pairs = VOCABULARY_DATA.countryNationalityPairs || [];
-        let html = `
-            <div class="vocab-pairing-view">
-                <div class="vocab-pairing-header">
-                    <div>
-                        <h3 style="margin: 0; font-size: 1.2rem; color: var(--text-main);">Country ➔ Nationality Conversion Pairing</h3>
-                        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--text-muted);">
-                            Converting geographic country names to nationality adjectives in natural spoken Nepali.
-                        </p>
-                    </div>
-                    <button class="vocab-btn vocab-btn-sage" id="close-pairing-btn">Return to Modules</button>
-                </div>
-                <div class="vocab-pairing-grid">
-        `;
-
-        pairs.forEach(p => {
-            html += `
-                <div class="vocab-pairing-card">
-                    <div class="vocab-pairing-side">
-                        <div class="vocab-pairing-nepali">${p.flag} ${escapeHtml(p.countryNepali)}</div>
-                        <div class="vocab-pairing-eng">${escapeHtml(p.country)}</div>
-                    </div>
-                    <div class="vocab-pairing-arrow">➔</div>
-                    <div class="vocab-pairing-side" style="text-align: right;">
-                        <div class="vocab-pairing-nepali" style="color: var(--vocab-sage-primary);">${escapeHtml(p.nationalityNepali)}</div>
-                        <div class="vocab-pairing-eng">${escapeHtml(p.nationality)}</div>
-                    </div>
-                </div>
-            `;
-        });
-
-        html += `</div></div>`;
-        container.innerHTML = html;
-
-        container.querySelector('#close-pairing-btn')?.addEventListener('click', () => {
-            State.showPairingView = false;
-            renderWorkspaceHeader();
-            renderVocabularyContent();
-        });
-    }
-
     function renderVariantsTab(container) {
         const lesson = State.getLesson(State.activeLessonNum);
         if (!lesson.recognitionVariants || lesson.recognitionVariants.length === 0) {
@@ -960,7 +1883,7 @@
         container.innerHTML = html;
     }
 
-    // ── 5.1 Interactive Practice Spread Implementation ──
+    // ── 5.2 Interactive Practice Spread Implementation ──
 
     function initPracticeMode() {
         const lesson = State.getLesson(State.activeLessonNum);
@@ -978,6 +1901,7 @@
         State.matchState.selectedEnglish = null;
         State.matchState.matchedIds = new Set();
         State.matchState.score = 0;
+        State.matchState.shuffledEng = null;
 
         // Init Listening
         initListeningQuestion();
@@ -1004,8 +1928,6 @@
     }
 
     function renderPracticeSpread(container) {
-        const lesson = State.getLesson(State.activeLessonNum);
-
         let html = `
             <div class="vocab-practice-container">
                 <div class="vocab-practice-tabs" role="tablist">
@@ -1129,7 +2051,6 @@
 
         arena.querySelector('#match-next-round-btn')?.addEventListener('click', () => {
             initPracticeMode();
-            State.matchState.shuffledEng = null;
             renderMatchUpArena(arena);
         });
     }
@@ -1147,7 +2068,6 @@
             State.matchState.selectedNepali = null;
             State.matchState.selectedEnglish = null;
 
-            // Pronounce word
             const item = findEntryById(selectedNepali);
             if (item) VocabularyAudio.playSingle(item);
 
@@ -1207,7 +2127,6 @@
 
         arena.innerHTML = html;
 
-        // Auto play sound first time
         setTimeout(() => {
             VocabularyAudio.playSingle(cur);
         }, 200);
@@ -1564,7 +2483,6 @@
         // Write-on line in drawer
         modal.querySelector('#drawer-writeon-input')?.addEventListener('input', (e) => {
             VocabularyNotes.set(entry.id, e.target.value);
-            // Also update main card input if present
             const cardInput = document.querySelector(`.vocab-writeon-input[data-writeon-id="${entry.id}"]`);
             if (cardInput) cardInput.value = e.target.value;
         });
@@ -1578,7 +2496,6 @@
                 modal.querySelectorAll('[data-set-status]').forEach(b => b.classList.remove('selected'));
                 btn.classList.add('selected');
 
-                // Update card status pill in main view
                 const cardPill = document.querySelector(`[data-status-btn="${entry.id}"]`);
                 if (cardPill) {
                     const info = getStatusLabel(newStatus);
@@ -1612,10 +2529,15 @@
                 return;
             }
 
-            // Escape closes detail drawer or modal
+            // Escape closes detail drawer, fullscreen spread, or modal
             if (e.key === 'Escape') {
                 closeDetailDrawer();
                 closeDataManagementModal();
+                const viewport = document.getElementById('vocab-spread-viewport');
+                if (viewport && viewport.classList.contains('fullscreen')) {
+                    viewport.classList.remove('fullscreen');
+                    document.body.style.overflow = '';
+                }
                 return;
             }
 
@@ -1628,6 +2550,23 @@
                 else if (e.key === 'ArrowLeft') document.getElementById('drawer-prev-btn')?.click();
                 else if (e.key === 'ArrowRight') document.getElementById('drawer-next-btn')?.click();
                 return;
+            }
+
+            // Zoom hotkeys in spread view
+            if (State.viewMode === 'spread') {
+                if (e.key === '+' || e.key === '=') {
+                    e.preventDefault();
+                    document.getElementById('spread-zoom-in-btn')?.click();
+                    return;
+                } else if (e.key === '-' || e.key === '_') {
+                    e.preventDefault();
+                    document.getElementById('spread-zoom-out-btn')?.click();
+                    return;
+                } else if (e.key === '0') {
+                    e.preventDefault();
+                    document.getElementById('spread-zoom-reset-btn')?.click();
+                    return;
+                }
             }
 
             // Left / Right navigates lessons
@@ -1652,6 +2591,7 @@
         State.activeLessonNum = num;
         State.activeTab = 'all';
         State.activeStatusFilter = 'all';
+        State.spreadModuleFilter = 'all';
         State.showPairingView = false;
         
         window.location.hash = `lesson-${num}`;
@@ -1833,7 +2773,7 @@
     }
 
     function setupMobileNavigation() {
-        const toggleBtn = document.getElementById('vocab-mobile-toggle');
+        const toggleBtn = document.getElementById('vocab-mobile-menu-btn');
         const sidebar = document.getElementById('vocab-sidebar');
         const backdrop = document.getElementById('vocab-sidebar-backdrop');
 
@@ -1867,8 +2807,8 @@
         }
 
         const prefs = VocabularyStorage.getPrefs();
-        State.viewMode = prefs.viewMode || 'grid';
-        State.spreadMode = prefs.spreadMode || 'teaching';
+        State.viewMode = prefs.viewMode || 'spread';
+        State.spreadPage = prefs.spreadPage || 'p1';
         VocabularyAudio.playbackSpeed = prefs.speed || 1.0;
 
         parseHashRoute();

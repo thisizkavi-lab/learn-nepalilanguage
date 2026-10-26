@@ -335,6 +335,12 @@ const VOCABULARY_DATA = {
       "mainCount": 59,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_01_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_01_p2.webp",
+        "printedPages": "10–11",
+        "pdfPages": "12–13"
+      },
       "modules": [
         {
           "id": "1.1",
@@ -1812,6 +1818,12 @@ const VOCABULARY_DATA = {
       "mainCount": 60,
       "practicalCount": 7,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_02_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_02_p2.webp",
+        "printedPages": "14–15",
+        "pdfPages": "16–17"
+      },
       "modules": [
         {
           "id": "2.1",
@@ -3253,6 +3265,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 9,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_03_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_03_p2.webp",
+        "printedPages": "18–19",
+        "pdfPages": "20–21"
+      },
       "modules": [
         {
           "id": "3.1",
@@ -4383,6 +4401,12 @@ const VOCABULARY_DATA = {
       "mainCount": 70,
       "practicalCount": 6,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_04_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_04_p2.webp",
+        "printedPages": "22–23",
+        "pdfPages": "24–25"
+      },
       "modules": [
         {
           "id": "4.1",
@@ -5793,6 +5817,12 @@ const VOCABULARY_DATA = {
       "mainCount": 48,
       "practicalCount": 8,
       "variantsCount": 4,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_05_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_05_p2.webp",
+        "printedPages": "26–27",
+        "pdfPages": "28–29"
+      },
       "modules": [
         {
           "id": "5.1",
@@ -6910,6 +6940,12 @@ const VOCABULARY_DATA = {
       "mainCount": 53,
       "practicalCount": 5,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_06_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_06_p2.webp",
+        "printedPages": "30–31",
+        "pdfPages": "32–33"
+      },
       "modules": [
         {
           "id": "6.1",
@@ -7994,6 +8030,12 @@ const VOCABULARY_DATA = {
       "mainCount": 45,
       "practicalCount": 4,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_07_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_07_p2.webp",
+        "printedPages": "34–35",
+        "pdfPages": "36–37"
+      },
       "modules": [
         {
           "id": "7.1",
@@ -8918,6 +8960,12 @@ const VOCABULARY_DATA = {
       "mainCount": 24,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_08_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_08_p2.webp",
+        "printedPages": "38–39",
+        "pdfPages": "40–41"
+      },
       "modules": [
         {
           "id": "8.1",
@@ -9504,6 +9552,12 @@ const VOCABULARY_DATA = {
       "mainCount": 53,
       "practicalCount": 5,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_09_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_09_p2.webp",
+        "printedPages": "42–43",
+        "pdfPages": "44–45"
+      },
       "modules": [
         {
           "id": "9.1",
@@ -10623,6 +10677,12 @@ const VOCABULARY_DATA = {
       "mainCount": 54,
       "practicalCount": 3,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_10_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_10_p2.webp",
+        "printedPages": "46–47",
+        "pdfPages": "48–49"
+      },
       "modules": [
         {
           "id": "10.1",
@@ -11677,6 +11737,12 @@ const VOCABULARY_DATA = {
       "mainCount": 59,
       "practicalCount": 7,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_11_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_11_p2.webp",
+        "printedPages": "50–51",
+        "pdfPages": "52–53"
+      },
       "modules": [
         {
           "id": "11.1",
@@ -12907,6 +12973,12 @@ const VOCABULARY_DATA = {
       "mainCount": 54,
       "practicalCount": 7,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_12_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_12_p2.webp",
+        "printedPages": "54–55",
+        "pdfPages": "56–57"
+      },
       "modules": [
         {
           "id": "12.1",
@@ -14053,6 +14125,12 @@ const VOCABULARY_DATA = {
       "mainCount": 48,
       "practicalCount": 4,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_13_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_13_p2.webp",
+        "printedPages": "58–59",
+        "pdfPages": "60–61"
+      },
       "modules": [
         {
           "id": "13.1",
@@ -15017,6 +15095,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_14_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_14_p2.webp",
+        "printedPages": "62–63",
+        "pdfPages": "64–65"
+      },
       "modules": [
         {
           "id": "14.1",
@@ -16203,6 +16287,12 @@ const VOCABULARY_DATA = {
       "mainCount": 56,
       "practicalCount": 3,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_15_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_15_p2.webp",
+        "printedPages": "66–67",
+        "pdfPages": "68–69"
+      },
       "modules": [
         {
           "id": "15.1",
@@ -17345,6 +17435,12 @@ const VOCABULARY_DATA = {
       "mainCount": 53,
       "practicalCount": 4,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_16_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_16_p2.webp",
+        "printedPages": "70–71",
+        "pdfPages": "72–73"
+      },
       "modules": [
         {
           "id": "16.1",
@@ -18426,6 +18522,12 @@ const VOCABULARY_DATA = {
       "mainCount": 55,
       "practicalCount": 4,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_17_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_17_p2.webp",
+        "printedPages": "74–75",
+        "pdfPages": "76–77"
+      },
       "modules": [
         {
           "id": "17.1",
@@ -19549,6 +19651,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 3,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_18_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_18_p2.webp",
+        "printedPages": "78–79",
+        "pdfPages": "80–81"
+      },
       "modules": [
         {
           "id": "18.1",
@@ -20549,6 +20657,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 1,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_19_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_19_p2.webp",
+        "printedPages": "82–83",
+        "pdfPages": "84–85"
+      },
       "modules": [
         {
           "id": "19.1",
@@ -21531,6 +21645,12 @@ const VOCABULARY_DATA = {
       "mainCount": 40,
       "practicalCount": 6,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_20_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_20_p2.webp",
+        "printedPages": "86–87",
+        "pdfPages": "88–89"
+      },
       "modules": [
         {
           "id": "20.1",
@@ -22407,6 +22527,12 @@ const VOCABULARY_DATA = {
       "mainCount": 24,
       "practicalCount": 10,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_21_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_21_p2.webp",
+        "printedPages": "90–91",
+        "pdfPages": "92–93"
+      },
       "modules": [
         {
           "id": "21.1",
@@ -23047,6 +23173,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 3,
       "variantsCount": 5,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_22_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_22_p2.webp",
+        "printedPages": "94–95",
+        "pdfPages": "96–97"
+      },
       "modules": [
         {
           "id": "22.1",
@@ -24130,6 +24262,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 5,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_23_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_23_p2.webp",
+        "printedPages": "98–99",
+        "pdfPages": "100–101"
+      },
       "modules": [
         {
           "id": "23.1",
@@ -25294,6 +25432,12 @@ const VOCABULARY_DATA = {
       "mainCount": 28,
       "practicalCount": 11,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_24_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_24_p2.webp",
+        "printedPages": "102–103",
+        "pdfPages": "104–105"
+      },
       "modules": [
         {
           "id": "24.1",
@@ -26038,6 +26182,12 @@ const VOCABULARY_DATA = {
       "mainCount": 21,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_25_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_25_p2.webp",
+        "printedPages": "106–107",
+        "pdfPages": "108–109"
+      },
       "modules": [
         {
           "id": "25.1",
@@ -26570,6 +26720,12 @@ const VOCABULARY_DATA = {
       "mainCount": 28,
       "practicalCount": 12,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_26_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_26_p2.webp",
+        "printedPages": "110–111",
+        "pdfPages": "112–113"
+      },
       "modules": [
         {
           "id": "26.1",
@@ -27345,6 +27501,12 @@ const VOCABULARY_DATA = {
       "mainCount": 38,
       "practicalCount": 9,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_27_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_27_p2.webp",
+        "printedPages": "114–115",
+        "pdfPages": "116–117"
+      },
       "modules": [
         {
           "id": "27.1",
@@ -28219,6 +28381,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 5,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_28_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_28_p2.webp",
+        "printedPages": "118–119",
+        "pdfPages": "120–121"
+      },
       "modules": [
         {
           "id": "28.1",
@@ -29300,6 +29468,12 @@ const VOCABULARY_DATA = {
       "mainCount": 47,
       "practicalCount": 6,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_29_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_29_p2.webp",
+        "printedPages": "122–123",
+        "pdfPages": "124–125"
+      },
       "modules": [
         {
           "id": "29.1",
@@ -30282,6 +30456,12 @@ const VOCABULARY_DATA = {
       "mainCount": 26,
       "practicalCount": 6,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_30_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_30_p2.webp",
+        "printedPages": "126–127",
+        "pdfPages": "128–129"
+      },
       "modules": [
         {
           "id": "30.1",
@@ -30913,6 +31093,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 2,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_31_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_31_p2.webp",
+        "printedPages": "130–131",
+        "pdfPages": "132–133"
+      },
       "modules": [
         {
           "id": "31.1",
@@ -31953,6 +32139,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 10,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_32_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_32_p2.webp",
+        "printedPages": "134–135",
+        "pdfPages": "136–137"
+      },
       "modules": [
         {
           "id": "32.1",
@@ -33187,6 +33379,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 8,
       "variantsCount": 5,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_33_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_33_p2.webp",
+        "printedPages": "138–139",
+        "pdfPages": "140–141"
+      },
       "modules": [
         {
           "id": "33.1",
@@ -34457,6 +34655,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 15,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_34_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_34_p2.webp",
+        "printedPages": "142–143",
+        "pdfPages": "144–145"
+      },
       "modules": [
         {
           "id": "34.1",
@@ -35717,6 +35921,12 @@ const VOCABULARY_DATA = {
       "mainCount": 40,
       "practicalCount": 9,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_35_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_35_p2.webp",
+        "printedPages": "146–147",
+        "pdfPages": "148–149"
+      },
       "modules": [
         {
           "id": "35.1",
@@ -36660,6 +36870,12 @@ const VOCABULARY_DATA = {
       "mainCount": 46,
       "practicalCount": 12,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_36_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_36_p2.webp",
+        "printedPages": "150–151",
+        "pdfPages": "152–153"
+      },
       "modules": [
         {
           "id": "36.1",
@@ -37732,6 +37948,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 9,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_37_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_37_p2.webp",
+        "printedPages": "154–155",
+        "pdfPages": "156–157"
+      },
       "modules": [
         {
           "id": "37.1",
@@ -38854,6 +39076,12 @@ const VOCABULARY_DATA = {
       "mainCount": 42,
       "practicalCount": 12,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_38_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_38_p2.webp",
+        "printedPages": "158–159",
+        "pdfPages": "160–161"
+      },
       "modules": [
         {
           "id": "38.1",
@@ -39854,6 +40082,12 @@ const VOCABULARY_DATA = {
       "mainCount": 22,
       "practicalCount": 13,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_39_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_39_p2.webp",
+        "printedPages": "162–163",
+        "pdfPages": "164–165"
+      },
       "modules": [
         {
           "id": "39.1",
@@ -40512,6 +40746,12 @@ const VOCABULARY_DATA = {
       "mainCount": 22,
       "practicalCount": 11,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_40_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_40_p2.webp",
+        "printedPages": "166–167",
+        "pdfPages": "168–169"
+      },
       "modules": [
         {
           "id": "40.1",
@@ -41134,6 +41374,12 @@ const VOCABULARY_DATA = {
       "mainCount": 20,
       "practicalCount": 5,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_41_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_41_p2.webp",
+        "printedPages": "170–171",
+        "pdfPages": "172–173"
+      },
       "modules": [
         {
           "id": "41.1",
@@ -41612,6 +41858,12 @@ const VOCABULARY_DATA = {
       "mainCount": 30,
       "practicalCount": 9,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_42_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_42_p2.webp",
+        "printedPages": "174–175",
+        "pdfPages": "176–177"
+      },
       "modules": [
         {
           "id": "42.1",
@@ -42369,6 +42621,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 3,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_43_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_43_p2.webp",
+        "printedPages": "178–179",
+        "pdfPages": "180–181"
+      },
       "modules": [
         {
           "id": "43.1",
@@ -43351,6 +43609,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 10,
       "variantsCount": 5,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_44_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_44_p2.webp",
+        "printedPages": "182–183",
+        "pdfPages": "184–185"
+      },
       "modules": [
         {
           "id": "44.1",
@@ -44570,6 +44834,12 @@ const VOCABULARY_DATA = {
       "mainCount": 53,
       "practicalCount": 6,
       "variantsCount": 9,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_45_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_45_p2.webp",
+        "printedPages": "186–187",
+        "pdfPages": "188–189"
+      },
       "modules": [
         {
           "id": "45.1",
@@ -45824,6 +46094,12 @@ const VOCABULARY_DATA = {
       "mainCount": 65,
       "practicalCount": 9,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_46_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_46_p2.webp",
+        "printedPages": "190–191",
+        "pdfPages": "192–193"
+      },
       "modules": [
         {
           "id": "46.1",
@@ -47217,6 +47493,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 11,
       "variantsCount": 5,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_47_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_47_p2.webp",
+        "printedPages": "194–195",
+        "pdfPages": "196–197"
+      },
       "modules": [
         {
           "id": "47.1",
@@ -48542,6 +48824,12 @@ const VOCABULARY_DATA = {
       "mainCount": 26,
       "practicalCount": 14,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_48_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_48_p2.webp",
+        "printedPages": "198–199",
+        "pdfPages": "200–201"
+      },
       "modules": [
         {
           "id": "48.1",
@@ -49290,6 +49578,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 10,
       "variantsCount": 4,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_49_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_49_p2.webp",
+        "printedPages": "202–203",
+        "pdfPages": "204–205"
+      },
       "modules": [
         {
           "id": "49.1",
@@ -50584,6 +50878,12 @@ const VOCABULARY_DATA = {
       "mainCount": 28,
       "practicalCount": 7,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_50_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_50_p2.webp",
+        "printedPages": "206–207",
+        "pdfPages": "208–209"
+      },
       "modules": [
         {
           "id": "50.1",
@@ -51256,6 +51556,12 @@ const VOCABULARY_DATA = {
       "mainCount": 57,
       "practicalCount": 9,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_51_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_51_p2.webp",
+        "printedPages": "210–211",
+        "pdfPages": "212–213"
+      },
       "modules": [
         {
           "id": "51.1",
@@ -52472,6 +52778,12 @@ const VOCABULARY_DATA = {
       "mainCount": 40,
       "practicalCount": 4,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_52_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_52_p2.webp",
+        "printedPages": "214–215",
+        "pdfPages": "216–217"
+      },
       "modules": [
         {
           "id": "52.1",
@@ -53292,6 +53604,12 @@ const VOCABULARY_DATA = {
       "mainCount": 19,
       "practicalCount": 9,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_53_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_53_p2.webp",
+        "printedPages": "218–219",
+        "pdfPages": "220–221"
+      },
       "modules": [
         {
           "id": "53.1",
@@ -53824,6 +54142,12 @@ const VOCABULARY_DATA = {
       "mainCount": 62,
       "practicalCount": 8,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_54_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_54_p2.webp",
+        "printedPages": "222–223",
+        "pdfPages": "224–225"
+      },
       "modules": [
         {
           "id": "54.1",
@@ -55132,6 +55456,12 @@ const VOCABULARY_DATA = {
       "mainCount": 47,
       "practicalCount": 8,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_55_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_55_p2.webp",
+        "printedPages": "226–227",
+        "pdfPages": "228–229"
+      },
       "modules": [
         {
           "id": "55.1",
@@ -56156,6 +56486,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_56_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_56_p2.webp",
+        "printedPages": "230–231",
+        "pdfPages": "232–233"
+      },
       "modules": [
         {
           "id": "56.1",
@@ -57216,6 +57552,12 @@ const VOCABULARY_DATA = {
       "mainCount": 39,
       "practicalCount": 5,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_57_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_57_p2.webp",
+        "printedPages": "234–235",
+        "pdfPages": "236–237"
+      },
       "modules": [
         {
           "id": "57.1",
@@ -58036,6 +58378,12 @@ const VOCABULARY_DATA = {
       "mainCount": 75,
       "practicalCount": 14,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_58_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_58_p2.webp",
+        "printedPages": "238–239",
+        "pdfPages": "240–241"
+      },
       "modules": [
         {
           "id": "58.1",
@@ -59693,6 +60041,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 11,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_59_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_59_p2.webp",
+        "printedPages": "242–243",
+        "pdfPages": "244–245"
+      },
       "modules": [
         {
           "id": "59.1",
@@ -60819,6 +61173,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 17,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_60_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_60_p2.webp",
+        "printedPages": "246–247",
+        "pdfPages": "248–249"
+      },
       "modules": [
         {
           "id": "60.1",
@@ -62089,6 +62449,12 @@ const VOCABULARY_DATA = {
       "mainCount": 42,
       "practicalCount": 10,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_61_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_61_p2.webp",
+        "printedPages": "250–251",
+        "pdfPages": "252–253"
+      },
       "modules": [
         {
           "id": "61.1",
@@ -63059,6 +63425,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 12,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_62_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_62_p2.webp",
+        "printedPages": "254–255",
+        "pdfPages": "256–257"
+      },
       "modules": [
         {
           "id": "62.1",
@@ -64221,6 +64593,12 @@ const VOCABULARY_DATA = {
       "mainCount": 46,
       "practicalCount": 9,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_63_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_63_p2.webp",
+        "printedPages": "258–259",
+        "pdfPages": "260–261"
+      },
       "modules": [
         {
           "id": "63.1",
@@ -65266,6 +65644,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 11,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_64_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_64_p2.webp",
+        "printedPages": "262–263",
+        "pdfPages": "264–265"
+      },
       "modules": [
         {
           "id": "64.1",
@@ -66406,6 +66790,12 @@ const VOCABULARY_DATA = {
       "mainCount": 53,
       "practicalCount": 7,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_65_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_65_p2.webp",
+        "printedPages": "266–267",
+        "pdfPages": "268–269"
+      },
       "modules": [
         {
           "id": "65.1",
@@ -67554,6 +67944,12 @@ const VOCABULARY_DATA = {
       "mainCount": 59,
       "practicalCount": 6,
       "variantsCount": 2,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_66_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_66_p2.webp",
+        "printedPages": "270–271",
+        "pdfPages": "272–273"
+      },
       "modules": [
         {
           "id": "66.1",
@@ -68793,6 +69189,12 @@ const VOCABULARY_DATA = {
       "mainCount": 22,
       "practicalCount": 16,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_67_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_67_p2.webp",
+        "printedPages": "274–275",
+        "pdfPages": "276–277"
+      },
       "modules": [
         {
           "id": "67.1",
@@ -69505,6 +69907,12 @@ const VOCABULARY_DATA = {
       "mainCount": 52,
       "practicalCount": 8,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_68_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_68_p2.webp",
+        "printedPages": "278–279",
+        "pdfPages": "280–281"
+      },
       "modules": [
         {
           "id": "68.1",
@@ -70633,6 +71041,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 11,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_69_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_69_p2.webp",
+        "printedPages": "282–283",
+        "pdfPages": "284–285"
+      },
       "modules": [
         {
           "id": "69.1",
@@ -71844,6 +72258,12 @@ const VOCABULARY_DATA = {
       "mainCount": 39,
       "practicalCount": 10,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_70_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_70_p2.webp",
+        "printedPages": "286–287",
+        "pdfPages": "288–289"
+      },
       "modules": [
         {
           "id": "70.1",
@@ -72768,6 +73188,12 @@ const VOCABULARY_DATA = {
       "mainCount": 47,
       "practicalCount": 8,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_71_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_71_p2.webp",
+        "printedPages": "290–291",
+        "pdfPages": "292–293"
+      },
       "modules": [
         {
           "id": "71.1",
@@ -73806,6 +74232,12 @@ const VOCABULARY_DATA = {
       "mainCount": 51,
       "practicalCount": 7,
       "variantsCount": 5,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_72_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_72_p2.webp",
+        "printedPages": "294–295",
+        "pdfPages": "296–297"
+      },
       "modules": [
         {
           "id": "72.1",
@@ -74944,6 +75376,12 @@ const VOCABULARY_DATA = {
       "mainCount": 41,
       "practicalCount": 16,
       "variantsCount": 1,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_73_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_73_p2.webp",
+        "printedPages": "298–299",
+        "pdfPages": "300–301"
+      },
       "modules": [
         {
           "id": "73.1",
@@ -76018,6 +76456,12 @@ const VOCABULARY_DATA = {
       "mainCount": 47,
       "practicalCount": 11,
       "variantsCount": 3,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_74_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_74_p2.webp",
+        "printedPages": "302–303",
+        "pdfPages": "304–305"
+      },
       "modules": [
         {
           "id": "74.1",
@@ -77130,6 +77574,12 @@ const VOCABULARY_DATA = {
       "mainCount": 20,
       "practicalCount": 15,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_75_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_75_p2.webp",
+        "printedPages": "306–307",
+        "pdfPages": "308–309"
+      },
       "modules": [
         {
           "id": "75.1",
@@ -77788,6 +78238,12 @@ const VOCABULARY_DATA = {
       "mainCount": 35,
       "practicalCount": 13,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_76_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_76_p2.webp",
+        "printedPages": "310–311",
+        "pdfPages": "312–313"
+      },
       "modules": [
         {
           "id": "76.1",
@@ -78686,6 +79142,12 @@ const VOCABULARY_DATA = {
       "mainCount": 22,
       "practicalCount": 14,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_77_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_77_p2.webp",
+        "printedPages": "314–315",
+        "pdfPages": "316–317"
+      },
       "modules": [
         {
           "id": "77.1",
@@ -79362,6 +79824,12 @@ const VOCABULARY_DATA = {
       "mainCount": 50,
       "practicalCount": 7,
       "variantsCount": 0,
+      "visualSpreads": {
+        "page1": "assets/visuals/spreads/lesson_78_p1.webp",
+        "page2": "assets/visuals/spreads/lesson_78_p2.webp",
+        "printedPages": "318–319",
+        "pdfPages": "320–321"
+      },
       "modules": [
         {
           "id": "78.1",

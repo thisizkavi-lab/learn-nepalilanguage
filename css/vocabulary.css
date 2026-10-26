@@ -1607,3 +1607,794 @@
         width: 100vw;
     }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   DK Visual Book Spread Viewer & Specialized Interactive Visual Modules
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. Visual Book Spread Viewer ── */
+.vocab-spread-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.vocab-spread-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.vocab-spread-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vocab-spread-toolbar-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-right: 6px;
+}
+
+.vocab-spread-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.vocab-spread-btn:hover {
+    border-color: var(--vocab-sage-primary);
+    background: var(--bg-surface-hover);
+    color: var(--vocab-sage-primary);
+}
+
+.vocab-spread-btn.active {
+    background: var(--vocab-sage-primary);
+    border-color: var(--vocab-sage-primary);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(61, 106, 84, 0.25);
+}
+
+.vocab-spread-viewport {
+    position: relative;
+    background: #1c1d21;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 520px;
+}
+
+.vocab-spread-viewport.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    border-radius: 0;
+    padding: 40px 20px;
+    background: rgba(15, 17, 21, 0.98);
+}
+
+.vocab-spread-fullscreen-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10001;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: none;
+}
+
+.vocab-spread-viewport.fullscreen .vocab-spread-fullscreen-close {
+    display: inline-flex;
+}
+
+.vocab-spread-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center center;
+}
+
+.vocab-spread-page-frame {
+    position: relative;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    transition: box-shadow 0.2s ease;
+}
+
+.vocab-spread-page-frame:hover {
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
+}
+
+.vocab-spread-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.vocab-spread-page-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* Companion Deck (Devanagari Sidekick) */
+.vocab-spread-companion {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+}
+
+.vocab-spread-companion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.vocab-companion-title-area h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vocab-companion-title-area p {
+    margin: 4px 0 0;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.vocab-companion-module-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.vocab-companion-tab-btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.vocab-companion-tab-btn:hover {
+    border-color: var(--vocab-sage-primary);
+    color: var(--text-main);
+}
+
+.vocab-companion-tab-btn.active {
+    background: var(--vocab-sage-light);
+    border-color: var(--vocab-sage-primary);
+    color: var(--vocab-sage-primary);
+}
+
+/* ── 2. Lesson 1: Interactive World Map & Flag Grid ── */
+.vocab-worldmap-wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.vocab-worldmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.vocab-worldmap-canvas {
+    position: relative;
+    background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 100%);
+    border-radius: 12px;
+    border: 1px solid #7dd3fc;
+    min-height: 440px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] .vocab-worldmap-canvas {
+    background: linear-gradient(180deg, #0c2135 0%, #071524 100%);
+    border-color: #1e3a5f;
+}
+
+.vocab-svg-map {
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    display: block;
+}
+
+.vocab-map-landmass {
+    fill: #f1f5f9;
+    stroke: #94a3b8;
+    stroke-width: 0.8;
+    transition: fill 0.2s ease;
+}
+
+[data-theme="dark"] .vocab-map-landmass {
+    fill: #1e293b;
+    stroke: #334155;
+}
+
+.vocab-map-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.vocab-map-pin:hover {
+    transform: translate(-50%, -55%) scale(1.15);
+    z-index: 20;
+}
+
+.vocab-map-pin-flag {
+    font-size: 1.35rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+    line-height: 1;
+}
+
+.vocab-map-pin-pill {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 2px 7px;
+    margin-top: 3px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #0f172a;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .vocab-map-pin-pill {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+}
+
+.vocab-map-pin-nepali {
+    font-size: 0.78rem;
+    color: var(--vocab-sage-primary);
+    font-weight: 700;
+}
+
+/* Flag & Leader Line Grid */
+.vocab-flags-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.vocab-flag-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.vocab-flag-card:hover {
+    border-color: var(--vocab-sage-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.vocab-flag-card-flag {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.vocab-flag-card-nepali {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.vocab-flag-card-eng {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+/* ── 3. Lesson 2: Structured Numbers & Ordinals (Image 2 Match) ── */
+.vocab-numbers-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
+}
+
+.vocab-numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.vocab-number-item {
+    background: var(--bg-surface);
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 135px;
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.vocab-number-item:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+    transform: translateY(-2px);
+}
+
+.vocab-number-header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+/* Big blue numeral matching Image 2 */
+.vocab-number-digit {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #1d4ed8;
+    line-height: 1;
+    font-family: var(--font-sans);
+}
+
+[data-theme="dark"] .vocab-number-digit {
+    color: #60a5fa;
+}
+
+.vocab-number-dev-digit {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+[data-theme="dark"] .vocab-number-dev-digit {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.vocab-number-nepali-word {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.vocab-number-eng-word {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+/* Write-on dotted line underneath */
+.vocab-number-writeon {
+    border-top: 1.5px dashed var(--border-color);
+    padding-top: 6px;
+    margin-top: auto;
+}
+
+.vocab-number-writeon-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 0.75rem;
+    color: var(--text-main);
+    outline: none;
+}
+
+.vocab-number-writeon-input:focus {
+    border-bottom: 1.5px solid var(--vocab-sage-primary);
+}
+
+/* Ordinal Numbers Strip */
+.vocab-ordinals-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.vocab-ordinal-card {
+    background: var(--bg-surface);
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.15s ease;
+}
+
+.vocab-ordinal-card:hover {
+    border-color: #d97706;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12);
+}
+
+.vocab-ordinal-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    background: rgba(217, 119, 6, 0.1);
+    color: #b45309;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1.15rem;
+    width: fit-content;
+    margin-bottom: 6px;
+}
+
+[data-theme="dark"] .vocab-ordinal-badge {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fcd34d;
+}
+
+/* ── 4. Lesson 3: Calendar & Seasons ── */
+.vocab-calendar-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.vocab-calendar-month-tile {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease;
+}
+
+.vocab-calendar-month-tile:hover {
+    transform: translateY(-2px);
+    border-color: var(--vocab-sage-primary);
+}
+
+.vocab-month-banner {
+    background: var(--vocab-sage-primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.vocab-month-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vocab-month-nepali {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.vocab-month-english {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.vocab-seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.vocab-season-card {
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    transition: transform 0.15s ease;
+}
+
+.vocab-season-card:hover {
+    transform: translateY(-2px);
+}
+
+.vocab-season-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    flex-shrink: 0;
+}
+
+.season-spring { background: rgba(34, 197, 94, 0.15); }
+.season-summer { background: rgba(234, 179, 8, 0.15); }
+.season-autumn { background: rgba(249, 115, 22, 0.15); }
+.season-winter { background: rgba(59, 130, 246, 0.15); }
+
+/* ── 5. Lesson 4: Daily Routines Timeline ── */
+.vocab-timeline-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.vocab-routine-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    padding-left: 28px;
+    margin-top: 16px;
+}
+
+.vocab-routine-track::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--vocab-sage-border);
+}
+
+.vocab-routine-step {
+    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.15s ease;
+}
+
+.vocab-routine-step::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--vocab-sage-primary);
+    border: 2px solid var(--card-bg);
+}
+
+.vocab-routine-step:hover {
+    border-color: var(--vocab-sage-primary);
+    transform: translateX(4px);
+}
+
+/* ── 6. Lesson 5: Colors Palette & Materials ── */
+.vocab-color-palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.vocab-color-tile {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.15s ease;
+}
+
+.vocab-color-tile:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.vocab-color-tile-preview {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.vocab-color-tile-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+/* ── 7. Lesson 14: Anatomical Body Diagram ── */
+.vocab-body-diagram-wrap {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .vocab-body-diagram-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vocab-body-silhouette-box {
+    position: relative;
+    background: var(--bg-surface);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vocab-body-silhouette-svg {
+    max-height: 420px;
+    width: auto;
+}
+
+.vocab-body-parts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+/* ── 8. Lesson 20: Family Tree ── */
+.vocab-family-tree-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.vocab-family-generation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.vocab-family-card {
+    background: var(--bg-surface);
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px 16px;
+    text-align: center;
+    min-width: 140px;
+    transition: all 0.15s ease;
+}
+
+.vocab-family-card:hover {
+    border-color: var(--vocab-sage-primary);
+    transform: translateY(-2px);
+}
+
+.vocab-family-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.vocab-family-card-nepali {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.vocab-family-card-eng {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+

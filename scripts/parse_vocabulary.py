@@ -629,6 +629,12 @@ for l_text in lessons_split:
         "mainCount": sum(1 for e in lesson_entries if e["sourceSection"] == "main"),
         "practicalCount": sum(1 for e in lesson_entries if e["sourceSection"] == "practical"),
         "variantsCount": len(lesson_variants),
+        "visualSpreads": {
+            "page1": f"assets/visuals/spreads/lesson_{lesson_num:02d}_p1.webp",
+            "page2": f"assets/visuals/spreads/lesson_{lesson_num:02d}_p2.webp",
+            "printedPages": f"{(lesson_num - 1) * 4 + 10}–{(lesson_num - 1) * 4 + 11}",
+            "pdfPages": f"{(lesson_num - 1) * 4 + 12}–{(lesson_num - 1) * 4 + 13}"
+        },
         "modules": sorted_modules,
         "recognitionVariants": lesson_variants,
         "countryNationalityPairs": COUNTRY_NATIONALITY_PAIRS if lesson_num == 1 else None,
