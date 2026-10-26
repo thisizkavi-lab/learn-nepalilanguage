@@ -1,83 +1,161 @@
 /* Nepali Writing Practice Styles */
 
+:root {
+    --subnav-height: 54px;
+    --total-header-height: calc(var(--topbar-height) + var(--subnav-height));
+}
+
 /* Page Layout */
 .practice-layout {
     display: flex;
-    min-height: 100vh;
+    margin-top: var(--total-header-height);
+    min-height: calc(100vh - var(--total-header-height));
     background: var(--bg-color);
     color: var(--text-main);
     font-family: var(--font-sans);
 }
 
-/* Header */
-.practice-topbar {
+/* Topbar section badge */
+.topbar-section-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 14px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   WRITING SUB-NAVIGATION BAR (1. Practice Writing  |  2. More Writing)
+   ══════════════════════════════════════════════════════════════ */
+.writing-subnav {
     position: fixed;
-    top: 0;
+    top: var(--topbar-height);
     left: 0;
     right: 0;
-    height: var(--topbar-height);
-    background: var(--topbar-bg);
+    height: var(--subnav-height);
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 90;
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.writing-subnav-inner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
-    z-index: 100;
-    color: white;
-}
-
-.practice-topbar-left {
-    display: flex;
-    align-items: center;
     gap: 16px;
 }
 
-.practice-topbar-left a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 0.875rem;
-    transition: color 0.2s;
+.writing-mode-switcher {
+    display: inline-flex;
+    background: var(--bg-surface-hover);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 4px;
 }
 
-.practice-topbar-left a:hover {
-    color: white;
+.writing-mode-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    text-align: left;
 }
 
-.practice-topbar h1 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin: 0;
-    color: white;
+.writing-mode-tab:hover {
+    color: var(--text-main);
+    background: rgba(0, 0, 0, 0.04);
 }
 
-.practice-topbar-right {
+[data-theme="dark"] .writing-mode-tab:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.writing-mode-tab.active {
+    background: var(--bg-color);
+    color: var(--link-color);
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.mode-tab-num {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    color: inherit;
+    font-size: 0.6875rem;
+    font-weight: 700;
 }
 
-.print-btn {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: white;
-    padding: 6px 16px;
+.writing-mode-tab.active .mode-tab-num {
+    background: var(--link-color);
+    color: #ffffff;
+}
+
+.mode-tab-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.mode-tab-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+.mode-tab-sub {
+    font-size: 0.6875rem;
+    opacity: 0.75;
+}
+
+.writing-subnav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subnav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-surface-hover);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.8125rem;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: background 0.2s;
+    transition: all 0.15s ease;
 }
 
-.print-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+.subnav-btn:hover {
+    background: var(--border-color);
 }
 
 /* Sidebar */
 .practice-sidebar {
     position: fixed;
-    top: var(--topbar-height);
+    top: var(--total-header-height);
     right: 0;
     bottom: 0;
     width: 320px;
@@ -456,152 +534,91 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   CANONICAL WRITING PROMPTS (नेपाली लेखन विषयहरू) STYLES
+   2. MORE WRITING (नेपाली विस्तृत लेखन विषयहरू) STYLES
    Format: First Nepali (Devanagari), Then English
    ══════════════════════════════════════════════════════════════ */
 
-/* Topbar Center & Mode Navigation */
-.practice-topbar-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.practice-mode-nav {
-    display: inline-flex;
-    background: rgba(0, 0, 0, 0.22);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
-    padding: 3px;
-    gap: 4px;
-}
-
-.mode-tab {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    background: transparent;
-    border: none;
-    border-radius: 6px;
-    color: rgba(255, 255, 255, 0.82);
-    font-family: inherit;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.mode-tab:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.mode-tab.active {
-    background: #ffffff;
-    color: #1a73e8;
-    font-weight: 600;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
-
-[data-theme="dark"] .mode-tab.active {
-    background: #2b2d31;
-    color: #ffffff;
-}
-
-.mode-tab-np {
-    font-weight: 600;
-}
-
-.mode-tab-en {
-    font-size: 0.75rem;
-    opacity: 0.85;
-}
-
 /* Prompts Section Main Layout */
 .prompts-layout {
-    margin-top: var(--topbar-height);
-    min-height: calc(100vh - var(--topbar-height));
+    margin-top: var(--total-header-height);
+    min-height: calc(100vh - var(--total-header-height));
     background: var(--bg-color);
     color: var(--text-main);
-    padding: 24px 24px 80px 24px;
+    padding: 20px 24px 80px 24px;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Hero Section */
-.prompts-hero {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 28px 32px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 8px var(--shadow-color);
-}
-
-.prompts-hero-inner {
+/* Compact Header (Replaces Bulky Hero) */
+.prompts-compact-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
     flex-wrap: wrap;
 }
 
-.prompts-hero-text {
+.prompts-header-main {
     flex: 1;
-    min-width: 280px;
+    min-width: 260px;
 }
 
-.prompts-title-badge {
+.prompts-section-badge {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     background: rgba(26, 115, 232, 0.1);
     color: var(--link-color);
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
 }
 
-[data-theme="dark"] .prompts-title-badge {
+[data-theme="dark"] .prompts-section-badge {
     background: rgba(88, 101, 242, 0.15);
     color: #8591f8;
 }
 
-.prompts-title-nep {
-    font-size: 1.625rem;
-    font-weight: 700;
+.prompts-header-title {
     margin: 0 0 4px 0;
+    font-size: 1.3125rem;
+    font-weight: 700;
     color: var(--text-main);
-    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.prompts-title-nep {
+    font-weight: 700;
+}
+
+.prompts-title-sep {
+    color: var(--text-muted);
+    font-weight: 400;
 }
 
 .prompts-title-eng {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin: 0 0 12px 0;
     color: var(--text-muted);
 }
 
-.prompts-subtitle {
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin: 0 0 4px 0;
-    color: var(--text-content);
-}
-
-.prompts-subtitle-eng {
-    font-size: 0.875rem;
-    line-height: 1.5;
+.prompts-header-desc {
     margin: 0;
-    color: var(--text-muted);
+    font-size: 0.875rem;
+    color: var(--text-content);
+    line-height: 1.4;
 }
 
-.prompts-hero-actions {
+.prompts-header-actions {
     display: flex;
     align-items: center;
 }
@@ -609,29 +626,24 @@
 .prompts-btn-random {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: linear-gradient(135deg, #1a73e8, #1557b0);
+    gap: 8px;
+    background: var(--link-color);
     color: #ffffff;
     border: none;
-    border-radius: 10px;
-    padding: 12px 20px;
+    border-radius: 8px;
+    padding: 8px 14px;
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(26, 115, 232, 0.3);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-[data-theme="dark"] .prompts-btn-random {
-    background: linear-gradient(135deg, #5865f2, #4752c4);
-    box-shadow: 0 3px 10px rgba(88, 101, 242, 0.3);
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.25);
+    transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
 .prompts-btn-random:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(26, 115, 232, 0.4);
+    transform: translateY(-1px);
+    opacity: 0.92;
 }
 
 .prompts-btn-random .random-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1;
 }
 
@@ -642,36 +654,35 @@
 }
 
 .random-text-nep {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
 .random-text-eng {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     opacity: 0.9;
 }
 
-/* Controls & Search Bar */
-.prompts-controls-bar {
+/* Filter & Search Bar */
+.prompts-filter-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
 }
 
-.prompts-search-wrap {
+.prompts-search-container {
     position: relative;
     flex: 1;
-    min-width: 260px;
-    max-width: 600px;
+    min-width: 240px;
+    max-width: 480px;
 }
 
-.prompts-search-wrap .search-icon {
+.prompts-search-container .search-icon {
     position: absolute;
-    left: 14px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
@@ -680,20 +691,20 @@
 
 .prompts-search-input {
     width: 100%;
-    padding: 10px 36px 10px 42px;
+    padding: 8px 32px 8px 36px;
     border: 1px solid var(--border-color);
     background: var(--bg-surface);
     color: var(--text-main);
     border-radius: 8px;
     font-family: inherit;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .prompts-search-input:focus {
     border-color: var(--link-color);
-    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.15);
 }
 
 .prompts-clear-btn {
@@ -705,8 +716,8 @@
     border: none;
     color: var(--text-muted);
     cursor: pointer;
-    font-size: 1rem;
-    padding: 4px;
+    font-size: 0.875rem;
+    padding: 2px;
     line-height: 1;
 }
 
@@ -714,35 +725,65 @@
     color: var(--text-main);
 }
 
-.prompts-stats-bar {
+.prompts-dropdown-container {
+    min-width: 220px;
+    max-width: 320px;
+}
+
+.prompts-category-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.8125rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.prompts-count-indicator {
+    margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.875rem;
+    gap: 6px;
+    font-size: 0.8125rem;
     color: var(--text-muted);
 }
 
-.prompts-counter-badge {
+.count-badge {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
-    padding: 4px 10px;
+    padding: 3px 8px;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-main);
 }
 
-/* Category Filter Pills */
-.prompts-categories-wrapper {
-    margin-bottom: 28px;
+/* Single-row Horizontally Scrollable Category Track */
+.prompts-categories-track-wrap {
+    margin-bottom: 20px;
     overflow-x: auto;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
 }
 
-.prompts-categories-scroll {
+.prompts-categories-track-wrap::-webkit-scrollbar {
+    height: 4px;
+}
+
+.prompts-categories-track-wrap::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.prompts-categories-track {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
+    white-space: nowrap;
+    width: max-content;
 }
 
 .category-pill {
@@ -752,12 +793,12 @@
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 6px 14px;
+    padding: 5px 12px;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.15s ease;
     color: var(--text-main);
-    text-align: left;
+    flex-shrink: 0;
 }
 
 .category-pill:hover {
@@ -769,16 +810,16 @@
     background: var(--link-color);
     border-color: var(--link-color);
     color: #ffffff;
-    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.25);
+    box-shadow: 0 2px 4px rgba(26, 115, 232, 0.2);
 }
 
 .category-pill .pill-nep {
     font-weight: 600;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
 }
 
 .category-pill .pill-eng {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     opacity: 0.85;
 }
 
@@ -786,9 +827,8 @@
     background: rgba(0, 0, 0, 0.08);
     font-size: 0.6875rem;
     font-weight: 700;
-    padding: 2px 6px;
+    padding: 1px 5px;
     border-radius: 10px;
-    margin-left: 2px;
 }
 
 .category-pill.active .pill-count {
@@ -1348,10 +1388,11 @@ body.modal-open {
    PRINT ADJUSTMENTS FOR PROMPTS
    ══════════════════════════════════════════════════════════════ */
 @media print {
-    .practice-mode-nav,
-    .prompts-hero-actions,
-    .prompts-controls-bar,
-    .prompts-categories-wrapper,
+    .topbar,
+    .writing-subnav,
+    .prompts-header-actions,
+    .prompts-filter-bar,
+    .prompts-categories-track-wrap,
     .prompt-card-actions,
     .devanagari-helpers-wrap,
     .drawer-footer,
@@ -1402,20 +1443,29 @@ body.modal-open {
    RESPONSIVE ADJUSTMENTS
    ══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-    .practice-topbar {
-        padding: 0 12px;
-    }
-
-    .practice-topbar-left a:not([href="index.html"]) {
+    .topbar-section-badge {
         display: none;
     }
 
-    .prompts-hero {
-        padding: 20px;
+    .writing-subnav-inner {
+        padding: 0 12px;
+    }
+
+    .mode-tab-sub {
+        display: none;
+    }
+
+    .prompts-layout {
+        padding: 16px 14px 60px 14px;
     }
 
     .prompts-grid {
         grid-template-columns: 1fr;
+    }
+
+    .prompts-dropdown-container {
+        flex: 1;
+        max-width: 100%;
     }
 
     .drawer-header {
@@ -1432,15 +1482,20 @@ body.modal-open {
 }
 
 @media (max-width: 600px) {
-    .mode-tab-en {
+    .writing-mode-tab {
+        padding: 5px 8px;
+        gap: 6px;
+    }
+
+    .mode-tab-title {
+        font-size: 0.75rem;
+    }
+
+    .subnav-btn span:not(.random-dice) {
         display: none;
     }
 
-    .practice-topbar h1 {
-        display: none;
-    }
-
-    .prompts-layout {
-        padding: 16px 12px 60px 12px;
+    .subnav-btn {
+        padding: 6px 10px;
     }
 }

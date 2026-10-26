@@ -87,9 +87,10 @@
     // Handle initial and hashchange routing
     function handleHashRouting() {
         const hash = window.location.hash || '';
-        if (hash.startsWith('#prompts')) {
+        if (hash.startsWith('#prompts') || hash.startsWith('#more')) {
             switchMode('prompts');
-            const params = new URLSearchParams(hash.replace(/^#prompts\??/, ''));
+            const cleanHash = hash.replace(/^#(prompts|more)\??/, '');
+            const params = new URLSearchParams(cleanHash);
             const catId = params.get('cat');
             const promptId = params.get('id');
 
@@ -107,20 +108,20 @@
         }
     }
 
-    // Mode Switching: Characters vs Prompts
+    // Mode Switching: 1. Practice Writing vs 2. More Writing
     function setupModeSwitching() {
-        const tabChars = document.getElementById('tab-btn-characters');
-        const tabPrompts = document.getElementById('tab-btn-prompts');
+        const tabPractice = document.getElementById('tab-btn-practice') || document.getElementById('tab-btn-characters');
+        const tabMore = document.getElementById('tab-btn-more') || document.getElementById('tab-btn-prompts');
 
-        if (tabChars) {
-            tabChars.addEventListener('click', () => {
-                window.location.hash = '#characters';
+        if (tabPractice) {
+            tabPractice.addEventListener('click', () => {
+                window.location.hash = '#practice';
                 switchMode('characters');
             });
         }
-        if (tabPrompts) {
-            tabPrompts.addEventListener('click', () => {
-                window.location.hash = '#prompts';
+        if (tabMore) {
+            tabMore.addEventListener('click', () => {
+                window.location.hash = '#more';
                 switchMode('prompts');
             });
         }
@@ -130,80 +131,124 @@
         state.activeMode = mode;
         const secChars = document.getElementById('section-characters');
         const secPrompts = document.getElementById('section-prompts');
-        const tabChars = document.getElementById('tab-btn-characters');
-        const tabPrompts = document.getElementById('tab-btn-prompts');
+        const tabPractice = document.getElementById('tab-btn-practice') || document.getElementById('tab-btn-characters');
+        const tabMore = document.getElementById('tab-btn-more') || document.getElementById('tab-btn-prompts');
         const printBtn = document.getElementById('print-btn');
+        const printBtnText = document.getElementById('print-btn-text');
+        const subnavRandomBtn = document.getElementById('subnav-random-btn');
         const sidebarToggle = document.getElementById('sidebar-toggle');
 
         if (mode === 'prompts') {
             if (secChars) secChars.style.display = 'none';
             if (secPrompts) secPrompts.style.display = 'block';
-            if (tabChars) tabChars.classList.remove('active');
-            if (tabPrompts) tabPrompts.classList.add('active');
+            if (tabPractice) {
+                tabPractice.classList.remove('active');
+                tabPractice.setAttribute('aria-selected', 'false');
+            }
+            if (tabMore) {
+                tabMore.classList.add('active');
+                tabMore.setAttribute('aria-selected', 'true');
+            }
             if (sidebarToggle) sidebarToggle.style.display = 'none';
+            if (subnavRandomBtn) subnavRandomBtn.style.display = 'inline-flex';
+            if (printBtnText) printBtnText.textContent = 'Print Prompts';
             if (printBtn) {
                 printBtn.setAttribute('title', 'लेखन विषयहरू प्रिन्ट गर्नुहोस् (Print Writing Prompts)');
             }
         } else {
             if (secChars) secChars.style.display = 'flex';
             if (secPrompts) secPrompts.style.display = 'none';
-            if (tabChars) tabChars.classList.add('active');
-            if (tabPrompts) tabPrompts.classList.remove('active');
+            if (tabPractice) {
+                tabPractice.classList.add('active');
+                tabPractice.setAttribute('aria-selected', 'true');
+            }
+            if (tabMore) {
+                tabMore.classList.remove('active');
+                tabMore.setAttribute('aria-selected', 'false');
+            }
+            if (subnavRandomBtn) subnavRandomBtn.style.display = 'none';
+            if (printBtnText) printBtnText.textContent = 'Print Worksheet';
             if (sidebarToggle && window.innerWidth <= 900) {
-                sidebarToggle.style.display = 'flex';
+                sidebarToggle.style.display = 'inline-flex';
             }
             if (printBtn) {
-                printBtn.setAttribute('title', 'अभ्यास पाना प्रिन्ट गर्नुहोस् (Print Worksheet)');
+                printBtn.setAttribute('title', 'अभ्यास पाना प्रिन्ट गर्नुहोस् (Print Practice Worksheet)');
             }
         }
     }
 
-    // Render Category Pills
+    // Render Category Pills & Dropdown
     function renderCategoryFilters() {
         const container = document.getElementById('prompts-category-filters');
+        const dropdown = document.getElementById('prompts-category-dropdown');
         const data = getPromptsData();
-        if (!container || !data) return;
+        if (!data) return;
 
-        let html = '';
-
-        // All pill
-        html += `
-            <button type="button" class="category-pill active" data-category="all">
-                <span class="pill-nep">सबै विषयहरू</span>
-                <span class="pill-eng">All Prompts</span>
-                <span class="pill-count">${data.meta.totalPrompts}</span>
-            </button>
-        `;
-
-        data.categories.forEach(cat => {
-            html += `
-                <button type="button" class="category-pill" data-category="${cat.id}">
-                    <span class="pill-nep">${cat.id}. ${cat.titleNep}</span>
-                    <span class="pill-eng">${cat.titleEng}</span>
-                    <span class="pill-count">${cat.prompts.length}</span>
+        // Render Pills
+        if (container) {
+            let html = `
+                <button type="button" class="category-pill active" data-category="all">
+                    <span class="pill-nep">सबै विषयहरू</span>
+                    <span class="pill-eng">All</span>
+                    <span class="pill-count">${data.meta.totalPrompts}</span>
                 </button>
             `;
-        });
 
-        container.innerHTML = html;
+            data.categories.forEach(cat => {
+                html += `
+                    <button type="button" class="category-pill" data-category="${cat.id}">
+                        <span class="pill-nep">${cat.id}. ${cat.titleNep}</span>
+                        <span class="pill-eng">${cat.titleEng}</span>
+                        <span class="pill-count">${cat.prompts.length}</span>
+                    </button>
+                `;
+            });
 
-        // Event delegation for pills
-        container.addEventListener('click', (e) => {
-            const pill = e.target.closest('.category-pill');
-            if (!pill) return;
-            const catId = pill.dataset.category;
-            setCategory(catId);
-        });
+            container.innerHTML = html;
+
+            container.addEventListener('click', (e) => {
+                const pill = e.target.closest('.category-pill');
+                if (!pill) return;
+                const catId = pill.dataset.category;
+                setCategory(catId);
+            });
+        }
+
+        // Render Dropdown options
+        if (dropdown) {
+            let optHtml = `<option value="all">सबै विषयहरू (All Topics • ${data.meta.totalPrompts})</option>`;
+            data.categories.forEach(cat => {
+                optHtml += `<option value="${cat.id}">${cat.id}. ${cat.titleNep} (${cat.titleEng} • ${cat.prompts.length})</option>`;
+            });
+            dropdown.innerHTML = optHtml;
+
+            dropdown.addEventListener('change', (e) => {
+                setCategory(e.target.value);
+            });
+        }
     }
 
     function setCategory(catId) {
         state.activeCategory = catId;
+
+        // Sync pills
         const container = document.getElementById('prompts-category-filters');
         if (container) {
             container.querySelectorAll('.category-pill').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.category === String(catId));
+                const isActive = btn.dataset.category === String(catId);
+                btn.classList.toggle('active', isActive);
+                if (isActive) {
+                    btn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+                }
             });
         }
+
+        // Sync dropdown
+        const dropdown = document.getElementById('prompts-category-dropdown');
+        if (dropdown && dropdown.value !== String(catId)) {
+            dropdown.value = String(catId);
+        }
+
         renderPrompts();
     }
 
@@ -344,6 +389,7 @@
         const searchInput = document.getElementById('prompts-search-input');
         const clearSearchBtn = document.getElementById('prompts-clear-search');
         const randomBtn = document.getElementById('prompts-random-btn');
+        const subnavRandomBtn = document.getElementById('subnav-random-btn');
 
         if (searchInput) {
             searchInput.addEventListener('input', (e) => {
@@ -369,6 +415,11 @@
 
         if (randomBtn) {
             randomBtn.addEventListener('click', () => {
+                pickRandomPrompt();
+            });
+        }
+        if (subnavRandomBtn) {
+            subnavRandomBtn.addEventListener('click', () => {
                 pickRandomPrompt();
             });
         }
