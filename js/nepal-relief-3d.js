@@ -16,6 +16,8 @@ const WORLD_W = 10.0;
 const HALF_W = WORLD_W * 0.5;
 const METER_TO_WORLD = 1.0 / 81680.0; // 1 world unit ≈ 81.68 km true ground scale
 const PLINTH_HEIGHT = 0.044;
+const MIN_ZOOM_RADIUS = 0.88; // Deep valley & summit-amphitheater closeup without clipping border wall
+const MAX_ZOOM_RADIUS = 15.5;
 
 const ZONE_META = {
     1: { name: 'Terai Plains', eco: 'Terai', ecoId: 1, share: '17%', color: '#2f9e66' },
@@ -1138,9 +1140,15 @@ class NepalReliefInstance {
         this.goalSpherical = { radius: 10.7, polar: 0.78, azimuth: -0.14 };
 
         this.isDragging = false;
+        this.isPinching = false;
+        this.safariGestureActive = false;
+        this.gestureLastScale = 1.0;
+        this.gestureLastRotation = 0;
+        this.touchOrbitActive = false;
+        this.lastTouchAngle = null;
+        this.pinchClearTimer = null;
         this.pointerDownPos = { x: 0, y: 0 };
         this.lastPointer = { x: 0, y: 0 };
-        this.activePointers = new Map();
         this.lastPinchDist = 0;
         this.lastPinchMid = null;
         this.rafId = null;
@@ -1159,7 +1167,7 @@ class NepalReliefInstance {
                 <div class="nr-readout" id="nr-readout">
                     <strong>60 m → 8,848.86 m</strong>
                     <span class="nr-readout-sep">·</span>
-                    <span>Drag sculpture to tilt &amp; orbit · Scroll on map to zoom</span>
+                    <span>Pinch to zoom in &amp; out · Drag sculpture to tilt &amp; orbit</span>
                 </div>
                 <div class="nr-quick-tools">
                     <button type="button" class="nr-icon-btn" data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
@@ -1259,7 +1267,7 @@ class NepalReliefInstance {
         const { W, H, worldD, demBytes, metaBytes, topGeometry, skirtGeometry } = this.data;
 
         this.scene = new THREE.Scene();
-        this.camera = new THREE.PerspectiveCamera(34, 1.8, 0.08, 60.0);
+        this.camera = new THREE.PerspectiveCamera(34, 1.8, 0.025, 65.0);
 
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvasEl,
@@ -1472,53 +1480,205 @@ class NepalReliefInstance {
             this.io.observe(this.root);
         }
 
-        // Wheel zoom ONLY when pointer is over the 3D sculpted landmass of Nepal (or actively dragging)!
-        // Whitespace around Nepal scrolls the webpage naturally — zero separate-box feeling!
+        const markPinchingBriefly = () => {
+            this.isPinching = true;
+            if (this.pinchClearTimer) clearTimeout(this.pinchClearTimer);
+            this.pinchClearTimer = setTimeout(() => {
+                this.isPinching = false;
+            }, 140);
+        };
+
+        // Trackpad two-finger pinch (ctrlKey/metaKey) works ANYWHERE inside the 3D stage (including over pins)
+        // with high finger-locked sensitivity; regular scroll wheel zooms only over Nepal's landmass.
         this.onWheel = (e) => {
-            const hit = this.raycastRelief(e.clientX, e.clientY);
+            const pinBtn = e.target?.closest?.('.nr-pin');
+            const pinFocus = pinBtn ? this.getPinFocusPoint(pinBtn.dataset.id) : undefined;
+            const isTrackpadPinch = e.ctrlKey || e.metaKey;
+            if (isTrackpadPinch) {
+                e.preventDefault();
+                if (this.safariGestureActive) return; // Handled smoothly via Safari gesturechange below
+                markPinchingBriefly();
+                const zoomFactor = Math.exp(e.deltaY * 0.0125);
+                this.applyZoomStep(zoomFactor, e.clientX, e.clientY, pinFocus);
+                return;
+            }
+
+            const hit = pinFocus || this.raycastRelief(e.clientX, e.clientY);
             if (!hit && !this.isDragging) return;
 
             e.preventDefault();
-            const zoomFactor = Math.exp(e.deltaY * 0.0013);
-            const prevR = this.goalSpherical.radius;
-            const nextR = Math.max(1.35, Math.min(14.2, prevR * zoomFactor));
-            this.goalSpherical.radius = nextR;
+            const zoomFactor = Math.exp(e.deltaY * 0.0018);
+            this.applyZoomStep(zoomFactor, e.clientX, e.clientY, hit);
+        };
+        this.viewportEl.addEventListener('wheel', this.onWheel, { passive: false });
 
-            // Zoom smoothly toward cursor point on Nepal when zooming in!
-            if (hit && nextR < prevR) {
-                const pull = Math.min(0.28, (1.0 - nextR / prevR) * 1.35);
-                this.goalTarget.x = THREE.MathUtils.clamp(
-                    THREE.MathUtils.lerp(this.goalTarget.x, hit.x, pull),
-                    -HALF_W * 0.92,
-                    HALF_W * 0.92
-                );
-                this.goalTarget.z = THREE.MathUtils.clamp(
-                    THREE.MathUtils.lerp(this.goalTarget.z, hit.z, pull),
-                    -this.data.halfD * 0.92,
-                    this.data.halfD * 0.92
-                );
-                this.goalTarget.y = THREE.MathUtils.lerp(this.goalTarget.y, hit.y * 0.65, pull);
+        // Safari (macOS trackpad & iOS) native two-finger pinch + two-finger twist
+        this.onGestureStart = (e) => {
+            e.preventDefault();
+            this.safariGestureActive = true;
+            this.isPinching = true;
+            this.gestureLastScale = e.scale || 1.0;
+            this.gestureLastRotation = e.rotation || 0;
+        };
+
+        this.onGestureChange = (e) => {
+            e.preventDefault();
+            const curScale = Math.max(0.05, e.scale || 1.0);
+            const rawStep = this.gestureLastScale / curScale;
+            this.gestureLastScale = curScale;
+            const factor = Math.pow(rawStep, 1.25);
+            this.applyZoomStep(factor, e.clientX, e.clientY);
+
+            if (typeof e.rotation === 'number') {
+                const dRot = e.rotation - this.gestureLastRotation;
+                this.gestureLastRotation = e.rotation;
+                if (Math.abs(dRot) < 45) {
+                    this.goalSpherical.azimuth += THREE.MathUtils.degToRad(dRot) * 0.85;
+                }
             }
-            this.clearActiveTourHighlight();
             this.requestFrame();
         };
-        this.canvasEl.addEventListener('wheel', this.onWheel, { passive: false });
 
-        // Pointer orbit / pan / hover telemetry
-        this.onPointerDown = (e) => {
-            if (e.pointerType === 'touch') {
-                const hit = this.raycastRelief(e.clientX, e.clientY);
-                if (!hit && this.activePointers.size === 0) return;
-                this.activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-                if (this.activePointers.size === 2) {
-                    const pts = Array.from(this.activePointers.values());
-                    this.lastPinchDist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
-                    this.lastPinchMid = { x: (pts[0].x + pts[1].x) * 0.5, y: (pts[0].y + pts[1].y) * 0.5 };
-                }
-            } else {
-                const hit = this.raycastRelief(e.clientX, e.clientY);
-                if (!hit && e.button === 0) return;
+        this.onGestureEnd = (e) => {
+            e.preventDefault();
+            this.safariGestureActive = false;
+            markPinchingBriefly();
+        };
+
+        this.viewportEl.addEventListener('gesturestart', this.onGestureStart, { passive: false });
+        this.viewportEl.addEventListener('gesturechange', this.onGestureChange, { passive: false });
+        this.viewportEl.addEventListener('gestureend', this.onGestureEnd, { passive: false });
+
+        // Dedicated multi-touch handler for phones/tablets:
+        // - 2 fingers anywhere on stage: generous pinch-zoom toward finger midpoint + 2-finger pan + 2-finger twist
+        // - 1 finger on 3D sculpture: tilt & orbit
+        // - 1 finger on empty page margin: scrolls webpage naturally
+        this.onTouchStart = (e) => {
+            if (e.touches.length >= 2) {
+                e.preventDefault();
+                this.isPinching = true;
+                this.touchOrbitActive = false;
+                const t0 = e.touches[0];
+                const t1 = e.touches[1];
+                this.lastPinchDist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+                this.lastPinchMid = {
+                    x: (t0.clientX + t1.clientX) * 0.5,
+                    y: (t0.clientY + t1.clientY) * 0.5
+                };
+                this.lastTouchAngle = Math.atan2(t1.clientY - t0.clientY, t1.clientX - t0.clientX);
+                return;
             }
+
+            if (e.touches.length === 1) {
+                const t0 = e.touches[0];
+                // Allow tapping landmark pins normally without hijacking click
+                if (t0.target && t0.target.closest && t0.target.closest('.nr-pin, .nr-placard')) {
+                    this.touchOrbitActive = false;
+                    return;
+                }
+                const hit = this.raycastRelief(t0.clientX, t0.clientY);
+                if (!hit) {
+                    this.touchOrbitActive = false;
+                    return;
+                }
+                this.touchOrbitActive = true;
+                this.isDragging = true;
+                this.pointerDownPos = { x: t0.clientX, y: t0.clientY };
+                this.lastPointer = { x: t0.clientX, y: t0.clientY };
+            }
+        };
+
+        this.onTouchMove = (e) => {
+            if (e.touches.length >= 2) {
+                e.preventDefault();
+                this.isPinching = true;
+                const t0 = e.touches[0];
+                const t1 = e.touches[1];
+                const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+                const mid = {
+                    x: (t0.clientX + t1.clientX) * 0.5,
+                    y: (t0.clientY + t1.clientY) * 0.5
+                };
+                const angle = Math.atan2(t1.clientY - t0.clientY, t1.clientX - t0.clientX);
+
+                if (this.lastPinchDist > 6) {
+                    const rawScale = this.lastPinchDist / Math.max(6, dist);
+                    const factor = Math.pow(rawScale, 1.28);
+                    this.applyZoomStep(factor, mid.x, mid.y);
+                }
+                if (this.lastPinchMid) {
+                    this.panByPixels(mid.x - this.lastPinchMid.x, mid.y - this.lastPinchMid.y);
+                }
+                if (this.lastTouchAngle !== null) {
+                    let dAngle = angle - this.lastTouchAngle;
+                    if (dAngle > Math.PI) dAngle -= Math.PI * 2;
+                    if (dAngle < -Math.PI) dAngle += Math.PI * 2;
+                    if (Math.abs(dAngle) < 0.5) {
+                        this.goalSpherical.azimuth += dAngle * 0.85;
+                    }
+                }
+
+                this.lastPinchDist = dist;
+                this.lastPinchMid = mid;
+                this.lastTouchAngle = angle;
+                this.clearActiveTourHighlight();
+                this.requestFrame();
+                return;
+            }
+
+            if (e.touches.length === 1 && this.touchOrbitActive) {
+                e.preventDefault();
+                const t0 = e.touches[0];
+                const dx = t0.clientX - this.lastPointer.x;
+                const dy = t0.clientY - this.lastPointer.y;
+                this.lastPointer = { x: t0.clientX, y: t0.clientY };
+
+                this.goalSpherical.azimuth -= dx * 0.0072;
+                this.goalSpherical.polar = THREE.MathUtils.clamp(
+                    this.goalSpherical.polar - dy * 0.0064,
+                    0.16,
+                    1.32
+                );
+                this.clearActiveTourHighlight();
+                this.requestFrame();
+            }
+        };
+
+        this.onTouchEnd = (e) => {
+            if (e.touches.length < 2) {
+                this.lastPinchDist = 0;
+                this.lastPinchMid = null;
+                this.lastTouchAngle = null;
+                if (this.isPinching) markPinchingBriefly();
+            }
+            if (e.touches.length === 0) {
+                if (this.touchOrbitActive && e.changedTouches.length > 0) {
+                    const t0 = e.changedTouches[0];
+                    const moved = Math.hypot(t0.clientX - this.pointerDownPos.x, t0.clientY - this.pointerDownPos.y);
+                    if (moved < 6) {
+                        const hit = this.raycastRelief(t0.clientX, t0.clientY);
+                        if (hit) this.updateTelemetry(hit);
+                    }
+                }
+                this.touchOrbitActive = false;
+                this.isDragging = false;
+            } else if (e.touches.length === 1) {
+                // Smoothly hand off remaining finger so lifting one finger after a pinch never jumps
+                this.lastPointer = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                this.touchOrbitActive = false;
+            }
+        };
+
+        this.viewportEl.addEventListener('touchstart', this.onTouchStart, { passive: false });
+        this.viewportEl.addEventListener('touchmove', this.onTouchMove, { passive: false });
+        this.viewportEl.addEventListener('touchend', this.onTouchEnd);
+        this.viewportEl.addEventListener('touchcancel', this.onTouchEnd);
+
+        // Mouse / Stylus pointer orbit, pan & hover telemetry
+        this.onPointerDown = (e) => {
+            if (e.pointerType === 'touch') return;
+            const hit = this.raycastRelief(e.clientX, e.clientY);
+            if (!hit && e.button === 0) return;
 
             this.isDragging = true;
             this.dragButton = e.button;
@@ -1530,27 +1690,7 @@ class NepalReliefInstance {
         };
 
         this.onPointerMove = (e) => {
-            if (this.activePointers.has(e.pointerId)) {
-                this.activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-            }
-
-            if (this.activePointers.size === 2) {
-                const pts = Array.from(this.activePointers.values());
-                const dist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
-                const mid = { x: (pts[0].x + pts[1].x) * 0.5, y: (pts[0].y + pts[1].y) * 0.5 };
-                if (this.lastPinchDist > 8) {
-                    const scale = this.lastPinchDist / Math.max(8, dist);
-                    this.goalSpherical.radius = THREE.MathUtils.clamp(this.goalSpherical.radius * scale, 1.35, 14.2);
-                }
-                if (this.lastPinchMid) {
-                    this.panByPixels(mid.x - this.lastPinchMid.x, mid.y - this.lastPinchMid.y);
-                }
-                this.lastPinchDist = dist;
-                this.lastPinchMid = mid;
-                this.clearActiveTourHighlight();
-                this.requestFrame();
-                return;
-            }
+            if (e.pointerType === 'touch') return;
 
             if (this.isDragging) {
                 const dx = e.clientX - this.lastPointer.x;
@@ -1564,7 +1704,7 @@ class NepalReliefInstance {
                     this.goalSpherical.polar = THREE.MathUtils.clamp(
                         this.goalSpherical.polar - dy * 0.0058,
                         0.16, // nearly straight overhead map
-                        1.30  // low dramatic 15° horizon angle
+                        1.32  // low dramatic horizon angle
                     );
                 }
                 this.clearActiveTourHighlight();
@@ -1588,18 +1728,13 @@ class NepalReliefInstance {
         };
 
         this.onPointerUp = (e) => {
-            this.activePointers.delete(e.pointerId);
-            if (this.activePointers.size < 2) {
-                this.lastPinchDist = 0;
-                this.lastPinchMid = null;
-            }
+            if (e.pointerType === 'touch') return;
 
             if (this.isDragging) {
                 const moved = Math.hypot(e.clientX - this.pointerDownPos.x, e.clientY - this.pointerDownPos.y);
                 this.isDragging = false;
                 this.viewportEl.classList.remove('nr-dragging');
 
-                // Double-click or clean click on terrain centers gently if desired, or updates telemetry
                 if (moved < 4) {
                     const hit = this.raycastRelief(e.clientX, e.clientY);
                     if (hit) this.updateTelemetry(hit);
@@ -1610,8 +1745,8 @@ class NepalReliefInstance {
         this.onDoubleClick = (e) => {
             const hit = this.raycastRelief(e.clientX, e.clientY);
             if (!hit) return;
-            this.goalTarget.set(hit.x, hit.y * 0.65, hit.z);
-            this.goalSpherical.radius = Math.max(1.55, this.goalSpherical.radius * 0.62);
+            this.goalTarget.set(hit.x, hit.y * 0.72, hit.z);
+            this.goalSpherical.radius = Math.max(MIN_ZOOM_RADIUS, this.goalSpherical.radius * 0.56);
             this.clearActiveTourHighlight();
             this.requestFrame();
         };
@@ -1619,8 +1754,8 @@ class NepalReliefInstance {
         this.canvasEl.addEventListener('pointerdown', this.onPointerDown);
         window.addEventListener('pointermove', this.onPointerMove);
         window.addEventListener('pointerup', this.onPointerUp);
-        this.canvasEl.addEventListener('dblclick', this.onDoubleClick);
-        this.canvasEl.addEventListener('contextmenu', (e) => e.preventDefault());
+        this.viewportEl.addEventListener('dblclick', this.onDoubleClick);
+        this.viewportEl.addEventListener('contextmenu', (e) => e.preventDefault());
 
         // UI Control Buttons
         this.root.querySelectorAll('[data-mode]').forEach(btn => {
@@ -1655,11 +1790,10 @@ class NepalReliefInstance {
             btn.addEventListener('click', () => {
                 const act = btn.dataset.action;
                 if (act === 'zoom-in') {
-                    this.goalSpherical.radius = Math.max(1.35, this.goalSpherical.radius * 0.74);
+                    this.goalSpherical.radius = Math.max(MIN_ZOOM_RADIUS, this.goalSpherical.radius * 0.68);
                     this.clearActiveTourHighlight();
                 } else if (act === 'zoom-out') {
-                    this.goalSpherical.radius = Math.min(14.2, this.goalSpherical.radius * 1.32);
-                    this.clearActiveTourHighlight();
+                    this.applyZoomStep(1.38);
                 } else if (act === 'labels') {
                     this.showLabels = !this.showLabels;
                     btn.setAttribute('aria-pressed', String(this.showLabels));
@@ -1680,6 +1814,116 @@ class NepalReliefInstance {
             this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
             this.requestFrame();
         });
+    }
+
+    getPinFocusPoint(landmarkId) {
+        if (!landmarkId) return undefined;
+        const item = this.pinItems.find(p => p.lm.id === landmarkId);
+        if (!item) return undefined;
+        return {
+            x: item.wx,
+            y: item.elev * METER_TO_WORLD * this.currentExag + PLINTH_HEIGHT,
+            z: item.wz
+        };
+    }
+
+    /**
+     * Snap any (x, z) point that falls outside Nepal's clipped border smoothly inward
+     * onto the nearest sculpted terrain inside Nepal so deep zoom never flies into empty air.
+     */
+    clampWorldPointInsideNepal(wx, wz, minSdfPx = 7.0) {
+        let u = THREE.MathUtils.clamp(wx / WORLD_W + 0.5, 0.02, 0.98);
+        let v = THREE.MathUtils.clamp(wz / this.data.worldD + 0.5, 0.02, 0.98);
+        const du = 2.5 / this.data.W;
+        const dv = 2.5 / this.data.H;
+
+        for (let iter = 0; iter < 10; iter++) {
+            const s = this.sampleSdfAtUV(u, v);
+            if (s >= minSdfPx) break;
+            const gx = this.sampleSdfAtUV(Math.min(0.99, u + du), v) - this.sampleSdfAtUV(Math.max(0.01, u - du), v);
+            const gz = this.sampleSdfAtUV(u, Math.min(0.99, v + dv)) - this.sampleSdfAtUV(u, Math.max(0.01, v - dv));
+            const len = Math.hypot(gx, gz);
+            if (len < 1e-4) {
+                u = THREE.MathUtils.lerp(u, 0.54, 0.25);
+                v = THREE.MathUtils.lerp(v, 0.54, 0.25);
+            } else {
+                const stepPx = Math.min(18.0, (minSdfPx + 0.4 - s) * 1.25);
+                u = THREE.MathUtils.clamp(u + (gx / len) * (stepPx / this.data.W), 0.02, 0.98);
+                v = THREE.MathUtils.clamp(v + (gz / len) * (stepPx / this.data.H), 0.02, 0.98);
+            }
+        }
+
+        const elev = this.sampleElevAtUV(u, v);
+        return {
+            x: (u - 0.5) * WORLD_W,
+            y: elev * METER_TO_WORLD * this.currentExag + PLINTH_HEIGHT,
+            z: (v - 0.5) * this.data.worldD
+        };
+    }
+
+    /**
+     * Unified pinch / wheel zoom step:
+     * - Zooms deeply in (down to MIN_ZOOM_RADIUS = 0.62) anchored toward the cursor / two-finger midpoint
+     * - Guarantees the focal target always stays inside Nepal's 3D landmass (never empty clipped space)
+     * - Smoothly re-centers Nepal onto the page when pinching all the way back out
+     */
+    applyZoomStep(factor, clientX, clientY, precomputedHit = undefined) {
+        if (!Number.isFinite(factor) || factor <= 0) return;
+        const prevR = this.goalSpherical.radius;
+        const nextR = THREE.MathUtils.clamp(prevR * factor, MIN_ZOOM_RADIUS, MAX_ZOOM_RADIUS);
+        this.goalSpherical.radius = nextR;
+
+        if (nextR < prevR && typeof clientX === 'number' && typeof clientY === 'number') {
+            let focus = precomputedHit !== undefined ? precomputedHit : this.raycastRelief(clientX, clientY);
+
+            if (!focus) {
+                const elAtPoint = document.elementFromPoint(clientX, clientY);
+                const pinBtn = elAtPoint?.closest?.('.nr-pin');
+                if (pinBtn) {
+                    focus = this.getPinFocusPoint(pinBtn.dataset.id);
+                }
+            }
+
+            // Fallback to plinth ground plane clamped inside Nepal if fingers pinch near border/sky
+            if (!focus) {
+                const rect = this.canvasEl.getBoundingClientRect();
+                if (rect.width > 0 && rect.height > 0) {
+                    const ndcX = ((clientX - rect.left) / rect.width) * 2.0 - 1.0;
+                    const ndcY = -(((clientY - rect.top) / rect.height) * 2.0 - 1.0);
+                    const ro = this.camera.position.clone();
+                    const rd = new THREE.Vector3(ndcX, ndcY, 0.5).unproject(this.camera).sub(ro).normalize();
+                    if (Math.abs(rd.y) > 1e-4) {
+                        const t = (PLINTH_HEIGHT - ro.y) / rd.y;
+                        if (t > 0 && t < 50) {
+                            focus = this.clampWorldPointInsideNepal(ro.x + rd.x * t, ro.z + rd.z * t);
+                        }
+                    }
+                }
+            } else {
+                const safe = this.clampWorldPointInsideNepal(focus.x, focus.z);
+                focus = { x: safe.x, y: Math.max(focus.y, safe.y), z: safe.z };
+            }
+
+            if (focus) {
+                const pull = Math.min(0.42, (1.0 - nextR / prevR) * 1.15);
+                const nx = THREE.MathUtils.lerp(this.goalTarget.x, focus.x, pull);
+                const nz = THREE.MathUtils.lerp(this.goalTarget.z, focus.z, pull);
+                const clampedGoal = this.clampWorldPointInsideNepal(nx, nz);
+                this.goalTarget.x = clampedGoal.x;
+                this.goalTarget.z = clampedGoal.z;
+                this.goalTarget.y = THREE.MathUtils.lerp(this.goalTarget.y, focus.y * 0.72, pull);
+            }
+        } else if (nextR > prevR && nextR > 6.0) {
+            // Smoothly re-center the sculpture onto the page as the user pinches back out to full view
+            const overviewR = this.computeOverviewRadius();
+            const recenterT = THREE.MathUtils.clamp((nextR - prevR) / Math.max(0.6, overviewR - prevR + 0.6), 0.0, 0.55);
+            this.goalTarget.x = THREE.MathUtils.lerp(this.goalTarget.x, 0.44, recenterT);
+            this.goalTarget.y = THREE.MathUtils.lerp(this.goalTarget.y, 0.14, recenterT);
+            this.goalTarget.z = THREE.MathUtils.lerp(this.goalTarget.z, 0.22, recenterT);
+        }
+
+        this.clearActiveTourHighlight();
+        this.requestFrame();
     }
 
     panByPixels(dx, dy) {
@@ -1813,7 +2057,7 @@ class NepalReliefInstance {
             this.readoutEl.innerHTML = `
                 <strong>60 m → 8,848.86 m</strong>
                 <span class="nr-readout-sep">·</span>
-                <span>Drag sculpture to tilt &amp; orbit · Scroll on map to zoom</span>
+                <span>Pinch to zoom in &amp; out · Drag sculpture to tilt &amp; orbit</span>
             `;
             return;
         }
@@ -1965,10 +2209,12 @@ class NepalReliefInstance {
         this.rafId = null;
         if (this.disposed || !this.visible) return;
 
-        const damp = 0.14;
+        // Instant finger-locked response during active pinch/drag; silky cinematic glide for tour flights
+        const camDamp = this.isPinching ? 0.45 : (this.isDragging ? 0.30 : 0.14);
+        const fxDamp = 0.14;
         let moving = false;
 
-        const stepScalar = (cur, goal, eps = 1e-4) => {
+        const stepScalar = (cur, goal, damp, eps = 1e-4) => {
             const diff = goal - cur;
             if (Math.abs(diff) > eps) {
                 moving = true;
@@ -1977,16 +2223,16 @@ class NepalReliefInstance {
             return goal;
         };
 
-        this.spherical.radius = stepScalar(this.spherical.radius, this.goalSpherical.radius, 5e-4);
-        this.spherical.polar = stepScalar(this.spherical.polar, this.goalSpherical.polar, 3e-4);
-        this.spherical.azimuth = stepScalar(this.spherical.azimuth, this.goalSpherical.azimuth, 3e-4);
+        this.spherical.radius = stepScalar(this.spherical.radius, this.goalSpherical.radius, camDamp, 4e-4);
+        this.spherical.polar = stepScalar(this.spherical.polar, this.goalSpherical.polar, camDamp, 3e-4);
+        this.spherical.azimuth = stepScalar(this.spherical.azimuth, this.goalSpherical.azimuth, camDamp, 3e-4);
 
-        this.target.x = stepScalar(this.target.x, this.goalTarget.x, 3e-4);
-        this.target.y = stepScalar(this.target.y, this.goalTarget.y, 3e-4);
-        this.target.z = stepScalar(this.target.z, this.goalTarget.z, 3e-4);
+        this.target.x = stepScalar(this.target.x, this.goalTarget.x, camDamp, 3e-4);
+        this.target.y = stepScalar(this.target.y, this.goalTarget.y, camDamp, 3e-4);
+        this.target.z = stepScalar(this.target.z, this.goalTarget.z, camDamp, 3e-4);
 
-        this.currentExag = stepScalar(this.currentExag, this.targetExag, 2e-3);
-        this.currentMeridian = stepScalar(this.currentMeridian, this.targetMeridian, 3e-3);
+        this.currentExag = stepScalar(this.currentExag, this.targetExag, fxDamp, 2e-3);
+        this.currentMeridian = stepScalar(this.currentMeridian, this.targetMeridian, fxDamp, 3e-3);
 
         this.terrainMat.uniforms.uExaggeration.value = this.currentExag;
         this.terrainMat.uniforms.uShowMeridian.value = this.currentMeridian;
@@ -2006,6 +2252,7 @@ class NepalReliefInstance {
         if (this.disposed) return;
         this.disposed = true;
         if (this.rafId !== null) window.cancelAnimationFrame(this.rafId);
+        if (this.pinchClearTimer) clearTimeout(this.pinchClearTimer);
         window.removeEventListener('resize', this.onResize);
         window.removeEventListener('pointermove', this.onPointerMove);
         window.removeEventListener('pointerup', this.onPointerUp);

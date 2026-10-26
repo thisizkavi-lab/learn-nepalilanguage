@@ -241,6 +241,7 @@ html[data-theme="dark"] .nepal-relief-stage {
     padding: 0;
     cursor: pointer;
     pointer-events: auto;
+    touch-action: pan-y;
     display: flex;
     flex-direction: column;
     align-items: center;
