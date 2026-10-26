@@ -1155,28 +1155,53 @@ body,
     }
 }
 
-/* Short History — commissioned teaching illustrations */
+/* Short History — editorial illustrations & archival photography */
 .history-illustration {
-    margin: 1.4rem auto 2.1rem;
-    width: min(100%, 640px);
+    margin: 1.25rem auto 1.85rem;
+    max-width: 440px;
+    width: 100%;
     text-align: center;
 }
 .history-illustration img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    max-height: 340px;
+    width: auto;
     height: auto;
+    margin: 0 auto;
     border-radius: 8px;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid var(--border-color);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    object-fit: contain;
 }
 .history-illustration figcaption {
-    max-width: 560px;
-    margin: 0.6rem auto 0;
-    font-size: 0.79rem;
-    line-height: 1.5;
+    max-width: 420px;
+    margin: 0.55rem auto 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
     color: var(--text-muted);
+    font-style: italic;
+}
+[data-theme="dark"] .history-illustration img {
+    background: #1e293b;
+    border-color: #334155;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    filter: brightness(0.92) contrast(1.04);
+}
+[data-theme="dark"] .history-illustration figcaption {
+    color: #94a3b8;
 }
 @media (max-width: 600px) {
-    .history-illustration { margin: 1rem auto 1.6rem; }
-    .history-illustration img { border-radius: 6px; }
+    .history-illustration {
+        margin: 1rem auto 1.5rem;
+        max-width: 100%;
+    }
+    .history-illustration img {
+        max-height: 280px;
+        border-radius: 6px;
+    }
+    .history-illustration figcaption {
+        font-size: 0.76rem;
+    }
 }

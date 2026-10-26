@@ -63,13 +63,13 @@ const courseData = [
                             <h2>History — From Land to Nation</h2>
                             <p>Fast forward to prehistoric times. Humans lived in the hills and valleys that would become Nepal. Archaeological tools show early settlements long before written history.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/prehistoric_village_by_the_mountain_river.webp" loading="lazy" decoding="async" width="720" height="720" alt="An artistic reconstruction of early human communities in Nepal’s hills and valleys.">
+                                <img src="assets/history/prehistoric_village_by_the_mountain_river.webp" loading="lazy" decoding="async" alt="An artistic reconstruction of early human communities in Nepal’s hills and valleys.">
                                 <figcaption>Early life in the region that became Nepal — an artistic reconstruction.</figcaption>
                             </figure>
                             <p>And then comes the myth.</p>
                             <p>The Kathmandu Valley was once a giant lake. According to legend, Manjushri cut open the hills to drain it and make the land habitable. Geology says the valley really was an ancient lake basin that naturally drained over time.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/manjushri_drains_the_kathmandu_valley_lake.webp" loading="lazy" decoding="async" width="720" height="720" alt="A mythological illustration of Manjushri opening the valley and draining the ancient lake.">
+                                <img src="assets/history/manjushri_drains_the_kathmandu_valley_lake.webp" loading="lazy" decoding="async" alt="A mythological illustration of Manjushri opening the valley and draining the ancient lake.">
                                 <figcaption>Manjushri and the valley lake — a legend, not a documented historical event.</figcaption>
                             </figure>
                             <p>Myth and science overlap here.</p>
@@ -80,7 +80,7 @@ const courseData = [
                             <p>Over centuries, different groups migrated into the region — Indo-Aryan Khas groups in the hills, Tibeto-Burman communities across mountains and valleys.</p>
                             <p>The Licchavis (around 4th–9th century CE) established organized rule in the Kathmandu Valley. They left inscriptions, trade networks, temples. Early statecraft began here.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/ancient_kathmandu_market_square.webp" loading="lazy" decoding="async" width="720" height="720" alt="An imagined ancient Kathmandu Valley marketplace during the Licchavi era, with traders and carved inscriptions.">
+                                <img src="assets/history/ancient_kathmandu_market_square.webp" loading="lazy" decoding="async" alt="An imagined ancient Kathmandu Valley marketplace during the Licchavi era, with traders and carved inscriptions.">
                                 <figcaption>An imagined Licchavi-era marketplace; the visual details are illustrative.</figcaption>
                             </figure>
                             <p>After them came the Malla period (c. 1200–1768).</p>
@@ -92,7 +92,7 @@ const courseData = [
                             </ul>
                             <p>They competed constantly — politically, economically, culturally. They built extraordinary temples and palaces that still define the valley today. But they were divided.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/malla_era_kathmandu_courtyard_festival.webp" loading="lazy" decoding="async" width="720" height="720" alt="An imagined Malla-era Kathmandu courtyard, with temple architecture, performers, and artisans.">
+                                <img src="assets/history/malla_era_kathmandu_courtyard_festival.webp" loading="lazy" decoding="async" alt="An imagined Malla-era Kathmandu courtyard, with temple architecture, performers, and artisans.">
                                 <figcaption>Malla-era cultural life — an artistic reconstruction.</figcaption>
                             </figure>
                             <p>Outside the valley, dozens of small kingdoms ruled their own territories.</p>
@@ -105,7 +105,7 @@ const courseData = [
                             <p>King of the small hill state of Gorkha.</p>
                             <p>He saw the wealthy but divided valley kingdoms — and moved strategically. Through siege, diplomacy, blockades, and force, he conquered the Kathmandu Valley by 1769.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/prithvi_narayan_shah_overlooks_kathmandu_valley.webp" loading="lazy" decoding="async" width="720" height="720" alt="A symbolic illustration of Prithvi Narayan Shah and Gorkhali soldiers overlooking the Kathmandu Valley during unification.">
+                                <img src="assets/history/prithvi_narayan_shah_overlooks_kathmandu_valley.webp" loading="lazy" decoding="async" alt="A symbolic illustration of Prithvi Narayan Shah and Gorkhali soldiers overlooking the Kathmandu Valley during unification.">
                                 <figcaption>The Gorkha unification campaign — a symbolic reconstruction.</figcaption>
                             </figure>
                             <p>Modern Nepal begins here.</p>
@@ -119,6 +119,10 @@ const courseData = [
                             <p>Then came 1846.</p>
                             <p>The Kot Massacre.</p>
                             <p>Jung Bahadur Rana eliminated rivals and established hereditary Rana prime ministers. The Shah kings remained, but only as ceremonial figures.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/jung_bahadur_rana.webp" loading="lazy" decoding="async" alt="Prime Minister Jung Bahadur Rana, founder of the Rana dynasty.">
+                                <figcaption>Prime Minister Jung Bahadur Rana, who consolidated power after the 1846 Kot Massacre to begin 104 years of Rana rule.</figcaption>
+                            </figure>
                             <p>For 104 years (1846–1951), the Rana regime ruled Nepal as an autocratic oligarchy. The country was largely isolated. Education and political participation were limited.</p>
                             <p>But Nepal maintained independence — partly by cooperating militarily with the British.</p>
                             
@@ -127,12 +131,20 @@ const courseData = [
                             <h3>Monarchy vs Democracy</h3>
                             <p>In 1951, King Tribhuvan aligned with political forces to end Rana rule. The monarchy regained authority. Democratic experiments followed — unstable and short-lived.</p>
                             <p>In 1960, King Mahendra dismissed the elected government and introduced the Panchayat system — a partyless political structure where the king held ultimate power.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/king_mahendra.webp" loading="lazy" decoding="async" alt="King Mahendra of Nepal, architect of the Panchayat system.">
+                                <figcaption>King Mahendra of Nepal, who introduced the partyless Panchayat system in 1960.</figcaption>
+                            </figure>
                             <p>National identity was centralized. Diversity was downplayed. Political dissent was suppressed.</p>
                             
                             <hr class="section-divider">
                             
                             <h3>1990 and the Civil War</h3>
                             <p>In 1990, a mass movement forced constitutional monarchy and multiparty democracy.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/jana_andolan_1990.webp" loading="lazy" decoding="async" alt="The 1990 People’s Movement in Kathmandu for multiparty democracy.">
+                                <figcaption>The 1990 People’s Movement (Jana Andolan) in Kathmandu demanding multiparty democracy. Photo: Min Ratna Bajracharya.</figcaption>
+                            </figure>
                             <p>But corruption, inequality, and rural neglect created anger.</p>
                             <p>In 1996, Maoist insurgents launched a “People’s War.” The conflict lasted ten years. Over 16,000 people died. The state, the rebels, and civilians all paid the cost.</p>
                             <p>Then came 2001.</p>
@@ -146,7 +158,7 @@ const courseData = [
                             <p>In 2006, another people’s movement forced the king to give up direct rule.</p>
                             <p>In 2008, Nepal abolished the monarchy and became a <strong>Federal Democratic Republic</strong>.</p>
                             <figure class="history-illustration">
-                                <img src="assets/history/nepal_united_for_democracy.webp" loading="lazy" decoding="async" width="720" height="720" alt="A conceptual illustration of Nepalese citizens, representation, democracy, and the 2008 republican transition.">
+                                <img src="assets/history/nepal_united_for_democracy.webp" loading="lazy" decoding="async" alt="A conceptual illustration of Nepalese citizens, representation, democracy, and the 2008 republican transition.">
                                 <figcaption>Nepal’s republican transition — a symbolic illustration, not a depiction of one event.</figcaption>
                             </figure>
                             <p>The Maoists entered mainstream politics. A new constitution was eventually adopted in 2015.</p>
@@ -157,6 +169,10 @@ const courseData = [
                             <p>Nepal is federal. Multilingual. Multiethnic. Politically active.</p>
                             <p>It struggles with corruption, instability, and economic migration.</p>
                             <p>It also has a young population, growing civic awareness, and ongoing debates about identity and governance.</p>
+                            <figure class="history-illustration">
+                                <img src="assets/history/modern_kathmandu_street.webp" loading="lazy" decoding="async" alt="Vibrant street life and youth in modern Kathmandu.">
+                                <figcaption>Everyday street life in modern Kathmandu — a young, dynamic, and evolving society.</figcaption>
+                            </figure>
                             <p>It’s unfinished.</p>
                         `
                     },
