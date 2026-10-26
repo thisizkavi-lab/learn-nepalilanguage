@@ -708,3 +708,42 @@
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     }
 }
+
+/* ─── Graded Stories: use the existing reading view and interactions ─── */
+.story-reading {padding-top:10px}
+.story-reading .reading-title {margin-bottom:14px;padding-bottom:12px}
+.story-meta {display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 0 24px}
+.story-tag {font-size:.76rem;background:var(--bg-surface);color:var(--text-main);border:1px solid var(--border-color);padding:3px 10px;border-radius:99px}
+.story-origin {font-size:.73rem;color:var(--text-muted)}
+.story-illustration {margin:0 0 28px}
+.story-illustration img {display:block;width:100%;height:auto;max-height:380px;object-fit:cover;border-radius:8px;border:1px solid var(--border-color)}
+.story-illustration figcaption {text-align:center;color:var(--text-muted);font-size:.75rem;margin-top:7px}
+.story-reading .reading-text {font-size:1.5rem;line-height:2.2}
+.story-reading .reading-text p {margin:0 0 24px}
+.story-reading .reading-text .speak-btn {margin-left:8px;vertical-align:middle;opacity:.65}
+.story-subhead {margin:35px 0 15px;font-size:1rem;color:var(--text-main);font-weight:650}
+.story-glossary {display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.story-gloss-item {display:flex;flex-direction:column;background:var(--bg-surface);border:1px solid var(--border-color);padding:10px 12px;border-radius:7px}
+.story-gloss-item strong {font-size:1.1rem}
+.story-gloss-en {font-size:.79rem;color:var(--text-muted)}
+.story-questions {display:grid;gap:7px}
+.story-question {border:1px solid var(--border-color);border-radius:7px;padding:12px 15px;background:var(--bg-surface)}
+.story-question summary {cursor:pointer;font-family:var(--font-sans);font-size:.96rem;color:var(--text-main)}
+.story-answer {margin:12px 0 0;color:var(--text-content);font-size:.92rem}
+.story-actions {display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;border-top:1px solid var(--border-color);padding-top:23px}
+.story-actions button {cursor:pointer;background:var(--bg-surface);border:1px solid var(--border-color);border-radius:7px;padding:10px 14px;color:var(--text-main);font-size:.83rem}
+.story-actions .story-complete.done {border-color:#22c55e;color:#16a34a}
+.story-actions .story-complete {margin-right:auto}
+.story-source {margin-top:20px;font-size:.76rem;color:var(--text-muted)}
+.story-source a {color:var(--link-color)}
+.reading-menu-toggle {display:none;background:none;border:none;color:white;font-size:1.35rem;cursor:pointer;padding:4px}
+.story-reading .hoverable-word {white-space:normal}
+@media (max-width:900px) {.reading-menu-toggle{display:inline-flex;align-items:center;justify-content:center}}
+@media (max-width:600px) {
+  .story-reading .reading-text {font-size:1.25rem;line-height:2.1}
+  .story-illustration img {max-height:280px}
+  .story-glossary {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .item-tabs {gap:5px}
+  .item-tab {padding:7px 10px;font-size:.75rem}
+  .story-reading .reading-title {font-size:1.25rem}
+}
