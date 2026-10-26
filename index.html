@@ -233,7 +233,126 @@
             margin-bottom: 0.38rem;
         }
 
+
+        .places-explore-page {
+            --pe-badge-bg: rgba(31, 111, 235, 0.08);
+            --pe-badge-text: #1a73e8;
+            --pe-card-bg: var(--pc-soft);
+            --pe-card-border: var(--pc-border);
+        }
+
+        html[data-theme="dark"] .places-explore-page {
+            --pe-badge-bg: rgba(88, 101, 242, 0.15);
+            --pe-badge-text: #8ea1ff;
+        }
+
+        .places-nav-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .places-nav-pills a {
+            display: inline-block;
+            padding: 0.42rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            background: var(--pe-badge-bg);
+            color: var(--pe-badge-text);
+            border: 1px solid var(--pe-card-border);
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .places-nav-pills a:hover {
+            background: var(--link-color);
+            color: #ffffff;
+            border-color: var(--link-color);
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin: 1.2rem 0 2rem;
+        }
+
+        .place-card {
+            border: 1px solid var(--pe-card-border);
+            border-radius: 10px;
+            padding: 1.15rem;
+            background: var(--pe-card-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .place-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.6rem;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .place-card-title {
+            font-size: 1.05rem;
+            font-weight: 650;
+        }
+
+        .place-card-meta {
+            font-size: 0.74rem;
+            color: var(--pc-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .place-card p {
+            font-size: 0.92rem;
+            line-height: 1.62;
+            margin: 0 0 0.8rem;
+        }
+
+        .place-highlights {
+            margin: 0;
+            padding-left: 1.15rem;
+            font-size: 0.86rem;
+            line-height: 1.55;
+            color: var(--text-content);
+        }
+
+        .place-highlights li {
+            margin-bottom: 0.32rem;
+        }
+
+        .travel-phrases-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .travel-phrases-table th,
+        .travel-phrases-table td {
+            padding: 0.75rem 0.9rem;
+            border: 1px solid var(--pe-card-border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .travel-phrases-table th {
+            background: var(--pe-card-bg);
+            font-weight: 650;
+        }
+
         @media (max-width: 720px) {
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
             .pc-stats {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -500,12 +619,510 @@
                 `;
             }
 
+
+            const placesToExplore = {
+                id: 'places-to-explore',
+                title: 'Places to Explore',
+                content: `<div class="places-explore-page people-cultures-page">
+    <p class="pc-lede">You cannot understand Nepal from a map. A map is flat; Nepal is an extreme vertical slope. In less than 150 kilometers from south to north, the land vaults from <strong>60 meters above sea level to 8,848 meters</strong>. That kind of incline does not just change scenery — it changes language, diet, architecture, oxygen levels, and gods.</p>
+    <p>To explore Nepal is to move across microclimates and centuries. Here is the geography of where to go: starting inside the historic bowl of <strong>Kathmandu Valley</strong>, moving out along its mountain rims, and then fanning outward across all four cardinal directions — all the way <strong>North</strong> to the high Himalayan passes, <strong>South</strong> to the subtropical Madhesh plains, <strong>West</strong> to the lakes and untamed Karnali wilderness, and <strong>East</strong> to the mist-drenched tea hills.</p>
+
+    <div class="pc-stats">
+        <div class="pc-stat"><strong>8 / 14</strong><span>World's 8,000m peaks on or inside Nepal's borders</span></div>
+        <div class="pc-stat"><strong>60m–8,848m</strong><span>Vertical elevation range across under 150 km</span></div>
+        <div class="pc-stat"><strong>12 Parks</strong><span>National parks from sal jungles to glaciers</span></div>
+        <div class="pc-stat"><strong>4 UNESCO</strong><span>Heritage zones: Kathmandu, Lumbini, Sagarmatha, Chitwan</span></div>
+    </div>
+
+    <div class="places-nav-pills" aria-label="Quick jump to regions">
+        <a href="#the-epicenter-kathmandu-valley">Kathmandu Valley</a>
+        <a href="#around-the-valley-rim-escapes--day-trips">Around the Rim</a>
+        <a href="#the-north-high-himalayan-valleys--rain-shadows">The North (Himalayas)</a>
+        <a href="#the-west-lakes-ridges--historic-forts">The West (Lakes & Forts)</a>
+        <a href="#the-south-terai-sacred-plains--wild-jungles">The South (Terai & Madhesh)</a>
+        <a href="#the-east-misty-tea-ridges--kirat-heartland">The East (Tea Hills)</a>
+        <a href="#the-far-west-the-untamed-frontier">The Far West (Wilderness)</a>
+        <a href="#the-highway-clock--travel-realities">Travel Realities</a>
+    </div>
+
+    <div class="pc-note">
+        <strong>The cardinal compass of Nepal:</strong> Forget standard cardinal directions where north is just cold and south is just warm. In Nepal, <em>North</em> means alpine passes, thin air, yak bells, and trans-Himalayan Tibetan culture. <em>South</em> means dense sal jungles, rhinos, fertile rice paddies, and ancient Mithila civilization. <em>East</em> is the mist-soaked kingdom of green tea hills and Kirat heritage. <em>West</em> is the lake country, Gurkha fortresses, and vast roadless wilderness. And right in the center sits <strong>Kathmandu</strong> — the historic melting pot where they all collide.
+    </div>
+
+    <h2>The Epicenter: Kathmandu Valley</h2>
+    <p>Before Nepal was a unified country, "Nepal" meant this valley. An ancient lake basin sitting at 1,400 meters, it was drained in myth by Manjushri's sword and in geology by the natural erosion of the southern Chobhar gorge. For over five hundred years, three rival Malla kingdoms — <strong>Kathmandu, Patan, and Bhaktapur</strong> — competed in wealth, prestige, and religion. They did not compete by building bigger armies; they competed by commissioning the most intricate woodcarvings, the most soaring multi-tiered pagodas, and the most magnificent gilded copper shrines. The result is one of the densest architectural heritage basins on the planet.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Boudha_Stupa_2018_04.jpg/1280px-Boudha_Stupa_2018_04.jpg" alt="Boudhanath Stupa in Kathmandu">
+            <figcaption class="pc-credit">Boudhanath Stupa. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Bisket_Jatra_festival_2018_at_the_Nyatapola_temple%2C_Bhaktapur.jpg/1280px-Bisket_Jatra_festival_2018_at_the_Nyatapola_temple%2C_Bhaktapur.jpg" alt="Nyatapola Temple during Bisket Jatra in Bhaktapur">
+            <figcaption class="pc-credit">Nyatapola Temple, Bhaktapur. Photo: Nrik ki, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>The Three Royal Squares</h3>
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Kathmandu Durbar Square (Basantapur)</span>
+                    <span class="place-card-meta">Central City • 1,400m</span>
+                </div>
+                <p>The beating heart of historic Kathmandu. Here sits <strong>Kasthamandap</strong>, the 7th-century three-tiered wooden pavilion built from the timber of a single sal tree that gave the capital its name. Wander past the imposing Taleju Temple, the Hanuman Dhoka royal palace, and the <strong>Kumari Ghar</strong> — the courtyard residence of the living child goddess, who blesses the city during Indra Jatra.</p>
+                <ul class="place-highlights">
+                    <li><strong>Must see:</strong> Kumari Bahal courtyard and the colossal stone Kal Bhairav sculpture.</li>
+                    <li><strong>Vibe:</strong> Street vendors selling marigolds, pigeons fluttering over tiered roofs, students chatting on temple stairs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Patan Durbar Square (Lalitpur)</span>
+                    <span class="place-card-meta">Across Bagmati • 1,400m</span>
+                </div>
+                <p>Lalitpur means "City of Fine Arts," and Patan earns the title. Its square is an open-air masterclass in Newar stone and metal craftsmanship. Highlights include the <strong>Krishna Mandir</strong>, constructed entirely of carved stone in 1637, the radiant <strong>Golden Temple (Hiranya Varna Mahavihar)</strong>, and the <strong>Patan Museum</strong> — celebrated internationally as one of the finest architectural restoration projects in Asia.</p>
+                <ul class="place-highlights">
+                    <li><strong>Must see:</strong> Patan Museum courtyards and the hidden courtyards (bahals) of traditional bronze casters.</li>
+                    <li><strong>Vibe:</strong> Refined, artistic, quieter than Basantapur, flanked by rooftop cafés overlooking terracotta roofs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Bhaktapur Durbar Square</span>
+                    <span class="place-card-meta">East Valley • 12 km out</span>
+                </div>
+                <p>The best preserved of the three medieval city-states. Paved with red brick and largely free of motor vehicles, Bhaktapur feels like stepping straight into the 17th century. It is home to the <strong>55-Window Palace</strong>, the Golden Gate, Pottery Square, and <strong>Nyatapola</strong> — Nepal's tallest pagoda standing 30 meters high on five massive stone plinths. Built in 1702, it proved so structurally sound it survived the 1934 and 2015 earthquakes virtually unscathed.</p>
+                <ul class="place-highlights">
+                    <li><strong>Culinary must:</strong> <em>Juju Dhau</em> ("King Curd"), rich sweetened buffalo curd served in traditional clay pots.</li>
+                    <li><strong>Vibe:</strong> Ancient brick alleys, sun-drying pottery, evening hymn singing (bhajan) in neighbourhood squares.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Pashupatinath Temple</span>
+                    <span class="place-card-meta">Bagmati River • Sacred Sanctuary</span>
+                </div>
+                <p>One of the holiest pilgrimage destinations in the entire Hindu world. Dedicated to Lord Shiva in his gentle aspect as protector of all beings, the temple stands on the sacred Bagmati River. Here life and death exist without separation: open-air funeral pyres burn night and day at <strong>Arya Ghat</strong>, while ash-smeared sadhus gather under ancient stone shrines and thousands attend the hypnotic evening <strong>Maha Aarti</strong>.</p>
+                <ul class="place-highlights">
+                    <li><strong>Cultural etiquette:</strong> The inner sanctum is open to Hindus only; visitors view the complex from across the river terrace.</li>
+                    <li><strong>Vibe:</strong> Intensely spiritual, reverent, aromatic with incense, sandalwood, and sacred chant.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Pashupatinath_Temple-2020.jpg/1280px-Pashupatinath_Temple-2020.jpg" alt="Pashupatinath Temple on the Bagmati River">
+            <figcaption class="pc-credit">Pashupatinath Temple on the Bagmati River. Photo: Bijay Chaurasia, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Swayambhunath_2018.jpg/1280px-Swayambhunath_2018.jpg" alt="Swayambhunath Stupa overlooking Kathmandu">
+            <figcaption class="pc-credit">Swayambhunath Stupa. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>The Sacred Guardians: Boudhanath & Swayambhunath</h3>
+    <p>Two colossal stupas bookend Kathmandu's spiritual geography. To the east lies <strong>Boudhanath</strong>, one of the largest spherical stupas in the world. Boudha is not a monument you merely observe from a distance; you join it. Every evening at sunset, hundreds of monks, Sherpas, Tibetans, and travelers walk in a clockwise circle (<em>kora</em>) around the massive mandala base, spinning copper prayer wheels to the rhythmic murmur of <em>Om Mani Padme Hum</em> as butter lamps flicker and rooftop cafés pour Himalayan tea.</p>
+    <p>To the west, crowned on a forested conical knoll, stands <strong>Swayambhunath</strong> (the "Monkey Temple"). Legend says that when Manjushri drained the primordial lake, a divine lotus flower settled on this exact hill and self-manifested as light (<em>swayambhu</em>). Climb the steep 365 stone stairs flanked by mischievous macaque monkeys to reach the gilded spire. From the platform, the painted, all-seeing eyes of the Buddha look down across the smog, rooftops, and flying kites of the entire valley basin.</p>
+
+    <h2>Around the Valley Rim: Escapes & Day Trips</h2>
+    <p>Kathmandu's energy can be exhilarating, but the dense traffic and dust will eventually make you crave open sky. Fortunately, the valley is surrounded by a ring of green mountains rising between 2,000 and 2,700 meters. Within an hour or two by road or cable car, the urban sprawl drops away into fresh mountain pine, terraced hillsides, and panoramic views of the snow peaks.</p>
+
+    <figure class="pc-photo">
+        <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/View_from_Chandragiri_Hills_05.jpg/1280px-View_from_Chandragiri_Hills_05.jpg" alt="View of Kathmandu Valley and Himalayas from Chandragiri Hills">
+        <figcaption class="pc-credit">Panoramic view from Chandragiri Hills. Photo: Chainwit., CC BY-SA 4.0.</figcaption>
+    </figure>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Nagarkot (2,175m)</span>
+                    <span class="place-card-meta">Eastern Rim • 32 km from city</span>
+                </div>
+                <p>The classic sunrise balcony. Perched on the eastern edge of the valley, Nagarkot offers one of the broadest Himalayan panoramas reachable by road. On crisp autumn and winter dawns, you can stand on the ridge and trace a continuous white barrier of peaks stretching from Dhaulagiri in the west past the Ganesh and Langtang ranges all the way to Mount Everest in the far east.</p>
+                <ul class="place-highlights">
+                    <li><strong>Best time:</strong> Stay overnight so you are standing on the view tower at 5:30 AM before morning valley fog rises.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Chandragiri Hills (2,551m)</span>
+                    <span class="place-card-meta">Southwest Rim • Cable Car Access</span>
+                </div>
+                <p>A modern cable car whisks you from the valley floor up 2.5 kilometers of steep pine-forested slopes to the breezy mountain summit in just 10 minutes. At the top sits the restored <strong>Bhaleshwor Mahadev Temple</strong>. This is historical ground: it was from this exact ridge that King Prithvi Narayan Shah of Gorkha first surveyed the wealthy Kathmandu Valley in the 1740s and resolved to unify Nepal.</p>
+                <ul class="place-highlights">
+                    <li><strong>Highlights:</strong> 360-degree glass viewing deck, clear views of Ganesh Himal and Langtang, cool mountain breeze.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Dhulikhel & Namobuddha</span>
+                    <span class="place-card-meta">Kavre District • 30–40 km east</span>
+                </div>
+                <p><strong>Dhulikhel</strong> is an ancient Newari commercial settlement that once prospered on the trade route to Tibet, retaining cobbled streets and wood-carved merchant houses. A short drive or scenic hike further south brings you to <strong>Namobuddha (Thrangu Tashi Yangtse)</strong>, one of Buddhism's holiest sanctuaries, marking the legendary spot where the Buddha in a previous life offered his own flesh to feed a starving tigress and her cubs.</p>
+                <ul class="place-highlights">
+                    <li><strong>Highlights:</strong> Majestic monastery architecture, peaceful monastic chanting, serene rural farm walks.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Shivapuri & Panauti</span>
+                    <span class="place-card-meta">Watershed & Medieval Stone</span>
+                </div>
+                <p>To the north, <strong>Shivapuri Nagarjun National Park</strong> provides Kathmandu's freshwater watershed, offering lush oak-rhododendron hiking trails up to Bagdwar (the source of the sacred Bagmati) and the Buddhist hermitage of Nagi Gompa. To the southeast lies <strong>Panauti</strong>, an ancient riverside town built on an indestructible single rock according to legend; its 15th-century Indreshwar Mahadev temple emerged virtually unscathed from the 2015 earthquake.</p>
+                <ul class="place-highlights">
+                    <li><strong>Highlights:</strong> Fresh mountain streams, pristine forest walks, untouched Newari woodcraft away from tourist crowds.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>The North: High Himalayan Valleys & Rain Shadows</h2>
+    <p>Leave the roads behind and head north toward the Tibetan frontier. Here the land stands up on end. Glaciers carve mile-deep gorges, forests give way to alpine scrub, oxygen levels thin by half, and human life reorganizes around stone lodges, yak caravans, and centuries-old Buddhist monasteries. This is the alpine theater that made Nepal famous worldwide.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Ama_Dablam%2C_Nepal.jpg/1280px-Ama_Dablam%2C_Nepal.jpg" alt="Ama Dablam peak in the Khumbu region">
+            <figcaption class="pc-credit">Ama Dablam (6,812m), Khumbu. Photo: Vyacheslav Argenberg, CC BY 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Guardian_of_the_Langtang_Valley.jpg/1280px-Guardian_of_the_Langtang_Valley.jpg" alt="Langtang Valley landscape in Nepal">
+            <figcaption class="pc-credit">Langtang Valley. Photo: Dilipkc, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>Khumbu: The Everest Heartland</h3>
+    <p>The journey begins with the thrilling mountain landing at <strong>Lukla's Tenzing-Hillary Airport</strong>, an angled tarmac strip carved into a mountainside. From there, the trail winds through pine-scented Dudh Koshi river gorges, crossing dramatic suspension bridges draped in prayer flags, before ascending steeply to <strong>Namche Bazaar (3,440m)</strong>. Namche is a natural amphitheater village where mountaineering heritage meets modern coffee shops, gear stores, and Sherpa bakeries.</p>
+    <p>Beyond Namche, the landscape opens into breathtaking alpine grandeur: the spiritual sanctuary of <strong>Tengboche Monastery</strong> set beneath the iconic pointed spire of <strong>Ama Dablam (6,812m)</strong>, the turquoise glacial waters of the <strong>Gokyo Lakes</strong>, the rocky vantage point of <strong>Kala Patthar (5,550m)</strong>, and finally <strong>Everest Base Camp (5,364m)</strong> perched on the creaking Khumbu Glacier. Remember: Sherpa communities here are not guides for hire; they are a proud, distinct people who built an enduring high-altitude civilization long before foreigners arrived with crampons.</p>
+
+    <h3>Langtang Valley & Sacred Gosaikunda</h3>
+    <p>Located in Rasuwa district just 50 kilometers north of Kathmandu, the <strong>Langtang Valley</strong> is known as the "Valley of Glaciers." Devastated during the 2015 earthquake when an entire village was buried under a catastrophic rock-and-ice avalanche, Langtang has rebuilt itself through sheer local grit. The trek ascends through lush bamboo forests into wide glacial pastures at <strong>Kyanjin Gompa (3,870m)</strong>, where you can sample fresh artisanal yak cheese right under the towering face of Langtang Lirung (7,234m).</p>
+    <p>Higher to the south across the Laurebina Pass lies <strong>Gosaikunda (4,380m)</strong>, a sacred alpine lake surrounded by rugged crags. According to Hindu mythology, Lord Shiva thrust his holy trident (<em>trishul</em>) into the mountain to draw pure spring water and quench his throat after swallowing the deadly poison Halahala to save the universe. Every August during Janai Purnima, thousands of Hindu and Buddhist pilgrims brave the steep climb to bathe in its freezing holy waters.</p>
+
+    <figure class="pc-photo">
+        <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Lo_Manthang%2C_The_Historic_Walled_City_of_Upper_Mustang.jpg/1280px-Lo_Manthang%2C_The_Historic_Walled_City_of_Upper_Mustang.jpg" alt="Lo Manthang, the historic walled city of Upper Mustang">
+        <figcaption class="pc-credit">Lo Manthang, Upper Mustang. Photo: Geri, CC BY-SA 4.0.</figcaption>
+    </figure>
+
+    <h3>Upper Mustang: The Walled Kingdom of Lo</h3>
+    <p>North of the Annapurna and Dhaulagiri ranges lies a landscape that looks like Mars crossed with Tibet. Because it sits in the Himalayan rain shadow, <strong>Upper Mustang</strong> receives virtually no monsoon rain. Instead, wind has sculpted its canyons into fluted ochre cliffs, deep gorges, and thousands of mysterious prehistoric sky caves carved into sheer vertical cliffs.</p>
+    <p>At the northern end sits <strong>Lo Manthang</strong>, the walled capital founded in 1380. Enclosed within six-meter-high rammed-earth ramparts, its unpainted mud-brick houses, 15th-century Tibetan Buddhist monasteries (such as Thubchen and Jampa Gompa), and traditional royal family preserved ancient Tibetan culture almost completely intact during centuries of isolation. Because it remains dry when the rest of Nepal is drenched, Mustang is one of the premier trekking destinations during the summer monsoon (June–August).</p>
+
+    <h3>Manang & The Annapurna Circuit</h3>
+    <p>Following the Marsyangdi River valley upstream brings you into <strong>Manang</strong>, a broad high-altitude valley ringed by the Annapurna giants. Manang is the crucial acclimatization hub on the world-renowned Annapurna Circuit. From here, side trails lead to the mesmerizing <strong>Tilicho Lake (4,919m)</strong>, one of the highest alpine lakes in the world, before the trail pushes over the grueling, breathless <strong>Thorong La Pass (5,416m)</strong> to descend into the pilgrimage shrine of Muktinath.</p>
+
+    <h2>The West: Lakes, Ridges & Historic Forts</h2>
+    <p>Travel west from the capital and the landscape opens out. The middle hills become wider, the climate softens, and the mountains come right down to meet tranquil lakes. This is the heart of Gandaki province — the launchpad for Annapurna adventures, tranquil lakeside retreats, and the historic hillforts that forged the modern nation.</p>
+
+    <figure class="pc-photo">
+        <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Phewa_Lake_in_Pokhara%2C_Nepal.jpg/1280px-Phewa_Lake_in_Pokhara%2C_Nepal.jpg" alt="Phewa Lake reflecting Machhapuchhre in Pokhara">
+        <figcaption class="pc-credit">Phewa Lake, Pokhara, with Machhapuchhre in the backdrop. Photo: Sudarshan Gautam, CC BY-SA 4.0.</figcaption>
+    </figure>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Pokhara (822m)</span>
+                    <span class="place-card-meta">Lakeside Capital • 200 km west</span>
+                </div>
+                <p>Nepal's premier leisure and adventure playground. Sitting at almost half the altitude of Kathmandu, Pokhara is lush, warm, and distinctly laid-back. The city hugs the shores of <strong>Phewa Lake</strong>, whose calm waters mirror the unmistakable pyramid spire of <strong>Machhapuchhre (Fishtail, 6,993m)</strong> — a mountain held so sacred to Shiva that it remains strictly forbidden to climbers.</p>
+                <ul class="place-highlights">
+                    <li><strong>Key experiences:</strong> Renting a wooden paddle boat to Tal Barahi temple, watching sunrise over the Annapurnas from Sarangkot, hiking up to the gleaming white World Peace Pagoda, or paragliding high above the lake basin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Bandipur (1,030m)</span>
+                    <span class="place-card-meta">Tanahun District • Preserved Outpost</span>
+                </div>
+                <p>Bandipur is what happened when history accidentally preserved an 18th-century Newari trading hub. In the 1970s, the newly built Prithvi Highway bypassed the town along the riverbed below, causing Bandipur's commercial trade to collapse. That economic isolation saved it: modern concrete never replaced its slate-paved streets, wooden lattice windows, and neoclassical townhouses.</p>
+                <ul class="place-highlights">
+                    <li><strong>Key experiences:</strong> Completely pedestrianized main street, atmospheric boutique homestays, dramatic cliff views overlooking the Marsyangdi River valley.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Gorkha Durbar</span>
+                    <span class="place-card-meta">Gorkha District • Cradle of the Nation</span>
+                </div>
+                <p>Perched like an eagle's nest on a knife-edge ridge high above the town, this 16th-century fortified complex was the ancestral home of King Prithvi Narayan Shah. Part fortress, part royal palace, part religious sanctuary (housing the sacred Gorakhnath and Kalika shrines), Gorkha is the crucible of the modern Nepali state. Looking down from its stone battlements across the surrounding hills, one immediately understands the military tactical mindset of the early Gorkhali kingdom.</p>
+                <ul class="place-highlights">
+                    <li><strong>Highlights:</strong> Intricate historic woodwork, sweeping mountain vistas, and deep historical resonance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Lumbini (Terai Plain)</span>
+                    <span class="place-card-meta">Rupandehi • Sacred Birthplace</span>
+                </div>
+                <p>In 623 BCE, according to ancient Buddhist tradition, Queen Maya Devi gave birth to Siddhartha Gautama — who would later achieve enlightenment as the Buddha — beneath a blooming sal tree in Lumbini. Today, the UNESCO World Heritage site centers on the archaeological <strong>Maya Devi Temple</strong>, the sacred Pushkarini pond, and the landmark sandstone pillar inscribed by Mauryan Emperor Ashoka in 249 BCE authenticating the exact site.</p>
+                <ul class="place-highlights">
+                    <li><strong>Highlights:</strong> Walking the tranquil monastic zone, where Buddhist nations from Sri Lanka to Germany have constructed traditional temples.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Akhanda_Dhowni_Durbar_Square_Gorkha_Durbar_Gorkha_District_Gorkha_Nepal_Rajesh_Dhungana_%284%29.jpg/1280px-Akhanda_Dhowni_Durbar_Square_Gorkha_Durbar_Gorkha_District_Gorkha_Nepal_Rajesh_Dhungana_%284%29.jpg" alt="Gorkha Durbar fortified palace">
+            <figcaption class="pc-credit">Gorkha Durbar. Photo: Sangita Dhungana, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Lumbini_Maya_Devi_Temple_1.jpg/1280px-Lumbini_Maya_Devi_Temple_1.jpg" alt="Maya Devi Temple at Lumbini">
+            <figcaption class="pc-credit">Maya Devi Temple, Lumbini. Photo: Rangan Datta, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h2>The South: Terai, Sacred Plains & Wild Jungles</h2>
+    <p>Descend the outer slopes of the Churia hills and the mountains vanish entirely. In their place emerges the <strong>Terai</strong>: a vast, flat expanse of fertile green silt, humid heat, endless mustard fields, and dense subtropical jungles. This is the agricultural engine of Nepal, home to ancient plains civilizations and some of the most celebrated wildlife conservation areas on Earth.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/RHINO-CHITWAN.jpg/1280px-RHINO-CHITWAN.jpg" alt="Greater one-horned rhinoceros in Chitwan National Park">
+            <figcaption class="pc-credit">One-horned rhino in Chitwan. Photo: Nrik ki, CC BY-SA 3.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Janaki_Temple%2C_Janakpur-September_22%2C_2016-IMG_7493.jpg/1280px-Janaki_Temple%2C_Janakpur-September_22%2C_2016-IMG_7493.jpg" alt="Janaki Mandir in Janakpur">
+            <figcaption class="pc-credit">Janaki Mandir, Janakpur. Photo: Bijay Chaurasia, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>Chitwan & Bardiya: Wildlife of the Subtropics</h3>
+    <p><strong>Chitwan National Park</strong>, established in 1973 as Nepal's first national park, is a global conservation success story. Covering 952 square kilometers of dense sal forests, marshlands, and elephant grass taller than a safari jeep, Chitwan shelters over 600 <strong>greater one-horned rhinoceroses (<em>gainda</em>)</strong>, thriving populations of Royal Bengal tigers, leopards, wild Asian elephants, and the critically endangered, fish-eating gharial crocodile with its pencil-thin snout.</p>
+    <p>Further west lies <strong>Bardiya National Park</strong>, Chitwan's wilder, less commercialized sister reserve. Spanning 968 square kilometers along the Karnali River, Bardiya receives only a fraction of Chitwan's visitor numbers, making wildlife encounters — including tracking wild tigers on foot with veteran naturalists and spotting rare Gangetic river dolphins — feel genuinely untamed.</p>
+
+    <h3>Janakpur Dham: Mithila Heritage & The Marble Palace</h3>
+    <p>Janakpur is not the hills. There is no snow, no pine forest, no mountain fleece. It is the heart of <strong>Mithila</strong>: hot terracotta dust, cycle rickshaws, lotus ponds, betel-nut stalls, and the brilliant multi-arched facade of <strong>Janaki Mandir</strong>. Built in 1911 by Queen Vrisha Bhanu of Tikamgarh for nine hundred thousand silver rupees (earning it the name <em>Naulakha Mandir</em>), this three-story white marble palace blends Hindu-Rajput and Mughal architectural styles.</p>
+    <p>Janakpur is celebrated as the birthplace of Sita and the site of her wedding to Rama in the Ramayana. It is also the spiritual capital of <strong>Mithila (Madhubani) art</strong> — an ancient tradition of geometric, richly colored domestic painting depicting gods, animals, and fertility symbols created primarily by Maithili women on mud walls and handmade paper.</p>
+
+    <h2>The East: Misty Tea Ridges & Kirat Heartland</h2>
+    <p>Eastern Nepal feels distinct from the rest of the country. Influenced by heavy rainfall sweeping in from the Bay of Bengal, the hills are lush, humid, and covered in deep vegetation. This is the ancestral heartland of the <strong>Kirat peoples (Rai and Limbu)</strong>, known for their oral <em>Mundhum</em> traditions, distinct agricultural practices, and rolling emerald tea plantations.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Kanyam_tea_garden_ilam.jpg/1280px-Kanyam_tea_garden_ilam.jpg" alt="Kanyam tea garden in Ilam">
+            <figcaption class="pc-credit">Kanyam tea gardens, Ilam. Photo: Nirjal Stitha, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Pathibhara_Devi_Temple%2C_Taplejung.jpg/1280px-Pathibhara_Devi_Temple%2C_Taplejung.jpg" alt="Pathibhara Devi Temple in Taplejung">
+            <figcaption class="pc-credit">Pathibhara Devi, Taplejung. Photo: Surendra Gurung, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>Ilam & Kanyam: Rolling Emerald Tea Hills</h3>
+    <p>While neighboring Darjeeling across the Indian border gained global branding for its tea, much of the world's most aromatic organic orthodox tea is grown right here across the ridges of <strong>Ilam</strong>. At <strong>Kanyam</strong>, manicured green tea bushes cascade down steep hill slopes shrouded in cool mountain mist. Walking through these verdant plantations, staying in community homestays, and tasting single-estate spring flushes brewed fresh from the harvest is one of the most tranquil sensory experiences in Nepal.</p>
+
+    <h3>Dharan, Bhedetar & Pathibhara</h3>
+    <p>At the foot of the eastern hills lies <strong>Dharan</strong>, a lively city long associated with British Gurkha recruitment, home to sacred shrines such as Budha Subba and Dantakali. Just a short drive up the serpentine highway brings you to <strong>Bhedetar (1,420m)</strong>, a mountain pass where cold hill winds meet the rising heat of the plains. From Charles Point, named after Britain's King Charles III who visited as Prince of Wales in 1980, you can look out over the vast Saptakoshi river basin blanketed under drifting clouds.</p>
+    <p>Further north in Taplejung district, perched at a breathtaking 3,794 meters, stands <strong>Pathibhara Devi</strong>, one of Nepal's most revered mountain pilgrimage shrines. Sacred to both Hindus and Kirati Yakthung communities, the trail winds through dense rhododendron forests to reward travelers with sweeping, up-close views of <strong>Mount Kanchenjunga (8,586m)</strong> — the third highest peak on Earth.</p>
+
+    <h3>Barun Valley & Makalu</h3>
+    <p>For purists seeking absolute wilderness, the <strong>Barun Valley</strong> inside Makalu-Barun National Park is one of the least spoiled mountain sanctuaries left on Earth. Sheer granite cliffs rise vertically thousands of meters from lush subtropical cloud forests straight into arctic glaciers. Home to red pandas, snow leopards, and over 3,000 species of flowering plants, this is pristine ecological wilderness without roads or commercial trekking infrastructure.</p>
+
+    <h2>The Far West: The Untamed Frontier</h2>
+    <p>If you want to experience the Himalayas before mass tourism, you go to the Far West. Karnali and Sudurpashchim provinces remain largely roadless, remote, and culturally conservative. Here mountains are wilder, distances are measured in days of walking, and the landscape retains an ancient, untouched stillness.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Lake_Rara%2C_Mugu_%282%29.jpg/1280px-Lake_Rara%2C_Mugu_%282%29.jpg" alt="Rara Lake in Mugu district">
+            <figcaption class="pc-credit">Rara Lake, Mugu (2,990m). Photo: Nrik ki, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Shey-Phoksundo_Lake_in_Dolpa.jpg/1280px-Shey-Phoksundo_Lake_in_Dolpa.jpg" alt="Shey Phoksundo Lake in Dolpa">
+            <figcaption class="pc-credit">Shey Phoksundo Lake, Dolpa (3,611m). Photo: Sunuwar Niranjan, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <h3>Rara Lake: The High-Altitude Sapphire</h3>
+    <p>Sitting at 2,990 meters in Mugu district, <strong>Rara Lake</strong> is Nepal's largest body of freshwater: over five kilometers long, two kilometers wide, and almost 170 meters deep. Framed by silent forests of blue pine, spruce, and black juniper, Rara reflects the surrounding snowcapped peaks like a flawless natural sapphire. Reaching Rara requires a flight into the dirt strip of Talcha or a rugged jeep ride along the Karnali Highway. There are no motorboats, no city noises, and zero light pollution — just grazing mountain horses, clean air, and astonishing nighttime starfields.</p>
+
+    <h3>Shey Phoksundo & Dolpo: The Mystic Blue</h3>
+    <p>Located in Dolpa, <strong>Shey Phoksundo Lake (3,611m)</strong> is Nepal's deepest lake (145 meters). Its intensely vibrant, turquoise-blue water is famous for having no aquatic plant or fish life. Ringed by sheer cedar-clad cliffs, the lake is guarded by the village of Ringmo, where villagers still practice <strong>Bon-po</strong>, the ancient pre-Buddhist animist faith of Tibet. This is the stark, magnificent landscape chronicled in Peter Matthiessen's literary classic <em>The Snow Leopard</em>.</p>
+
+    <h3>Khaptad & Suklaphanta</h3>
+    <p>In Sudurpashchim, <strong>Khaptad National Park</strong> protects a rare sub-alpine plateau of 22 rolling green meadows (<em>patans</em>), pine-oak forests, and meditation hermitages where the revered hermit philosopher Khaptad Swami lived and wrote. Down in the far-southwestern plains, <strong>Suklaphanta National Park</strong> shelters the largest continuous grassland in Nepal, home to the world's largest concentration of <strong>swamp deer (<em>barasingha</em>)</strong>, with herds numbering in the thousands grazing against sunset skies.</p>
+
+    <h2>The Highway Clock & Travel Realities</h2>
+    <p>Before you pack your bags, understand how physics and infrastructure work in Nepal. Travel brochures show crystal-clear mountain vistas; experienced travelers know the logistical realities that make those vistas possible.</p>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The 3,000-Meter Rule</span>
+                    <span class="place-card-meta">Altitude Science</span>
+                </div>
+                <p>Acclimatization is human biology, not mental willpower. Below 2,500 meters, your body handles thinner air with ease. Above 3,000 meters, effective oxygen levels drop significantly. Never increase your sleeping altitude by more than 300 to 500 meters per day. Walk slowly (<em>bistaarai</em>), hydrate constantly, and if severe headaches or nausea develop, the golden rule is absolute: <strong>descend immediately</strong>.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Highway Clock</span>
+                    <span class="place-card-meta">Hours, Not Kilometers</span>
+                </div>
+                <p>Never measure travel in Nepal by kilometers. A 150-kilometer trip between Kathmandu and Pokhara looks like two hours on a map; in reality, mountain curves, freight trucks, and ongoing road widening mean it frequently takes 6 to 8 hours. If you are pressed for time, take short 25-minute domestic flights. If you want to witness how the landscape shifts bend by bend, take the bus and pack patience.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Autumn: The Clear Window</span>
+                    <span class="place-card-meta">October to November</span>
+                </div>
+                <p>The undisputed king of trekking seasons. The summer monsoon has swept the skies clean of haze, offering razor-sharp mountain panoramas, warm sunny days, and comfortable nights. This season also coincides with <strong>Dashain and Tihar</strong>, Nepal's two greatest national festivals, filling towns and villages with holiday music, swings, and festive cheer.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Spring: Rhododendrons Bloom</span>
+                    <span class="place-card-meta">March to April</span>
+                </div>
+                <p>The second golden window. Temperatures warm, high mountain passes melt open, and wild rhododendron forests (<em>laligurans</em>, the national flower) paint entire hillsides in blazing scarlet, pink, and white. Afternoon pre-monsoon haze can occasionally build in the valleys, but the warmth and blooming flora make it an extraordinary time to explore.</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Nepali on the Road: Essential Travel Phrases</h3>
+    <p>Language grows out of terrain. Here are seven phrases you will hear and use at every roadside eatery (<em>bhatti</em>), jeep counter, and mountain trail across Nepal:</p>
+
+    <div class="table-responsive">
+        <table class="travel-phrases-table">
+            <thead>
+                <tr>
+                    <th>Nepali (नेपाली)</th>
+                    <th>Pronunciation</th>
+                    <th>Meaning</th>
+                    <th>When to Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>बाटो कस्तो छ?</strong></td>
+                    <td><em>Baato kasto chha?</em></td>
+                    <td>How is the road / trail?</td>
+                    <td>The single most essential question before embarking on any drive or mountain hike.</td>
+                </tr>
+                <tr>
+                    <td><strong>यहाँबाट कति समय लाग्छ?</strong></td>
+                    <td><em>Yahaanbaata kati samaya laagchha?</em></td>
+                    <td>How much time does it take from here?</td>
+                    <td>Always ask about travel time, never kilometers.</td>
+                </tr>
+                <tr>
+                    <td><strong>उचाइ कति छ?</strong></td>
+                    <td><em>Uchai kati chha?</em></td>
+                    <td>What is the altitude?</td>
+                    <td>Vital for monitoring your elevation gain on trekking routes.</td>
+                </tr>
+                <tr>
+                    <td><strong>बिस्तारै जानुहोस्।</strong></td>
+                    <td><em>Bistaarai jaanuhos.</em></td>
+                    <td>Please go slowly.</td>
+                    <td>Say this to taxi and jeep drivers on winding roads, or to your trekking partner on steep climbs.</td>
+                </tr>
+                <tr>
+                    <td><strong>खाना तयार छ?</strong></td>
+                    <td><em>Khaana tayaar chha?</em></td>
+                    <td>Is the food ready?</td>
+                    <td>The magic question at any highway roadside restaurant or high-altitude lodge.</td>
+                </tr>
+                <tr>
+                    <td><strong>पानी पर्छ कि?</strong></td>
+                    <td><em>Paani parchha ki?</em></td>
+                    <td>Will it rain?</td>
+                    <td>Asked when observing dark afternoon clouds gathering over high mountain ridges.</td>
+                </tr>
+                <tr>
+                    <td><strong>चिया पाइन्छ?</strong></td>
+                    <td><em>Chiyaa paainchha?</em></td>
+                    <td>Can I get some tea?</td>
+                    <td>The universal social icebreaker at every tea stall and village stop in Nepal.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pc-ending">
+        <strong>The real secret of exploring Nepal:</strong> The mountains will humble you, but it is the people who will stay with you. Whether it is a cup of milk tea shared in a roadside tin shack during a landslide delay, a monk in Lo Manthang offering you dried yak cheese, or a grandmother in Bhaktapur offering a quiet <em>Namaste</em> from her carved wooden window — Nepal's greatest destination is not a spot on a map. It is the human warmth you meet on the way.
+    </div>
+
+    <details class="pc-source-details">
+        <summary>Sources and image credits</summary>
+        <p><strong>Official references & geographic data</strong></p>
+        <ul>
+            <li><a href="https://dnpwc.gov.np/" target="_blank" rel="noopener">Department of National Parks and Wildlife Conservation (DNPWC), Government of Nepal</a></li>
+            <li><a href="https://ntb.gov.np/" target="_blank" rel="noopener">Nepal Tourism Board (NTB) official destination guides</a></li>
+            <li><a href="https://whc.unesco.org/en/statesparties/np" target="_blank" rel="noopener">UNESCO World Heritage Centre: Kathmandu Valley, Lumbini, Sagarmatha, and Chitwan</a></li>
+            <li><a href="https://censusnepal.cbs.gov.np/" target="_blank" rel="noopener">National Population and Housing Census 2021, National Statistics Office</a></li>
+        </ul>
+        <p><strong>Photographs (Wikimedia Commons)</strong></p>
+        <ul>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Boudha_Stupa_2018_04.jpg" target="_blank" rel="noopener">Boudhanath Stupa</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Bisket_Jatra_festival_2018_at_the_Nyatapola_temple,_Bhaktapur.jpg" target="_blank" rel="noopener">Nyatapola Temple during Bisket Jatra, Bhaktapur</a> — Nrik ki, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Pashupatinath_Temple-2020.jpg" target="_blank" rel="noopener">Pashupatinath Temple</a> — Bijay Chaurasia, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Swayambhunath_2018.jpg" target="_blank" rel="noopener">Swayambhunath Stupa</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:View_from_Chandragiri_Hills_05.jpg" target="_blank" rel="noopener">View from Chandragiri Hills</a> — Chainwit., CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Ama_Dablam,_Nepal.jpg" target="_blank" rel="noopener">Ama Dablam, Khumbu</a> — Vyacheslav Argenberg, CC BY 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Guardian_of_the_Langtang_Valley.jpg" target="_blank" rel="noopener">Guardian of the Langtang Valley</a> — Dilipkc, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Lo_Manthang,_The_Historic_Walled_City_of_Upper_Mustang.jpg" target="_blank" rel="noopener">Lo Manthang, Upper Mustang</a> — Geri, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Phewa_Lake_in_Pokhara,_Nepal.jpg" target="_blank" rel="noopener">Phewa Lake, Pokhara</a> — Sudarshan Gautam, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Akhanda_Dhowni_Durbar_Square_Gorkha_Durbar_Gorkha_District_Gorkha_Nepal_Rajesh_Dhungana_(4).jpg" target="_blank" rel="noopener">Gorkha Durbar</a> — Sangita Dhungana, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Lumbini_Maya_Devi_Temple_1.jpg" target="_blank" rel="noopener">Maya Devi Temple, Lumbini</a> — Rangan Datta, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:RHINO-CHITWAN.jpg" target="_blank" rel="noopener">One-horned Rhino, Chitwan</a> — Nrik ki, CC BY-SA 3.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Janaki_Temple,_Janakpur-September_22,_2016-IMG_7493.jpg" target="_blank" rel="noopener">Janaki Mandir, Janakpur</a> — Bijay Chaurasia, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Kanyam_tea_garden_ilam.jpg" target="_blank" rel="noopener">Kanyam tea gardens, Ilam</a> — Nirjal Stitha, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Pathibhara_Devi_Temple,_Taplejung.jpg" target="_blank" rel="noopener">Pathibhara Devi Temple, Taplejung</a> — Surendra Gurung, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Lake_Rara,_Mugu_(2).jpg" target="_blank" rel="noopener">Lake Rara, Mugu</a> — Nrik ki, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Shey-Phoksundo_Lake_in_Dolpa.jpg" target="_blank" rel="noopener">Shey Phoksundo Lake, Dolpa</a> — Sunuwar Niranjan, CC BY-SA 4.0</li>
+        </ul>
+    </details>
+</div>`
+            };
+
             category.lessons = [
                 geography,
                 history,
                 government,
                 people,
-                { id: 'places-to-explore', title: 'Places to Explore', content: '' },
+                placesToExplore,
                 { id: 'food-to-try', title: 'Food to Try', content: '' }
             ].filter(Boolean);
 
