@@ -233,107 +233,529 @@ const courseData = [
                     {
                         id: "government-structure",
                         title: "Government Structure",
-                        content: `
-                            <h2>Government Structure — How Power Is Organized</h2>
-                            <p>Nepal today is a Federal Democratic Republic.</p>
-                            <p>No king.<br>No monarchy.<br>Power comes from the constitution (2015) and elected representatives.</p>
-                            <p>That’s the theory.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Three Levels of Government</h3>
-                            <p>Nepal runs on a three-tier system:</p>
-                            <ul>
-                                <li>Federal (Central Government)</li>
-                                <li>7 Provinces</li>
-                                <li>753 Local Levels (municipalities and rural municipalities)</li>
-                            </ul>
-                            <p>Think of it as vertical power distribution.</p>
-                            <p>Not everything is controlled by Kathmandu anymore.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Federal Level</h3>
-                            <p>This is the national government.</p>
-                            <p>It includes:</p>
-                            <ul>
-                                <li>President (ceremonial head of state)</li>
-                                <li>Prime Minister (head of government)</li>
-                                <li>Federal Parliament</li>
-                            </ul>
-                            <p>The Prime Minister runs the executive branch. Parliament makes laws. The Supreme Court interprets them.</p>
-                            <p>The federal government handles:</p>
-                            <ul>
-                                <li>Foreign affairs</li>
-                                <li>National defense</li>
-                                <li>Monetary policy</li>
-                                <li>National taxation</li>
-                                <li>Big infrastructure</li>
-                            </ul>
-                            <p>This is where the main political drama usually happens.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Provincial Level (7 Provinces)</h3>
-                            <p>Each province has:</p>
-                            <ul>
-                                <li>A Provincial Assembly</li>
-                                <li>A Chief Minister</li>
-                                <li>A provincial cabinet</li>
-                            </ul>
-                            <p>They handle regional issues like:</p>
-                            <ul>
-                                <li>Provincial roads</li>
-                                <li>Health systems</li>
-                                <li>Education administration</li>
-                                <li>Local development</li>
-                            </ul>
-                            <p>In theory, this allows regional autonomy.</p>
-                            <p>In practice, coordination with the federal level is still messy. The system is young.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Local Level (753 Units)</h3>
-                            <p>This is where federalism becomes real.</p>
-                            <p>Each municipality or rural municipality has:</p>
-                            <ul>
-                                <li>A Mayor or Chairperson</li>
-                                <li>A local council</li>
-                            </ul>
-                            <p>They deal with:</p>
-                            <ul>
-                                <li>Local schools</li>
-                                <li>Basic healthcare</li>
-                                <li>Local roads</li>
-                                <li>Registration (birth, marriage, land records)</li>
-                                <li>Community-level services</li>
-                            </ul>
-                            <p>If something affects your daily life directly, it’s often handled here.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Political Reality</h3>
-                            <p>Nepal is multiparty.</p>
-                            <p>Major parties rotate in and out of coalition governments. No party usually wins a strong majority, so alliances are common.</p>
-                            <p>That means frequent government changes. Instability is normal. Coalition politics is constant.</p>
-                            <p>But elections happen. Power changes hands. The system holds — even if it shakes.</p>
-                            
-                            <hr class="section-divider">
-                            
-                            <h3>Big Shift</h3>
-                            <p>Before 2008:</p>
-                            <ul>
-                                <li>Constitutional monarchy</li>
-                                <li>Centralized state</li>
-                            </ul>
-                            <p>After 2008:</p>
-                            <ul>
-                                <li>Republic</li>
-                                <li>Federal restructuring</li>
-                            </ul>
-                            <p>The change from a Kathmandu-centered unitary system to federalism is one of the biggest political shifts in Nepal’s history.</p>
-                            <p>It’s still evolving.</p>
-                        `
+                        content: `<div class="places-explore-page people-cultures-page">
+    <p class="pc-lede">In 2001, Nepal was a Hindu kingdom where ultimate power belonged to the monarch. In 2008, following a decade of civil war and a mass democracy movement, the 240-year-old Shah dynasty was abolished. In 2015, Nepal adopted a landmark constitution that completely dismantled one of South Asia’s most centralized states and rebuilt it as a <strong>Federal Democratic Republic</strong>.</p>
+    <p>Today, power in Nepal does not flow from a palace. It is shared across <strong>three vertical tiers of government</strong> (Federal, 7 Provinces, and 753 Local Units) and divided between <strong>three independent branches</strong> (the Executive, the Legislature, and the Judiciary).</p>
+    <p>It is a young, ambitious, and sometimes turbulent democracy. Here is how modern Nepal governs itself — how power is distributed on paper, and how politics actually plays out in daily reality.</p>
+
+    <div class="pc-stats">
+        <div class="pc-stat"><strong>3 Tiers</strong><span>Federal, 7 Provinces, and 753 Local Governments</span></div>
+        <div class="pc-stat"><strong>2015</strong><span>Promulgation of the Federal Democratic Constitution</span></div>
+        <div class="pc-stat"><strong>275 MPs</strong><span>House of Representatives (165 FPTP + 110 Proportional)</span></div>
+        <div class="pc-stat"><strong>33%+</strong><span>Mandatory constitutional representation quota for women</span></div>
+    </div>
+
+    <div class="places-nav-pills" aria-label="Quick jump to government sections">
+        <a href="#the-big-transformation-from-kingdom-to-republic">From Kingdom to Republic</a>
+        <a href="#the-three-tiers-of-government">Three Tiers of Government</a>
+        <a href="#the-seven-provinces-of-nepal">The 7 Provinces</a>
+        <a href="#the-three-branches-of-power">Executive, Parliament & Courts</a>
+        <a href="#how-elections-work-the-mixed-system">How Elections Work</a>
+        <a href="#constitutional-watchdogs--checks">Watchdogs & Checks</a>
+        <a href="#political-reality-coalitions--stability">Coalition Politics in Reality</a>
+        <a href="#key-governance-terms-in-nepali">Key Nepali Civic Words</a>
+    </div>
+
+    <div class="pc-note">
+        <strong>The core idea:</strong> Federalism was not chosen because it was easy or cheap. It was adopted because Nepal is extraordinarily diverse: 142 ethnic groups, 124 mother tongues, and geographic terrain vaulting from sea-level plains to the top of Everest. A centralized government in Kathmandu could no longer manage a country that was never homogeneous to begin with.
+    </div>
+
+    <h2>The Big Transformation: From Kingdom to Republic</h2>
+    <p>For more than two centuries after King Prithvi Narayan Shah unified the Kathmandu Valley in 1769, Nepal was ruled as a strictly unitary state. Power radiated outward from Kathmandu. Every major administrative decision — from building a dirt road in the far-western hills to hiring a teacher in the southern plains — had to be approved by royal decree or ministerial signature in the capital.</p>
+    <p>That extreme centralization created deep rural neglect, regional inequality, and ethnic grievances. In 1996, the Communist Party of Nepal (Maoist) launched an armed insurgency that lasted a decade. In 2006, a massive peaceful popular uprising (<strong>Jana Andolan II</strong>) brought millions of citizens into the streets, forcing King Gyanendra to surrender power. In 2008, the newly elected Constituent Assembly officially declared Nepal a <strong>Federal Democratic Republic</strong>, peacefully ending the monarchy.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Singha_Durbar.jpg/1280px-Singha_Durbar.jpg" alt="Singha Durbar administrative headquarters in Kathmandu">
+            <figcaption class="pc-credit">Singha Durbar, seat of the Prime Minister and Ministries. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Constitution_of_nepal_2015.jpg" alt="Constitution of Nepal 2015">
+            <figcaption class="pc-credit">The Constitution of Nepal, promulgated Sept 20, 2015. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <p>On <strong>September 20, 2015</strong>, Nepal promulgated its current constitution. Drafted by an elected Constituent Assembly, it defined Nepal as an <em>“independent, indivisible, sovereign, secular, inclusive, democratic, socialism-oriented, federal democratic republican state.”</em> It was the first constitution in South Asia to explicitly protect the rights of sexual minorities (LGBTQ+) and mandate that at least 33% of federal and provincial lawmakers be women.</p>
+
+    <h2>The Three Tiers of Government</h2>
+    <p>Under the 2015 Constitution, sovereignty is distributed across three vertical levels of government. Each tier has its own directly elected leaders, its own legislative body, and its own constitutionally protected list of powers.</p>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">1. Federal Government (संघीय सरकार)</span>
+                    <span class="place-card-meta">National Level • Singha Durbar</span>
+                </div>
+                <p>The central government responsible for the integrity and sovereignty of the country as a whole. Operating from Singha Durbar in Kathmandu, it handles:</p>
+                <ul class="place-highlights">
+                    <li><strong>National Defense & Security:</strong> Command of the Nepal Army.</li>
+                    <li><strong>Foreign Affairs & Treaties:</strong> International diplomacy, border security, passports, and trade pacts.</li>
+                    <li><strong>Monetary Policy:</strong> The central bank (Nepal Rastra Bank), currency, and national public debt.</li>
+                    <li><strong>Strategic Infrastructure:</strong> International airports, major highways, and trans-national power grids.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">2. Provincial Government (प्रदेश सरकार)</span>
+                    <span class="place-card-meta">7 Provinces • Regional Autonomy</span>
+                </div>
+                <p>Seven autonomous provinces designed to decentralize power away from Kathmandu. Each province has a unicameral assembly and a cabinet headed by a Chief Minister:</p>
+                <ul class="place-highlights">
+                    <li><strong>Provincial Police & Administration:</strong> Regional law enforcement and public security.</li>
+                    <li><strong>Healthcare & Universities:</strong> Provincial hospitals, colleges, and regional transport networks.</li>
+                    <li><strong>Agriculture & Tourism:</strong> Local crop subsidies, irrigation canals, and provincial parks.</li>
+                    <li><strong>Current Challenge:</strong> Negotiating fiscal autonomy and administrative powers with the central ministries in Kathmandu.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">3. Local Government (स्थानीय तह)</span>
+                    <span class="place-card-meta">753 Units • Grassroots Democracy</span>
+                </div>
+                <p>The true frontline of citizen democracy. Composed of <strong>753 independent municipal and rural governments</strong>, plus 6,743 Ward Offices:</p>
+                <ul class="place-highlights">
+                    <li><strong>6 Metropolises (Mahanagarpalika):</strong> Kathmandu, Lalitpur, Pokhara, Bharatpur, Birgunj, Biratnagar.</li>
+                    <li><strong>11 Sub-Metropolises (Upamahanagarpalika) & 276 Municipalities (Nagarpalika).</strong></li>
+                    <li><strong>460 Rural Municipalities (Gaunpalika):</strong> Governing agrarian and mountain villages.</li>
+                    <li><strong>Ward Offices (Wada Karyalaya):</strong> Where births, marriages, and citizenship recommendations are processed daily.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Concurrent Powers (साझा अधिकार)</span>
+                    <span class="place-card-meta">Shared Responsibilities</span>
+                </div>
+                <p>The constitution includes lists of powers shared between tiers. When local, provincial, and federal powers intersect, federal law takes precedence if there is an irreconcilable conflict, subject to Supreme Court constitutional review.</p>
+                <ul class="place-highlights">
+                    <li><strong>Shared areas:</strong> Civil and criminal procedure, electricity, forests and wildlife, environmental protection, and disaster management.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>The Seven Provinces of Nepal</h2>
+    <p>Nepal eliminated its historical division of 5 Development Regions and 14 Administrative Zones, replacing them with seven federal provinces. Initially designated by numbers (Province 1 through 7), all seven have now officially adopted geographic, historical, and river-based names chosen by their respective elected assemblies.</p>
+
+    <figure class="pc-photo">
+        <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Map_of_Nepal_%28Political_and_Administrative%29.jpg/1280px-Map_of_Nepal_%28Political_and_Administrative%29.jpg" alt="Official Political and Administrative Map of Nepal showing 7 Provinces">
+        <figcaption class="pc-credit">Official Political and Administrative Map of Nepal showing the 7 Provinces. Public domain.</figcaption>
+    </figure>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">1. Koshi Province (कोशी प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Biratnagar • 14 Districts</span>
+                </div>
+                <p>Named after the mighty Koshi River system. Encompasses Mount Everest, Kanchenjunga, and Makalu in the north, rolling organic tea hills in Ilam, and major industrial trade hubs in the southern Morang plains.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">2. Madhesh Province (मधेश प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Janakpur • 8 Districts</span>
+                </div>
+                <p>The only province located entirely in the flat Terai plains. Home to rich Maithili and Bhojpuri cultures, the agricultural breadbasket of Nepal, and the historic cultural hub of Janakpur Dham. Densely populated and politically influential.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">3. Bagmati Province (बागमती प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Hetauda • 13 Districts</span>
+                </div>
+                <p>Encompasses the federal capital of Kathmandu Valley as well as surrounding hill districts. The economic, educational, and bureaucratic engine of the nation, producing over one-third of the country’s GDP.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">4. Gandaki Province (गण्डकी प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Pokhara • 11 Districts</span>
+                </div>
+                <p>The tourism and adventure heartland. Home to the Annapurna mountain range, Phewa Lake, historic Gurkha recruitment communities, and major hydroelectric power plants along the Kali Gandaki and Marsyangdi rivers.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">5. Lumbini Province (लुम्बिनी प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Deukhuri (Dang) • 12 Districts</span>
+                </div>
+                <p>Named after Lumbini, the historic birthplace of Siddhartha Gautama (the Buddha). Spans fertile southern farmlands, vibrant border trade towns like Nepalgunj and Butwal, and the scenic middle hills of Palpa.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">6. Karnali Province (कर्णाली प्रदेश)</span>
+                    <span class="place-card-meta">Capital: Birendranagar • 10 Districts</span>
+                </div>
+                <p>The largest province by area, but the smallest by population. Encompasses pristine natural wonders like Rara Lake and Shey Phoksundo, high trans-Himalayan valleys, and the historic birthplace of the Khas language. Rich in natural beauty, but facing serious infrastructure challenges.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">7. Sudurpashchim Province (सुदूरपश्चिम)</span>
+                    <span class="place-card-meta">Capital: Godawari • 9 Districts</span>
+                </div>
+                <p>The Far-Western province bordered by India to the south and west. Home to the rolling sub-alpine meadows of Khaptad National Park, vast grasslands of Suklaphanta, and distinct Doteli and Tharu cultural traditions.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Inter-Provincial Council</span>
+                    <span class="place-card-meta">Conflict Resolution</span>
+                </div>
+                <p>The constitution establishes a permanent Inter-Provincial Council headed by the Prime Minister, the Federal Finance Minister, the Home Minister, and the Chief Ministers of all seven provinces to settle political and financial disputes between provinces and the center.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>The Three Branches of Power</h2>
+    <p>Like many parliamentary democracies, Nepal’s federal government is organized around a constitutional separation of powers between three independent branches.</p>
+
+    <div class="pc-photo-pair">
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Sansad_Bhavan_of_Nepal_%28International_Convention_Centre_Nepal%29-070A4427.jpg/1280px-Sansad_Bhavan_of_Nepal_%28International_Convention_Centre_Nepal%29-070A4427.jpg" alt="Federal Parliament of Nepal in Kathmandu">
+            <figcaption class="pc-credit">Federal Parliament building (Sansad Bhavan), Kathmandu. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+        <figure>
+            <img loading="lazy" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Supreme_Court_of_Nepal_02.jpg/1280px-Supreme_Court_of_Nepal_02.jpg" alt="Supreme Court of Nepal">
+            <figcaption class="pc-credit">The Supreme Court of Nepal, Ramshah Path. Photo: Nabin K Sapkota, CC BY-SA 4.0.</figcaption>
+        </figure>
+    </div>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Executive (कार्यपालिका)</span>
+                    <span class="place-card-meta">President & Prime Minister</span>
+                </div>
+                <p>Executive authority is divided between a ceremonial Head of State and an executive Head of Government:</p>
+                <ul class="place-highlights">
+                    <li><strong>President (राष्ट्रपति):</strong> Ceremonial Head of State and supreme commander of the military. Elected for a 5-year term by an electoral college consisting of all members of the Federal Parliament and Provincial Assemblies. Acts on the binding recommendation of the Council of Ministers.</li>
+                    <li><strong>Prime Minister (प्रधानमन्त्री):</strong> Chief Executive. Must command a majority in the House of Representatives. Heads the Council of Ministers, which by constitutional mandate is strictly capped at a maximum of 25 ministers to prevent bloated cabinets.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Legislature (व्यवस्थापिका)</span>
+                    <span class="place-card-meta">Bicameral Parliament (334 MPs)</span>
+                </div>
+                <p>The Federal Parliament of Nepal consists of two houses:</p>
+                <ul class="place-highlights">
+                    <li><strong>House of Representatives (प्रतिनिधि सभा):</strong> Lower house with 275 members serving 5-year terms. This is where national legislation originates and where governments are formed or dissolved via votes of confidence.</li>
+                    <li><strong>National Assembly (राष्ट्रिय सभा):</strong> Permanent upper house with 59 members representing the provinces, women, Dalits, and marginalized communities. One-third of members retire every two years to ensure institutional continuity.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Judiciary (न्यायपालिका)</span>
+                    <span class="place-card-meta">Supreme Court & Judicial Review</span>
+                </div>
+                <p>An independent, three-tier court system headed by the Chief Justice (<em>Pradhan Nyayadhish</em>):</p>
+                <ul class="place-highlights">
+                    <li><strong>Supreme Court (सर्वोच्च अदालत):</strong> The apex constitutional court in Kathmandu with the power of judicial review. It can strike down laws passed by parliament or executive orders deemed unconstitutional.</li>
+                    <li><strong>7 High Courts (उच्च अदालत):</strong> One in each province, handling major regional appeals.</li>
+                    <li><strong>77 District Courts (जिल्ला अदालत):</strong> Trial courts of first instance in every district.</li>
+                    <li><strong>Proven Independence:</strong> The Supreme Court has repeatedly demonstrated independence, such as overturning Prime Ministerial attempts to dissolve parliament in 2020 and 2021.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Local Judicial Committees</span>
+                    <span class="place-card-meta">Community Justice</span>
+                </div>
+                <p>Under Article 217 of the constitution, every single municipality and rural municipality has a three-member <strong>Judicial Committee</strong> headed by the Deputy Mayor or Vice-Chairperson.</p>
+                <ul class="place-highlights">
+                    <li><strong>Role:</strong> Mediates neighborhood civil disputes, property boundary arguments, and family disagreements locally without expensive court litigation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>How Elections Work: The Mixed System</h2>
+    <p>Nepal uses a <strong>mixed electoral system</strong> designed to balance direct democratic accountability with broad social representation. This unique mechanism is why Nepal's parliament is one of the most demographically diverse in Asia, but also why single-party majorities are rare.</p>
+
+    <figure class="pc-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/5/59/A_Nepalese_voter_cast_their_votes_for_the_local_election_in_2022.jpg" alt="A Nepalese citizen casting vote in an election">
+        <figcaption class="pc-credit">A voter casting their ballot in Nepal's local elections. Photo: Janak Bhatta, CC BY-SA 4.0.</figcaption>
+    </figure>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">1. First-Past-The-Post (FPTP — 60%)</span>
+                    <span class="place-card-meta">165 Direct Constituencies</span>
+                </div>
+                <p>165 members of the House of Representatives are elected directly from geographically defined constituencies across the country. Each citizen casts a vote for an individual candidate on their ballot; whoever receives the most votes wins the seat.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">2. Proportional Representation (PR — 40%)</span>
+                    <span class="place-card-meta">110 Party List Seats</span>
+                </div>
+                <p>110 seats are allocated based on the total share of the popular vote won by political parties nationwide. To qualify for PR seats, a party must cross a legal threshold of at least 3% of the national vote.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Mandatory Diversity Quotas</span>
+                    <span class="place-card-meta">Constitutional Inclusion</span>
+                </div>
+                <p>Political party PR lists are legally required by the constitution to reflect Nepal's demographic composition:</p>
+                <ul class="place-highlights">
+                    <li><strong>Gender:</strong> At least 33% of total elected members across both houses must be women.</li>
+                    <li><strong>Communities:</strong> Strict percentage quotas for Indigenous Janajati (28.7%), Khas-Arya (31.2%), Madhesi (15.3%), Dalit (13.8%), Tharu (6.6%), and Muslim (4.4%).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Local Election Quotas</span>
+                    <span class="place-card-meta">Grassroots Transformation</span>
+                </div>
+                <p>At the municipal level, if a party nominates a candidate for Mayor, its candidate for Deputy Mayor must be of the opposite gender. Furthermore, every single 5-member Ward Committee in the country is legally required to include at least one woman member and one Dalit woman member.</p>
+                <ul class="place-highlights">
+                    <li><strong>Impact:</strong> Over 14,000 women were elected to local government positions across Nepal in recent elections.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Constitutional Watchdogs & Checks</h2>
+    <p>To prevent the concentration of authoritarian power that characterized past regimes, the 2015 Constitution established independent constitutional bodies with constitutional tenure and autonomous budgets:</p>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">CIAA (अख्तियार दुरुपयोग अनुसन्धान आयोग)</span>
+                    <span class="place-card-meta">Anti-Corruption Commission</span>
+                </div>
+                <p>The Commission for the Investigation of Abuse of Authority investigates corruption, bribery, and misuse of power by public officials, ministers, and civil servants, filing cases directly before the Special Court.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Election Commission (निर्वाचन आयोग)</span>
+                    <span class="place-card-meta">Independent Elections</span>
+                </div>
+                <p>Conducts and supervises all federal, provincial, and local elections. It enforces campaign spending limits, maintains biometric voter rolls, and ensures peaceful transitions of power.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">Auditor General (महालेखा परीक्षक)</span>
+                    <span class="place-card-meta">Public Financial Scrutiny</span>
+                </div>
+                <p>Audits every government ministry, department, and state-owned corporation, submitting an annual report directly to the President and Parliament on fiscal irregularities and wasteful spending.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">National Human Rights Commission</span>
+                    <span class="place-card-meta">Civil Liberties Watchdog</span>
+                </div>
+                <p>A constitutional body with the authority to independently investigate human rights abuses, custodial deaths, and civil liberty violations by state security forces or private actors.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Political Reality: Coalitions & Stability</h2>
+    <p>The constitution creates a sophisticated blueprint. Daily Nepali politics, however, is famous for its turbulence. Understanding how government functions requires looking beyond the legal text to the real political dynamics on the ground.</p>
+
+    <div class="places-grid">
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Math of Coalition Politics</span>
+                    <span class="place-card-meta">The "Hung Parliament" Default</span>
+                </div>
+                <p>Because 40% of parliament is elected through proportional representation, it is mathematically almost impossible for any single political party to win a clean majority (138 out of 275 seats). Every federal government is formed through coalitions, negotiations, and power-sharing pacts.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Revolving Door of Prime Ministers</span>
+                    <span class="place-card-meta">Frequent Leadership Shifts</span>
+                </div>
+                <p>Since the end of the monarchy in 2008, Nepal has seen more than a dozen prime ministerial changes. Three major political forces — the <strong>Nepali Congress (center-left democratic)</strong>, the <strong>CPN-UML (mainstream communist)</strong>, and the <strong>CPN-Maoist Centre (former insurgents)</strong> — have rotated power through changing alliances, alongside newer reformist parties like the <strong>RSP (Rastriya Swatantra Party)</strong> and regional Madhes-based movements.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The "Vote of No Confidence" Rule</span>
+                    <span class="place-card-meta">Constitutional Safeguard</span>
+                </div>
+                <p>To prevent hyper-instability, the 2015 Constitution introduced Article 100(4): <strong>no vote of no confidence can be brought against a Prime Minister during the first two years of their term</strong>. This was created specifically to give newly elected cabinets time to pass budgets and govern.</p>
+            </div>
+        </div>
+
+        <div class="place-card">
+            <div>
+                <div class="place-card-header">
+                    <span class="place-card-title">The Real Success: Systemic Resilience</span>
+                    <span class="place-card-meta">Democracy Survives</span>
+                </div>
+                <p>Despite headline-grabbing political drama in Kathmandu, the system itself has proven remarkably durable. Elections happen on time, power transfers occur peacefully without tanks in the streets, local governments pave roads and run clinics regardless of who is prime minister, and the independent Supreme Court consistently upholds the rule of law.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Key Governance Terms in Nepali</h2>
+    <p>Here are the essential civic and constitutional terms you will hear on Nepali television news, read in local newspapers, and encounter in daily conversations:</p>
+
+    <div class="table-responsive">
+        <table class="travel-phrases-table">
+            <thead>
+                <tr>
+                    <th>Nepali (नेपाली)</th>
+                    <th>Pronunciation</th>
+                    <th>English Meaning</th>
+                    <th>Significance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>संघीय लोकतान्त्रिक गणतन्त्र</strong></td>
+                    <td><em>Sanghiya Loktaantrik Ganatantra</em></td>
+                    <td>Federal Democratic Republic</td>
+                    <td>The official constitutional description of the modern Nepali state.</td>
+                </tr>
+                <tr>
+                    <td><strong>संविधान</strong></td>
+                    <td><em>Sambidhaan</em></td>
+                    <td>Constitution</td>
+                    <td>The supreme law of the land, adopted on September 20, 2015.</td>
+                </tr>
+                <tr>
+                    <td><strong>प्रधानमन्त्री</strong></td>
+                    <td><em>Pradhaanmantri</em></td>
+                    <td>Prime Minister</td>
+                    <td>The Chief Executive who leads the Council of Ministers and governs the country.</td>
+                </tr>
+                <tr>
+                    <td><strong>राष्ट्रपति</strong></td>
+                    <td><em>Rashtrapati</em></td>
+                    <td>President</td>
+                    <td>The ceremonial Head of State and supreme commander of the armed forces.</td>
+                </tr>
+                <tr>
+                    <td><strong>संसद</strong></td>
+                    <td><em>Sansad</em></td>
+                    <td>Parliament</td>
+                    <td>The bicameral national legislature in Kathmandu that writes federal laws.</td>
+                </tr>
+                <tr>
+                    <td><strong>सर्वोच्च अदालत</strong></td>
+                    <td><em>Sarbochha Adalat</em></td>
+                    <td>Supreme Court</td>
+                    <td>The highest court of the land, guarding civil rights and constitutional review.</td>
+                </tr>
+                <tr>
+                    <td><strong>प्रदेश</strong></td>
+                    <td><em>Pradesh</em></td>
+                    <td>Province</td>
+                    <td>The seven regional federal units of government (Koshi, Madhesh, Bagmati, etc.).</td>
+                </tr>
+                <tr>
+                    <td><strong>स्थानीय तह</strong></td>
+                    <td><em>Sthaaniya Taha</em></td>
+                    <td>Local Level / Government</td>
+                    <td>The 753 municipalities and rural municipalities closest to everyday citizen life.</td>
+                </tr>
+                <tr>
+                    <td><strong>वडा कार्यालय</strong></td>
+                    <td><em>Wada Karyalaya</em></td>
+                    <td>Ward Office</td>
+                    <td>The neighborhood government office where vital registrations and recommendations happen.</td>
+                </tr>
+                <tr>
+                    <td><strong>मताधिकार / चुनाव</strong></td>
+                    <td><em>Mataadhikaar / Chunaab</em></td>
+                    <td>Right to Vote / Election</td>
+                    <td>The democratic exercise practiced by all citizens age 18 and older.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pc-ending">
+        <strong>The big picture:</strong> Modern Nepal is neither the autocratic kingdom of the past nor a finished democratic utopia. It is a work in progress. It is what happens when a country with ancient monarchical habits, extreme mountain topography, and deep social diversity commits to democracy, federalism, and the rule of law. It can be noisy, slow, and unpredictable — but the power to shape the future now rests firmly in the hands of its people.
+    </div>
+
+    <details class="pc-source-details">
+        <summary>Sources and image credits</summary>
+        <p><strong>Official legal & constitutional references</strong></p>
+        <ul>
+            <li><a href="https://repository.lawcommission.gov.np/np/category/documents/prevailing-law/%E0%A4%B8%E0%A4%82%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8/constitution-of-nepal/" target="_blank" rel="noopener">The Constitution of Nepal (2015), Nepal Law Commission</a></li>
+            <li><a href="https://hr.parliament.gov.np/" target="_blank" rel="noopener">House of Representatives (Pratinidhi Sabha), Federal Parliament of Nepal</a></li>
+            <li><a href="https://supremecourt.gov.np/" target="_blank" rel="noopener">Supreme Court of Nepal (Sarbochha Adalat) Official Decisions & Reports</a></li>
+            <li><a href="https://election.gov.np/" target="_blank" rel="noopener">Election Commission of Nepal: Results & Electoral Frameworks</a></li>
+            <li><a href="https://mofaga.gov.np/" target="_blank" rel="noopener">Ministry of Federal Affairs and General Administration (MoFAGA): Local Government Profiles</a></li>
+        </ul>
+        <p><strong>Photographs (Wikimedia Commons)</strong></p>
+        <ul>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Singha_Durbar.jpg" target="_blank" rel="noopener">Singha Durbar, Kathmandu</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Constitution_of_nepal_2015.jpg" target="_blank" rel="noopener">The Constitution of Nepal (2015)</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Sansad_Bhavan_of_Nepal_(International_Convention_Centre_Nepal)-070A4427.jpg" target="_blank" rel="noopener">Federal Parliament of Nepal (Sansad Bhavan)</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Supreme_Court_of_Nepal_02.jpg" target="_blank" rel="noopener">The Supreme Court of Nepal</a> — Nabin K Sapkota, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:A_Nepalese_voter_cast_their_votes_for_the_local_election_in_2022.jpg" target="_blank" rel="noopener">A Nepalese voter casting their ballot</a> — Janak Bhatta, CC BY-SA 4.0</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Map_of_Nepal_(Political_and_Administrative).jpg" target="_blank" rel="noopener">Official Map of Nepal with 7 Provinces</a> — Public domain</li>
+        </ul>
+    </details>
+</div>`
                     },
                     {
                         id: "interesting-facts",
