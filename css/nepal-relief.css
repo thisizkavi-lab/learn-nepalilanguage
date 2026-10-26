@@ -1,0 +1,576 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Nepal 3D Museum Topographical Relief — Frameless Embedded Stage
+   Designed to float seamlessly on the page (zero separate box/iframe frame)
+   ───────────────────────────────────────────────────────────────────────── */
+
+.content-inner:has(.nepal-relief-stage) {
+    overflow: visible;
+}
+
+.nepal-relief-stage {
+    --nr-muted: #646c77;
+    --nr-ink: #1b1f24;
+    --nr-hairline: rgba(30, 41, 59, 0.13);
+    --nr-pill-bg: rgba(15, 23, 42, 0.042);
+    --nr-pill-hover: rgba(15, 23, 42, 0.085);
+    --nr-pill-active-bg: #1b2432;
+    --nr-pill-active-ink: #ffffff;
+    --nr-card-bg: rgba(255, 255, 255, 0.92);
+    --nr-card-shadow: 0 10px 30px rgba(15, 23, 42, 0.12), 0 1px 3px rgba(15, 23, 42, 0.08);
+    --nr-pin-bg: rgba(255, 255, 255, 0.88);
+    --nr-pin-ink: #17202a;
+    --nr-pin-stem: rgba(23, 32, 42, 0.48);
+    --nr-accent: #1a73e8;
+    --nr-gold: #b7791f;
+
+    position: relative;
+    margin: 0.35rem -36px 2.4rem;
+    width: calc(100% + 72px);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+html[data-theme="dark"] .nepal-relief-stage {
+    --nr-muted: #9da5b0;
+    --nr-ink: #e6e9ef;
+    --nr-hairline: rgba(230, 235, 245, 0.14);
+    --nr-pill-bg: rgba(255, 255, 255, 0.055);
+    --nr-pill-hover: rgba(255, 255, 255, 0.11);
+    --nr-pill-active-bg: #e6e9ef;
+    --nr-pill-active-ink: #1c1e22;
+    --nr-card-bg: rgba(35, 37, 42, 0.93);
+    --nr-card-shadow: 0 12px 34px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --nr-pin-bg: rgba(32, 34, 39, 0.88);
+    --nr-pin-ink: #eef1f6;
+    --nr-pin-stem: rgba(235, 240, 248, 0.45);
+    --nr-accent: #7aa2f7;
+    --nr-gold: #ecc94b;
+}
+
+/* Top whisper telemetry bar — sits directly on page background */
+.nr-telemetry-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 36px 2px;
+    min-height: 28px;
+    font-size: 0.775rem;
+    color: var(--nr-muted);
+    letter-spacing: 0.01em;
+}
+
+.nr-readout {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+}
+
+.nr-readout strong {
+    color: var(--nr-ink);
+    font-weight: 600;
+}
+
+.nr-readout-sep {
+    opacity: 0.38;
+}
+
+.nr-readout-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--nr-pill-bg);
+    border: 1px solid var(--nr-hairline);
+    color: var(--nr-ink);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.nr-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Minimalist zoom / reset / compass micro-controls */
+.nr-quick-tools {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.nr-icon-btn {
+    appearance: none;
+    border: 1px solid var(--nr-hairline);
+    background: transparent;
+    color: var(--nr-ink);
+    border-radius: 999px;
+    height: 26px;
+    min-width: 26px;
+    padding: 0 8px;
+    font-family: inherit;
+    font-size: 0.73rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: background-color 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
+}
+
+.nr-icon-btn:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-icon-btn[aria-pressed="true"] {
+    background: var(--nr-pill-bg);
+    border-color: var(--nr-ink);
+}
+
+.nr-compass-needle {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    transition: transform 0.06s linear;
+}
+
+/* Frameless 3D Viewport — 100% transparent, blends into webpage */
+.nr-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 8.1;
+    min-height: 300px;
+    max-height: 490px;
+    overflow: visible;
+    touch-action: pan-y;
+}
+
+.nr-viewport.nr-hovering-model {
+    cursor: grab;
+}
+
+.nr-viewport.nr-dragging {
+    cursor: grabbing;
+}
+
+.nr-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: transparent;
+    /* Dissolve edges seamlessly into the page when zoomed in — never a sharp box */
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 3.5%, #000 95%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 3.5%, #000 95%, transparent 100%);
+    mask-composite: intersect;
+}
+
+/* Subtle loading state */
+.nr-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--nr-muted);
+    font-size: 0.8rem;
+    pointer-events: none;
+    transition: opacity 0.45s ease;
+}
+
+.nr-loading.nr-hidden {
+    opacity: 0;
+}
+
+.nr-loading-pulse {
+    width: 34px;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--nr-hairline);
+    overflow: hidden;
+    position: relative;
+}
+
+.nr-loading-pulse::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 45%;
+    background: var(--nr-ink);
+    border-radius: 99px;
+    animation: nrSlide 1.05s ease-in-out infinite alternate;
+}
+
+@keyframes nrSlide {
+    from { transform: translateX(-10%); }
+    to { transform: translateX(130%); }
+}
+
+/* 3D Projected Museum Pin Markers */
+.nr-markers-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.nr-pin {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -100%);
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: opacity 0.2s ease;
+}
+
+.nr-pin.nr-pin-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nr-pin-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--nr-pin-bg);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--nr-hairline);
+    color: var(--nr-pin-ink);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    transition: transform 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.nr-pin:hover .nr-pin-tag,
+.nr-pin.nr-pin-active .nr-pin-tag {
+    transform: translateY(-2px) scale(1.04);
+    border-color: var(--nr-accent);
+    z-index: 6;
+}
+
+.nr-pin.nr-pin-active .nr-pin-tag {
+    background: var(--nr-pill-active-bg);
+    color: var(--nr-pill-active-ink);
+    border-color: var(--nr-pill-active-bg);
+}
+
+.nr-pin-elev {
+    font-weight: 500;
+    opacity: 0.72;
+    font-size: 0.63rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.nr-pin-stem {
+    width: 1px;
+    height: 11px;
+    background: var(--nr-pin-stem);
+}
+
+.nr-pin--peak .nr-pin-stem {
+    height: 14px;
+}
+
+.nr-pin-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--nr-pin-ink);
+    box-shadow: 0 0 0 1.5px var(--nr-pin-bg);
+}
+
+.nr-pin--peak .nr-pin-dot {
+    background: #d97706;
+}
+
+.nr-pin--valley .nr-pin-dot {
+    background: #2563eb;
+}
+
+.nr-pin--water .nr-pin-dot {
+    background: #0891b2;
+}
+
+/* Floating Museum Placard when a Landmark is Selected */
+.nr-placard {
+    position: absolute;
+    right: 36px;
+    bottom: 10px;
+    max-width: 305px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    background: var(--nr-card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--nr-hairline);
+    box-shadow: var(--nr-card-shadow);
+    z-index: 8;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.nr-placard.nr-hidden {
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+}
+
+.nr-placard-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 3px;
+}
+
+.nr-placard-title {
+    font-size: 0.86rem;
+    font-weight: 650;
+    color: var(--nr-ink);
+    line-height: 1.25;
+}
+
+.nr-placard-nep {
+    font-family: 'Kalimati', 'Noto Sans Devanagari', sans-serif;
+    font-weight: 500;
+    color: var(--nr-muted);
+    margin-left: 4px;
+    font-size: 0.84rem;
+}
+
+.nr-placard-close {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--nr-muted);
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1;
+    padding: 1px 4px;
+    border-radius: 4px;
+}
+
+.nr-placard-close:hover {
+    color: var(--nr-ink);
+    background: var(--nr-pill-hover);
+}
+
+.nr-placard-meta {
+    font-size: 0.71rem;
+    color: var(--nr-accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
+}
+
+.nr-placard-desc {
+    font-size: 0.76rem;
+    line-height: 1.48;
+    color: var(--nr-muted);
+    margin: 0 !important;
+}
+
+/* Bottom Editorial Controls — matches site's minimal pill aesthetic */
+.nr-controls-wrap {
+    padding: 2px 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nr-bar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nr-pill-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nr-row-label {
+    font-size: 0.71rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--nr-muted);
+    margin-right: 3px;
+}
+
+.nr-pill {
+    appearance: none;
+    border: 1px solid var(--nr-hairline);
+    background: var(--nr-pill-bg);
+    color: var(--nr-ink);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.3;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+.nr-pill:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-pill.nr-active {
+    background: var(--nr-pill-active-bg);
+    color: var(--nr-pill-active-ink);
+    border-color: var(--nr-pill-active-bg);
+}
+
+.nr-pill--tour {
+    background: transparent;
+    font-size: 0.73rem;
+    padding: 3px 9px;
+    color: var(--nr-muted);
+}
+
+.nr-pill--tour:hover {
+    color: var(--nr-ink);
+}
+
+.nr-pill--tour.nr-active {
+    background: var(--nr-pill-bg);
+    color: var(--nr-ink);
+    border-color: var(--nr-ink);
+}
+
+/* Interactive Legend Key (visible in Ecological Belts & 7 Provinces modes) */
+.nr-legend-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 2px;
+}
+
+.nr-legend-strip.nr-hidden {
+    display: none;
+}
+
+.nr-legend-chip {
+    appearance: none;
+    border: 1px solid var(--nr-hairline);
+    background: transparent;
+    color: var(--nr-ink);
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.72rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.nr-legend-chip:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-legend-chip.nr-dimmed {
+    opacity: 0.42;
+}
+
+.nr-legend-chip.nr-focused {
+    border-color: var(--nr-ink);
+    background: var(--nr-pill-bg);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .nepal-relief-stage {
+        margin: 0.25rem 0 2rem;
+        width: 100%;
+    }
+
+    .nr-telemetry-bar,
+    .nr-controls-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .nr-placard {
+        right: 8px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nr-viewport {
+        aspect-ratio: 16 / 10.6;
+        min-height: 250px;
+    }
+
+    .nr-telemetry-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .nr-quick-tools {
+        align-self: flex-end;
+    }
+
+    .nr-placard {
+        position: static;
+        max-width: 100%;
+        margin: 6px 0 4px;
+    }
+
+    .nr-placard.nr-hidden {
+        display: none;
+    }
+
+    .nr-pin-tag {
+        font-size: 0.62rem;
+        padding: 1.5px 5.5px;
+    }
+
+    .nr-pin-elev {
+        display: none;
+    }
+}

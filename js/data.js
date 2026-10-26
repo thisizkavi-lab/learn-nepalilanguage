@@ -27,7 +27,7 @@ const courseData = [
                         id: "geography",
                         title: "Geography",
                         content: `
-                            <iframe src="https://maps.google.com/maps?q=Nepal&t=&z=6&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; border-radius: 8px; margin-bottom: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div id="nepal-relief-root" class="nepal-relief-stage" aria-label="Interactive 3D topographical relief map of Nepal"></div>
                             <h2>The Hardware (Geography — Where Is Nepal?)</h2>
                             <p>Big Bang. Stars form. Galaxies settle. <br>Fast forward 13.8 billion years.</p>
                             <p>The Indian tectonic plate decides to slam into the Eurasian plate. It doesn’t politely bump. It crashes. Hard. The land buckles upward. That collision is still happening today.</p>
