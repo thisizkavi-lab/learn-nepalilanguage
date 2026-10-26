@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Vocabulary Builder — Everyday Spoken Nepali</title>
+    <meta name="description" content="A comprehensive, data-driven vocabulary library for English-speaking learners studying everyday spoken Nepali across 78 lessons with Devanagari, practical additions, and learning tracking.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/vocabulary.css?v=1">
+    <script>
+        (function () {
+            var t = localStorage.getItem('nepali-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <button id="vocab-mobile-menu-btn" class="menu-toggle vocab-mobile-menu-btn" aria-label="Toggle Lessons Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <a href="index.html" class="logo" aria-label="Learn Nepali home">
+                <img class="brand-logo-image brand-logo-base" src="assets/learn-nepali-logo.png?v=3" alt="Learn Nepali">
+                <img class="brand-logo-image brand-logo-contrast" src="assets/learn-nepali-logo.png?v=3" alt="" aria-hidden="true">
+            </a>
+        </div>
+        <div class="topbar-right">
+            <a href="practice.html" class="icon-link"
+                style="font-size:0.8125rem; text-decoration:none; color:white; opacity:0.85; margin-right:8px;">Writing</a>
+            <a href="reading.html" class="icon-link"
+                style="font-size:0.8125rem; text-decoration:none; color:white; opacity:0.85; margin-right:8px;">Reading</a>
+            <a href="quiz.html" class="icon-link"
+                style="font-size:0.8125rem; text-decoration:none; color:white; opacity:0.85; margin-right:8px;">Quiz</a>
+            <a href="vocabulary.html" class="icon-link"
+                style="font-size:0.8125rem; text-decoration:none; color:white; font-weight:700; opacity:1; border-bottom: 2px solid white; padding-bottom: 2px; margin-right:8px;">
+                Vocabulary <span class="topbar-badge">4,210</span>
+            </a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Backdrop -->
+    <div class="sidebar-backdrop" id="vocab-sidebar-backdrop"></div>
+
+    <!-- Main Vocabulary App Layout -->
+    <div class="vocab-layout">
+        <!-- Left Sidebar: Lessons Explorer -->
+        <aside class="vocab-sidebar" id="vocab-sidebar">
+            <div class="vocab-sidebar-header">
+                <!-- Search bar -->
+                <div class="vocab-search-wrap">
+                    <svg class="vocab-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="vocab-search-input" class="vocab-search-input" placeholder="Search English, देवनागरी, roman..." aria-label="Search vocabulary">
+                    <button id="vocab-search-clear" class="vocab-search-clear" aria-label="Clear search">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+
+                <!-- Thematic domain filter pills -->
+                <div class="vocab-themes-scroller" id="vocab-themes-scroller" aria-label="Browse by theme"></div>
+            </div>
+
+            <!-- Lessons List -->
+            <ul class="vocab-lesson-list" id="vocab-lesson-list" role="list" aria-label="Lessons list"></ul>
+
+            <!-- Sidebar Footer -->
+            <div class="vocab-sidebar-footer">
+                <span>78 Lessons • 4,210 words</span>
+                <button class="vocab-footer-action-btn" id="vocab-data-mgmt-btn" title="Manage your progress backup">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    <span>Storage</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="vocab-main">
+            <!-- Header panel: Current lesson, tabs, status filters -->
+            <section class="vocab-header-panel" id="vocab-header-panel"></section>
+
+            <!-- Sequential Audio Player Bar -->
+            <div class="vocab-audio-player-bar" id="vocab-audio-player-bar">
+                <div class="vocab-player-left">
+                    <button class="vocab-player-btn active" id="player-play-btn" title="Play sequence (Space)" aria-label="Play sequence">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </button>
+                    <div>
+                        <div class="vocab-player-title">Lesson Audio Sequence Player</div>
+                        <div class="vocab-player-status" id="player-status-text">Sequence ready</div>
+                    </div>
+                </div>
+
+                <div class="vocab-player-controls">
+                    <button class="vocab-player-btn" id="player-prev-btn" title="Previous audio item" aria-label="Previous audio item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
+                    </button>
+                    <button class="vocab-player-btn" id="player-next-btn" title="Next audio item" aria-label="Next audio item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+                    </button>
+                    <button class="vocab-player-btn" id="player-repeat-btn" title="Repeat item toggle" aria-label="Repeat item toggle">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                    </button>
+                    <button class="vocab-player-speed" id="player-speed-btn" title="Playback speed toggle">1.0x</button>
+                </div>
+            </div>
+
+            <!-- Vocabulary Cards / Rows Container -->
+            <section id="vocab-content-container" aria-live="polite"></section>
+        </main>
+    </div>
+
+    <!-- Detail View Slide-over Modal / Drawer -->
+    <div class="vocab-modal-backdrop" id="vocab-detail-modal" aria-hidden="true"></div>
+
+    <!-- App Scripts -->
+    <script src="js/vocabulary-data.js?v=1"></script>
+    <script src="js/vocabulary.js?v=1"></script>
+</body>
+
+</html>

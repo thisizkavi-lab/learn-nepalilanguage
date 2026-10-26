@@ -48,6 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
             html += `</div></div>`;
         });
 
+        html += `
+            <div class="nav-group" style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                <div class="nav-category" style="cursor: default;">
+                    <span style="display: flex; align-items: center; gap: 6px;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        Vocabulary Library
+                    </span>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="vocabulary.html" style="font-weight: 600; color: #3d6a54; display: flex; align-items: center; justify-content: space-between;">
+                            <span>78-Lesson Builder</span>
+                            <span style="font-size: 0.7rem; background: rgba(61,106,84,0.14); color: #3d6a54; padding: 1px 7px; border-radius: 10px;">4,210 words</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        `;
+
         navLeftContainer.innerHTML = html;
 
         // Attach event listeners for categories
