@@ -208,15 +208,15 @@ a:hover {
     text-decoration: none;
 }
 
-/* Brand artwork: readable over the blue (and dark) topbar without
-   changing the rest of the site's header or navigation styling. */
+/* Compact wordmark: tightly crop the transparent source image in its SVG.
+   The white backing keeps the dark lettering legible on the blue top bar. */
 .topbar .logo {
-    height: 44px;
+    height: 36px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0 8px;
-    border-radius: 7px;
+    border-radius: 5px;
     background: #fff;
     overflow: hidden;
     flex-shrink: 0;
@@ -224,12 +224,19 @@ a:hover {
 
 .brand-logo-image {
     display: block;
-    width: 190px;
+    width: 150px;
     height: auto;
 }
 
 @media (max-width: 600px) {
-    .brand-logo-image { width: 160px; }
+    .topbar .logo {
+        height: 32px;
+        padding: 0 6px;
+    }
+
+    .brand-logo-image {
+        width: 128px;
+    }
 }
 
 .icon-link {
