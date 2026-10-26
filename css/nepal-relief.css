@@ -1,61 +1,157 @@
 /* ─────────────────────────────────────────────────────────────────────────
-   Nepal 3D Museum Topographical Relief — Frameless Embedded Stage
-   Designed to float seamlessly on the page (zero separate box/iframe frame)
+   Nepal 3D Museum Topographical Relief — Frameless Stage + Side Explorer Rail
    ───────────────────────────────────────────────────────────────────────── */
 
+/* Reclaim the mostly-empty right TOC space on #geography so the 3D sculpture
+   and Side Explorer Rail sit comfortably side-by-side without double sidebars */
+@media (min-width: 1201px) {
+    .layout:has(.nepal-relief-stage) .sidebar-right {
+        display: none;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .content:has(.nepal-relief-stage) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+
 .content-inner:has(.nepal-relief-stage) {
+    max-width: 1090px;
     overflow: visible;
 }
 
+.content-inner:has(.nepal-relief-stage) > :not(.nepal-relief-stage) {
+    max-width: 780px;
+}
+
 .nepal-relief-stage {
-    --nr-muted: #646c77;
-    --nr-ink: #1b1f24;
-    --nr-hairline: rgba(30, 41, 59, 0.13);
+    --nr-muted: #646d78;
+    --nr-ink: #18202a;
+    --nr-sub: #475261;
+    --nr-hairline: rgba(15, 23, 42, 0.11);
+    --nr-hairline-strong: rgba(15, 23, 42, 0.22);
+    --nr-panel-bg: rgba(248, 250, 252, 0.78);
+    --nr-focus-bg: #ffffff;
     --nr-pill-bg: rgba(15, 23, 42, 0.042);
-    --nr-pill-hover: rgba(15, 23, 42, 0.085);
-    --nr-pill-active-bg: #1b2432;
+    --nr-pill-hover: rgba(15, 23, 42, 0.082);
+    --nr-pill-active-bg: #182230;
     --nr-pill-active-ink: #ffffff;
-    --nr-card-bg: rgba(255, 255, 255, 0.92);
-    --nr-card-shadow: 0 10px 30px rgba(15, 23, 42, 0.12), 0 1px 3px rgba(15, 23, 42, 0.08);
-    --nr-pin-bg: rgba(255, 255, 255, 0.88);
+    --nr-pin-bg: rgba(255, 255, 255, 0.90);
     --nr-pin-ink: #17202a;
     --nr-pin-stem: rgba(23, 32, 42, 0.48);
     --nr-accent: #1a73e8;
-    --nr-gold: #b7791f;
+    --nr-accent-soft: rgba(26, 115, 232, 0.09);
 
     position: relative;
-    margin: 0.35rem -36px 2.4rem;
-    width: calc(100% + 72px);
+    margin: 0.55rem 0 2.5rem;
+    width: 100%;
+    container-type: inline-size;
+    container-name: nr-stage;
     user-select: none;
     -webkit-user-select: none;
 }
 
 html[data-theme="dark"] .nepal-relief-stage {
-    --nr-muted: #9da5b0;
-    --nr-ink: #e6e9ef;
-    --nr-hairline: rgba(230, 235, 245, 0.14);
+    --nr-muted: #98a2b0;
+    --nr-ink: #eaedf3;
+    --nr-sub: #c2c9d4;
+    --nr-hairline: rgba(230, 235, 245, 0.12);
+    --nr-hairline-strong: rgba(230, 235, 245, 0.26);
+    --nr-panel-bg: rgba(255, 255, 255, 0.032);
+    --nr-focus-bg: rgba(255, 255, 255, 0.048);
     --nr-pill-bg: rgba(255, 255, 255, 0.055);
-    --nr-pill-hover: rgba(255, 255, 255, 0.11);
-    --nr-pill-active-bg: #e6e9ef;
-    --nr-pill-active-ink: #1c1e22;
-    --nr-card-bg: rgba(35, 37, 42, 0.93);
-    --nr-card-shadow: 0 12px 34px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
-    --nr-pin-bg: rgba(32, 34, 39, 0.88);
+    --nr-pill-hover: rgba(255, 255, 255, 0.105);
+    --nr-pill-active-bg: #eaedf3;
+    --nr-pill-active-ink: #181b20;
+    --nr-pin-bg: rgba(30, 33, 39, 0.90);
     --nr-pin-ink: #eef1f6;
     --nr-pin-stem: rgba(235, 240, 248, 0.45);
     --nr-accent: #7aa2f7;
-    --nr-gold: #ecc94b;
+    --nr-accent-soft: rgba(122, 162, 247, 0.14);
 }
 
-/* Top whisper telemetry bar — sits directly on page background */
+/* ─── Two-Column Stage Grid (3D Sculpture Left · Explorer Rail Right) ─── */
+.nr-stage-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.nr-stage-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nr-side-panel {
+    border: 1px solid var(--nr-hairline);
+    border-radius: 14px;
+    background: var(--nr-panel-bg);
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+@container nr-stage (min-width: 670px) {
+    .nr-stage-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .nr-stage-main {
+        justify-content: space-between;
+    }
+
+    .nr-viewport {
+        flex: 1 1 auto;
+        aspect-ratio: 16 / 11.4;
+        min-height: 360px;
+        max-height: 560px;
+    }
+
+    .nr-mobile-tabs {
+        display: none !important;
+    }
+
+    .nr-side-panel[data-mobile-tab] .nr-panel-section {
+        display: flex !important;
+    }
+}
+
+/* Fallback if container queries are unavailable */
+@supports not (container-type: inline-size) {
+    @media (min-width: 980px) {
+        .nr-stage-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 310px;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .nr-stage-main {
+            justify-content: space-between;
+        }
+
+        .nr-mobile-tabs {
+            display: none !important;
+        }
+    }
+}
+
+/* ─── Top Whisper Telemetry Bar above 3D Sculpture ─── */
 .nr-telemetry-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    padding: 0 36px 2px;
+    gap: 10px;
+    padding: 0 2px 4px;
     min-height: 28px;
-    font-size: 0.775rem;
+    font-size: 0.76rem;
     color: var(--nr-muted);
     letter-spacing: 0.01em;
 }
@@ -64,8 +160,8 @@ html[data-theme="dark"] .nepal-relief-stage {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6px;
-    line-height: 1.4;
+    gap: 5px;
+    line-height: 1.35;
     font-variant-numeric: tabular-nums;
 }
 
@@ -87,19 +183,19 @@ html[data-theme="dark"] .nepal-relief-stage {
     background: var(--nr-pill-bg);
     border: 1px solid var(--nr-hairline);
     color: var(--nr-ink);
-    font-size: 0.72rem;
+    font-size: 0.71rem;
     font-weight: 500;
 }
 
 .nr-dot {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     display: inline-block;
     flex-shrink: 0;
 }
 
-/* Minimalist zoom / reset / compass micro-controls */
+/* Minimalist zoom / pins / compass micro-controls */
 .nr-quick-tools {
     display: flex;
     align-items: center;
@@ -113,18 +209,18 @@ html[data-theme="dark"] .nepal-relief-stage {
     background: transparent;
     color: var(--nr-ink);
     border-radius: 999px;
-    height: 26px;
-    min-width: 26px;
+    height: 25px;
+    min-width: 25px;
     padding: 0 8px;
     font-family: inherit;
-    font-size: 0.73rem;
+    font-size: 0.72rem;
     font-weight: 500;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    transition: background-color 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .nr-icon-btn:hover {
@@ -133,23 +229,24 @@ html[data-theme="dark"] .nepal-relief-stage {
 
 .nr-icon-btn[aria-pressed="true"] {
     background: var(--nr-pill-bg);
-    border-color: var(--nr-ink);
+    border-color: var(--nr-hairline-strong);
 }
 
 .nr-compass-needle {
-    width: 12px;
-    height: 12px;
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px;
     display: inline-block;
     transition: transform 0.06s linear;
 }
 
-/* Frameless 3D Viewport — 100% transparent, blends into webpage */
+/* ─── Frameless 3D Viewport — 100% transparent on webpage background ─── */
 .nr-viewport {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 8.1;
-    min-height: 300px;
-    max-height: 490px;
+    aspect-ratio: 16 / 10.2;
+    min-height: 310px;
+    max-height: 470px;
     overflow: visible;
     touch-action: pan-y;
 }
@@ -168,7 +265,6 @@ html[data-theme="dark"] .nepal-relief-stage {
     height: 100%;
     outline: none;
     background: transparent;
-    /* Dissolve edges seamlessly into the page when zoomed in — never a sharp box */
     -webkit-mask-image:
         linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%),
         linear-gradient(to bottom, transparent 0%, #000 3.5%, #000 95%, transparent 100%);
@@ -177,6 +273,14 @@ html[data-theme="dark"] .nepal-relief-stage {
         linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%),
         linear-gradient(to bottom, transparent 0%, #000 3.5%, #000 95%, transparent 100%);
     mask-composite: intersect;
+}
+
+.nr-gesture-hint {
+    padding: 3px 2px 0;
+    font-size: 0.71rem;
+    color: var(--nr-muted);
+    opacity: 0.82;
+    text-align: center;
 }
 
 /* Subtle loading state */
@@ -192,10 +296,6 @@ html[data-theme="dark"] .nepal-relief-stage {
     font-size: 0.8rem;
     pointer-events: none;
     transition: opacity 0.45s ease;
-}
-
-.nr-loading.nr-hidden {
-    opacity: 0;
 }
 
 .nr-loading-pulse {
@@ -222,7 +322,7 @@ html[data-theme="dark"] .nepal-relief-stage {
     to { transform: translateX(130%); }
 }
 
-/* 3D Projected Museum Pin Markers */
+/* ─── 3D Projected Museum Pin Markers ─── */
 .nr-markers-layer {
     position: absolute;
     inset: 0;
@@ -266,7 +366,7 @@ html[data-theme="dark"] .nepal-relief-stage {
     border: 1px solid var(--nr-hairline);
     color: var(--nr-pin-ink);
     font-family: var(--font-sans);
-    font-size: 0.68rem;
+    font-size: 0.67rem;
     font-weight: 600;
     line-height: 1.3;
     white-space: nowrap;
@@ -290,7 +390,7 @@ html[data-theme="dark"] .nepal-relief-stage {
 .nr-pin-elev {
     font-weight: 500;
     opacity: 0.72;
-    font-size: 0.63rem;
+    font-size: 0.62rem;
     font-variant-numeric: tabular-nums;
 }
 
@@ -324,246 +424,507 @@ html[data-theme="dark"] .nepal-relief-stage {
     background: #0891b2;
 }
 
-/* Floating Museum Placard when a Landmark is Selected */
-.nr-placard {
-    position: absolute;
-    right: 36px;
-    bottom: 10px;
-    max-width: 305px;
-    padding: 10px 13px;
-    border-radius: 10px;
-    background: var(--nr-card-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+/* ─── Side Explorer Rail: Active Focus Card ─── */
+.nr-focus-card {
+    background: var(--nr-focus-bg);
     border: 1px solid var(--nr-hairline);
-    box-shadow: var(--nr-card-shadow);
-    z-index: 8;
-    transition: opacity 0.22s ease, transform 0.22s ease;
-}
-
-.nr-placard.nr-hidden {
-    opacity: 0;
-    transform: translateY(6px);
-    pointer-events: none;
-}
-
-.nr-placard-head {
+    border-radius: 10px;
+    padding: 10px 11px;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 3px;
+    flex-direction: column;
+    gap: 3px;
 }
 
-.nr-placard-title {
+.nr-focus-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.nr-focus-eyebrow {
+    font-size: 0.63rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--nr-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nr-focus-back {
+    appearance: none;
+    border: 1px solid var(--nr-hairline);
+    background: var(--nr-pill-bg);
+    color: var(--nr-ink);
+    font-family: inherit;
+    font-size: 0.66rem;
+    font-weight: 600;
+    padding: 1.5px 7px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease;
+}
+
+.nr-focus-back:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-focus-back.nr-hidden {
+    display: none;
+}
+
+.nr-focus-title {
     font-size: 0.86rem;
     font-weight: 650;
     color: var(--nr-ink);
     line-height: 1.25;
 }
 
-.nr-placard-nep {
+.nr-focus-nep {
     font-family: 'Kalimati', 'Noto Sans Devanagari', sans-serif;
     font-weight: 500;
     color: var(--nr-muted);
     margin-left: 4px;
-    font-size: 0.84rem;
+    font-size: 0.81rem;
 }
 
-.nr-placard-close {
+.nr-focus-meta {
+    font-size: 0.70rem;
+    color: var(--nr-accent);
+    font-weight: 600;
+    line-height: 1.3;
+    font-variant-numeric: tabular-nums;
+}
+
+.nepal-relief-stage .nr-focus-desc {
+    font-size: 0.735rem !important;
+    line-height: 1.44 !important;
+    color: var(--nr-sub) !important;
+    margin: 2px 0 0 !important;
+}
+
+/* ─── Mobile Switcher (hidden on side-by-side desktop) ─── */
+.nr-mobile-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 3px;
+    border-radius: 9px;
+    background: var(--nr-pill-bg);
+    border: 1px solid var(--nr-hairline);
+}
+
+.nr-mobile-tab {
     appearance: none;
     border: none;
     background: transparent;
     color: var(--nr-muted);
-    cursor: pointer;
-    font-size: 0.95rem;
-    line-height: 1;
-    padding: 1px 4px;
-    border-radius: 4px;
-}
-
-.nr-placard-close:hover {
-    color: var(--nr-ink);
-    background: var(--nr-pill-hover);
-}
-
-.nr-placard-meta {
-    font-size: 0.71rem;
-    color: var(--nr-accent);
+    font-family: inherit;
+    font-size: 0.74rem;
     font-weight: 600;
-    margin-bottom: 4px;
-    font-variant-numeric: tabular-nums;
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.nr-placard-desc {
-    font-size: 0.76rem;
-    line-height: 1.48;
-    color: var(--nr-muted);
-    margin: 0 !important;
+.nr-mobile-tab.nr-active {
+    background: var(--nr-focus-bg);
+    color: var(--nr-ink);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-/* Bottom Editorial Controls — matches site's minimal pill aesthetic */
-.nr-controls-wrap {
-    padding: 2px 36px 0;
+.nr-side-panel[data-mobile-tab="tour"] .nr-panel-section--layers {
+    display: none;
+}
+
+.nr-side-panel[data-mobile-tab="layers"] .nr-panel-section--tour {
+    display: none;
+}
+
+/* ─── Side Panel Sections ─── */
+.nr-panel-section {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
 }
 
-.nr-bar-row {
+.nr-panel-section + .nr-panel-section {
+    padding-top: 8px;
+    border-top: 1px solid var(--nr-hairline);
+}
+
+.nr-section-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
-.nr-pill-group {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+.nr-section-title {
+    font-size: 0.66rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--nr-muted);
+}
+
+/* ─── Section 1: Map Layer 2×2 Cards + Contextual Region Filter ─── */
+.nr-mode-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 5px;
 }
 
-.nr-row-label {
-    font-size: 0.71rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--nr-muted);
-    margin-right: 3px;
-}
-
-.nr-pill {
+.nr-mode-btn {
     appearance: none;
     border: 1px solid var(--nr-hairline);
-    background: var(--nr-pill-bg);
+    background: var(--nr-focus-bg);
     color: var(--nr-ink);
-    padding: 4px 10px;
-    border-radius: 999px;
+    border-radius: 8px;
+    padding: 6px 8px;
     font-family: inherit;
-    font-size: 0.75rem;
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: 0.74rem;
+    font-weight: 550;
+    line-height: 1.2;
+    text-align: left;
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 5px;
-    transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+    gap: 6px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.nr-pill:hover {
+.nr-mode-btn:hover {
     background: var(--nr-pill-hover);
 }
 
-.nr-pill.nr-active {
+.nr-mode-btn.nr-active {
     background: var(--nr-pill-active-bg);
     color: var(--nr-pill-active-ink);
     border-color: var(--nr-pill-active-bg);
 }
 
-.nr-pill--tour {
-    background: transparent;
-    font-size: 0.73rem;
-    padding: 3px 9px;
-    color: var(--nr-muted);
+.nr-mode-swatch {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-.nr-pill--tour:hover {
-    color: var(--nr-ink);
+.nr-mode-swatch--natural {
+    background: linear-gradient(135deg, #2f9e66 0%, #c98a35 52%, #e2e8f0 100%);
 }
 
-.nr-pill--tour.nr-active {
-    background: var(--nr-pill-bg);
-    color: var(--nr-ink);
-    border-color: var(--nr-ink);
+.nr-mode-swatch--eco {
+    background: linear-gradient(135deg, #2f9e66 0%, #d4843b 50%, #4b86e8 100%);
 }
 
-/* Interactive Legend Key (visible in Ecological Belts & 7 Provinces modes) */
-.nr-legend-strip {
+.nr-mode-swatch--prov {
+    background: conic-gradient(#cf6679, #c9a13b, #3ea377, #4c8eda, #8f6fd6, #cf6679);
+}
+
+.nr-mode-swatch--plaster {
+    background: linear-gradient(135deg, #f3f1ec 0%, #a8a29e 100%);
+    border: 1px solid rgba(120, 120, 120, 0.35);
+}
+
+/* Sub-region picker (3 Eco Belts / 7 Provinces) */
+.nr-subfilter {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-    padding-top: 2px;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 2px;
+    padding: 7px;
+    border-radius: 9px;
+    background: var(--nr-pill-bg);
+    border: 1px solid var(--nr-hairline);
 }
 
-.nr-legend-strip.nr-hidden {
+.nr-subfilter.nr-hidden {
     display: none;
 }
 
-.nr-legend-chip {
-    appearance: none;
-    border: 1px solid var(--nr-hairline);
-    background: transparent;
-    color: var(--nr-ink);
-    padding: 3px 9px;
-    border-radius: 999px;
-    font-family: inherit;
-    font-size: 0.72rem;
-    cursor: pointer;
-    display: inline-flex;
+.nr-subfilter-head {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    transition: opacity 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--nr-muted);
+    font-weight: 600;
+    padding: 0 2px;
 }
 
-.nr-legend-chip:hover {
-    background: var(--nr-pill-hover);
+.nr-region-list--eco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.nr-legend-chip.nr-dimmed {
-    opacity: 0.42;
+.nr-region-list--prov {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
 }
 
-.nr-legend-chip.nr-focused {
-    border-color: var(--nr-ink);
-    background: var(--nr-pill-bg);
+.nr-region-btn {
+    appearance: none;
+    border: 1px solid transparent;
+    background: var(--nr-focus-bg);
+    color: var(--nr-ink);
+    border-radius: 7px;
+    padding: 4.5px 6px;
+    font-family: inherit;
+    font-size: 0.70rem;
+    line-height: 1.2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    text-align: left;
+    transition: background-color 0.14s ease, border-color 0.14s ease, opacity 0.14s ease;
+}
+
+.nr-region-list--prov .nr-region-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+    padding: 4.5px 7px;
+}
+
+.nr-region-list--prov .nr-dot {
+    width: 6px;
+    height: 6px;
+}
+
+.nr-region-list--prov .nr-region-main {
+    gap: 5px;
+    width: 100%;
+}
+
+.nr-region-list--prov .nr-region-name {
+    font-size: 0.71rem;
+    font-weight: 550;
+}
+
+.nr-region-list--prov .nr-region-sub {
+    padding-left: 11px;
+    font-size: 0.62rem;
+    line-height: 1.15;
+}
+
+.nr-region-btn:hover {
+    border-color: var(--nr-hairline-strong);
+}
+
+.nr-region-btn.nr-active {
+    border-color: var(--nr-accent);
+    background: var(--nr-accent-soft);
     font-weight: 600;
 }
 
-/* Responsive adjustments */
-@media (max-width: 960px) {
-    .nepal-relief-stage {
-        margin: 0.25rem 0 2rem;
-        width: 100%;
-    }
-
-    .nr-telemetry-bar,
-    .nr-controls-wrap {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .nr-placard {
-        right: 8px;
-    }
+.nr-region-btn.nr-dimmed {
+    opacity: 0.62;
 }
 
-@media (max-width: 640px) {
+.nr-region-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.nr-region-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nr-region-sub {
+    font-size: 0.64rem;
+    color: var(--nr-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ─── Section 2: Guided Tour Stepper + Scannable Vertical List ─── */
+.nr-tour-stepper {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nr-step-btn {
+    appearance: none;
+    border: 1px solid var(--nr-hairline);
+    background: var(--nr-focus-bg);
+    color: var(--nr-ink);
+    width: 22px;
+    height: 20px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.14s ease;
+}
+
+.nr-step-btn:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-step-count {
+    font-size: 0.67rem;
+    font-weight: 600;
+    color: var(--nr-muted);
+    min-width: 30px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.nr-tour-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Keep Side Rail balanced with 3D map height when 7-Province subfilter is open */
+.nr-side-panel.nr-has-subfilter .nr-tour-list {
+    max-height: 148px;
+    overflow-y: auto;
+    padding-right: 2px;
+}
+
+.nr-tour-item {
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--nr-ink);
+    border-radius: 7px;
+    padding: 4px 7px;
+    font-family: inherit;
+    font-size: 0.73rem;
+    line-height: 1.25;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    text-align: left;
+    transition: background-color 0.14s ease, border-color 0.14s ease;
+}
+
+.nr-tour-item:hover {
+    background: var(--nr-pill-hover);
+}
+
+.nr-tour-item.nr-active {
+    background: var(--nr-accent-soft);
+    border-color: var(--nr-accent);
+    font-weight: 600;
+}
+
+.nr-tour-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.nr-tour-num {
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: var(--nr-muted);
+    width: 13px;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.nr-tour-item.nr-active .nr-tour-num {
+    color: var(--nr-accent);
+}
+
+.nr-tour-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.nr-tour-tag {
+    font-size: 0.65rem;
+    color: var(--nr-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ─── Section 3: 3D Mountain Steepness Segmented Bar ─── */
+.nr-exag-seg {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+    padding: 2px;
+    border-radius: 8px;
+    background: var(--nr-pill-bg);
+    border: 1px solid var(--nr-hairline);
+}
+
+.nr-exag-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--nr-muted);
+    font-family: inherit;
+    font-size: 0.71rem;
+    font-weight: 550;
+    padding: 4px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+.nr-exag-btn:hover {
+    color: var(--nr-ink);
+}
+
+.nr-exag-btn.nr-active {
+    background: var(--nr-focus-bg);
+    color: var(--nr-ink);
+    font-weight: 650;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Compact Stacked Layout (< 670px container width / phones) ─── */
+@container nr-stage (max-width: 669px) {
     .nr-viewport {
-        aspect-ratio: 16 / 10.6;
-        min-height: 250px;
+        aspect-ratio: 16 / 10.5;
+        min-height: 245px;
+    }
+
+    .nr-tour-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+        max-height: none !important;
+    }
+
+    .nr-tour-tag {
+        display: none;
     }
 
     .nr-telemetry-bar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 6px;
-    }
-
-    .nr-quick-tools {
-        align-self: flex-end;
-    }
-
-    .nr-placard {
-        position: static;
-        max-width: 100%;
-        margin: 6px 0 4px;
-    }
-
-    .nr-placard.nr-hidden {
-        display: none;
     }
 
     .nr-pin-tag {

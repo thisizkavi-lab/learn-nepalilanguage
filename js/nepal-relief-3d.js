@@ -17,7 +17,7 @@ const HALF_W = WORLD_W * 0.5;
 const METER_TO_WORLD = 1.0 / 81680.0; // 1 world unit ≈ 81.68 km true ground scale
 const PLINTH_HEIGHT = 0.044;
 const MIN_ZOOM_RADIUS = 0.88; // Deep valley & summit-amphitheater closeup without clipping border wall
-const MAX_ZOOM_RADIUS = 15.5;
+const MAX_ZOOM_RADIUS = 16.8;
 
 const ZONE_META = {
     1: { name: 'Terai Plains', eco: 'Terai', ecoId: 1, share: '17%', color: '#2f9e66' },
@@ -27,14 +27,146 @@ const ZONE_META = {
     5: { name: 'High Himalaya', eco: 'Himal', ecoId: 3, share: '15%', color: '#7db4ff' }
 };
 
+const ECO_META = {
+    3: {
+        id: 3,
+        name: 'Himal (High Mountains)',
+        short: 'Himal · North',
+        nep: 'हिमाल',
+        share: '15% land',
+        range: '3,000 – 8,849 m',
+        color: '#4b86e8',
+        lon: 84.65,
+        lat: 28.55,
+        radius: 8.8,
+        polar: 0.94,
+        azimuth: -0.14,
+        desc: 'Snow-bound High Himalaya and arid trans-Himalayan valleys (Mustang, Dolpo, Manang), holding 8 of Earth’s 14 eight-thousand-meter peaks.'
+    },
+    2: {
+        id: 2,
+        name: 'Pahad (Hills & Chure)',
+        short: 'Pahad · Hills',
+        nep: 'पहाड',
+        share: '68% land',
+        range: '600 – 3,000 m',
+        color: '#d4843b',
+        lon: 84.45,
+        lat: 28.08,
+        radius: 9.0,
+        polar: 0.84,
+        azimuth: -0.12,
+        desc: 'Broad mid-belt of folded Mahabharat ridges, young Chure foothills, terraced slopes, and fertile basins including Kathmandu and Pokhara.'
+    },
+    1: {
+        id: 1,
+        name: 'Terai (Southern Plains)',
+        short: 'Terai · South',
+        nep: 'तराई',
+        share: '17% land',
+        range: '60 – 600 m',
+        color: '#2f9e66',
+        lon: 84.65,
+        lat: 27.35,
+        radius: 8.6,
+        polar: 0.88,
+        azimuth: -0.08,
+        desc: 'Warm subtropical alluvial plains along the southern strip—Nepal’s agricultural breadbasket, sal forests, and most densely populated belt.'
+    }
+};
+
 const PROV_META = {
-    1: { name: 'Koshi', nep: 'कोशी', color: '#4c8eda' },
-    2: { name: 'Madhesh', nep: 'मधेश', color: '#3ea377' },
-    3: { name: 'Bagmati', nep: 'बागमती', color: '#d97b43' },
-    4: { name: 'Gandaki', nep: 'गण्डकी', color: '#8f6fd6' },
-    5: { name: 'Lumbini', nep: 'लुम्बिनी', color: '#c9a13b' },
-    6: { name: 'Karnali', nep: 'कर्णाली', color: '#4ca6a8' },
-    7: { name: 'Sudurpashchim', nep: 'सुदूरपश्चिम', color: '#cf6679' }
+    1: {
+        name: 'Koshi',
+        nep: 'कोशी',
+        color: '#4c8eda',
+        capital: 'Biratnagar',
+        span: '60 m → 8,849 m',
+        lon: 87.35,
+        lat: 27.34,
+        radius: 3.75,
+        polar: 0.88,
+        azimuth: -0.16,
+        desc: 'Rises from Nepal’s lowest plain at Kechana Kalan (60 m) straight up to Sagarmatha, Lhotse, Makalu, and Kangchenjunga across the Sapta Koshi basin.'
+    },
+    2: {
+        name: 'Madhesh',
+        nep: 'मधेश',
+        color: '#3ea377',
+        capital: 'Janakpur',
+        span: '61 m → ~900 m',
+        lon: 85.72,
+        lat: 26.90,
+        radius: 4.10,
+        polar: 0.86,
+        azimuth: -0.06,
+        desc: 'Fertile southeastern Terai heartland between the Koshi and Narayani rivers—granary of Nepal and historic center of Mithila culture.'
+    },
+    3: {
+        name: 'Bagmati',
+        nep: 'बागमती',
+        color: '#d97b43',
+        capital: 'Hetauda (Kathmandu Valley)',
+        span: '140 m → 7,227 m',
+        lon: 85.36,
+        lat: 27.78,
+        radius: 3.95,
+        polar: 0.90,
+        azimuth: -0.08,
+        desc: 'Connects Inner Terai Chitwan and the Kathmandu Valley bowl up to Langtang Himal and the 86°20′E Gaurishankar time meridian.'
+    },
+    4: {
+        name: 'Gandaki',
+        nep: 'गण्डकी',
+        color: '#8f6fd6',
+        capital: 'Pokhara',
+        span: '180 m → 8,167 m',
+        lon: 84.06,
+        lat: 28.48,
+        radius: 4.20,
+        polar: 0.92,
+        azimuth: -0.10,
+        desc: 'Spans subtropical Pokhara to three 8,000 m giants (Dhaulagiri, Manaslu, Annapurna), the Kali Gandaki Gorge, and rain-shadow Mustang.'
+    },
+    5: {
+        name: 'Lumbini',
+        nep: 'लुम्बिनी',
+        color: '#c9a13b',
+        capital: 'Deukhuri',
+        span: '80 m → 7,246 m',
+        lon: 82.68,
+        lat: 27.95,
+        radius: 4.55,
+        polar: 0.86,
+        azimuth: 0.04,
+        desc: 'Stretches across western Terai plains, Inner Terai Dang-Deukhuri valleys, and mid-hills—home to Lumbini, birthplace of the Buddha.'
+    },
+    6: {
+        name: 'Karnali',
+        nep: 'कर्णाली',
+        color: '#4ca6a8',
+        capital: 'Birendranagar',
+        span: '180 m → 7,348 m',
+        lon: 82.18,
+        lat: 29.18,
+        radius: 4.75,
+        polar: 0.88,
+        azimuth: 0.12,
+        desc: 'Nepal’s largest province by area—rugged mountain and trans-Himalayan terrain of Dolpo, Humla, Rara Lake, and the longest river Karnali.'
+    },
+    7: {
+        name: 'Sudurpashchim',
+        nep: 'सुदूरपश्चिम',
+        color: '#cf6679',
+        capital: 'Godawari',
+        span: '110 m → 7,132 m',
+        lon: 80.85,
+        lat: 29.32,
+        radius: 3.95,
+        polar: 0.88,
+        azimuth: 0.18,
+        desc: 'Far-Western Nepal along the Mahakali watershed—rising from Shuklaphanta grasslands to Api Himal, Saipal, and Limpiyadhura.'
+    }
 };
 
 const LANDMARKS = [
@@ -297,16 +429,22 @@ const TOUR_STOPS = [
     {
         id: 'overview',
         label: 'Full Nepal',
+        tag: '800 km',
         lon: 84.50,
         lat: 28.25,
         radius: null, // Computed dynamically from viewport aspect so 100% of Nepal fits with margin
         polar: 0.78, // ~44.7° from vertical (museum gallery overview)
         azimuth: -0.14,
-        landmarkId: null
+        landmarkId: null,
+        title: 'Nepal Topographical Overview',
+        nep: 'नेपाल',
+        meta: '800 km W→E · 60 m (Jhapa) to 8,848.86 m (Sagarmatha)',
+        desc: 'Three dramatic belts—flat Terai plains, folded Pahad hills, and the snow-bound Himal—rise nearly 9 vertical kilometers in under 200 km south to north.'
     },
     {
         id: 'everest-khumbu',
         label: 'Sagarmatha · Everest',
+        tag: '8,849 m',
         lon: 86.90,
         lat: 27.93,
         radius: 2.35,
@@ -317,6 +455,7 @@ const TOUR_STOPS = [
     {
         id: 'kali-gandaki',
         label: 'Kali Gandaki Gorge',
+        tag: 'Deepest',
         lon: 83.72,
         lat: 28.66,
         radius: 2.45,
@@ -327,6 +466,7 @@ const TOUR_STOPS = [
     {
         id: 'kathmandu',
         label: 'Kathmandu Bowl',
+        tag: '1,337 m',
         lon: 85.33,
         lat: 27.71,
         radius: 2.15,
@@ -337,16 +477,19 @@ const TOUR_STOPS = [
     {
         id: 'pokhara-annapurna',
         label: 'Pokhara → Annapurna',
+        tag: '8,091 m',
         lon: 83.92,
         lat: 28.42,
         radius: 2.35,
         polar: 1.14,
         azimuth: -0.10,
-        landmarkId: 'pokhara'
+        landmarkId: 'pokhara',
+        desc: 'Nowhere else on Earth rises this abruptly: subtropical Pokhara (822 m) sits directly beneath the 7,200 m vertical wall of Machhapuchhre and Annapurna I.'
     },
     {
         id: 'gaurishankar-nst',
         label: 'UTC+5:45 Meridian',
+        tag: '86°20′E',
         lon: 86.33,
         lat: 27.82,
         radius: 3.35,
@@ -357,6 +500,7 @@ const TOUR_STOPS = [
     {
         id: 'limpiyadhura-west',
         label: 'Limpiyadhura & Far West',
+        tag: 'Far West',
         lon: 80.98,
         lat: 29.88,
         radius: 2.85,
@@ -367,12 +511,17 @@ const TOUR_STOPS = [
     {
         id: 'cross-section',
         label: '60 m → 8,849 m Profile',
+        tag: '3D Wall',
         lon: 84.55,
         lat: 28.18,
         radius: 7.55,
         polar: 1.24, // low dramatic horizon angle from south
         azimuth: -0.24,
-        landmarkId: null
+        landmarkId: null,
+        title: 'South → North Elevation Wall',
+        nep: 'तराई → पहाड → हिमाल',
+        meta: '60 m Plains → 1,500 m Hills → 8,849 m Crest',
+        desc: 'Viewed low from the southern plains, see how the flat Terai steps abruptly into the Chure and Mahabharat hills before soaring into the Himalayan ice wall.'
     }
 ];
 
@@ -1127,6 +1276,7 @@ class NepalReliefInstance {
         this.showLabels = true;
         this.selectedLandmark = null;
         this.activeTourId = 'overview';
+        this.lastTourIndex = 0;
 
         this.targetExag = 4.0;
         this.currentExag = 0.35; // Rises tectonically on entrance!
@@ -1157,75 +1307,122 @@ class NepalReliefInstance {
         this.initThree();
         this.bindEvents();
         this.syncTheme();
-        this.updateLegendStrip();
+        this.updateSubfilter();
+        this.syncFocusCard();
         this.requestFrame();
     }
 
     buildDOM() {
         this.root.innerHTML = `
-            <div class="nr-telemetry-bar">
-                <div class="nr-readout" id="nr-readout">
-                    <strong>60 m → 8,848.86 m</strong>
-                    <span class="nr-readout-sep">·</span>
-                    <span>Pinch to zoom in &amp; out · Drag sculpture to tilt &amp; orbit</span>
-                </div>
-                <div class="nr-quick-tools">
-                    <button type="button" class="nr-icon-btn" data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
-                    <button type="button" class="nr-icon-btn" data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
-                    <button type="button" class="nr-icon-btn" data-action="labels" aria-pressed="true" title="Toggle landmark pins">Pins</button>
-                    <button type="button" class="nr-icon-btn" data-action="reset" title="Reset camera to north-up overview">
-                        <svg class="nr-compass-needle" id="nr-compass-svg" viewBox="0 0 24 24" fill="none">
-                            <polygon points="12,2 15.5,12 12,10 8.5,12" fill="#dc2626"/>
-                            <polygon points="12,22 15.5,12 12,14 8.5,12" fill="currentColor" opacity="0.45"/>
-                        </svg>
-                        <span>Reset</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="nr-viewport" id="nr-viewport">
-                <canvas class="nr-canvas" id="nr-canvas"></canvas>
-                <div class="nr-markers-layer" id="nr-markers"></div>
-                <div class="nr-placard nr-hidden" id="nr-placard" role="region" aria-live="polite">
-                    <div class="nr-placard-head">
-                        <div class="nr-placard-title">
-                            <span id="nr-placard-name"></span>
-                            <span class="nr-placard-nep" id="nr-placard-nep"></span>
+            <div class="nr-stage-grid">
+                <div class="nr-stage-main">
+                    <div class="nr-telemetry-bar">
+                        <div class="nr-readout" id="nr-readout">
+                            <strong>60 m → 8,848.86 m</strong>
+                            <span class="nr-readout-sep">·</span>
+                            <span>Hover terrain to inspect elevation &amp; zone</span>
                         </div>
-                        <button type="button" class="nr-placard-close" id="nr-placard-close" aria-label="Close details">×</button>
+                        <div class="nr-quick-tools">
+                            <button type="button" class="nr-icon-btn" data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+                            <button type="button" class="nr-icon-btn" data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+                            <button type="button" class="nr-icon-btn" data-action="labels" aria-pressed="true" title="Toggle landmark pins">Pins</button>
+                            <button type="button" class="nr-icon-btn" data-action="reset" title="Reset camera to full Nepal overview">
+                                <svg class="nr-compass-needle" id="nr-compass-svg" viewBox="0 0 24 24" fill="none">
+                                    <polygon points="12,2 15.5,12 12,10 8.5,12" fill="#dc2626"/>
+                                    <polygon points="12,22 15.5,12 12,14 8.5,12" fill="currentColor" opacity="0.45"/>
+                                </svg>
+                                <span>Reset</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="nr-placard-meta" id="nr-placard-meta"></div>
-                    <p class="nr-placard-desc" id="nr-placard-desc"></p>
-                </div>
-            </div>
 
-            <div class="nr-controls-wrap">
-                <div class="nr-bar-row">
-                    <div class="nr-pill-group" role="tablist" aria-label="Surface map style">
-                        <span class="nr-row-label">Surface</span>
-                        <button type="button" class="nr-pill nr-active" data-mode="0">Natural Relief</button>
-                        <button type="button" class="nr-pill" data-mode="1">Ecological Belts</button>
-                        <button type="button" class="nr-pill" data-mode="2">7 Provinces</button>
-                        <button type="button" class="nr-pill" data-mode="3">Museum Plaster</button>
+                    <div class="nr-viewport" id="nr-viewport">
+                        <canvas class="nr-canvas" id="nr-canvas"></canvas>
+                        <div class="nr-markers-layer" id="nr-markers"></div>
                     </div>
-                    <div class="nr-pill-group" aria-label="Vertical relief scale">
-                        <span class="nr-row-label">Relief</span>
-                        <button type="button" class="nr-pill nr-pill--tour" data-exag="1.3">1× True</button>
-                        <button type="button" class="nr-pill nr-pill--tour nr-active" data-exag="4.0">4× Museum</button>
-                        <button type="button" class="nr-pill nr-pill--tour" data-exag="6.5">6.5× Steep</button>
-                    </div>
-                </div>
 
-                <div class="nr-legend-strip nr-hidden" id="nr-legend-strip"></div>
-
-                <div class="nr-bar-row">
-                    <div class="nr-pill-group" id="nr-tour-group" aria-label="Guided 3D camera views">
-                        <span class="nr-row-label">Explore</span>
-                        ${TOUR_STOPS.map((t, idx) => `
-                            <button type="button" class="nr-pill nr-pill--tour${idx === 0 ? ' nr-active' : ''}" data-tour="${t.id}">${t.label}</button>
-                        `).join('')}
+                    <div class="nr-gesture-hint">
+                        Pinch to zoom · Drag sculpture to tilt &amp; rotate · Click any pin or colored region
                     </div>
                 </div>
+
+                <aside class="nr-side-panel" id="nr-side-panel" data-mobile-tab="tour" aria-label="3D Map Explorer">
+                    <div class="nr-focus-card" id="nr-focus-card" role="region" aria-live="polite">
+                        <div class="nr-focus-top">
+                            <span class="nr-focus-eyebrow" id="nr-focus-eyebrow">Overview</span>
+                            <button type="button" class="nr-focus-back nr-hidden" id="nr-focus-back">↺ Full Nepal</button>
+                        </div>
+                        <div class="nr-focus-title">
+                            <span id="nr-focus-name"></span>
+                            <span class="nr-focus-nep" id="nr-focus-nep"></span>
+                        </div>
+                        <div class="nr-focus-meta" id="nr-focus-meta"></div>
+                        <p class="nr-focus-desc" id="nr-focus-desc"></p>
+                    </div>
+
+                    <div class="nr-mobile-tabs" role="tablist" aria-label="Explorer sections">
+                        <button type="button" class="nr-mobile-tab nr-active" data-mtab="tour">Guided Tour</button>
+                        <button type="button" class="nr-mobile-tab" data-mtab="layers">Map Layers &amp; Scale</button>
+                    </div>
+
+                    <div class="nr-panel-section nr-panel-section--layers">
+                        <div class="nr-section-head">
+                            <span class="nr-section-title">Map Layer</span>
+                        </div>
+                        <div class="nr-mode-grid" role="tablist" aria-label="Map surface layer">
+                            <button type="button" class="nr-mode-btn nr-active" data-mode="0">
+                                <span class="nr-mode-swatch nr-mode-swatch--natural"></span>
+                                <span>Natural</span>
+                            </button>
+                            <button type="button" class="nr-mode-btn" data-mode="1">
+                                <span class="nr-mode-swatch nr-mode-swatch--eco"></span>
+                                <span>3 Eco Belts</span>
+                            </button>
+                            <button type="button" class="nr-mode-btn" data-mode="2">
+                                <span class="nr-mode-swatch nr-mode-swatch--prov"></span>
+                                <span>7 Provinces</span>
+                            </button>
+                            <button type="button" class="nr-mode-btn" data-mode="3">
+                                <span class="nr-mode-swatch nr-mode-swatch--plaster"></span>
+                                <span>Plaster</span>
+                            </button>
+                        </div>
+                        <div class="nr-subfilter nr-hidden" id="nr-subfilter"></div>
+                    </div>
+
+                    <div class="nr-panel-section nr-panel-section--tour">
+                        <div class="nr-section-head">
+                            <span class="nr-section-title">Guided Tour</span>
+                            <div class="nr-tour-stepper">
+                                <button type="button" class="nr-step-btn" data-step="-1" title="Previous stop" aria-label="Previous stop">‹</button>
+                                <span class="nr-step-count" id="nr-step-count">1 / ${TOUR_STOPS.length}</span>
+                                <button type="button" class="nr-step-btn" data-step="1" title="Next stop" aria-label="Next stop">›</button>
+                            </div>
+                        </div>
+                        <div class="nr-tour-list" id="nr-tour-list" aria-label="Guided 3D camera stops">
+                            ${TOUR_STOPS.map((t, idx) => `
+                                <button type="button" class="nr-tour-item${idx === 0 ? ' nr-active' : ''}" data-tour="${t.id}">
+                                    <span class="nr-tour-left">
+                                        <span class="nr-tour-num">${idx + 1}</span>
+                                        <span class="nr-tour-label">${t.label}</span>
+                                    </span>
+                                    <span class="nr-tour-tag">${t.tag}</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="nr-panel-section nr-panel-section--layers">
+                        <div class="nr-section-head">
+                            <span class="nr-section-title">Mountain Steepness</span>
+                        </div>
+                        <div class="nr-exag-seg" aria-label="Vertical relief scale">
+                            <button type="button" class="nr-exag-btn" data-exag="1.3">1× Real</button>
+                            <button type="button" class="nr-exag-btn nr-active" data-exag="4.0">4× Museum</button>
+                            <button type="button" class="nr-exag-btn" data-exag="6.5">6.5× Steep</button>
+                        </div>
+                    </div>
+                </aside>
             </div>
         `;
 
@@ -1234,8 +1431,16 @@ class NepalReliefInstance {
         this.readoutEl = this.root.querySelector('#nr-readout');
         this.markersEl = this.root.querySelector('#nr-markers');
         this.compassEl = this.root.querySelector('#nr-compass-svg');
-        this.placardEl = this.root.querySelector('#nr-placard');
-        this.legendEl = this.root.querySelector('#nr-legend-strip');
+        this.sidePanelEl = this.root.querySelector('#nr-side-panel');
+        this.subfilterEl = this.root.querySelector('#nr-subfilter');
+        this.tourListEl = this.root.querySelector('#nr-tour-list');
+        this.stepCountEl = this.root.querySelector('#nr-step-count');
+        this.focusEyebrowEl = this.root.querySelector('#nr-focus-eyebrow');
+        this.focusBackEl = this.root.querySelector('#nr-focus-back');
+        this.focusNameEl = this.root.querySelector('#nr-focus-name');
+        this.focusNepEl = this.root.querySelector('#nr-focus-nep');
+        this.focusMetaEl = this.root.querySelector('#nr-focus-meta');
+        this.focusDescEl = this.root.querySelector('#nr-focus-desc');
 
         // Build landmark pins
         this.pinItems = LANDMARKS.map(lm => {
@@ -1258,9 +1463,32 @@ class NepalReliefInstance {
             });
             this.markersEl.appendChild(btn);
 
-            const { x, z, elev } = this.lonLatToWorld(lm.lon, lm.lat);
-            return { lm, el: btn, wx: x, wz: z, elev: Math.max(elev, lm.elev * 0.92) };
+            const { x, z, u, v, elev } = this.lonLatToWorld(lm.lon, lm.lat);
+            const { provId, ecoId } = this.sampleRegionAtUV(u, v);
+            return { lm, el: btn, wx: x, wz: z, elev: Math.max(elev, lm.elev * 0.92), provId, ecoId };
         });
+    }
+
+    sampleRegionAtUV(u, v) {
+        const { W, H, metaBytes } = this.data;
+        const cx = Math.max(0, Math.min(W - 1, Math.round(u * (W - 1))));
+        const cy = Math.max(0, Math.min(H - 1, Math.round(v * (H - 1))));
+        for (let r = 0; r <= 8; r++) {
+            for (let dy = -r; dy <= r; dy++) {
+                for (let dx = -r; dx <= r; dx++) {
+                    if (Math.abs(dx) !== r && Math.abs(dy) !== r) continue;
+                    const sx = Math.max(0, Math.min(W - 1, cx + dx));
+                    const sy = Math.max(0, Math.min(H - 1, cy + dy));
+                    const mb = metaBytes[(sy * W + sx) * 4];
+                    const zoneId = mb & 7;
+                    const provId = (mb >> 3) & 7;
+                    if (provId > 0 && zoneId > 0) {
+                        return { provId, ecoId: ZONE_META[zoneId]?.ecoId || 2 };
+                    }
+                }
+            }
+        }
+        return { provId: 0, ecoId: 0 };
     }
 
     initThree() {
@@ -1572,7 +1800,7 @@ class NepalReliefInstance {
             if (e.touches.length === 1) {
                 const t0 = e.touches[0];
                 // Allow tapping landmark pins normally without hijacking click
-                if (t0.target && t0.target.closest && t0.target.closest('.nr-pin, .nr-placard')) {
+                if (t0.target && t0.target.closest && t0.target.closest('.nr-pin')) {
                     this.touchOrbitActive = false;
                     return;
                 }
@@ -1657,7 +1885,7 @@ class NepalReliefInstance {
                     const moved = Math.hypot(t0.clientX - this.pointerDownPos.x, t0.clientY - this.pointerDownPos.y);
                     if (moved < 6) {
                         const hit = this.raycastRelief(t0.clientX, t0.clientY);
-                        if (hit) this.updateTelemetry(hit);
+                        if (hit) this.handleTerrainTap(hit);
                     }
                 }
                 this.touchOrbitActive = false;
@@ -1737,7 +1965,7 @@ class NepalReliefInstance {
 
                 if (moved < 4) {
                     const hit = this.raycastRelief(e.clientX, e.clientY);
-                    if (hit) this.updateTelemetry(hit);
+                    if (hit) this.handleTerrainTap(hit);
                 }
             }
         };
@@ -1757,7 +1985,16 @@ class NepalReliefInstance {
         this.viewportEl.addEventListener('dblclick', this.onDoubleClick);
         this.viewportEl.addEventListener('contextmenu', (e) => e.preventDefault());
 
-        // UI Control Buttons
+        // Mobile section tab switcher (Guided Tour vs Map Layers & Scale)
+        this.root.querySelectorAll('[data-mtab]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.mtab;
+                this.sidePanelEl.setAttribute('data-mobile-tab', tab);
+                this.root.querySelectorAll('[data-mtab]').forEach(b => b.classList.toggle('nr-active', b === btn));
+            });
+        });
+
+        // Map Layer buttons (Natural / 3 Eco Belts / 7 Provinces / Plaster)
         this.root.querySelectorAll('[data-mode]').forEach(btn => {
             btn.addEventListener('click', () => {
                 this.mode = parseInt(btn.dataset.mode, 10);
@@ -1765,11 +2002,20 @@ class NepalReliefInstance {
                 this.terrainMat.uniforms.uMode.value = this.mode;
                 this.terrainMat.uniforms.uFocusId.value = 0;
                 this.root.querySelectorAll('[data-mode]').forEach(b => b.classList.toggle('nr-active', b === btn));
-                this.updateLegendStrip();
+                if (this.mode === 1 || this.mode === 2) {
+                    // When switching to Eco Belts or 7 Provinces, show full-map context unless user picks a sub-region
+                    this.selectedLandmark = null;
+                    this.targetMeridian = 0.0;
+                    this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
+                    this.flyToTour(TOUR_STOPS[0]);
+                }
+                this.updateSubfilter();
+                this.syncFocusCard();
                 this.requestFrame();
             });
         });
 
+        // 3D Mountain Steepness buttons
         this.root.querySelectorAll('[data-exag]').forEach(btn => {
             btn.addEventListener('click', () => {
                 this.targetExag = parseFloat(btn.dataset.exag);
@@ -1778,6 +2024,7 @@ class NepalReliefInstance {
             });
         });
 
+        // Guided Tour list items
         this.root.querySelectorAll('[data-tour]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const stop = TOUR_STOPS.find(s => s.id === btn.dataset.tour);
@@ -1786,6 +2033,15 @@ class NepalReliefInstance {
             });
         });
 
+        // Guided Tour Prev / Next stepper buttons
+        this.root.querySelectorAll('[data-step]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const delta = parseInt(btn.dataset.step, 10);
+                this.stepTour(delta);
+            });
+        });
+
+        // Top quick tools (+ / - / Pins / Reset)
         this.root.querySelectorAll('[data-action]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const act = btn.dataset.action;
@@ -1798,22 +2054,53 @@ class NepalReliefInstance {
                     this.showLabels = !this.showLabels;
                     btn.setAttribute('aria-pressed', String(this.showLabels));
                 } else if (act === 'reset') {
-                    this.selectedLandmark = null;
-                    this.targetMeridian = 0.0;
-                    this.placardEl.classList.add('nr-hidden');
-                    this.flyToTour(TOUR_STOPS[0]);
+                    this.resetToOverview();
                 }
                 this.requestFrame();
             });
         });
 
-        this.root.querySelector('#nr-placard-close').addEventListener('click', () => {
-            this.selectedLandmark = null;
-            this.targetMeridian = 0.0;
-            this.placardEl.classList.add('nr-hidden');
-            this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
-            this.requestFrame();
+        // Context Focus Card back/reset chip
+        this.focusBackEl.addEventListener('click', () => {
+            if (this.focusId !== 0 && (this.mode === 1 || this.mode === 2)) {
+                this.selectRegion(0);
+            } else {
+                this.resetToOverview();
+            }
         });
+    }
+
+    handleTerrainTap(hit) {
+        this.updateTelemetry(hit);
+        if (this.mode === 2 && hit.provId >= 1 && hit.provId <= 7) {
+            this.selectRegion(hit.provId);
+        } else if (this.mode === 1) {
+            const ecoId = ZONE_META[hit.zoneId]?.ecoId;
+            if (ecoId) this.selectRegion(ecoId);
+        }
+    }
+
+    resetToOverview() {
+        this.selectedLandmark = null;
+        this.targetMeridian = 0.0;
+        this.focusId = 0;
+        this.terrainMat.uniforms.uFocusId.value = 0;
+        this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
+        this.syncSubfilterHighlight();
+        this.flyToTour(TOUR_STOPS[0]);
+    }
+
+    stepTour(delta) {
+        const curIdx = TOUR_STOPS.findIndex(s => s.id === this.activeTourId);
+        let nextIdx;
+        if (curIdx >= 0) {
+            nextIdx = (curIdx + delta + TOUR_STOPS.length) % TOUR_STOPS.length;
+        } else {
+            nextIdx = delta > 0
+                ? (this.lastTourIndex + 1) % TOUR_STOPS.length
+                : this.lastTourIndex;
+        }
+        this.flyToTour(TOUR_STOPS[nextIdx]);
     }
 
     getPinFocusPoint(landmarkId) {
@@ -1945,16 +2232,43 @@ class NepalReliefInstance {
 
     computeOverviewRadius() {
         const halfFovRad = THREE.MathUtils.degToRad(this.camera.fov * 0.5);
-        const halfWidthNeeded = 6.12; // Full NW->SE diagonal + perspective margin on both ends
+        const halfWidthNeeded = 5.75; // Full NW->SE diagonal + clean breathing room on both ends
         const rFitWidth = halfWidthNeeded / Math.max(0.25, Math.tan(halfFovRad) * this.camera.aspect);
-        return THREE.MathUtils.clamp(rFitWidth, 9.8, 14.2);
+        return THREE.MathUtils.clamp(rFitWidth, 9.4, 13.8);
     }
 
     flyToTour(stop) {
         this.activeTourId = stop.id;
+        const stopIdx = TOUR_STOPS.findIndex(s => s.id === stop.id);
+        if (stopIdx >= 0) {
+            this.lastTourIndex = stopIdx;
+            if (this.stepCountEl) {
+                this.stepCountEl.textContent = `${stopIdx + 1} / ${TOUR_STOPS.length}`;
+            }
+        }
+
+        // Clear single-province/belt dimming when taking a guided tour so destination terrain isn't dimmed
+        if (this.focusId !== 0) {
+            this.focusId = 0;
+            this.terrainMat.uniforms.uFocusId.value = 0;
+            this.syncSubfilterHighlight();
+        }
+
+        let activeBtn = null;
         this.root.querySelectorAll('[data-tour]').forEach(b => {
-            b.classList.toggle('nr-active', b.dataset.tour === stop.id);
+            const isMatch = b.dataset.tour === stop.id;
+            b.classList.toggle('nr-active', isMatch);
+            if (isMatch) activeBtn = b;
         });
+        if (activeBtn && this.tourListEl) {
+            const btnTop = activeBtn.offsetTop - this.tourListEl.offsetTop;
+            const btnBot = btnTop + activeBtn.offsetHeight;
+            if (btnTop < this.tourListEl.scrollTop) {
+                this.tourListEl.scrollTop = btnTop - 4;
+            } else if (btnBot > this.tourListEl.scrollTop + this.tourListEl.clientHeight) {
+                this.tourListEl.scrollTop = btnBot - this.tourListEl.clientHeight + 4;
+            }
+        }
 
         const { x, z, elev } = this.lonLatToWorld(stop.lon, stop.lat);
         const wy = elev * METER_TO_WORLD * this.targetExag + PLINTH_HEIGHT;
@@ -1964,92 +2278,262 @@ class NepalReliefInstance {
         this.goalSpherical.azimuth = stop.azimuth;
 
         if (stop.landmarkId) {
-            const lm = LANDMARKS.find(l => l.id === stop.landmarkId);
-            if (lm) this.showPlacard(lm);
+            const lm = LANDMARKS.find(l => l.id === stop.landmarkId) || null;
+            this.selectedLandmark = lm;
+            this.targetMeridian = lm?.meridian ? 1.0 : 0.0;
+            this.pinItems.forEach(p => p.el.classList.toggle('nr-pin-active', p.lm.id === lm?.id));
         } else {
             this.selectedLandmark = null;
             this.targetMeridian = 0.0;
-            this.placardEl.classList.add('nr-hidden');
             this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
         }
+
+        this.syncFocusCard();
         this.requestFrame();
     }
 
     focusLandmark(lm) {
+        if (this.focusId !== 0) {
+            this.focusId = 0;
+            this.terrainMat.uniforms.uFocusId.value = 0;
+            this.syncSubfilterHighlight();
+        }
+
         const { x, z, elev } = this.lonLatToWorld(lm.lon, lm.lat);
         const wy = Math.max(elev, lm.elev * 0.9) * METER_TO_WORLD * this.targetExag + PLINTH_HEIGHT;
         this.goalTarget.set(x, wy * 0.65, z);
         this.goalSpherical.radius = Math.min(this.goalSpherical.radius, lm.kind === 'peak' ? 2.45 : 2.25);
         this.goalSpherical.polar = Math.max(this.goalSpherical.polar, 0.96);
-        this.clearActiveTourHighlight();
-        this.showPlacard(lm);
-        this.requestFrame();
-    }
 
-    showPlacard(lm) {
         this.selectedLandmark = lm;
         this.targetMeridian = lm.meridian ? 1.0 : 0.0;
         this.pinItems.forEach(p => p.el.classList.toggle('nr-pin-active', p.lm.id === lm.id));
-
-        const ft = Math.round(lm.elev * 3.28084).toLocaleString();
-        this.root.querySelector('#nr-placard-name').textContent = lm.name;
-        this.root.querySelector('#nr-placard-nep').textContent = lm.nep;
-        this.root.querySelector('#nr-placard-meta').textContent =
-            `${lm.elev.toLocaleString()} m (${ft} ft) · ${lm.lat.toFixed(2)}°N, ${lm.lon.toFixed(2)}°E`;
-        this.root.querySelector('#nr-placard-desc').textContent = lm.desc;
-        this.placardEl.classList.remove('nr-hidden');
+        this.clearActiveTourHighlight();
+        this.syncFocusCard();
+        this.requestFrame();
     }
 
     clearActiveTourHighlight() {
+        if (!this.activeTourId) return;
         this.activeTourId = null;
         this.root.querySelectorAll('[data-tour]').forEach(b => b.classList.remove('nr-active'));
+        if (this.stepCountEl) {
+            this.stepCountEl.textContent = `– / ${TOUR_STOPS.length}`;
+        }
+        this.syncFocusCard();
     }
 
-    updateLegendStrip() {
+    selectRegion(id) {
+        const nextId = (id === 0 || this.focusId === id) ? 0 : id;
+        this.focusId = nextId;
+        this.terrainMat.uniforms.uFocusId.value = nextId;
+        this.selectedLandmark = null;
+        this.targetMeridian = 0.0;
+        this.pinItems.forEach(p => p.el.classList.remove('nr-pin-active'));
+        this.syncSubfilterHighlight();
+
+        if (nextId === 0) {
+            this.flyToTour(TOUR_STOPS[0]);
+            return;
+        }
+
+        this.activeTourId = null;
+        this.root.querySelectorAll('[data-tour]').forEach(b => b.classList.remove('nr-active'));
+        if (this.stepCountEl) {
+            this.stepCountEl.textContent = `– / ${TOUR_STOPS.length}`;
+        }
+
+        const regionMeta = this.mode === 2 ? PROV_META[nextId] : ECO_META[nextId];
+        if (regionMeta) {
+            const { x, z, elev } = this.lonLatToWorld(regionMeta.lon, regionMeta.lat);
+            const wy = elev * METER_TO_WORLD * this.targetExag + PLINTH_HEIGHT;
+            this.goalTarget.set(x, wy * 0.50, z);
+            this.goalSpherical.radius = regionMeta.radius;
+            this.goalSpherical.polar = regionMeta.polar;
+            this.goalSpherical.azimuth = regionMeta.azimuth;
+        }
+
+        this.syncFocusCard();
+        this.requestFrame();
+    }
+
+    updateSubfilter() {
         if (this.mode === 1) {
-            const items = [
-                { id: 1, label: 'Terai Plains · 17% (60–600 m)', color: '#2f9e66' },
-                { id: 2, label: 'Pahad / Hills & Chure · 68% (600–3,000 m)', color: '#d4843b' },
-                { id: 3, label: 'Himal · 15% (3,000–8,849 m)', color: '#4b86e8' }
-            ];
-            this.renderLegendChips(items);
-            this.legendEl.classList.remove('nr-hidden');
+            const belts = [ECO_META[3], ECO_META[2], ECO_META[1]]; // North (Himal) -> South (Terai)
+            this.subfilterEl.innerHTML = `
+                <div class="nr-subfilter-head">
+                    <span>Click a belt (North → South)</span>
+                </div>
+                <div class="nr-region-list--eco">
+                    <button type="button" class="nr-region-btn nr-active" data-focus="0">
+                        <span class="nr-region-main">
+                            <span class="nr-mode-swatch nr-mode-swatch--eco"></span>
+                            <span class="nr-region-name">All 3 Ecological Belts</span>
+                        </span>
+                        <span class="nr-region-sub">100%</span>
+                    </button>
+                    ${belts.map(b => `
+                        <button type="button" class="nr-region-btn" data-focus="${b.id}">
+                            <span class="nr-region-main">
+                                <span class="nr-dot" style="background:${b.color}"></span>
+                                <span class="nr-region-name">${b.short} (${b.nep})</span>
+                            </span>
+                            <span class="nr-region-sub">${b.range}</span>
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+            this.subfilterEl.classList.remove('nr-hidden');
+            this.sidePanelEl.classList.add('nr-has-subfilter');
+            this.bindSubfilterButtons();
         } else if (this.mode === 2) {
             const order = [7, 6, 5, 4, 3, 2, 1]; // West -> East geographic order!
-            const items = order.map(id => ({
-                id,
-                label: `${PROV_META[id].name} (${PROV_META[id].nep})`,
-                color: PROV_META[id].color
-            }));
-            this.renderLegendChips(items);
-            this.legendEl.classList.remove('nr-hidden');
+            this.subfilterEl.innerHTML = `
+                <div class="nr-subfilter-head">
+                    <span>Click a province (West → East)</span>
+                </div>
+                <div class="nr-region-list--prov">
+                    <button type="button" class="nr-region-btn nr-active" data-focus="0">
+                        <span class="nr-region-main">
+                            <span class="nr-mode-swatch nr-mode-swatch--prov"></span>
+                            <span class="nr-region-name">All 7</span>
+                        </span>
+                        <span class="nr-region-sub">सबै</span>
+                    </button>
+                    ${order.map(id => {
+                        const p = PROV_META[id];
+                        return `
+                            <button type="button" class="nr-region-btn" data-focus="${id}">
+                                <span class="nr-region-main">
+                                    <span class="nr-dot" style="background:${p.color}"></span>
+                                    <span class="nr-region-name">${p.name}</span>
+                                </span>
+                                <span class="nr-region-sub">${p.nep}</span>
+                            </button>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            this.subfilterEl.classList.remove('nr-hidden');
+            this.sidePanelEl.classList.add('nr-has-subfilter');
+            this.bindSubfilterButtons();
         } else {
-            this.legendEl.classList.add('nr-hidden');
-            this.legendEl.innerHTML = '';
+            this.subfilterEl.classList.add('nr-hidden');
+            this.sidePanelEl.classList.remove('nr-has-subfilter');
+            this.subfilterEl.innerHTML = '';
         }
     }
 
-    renderLegendChips(items) {
-        this.legendEl.innerHTML = items.map(item => `
-            <button type="button" class="nr-legend-chip" data-focus="${item.id}">
-                <span class="nr-dot" style="background:${item.color}"></span>
-                <span>${item.label}</span>
-            </button>
-        `).join('');
-
-        this.legendEl.querySelectorAll('[data-focus]').forEach(chip => {
-            chip.addEventListener('click', () => {
-                const id = parseInt(chip.dataset.focus, 10);
-                this.focusId = this.focusId === id ? 0 : id;
-                this.terrainMat.uniforms.uFocusId.value = this.focusId;
-                this.legendEl.querySelectorAll('[data-focus]').forEach(c => {
-                    const cid = parseInt(c.dataset.focus, 10);
-                    c.classList.toggle('nr-focused', this.focusId === cid);
-                    c.classList.toggle('nr-dimmed', this.focusId !== 0 && this.focusId !== cid);
-                });
-                this.requestFrame();
+    bindSubfilterButtons() {
+        this.subfilterEl.querySelectorAll('[data-focus]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = parseInt(btn.dataset.focus, 10);
+                this.selectRegion(id);
             });
         });
+        this.syncSubfilterHighlight();
+    }
+
+    syncSubfilterHighlight() {
+        if (!this.subfilterEl) return;
+        this.subfilterEl.querySelectorAll('[data-focus]').forEach(btn => {
+            const cid = parseInt(btn.dataset.focus, 10);
+            const isSelected = this.focusId === cid;
+            btn.classList.toggle('nr-active', isSelected);
+            btn.classList.toggle('nr-dimmed', this.focusId !== 0 && cid !== 0 && !isSelected);
+        });
+    }
+
+    syncFocusCard() {
+        if (!this.focusNameEl) return;
+
+        const activeStop = this.activeTourId ? TOUR_STOPS.find(s => s.id === this.activeTourId) : null;
+
+        // 1. Landmark or Tour Stop with Landmark
+        if (this.selectedLandmark) {
+            const lm = this.selectedLandmark;
+            const ft = Math.round(lm.elev * 3.28084).toLocaleString();
+            this.focusEyebrowEl.textContent = activeStop
+                ? `Tour Stop ${this.lastTourIndex + 1} of ${TOUR_STOPS.length}`
+                : 'Selected Landmark';
+            this.focusNameEl.textContent = lm.name;
+            this.focusNepEl.textContent = lm.nep;
+            this.focusMetaEl.textContent = `${lm.elev.toLocaleString()} m (${ft} ft) · ${lm.lat.toFixed(2)}°N, ${lm.lon.toFixed(2)}°E`;
+            this.focusDescEl.textContent = activeStop?.desc || lm.desc;
+            this.focusBackEl.textContent = '↺ Full Nepal';
+            this.focusBackEl.classList.remove('nr-hidden');
+            return;
+        }
+
+        // 2. Focused Province (7 Provinces layer)
+        if (this.mode === 2 && this.focusId > 0 && PROV_META[this.focusId]) {
+            const p = PROV_META[this.focusId];
+            this.focusEyebrowEl.textContent = 'Selected Province';
+            this.focusNameEl.textContent = `${p.name} Province`;
+            this.focusNepEl.textContent = p.nep;
+            this.focusMetaEl.textContent = `Capital: ${p.capital} · ${p.span}`;
+            this.focusDescEl.textContent = p.desc;
+            this.focusBackEl.textContent = '↺ All 7';
+            this.focusBackEl.classList.remove('nr-hidden');
+            return;
+        }
+
+        // 3. Focused Ecological Belt (3 Eco Belts layer)
+        if (this.mode === 1 && this.focusId > 0 && ECO_META[this.focusId]) {
+            const b = ECO_META[this.focusId];
+            this.focusEyebrowEl.textContent = 'Ecological Belt';
+            this.focusNameEl.textContent = b.name;
+            this.focusNepEl.textContent = b.nep;
+            this.focusMetaEl.textContent = `${b.share} · ${b.range}`;
+            this.focusDescEl.textContent = b.desc;
+            this.focusBackEl.textContent = '↺ All 3';
+            this.focusBackEl.classList.remove('nr-hidden');
+            return;
+        }
+
+        // 4. Non-landmark Tour Stop (e.g. 60 m -> 8,849 m Profile)
+        if (activeStop && activeStop.id !== 'overview') {
+            this.focusEyebrowEl.textContent = `Tour Stop ${this.lastTourIndex + 1} of ${TOUR_STOPS.length}`;
+            this.focusNameEl.textContent = activeStop.title || activeStop.label;
+            this.focusNepEl.textContent = activeStop.nep || '';
+            this.focusMetaEl.textContent = activeStop.meta || '';
+            this.focusDescEl.textContent = activeStop.desc || '';
+            this.focusBackEl.textContent = '↺ Full Nepal';
+            this.focusBackEl.classList.remove('nr-hidden');
+            return;
+        }
+
+        // 5. Full Nepal Overview (tailored to active Map Layer)
+        const showReset = this.activeTourId !== 'overview';
+        this.focusBackEl.textContent = '↺ Full Nepal';
+        this.focusBackEl.classList.toggle('nr-hidden', !showReset);
+
+        if (this.mode === 1) {
+            this.focusEyebrowEl.textContent = 'Map Layer · 3 Belts';
+            this.focusNameEl.textContent = 'Three Ecological Belts';
+            this.focusNepEl.textContent = 'हिमाल · पहाड · तराई';
+            this.focusMetaEl.textContent = 'Himal 15% · Pahad 68% · Terai 17%';
+            this.focusDescEl.textContent = 'Click any belt below—or directly on the 3D terrain—to isolate its elevation band and zoom in.';
+        } else if (this.mode === 2) {
+            this.focusEyebrowEl.textContent = 'Map Layer · Federal Nepal';
+            this.focusNameEl.textContent = 'Seven Federal Provinces';
+            this.focusNepEl.textContent = '७ प्रदेश';
+            this.focusMetaEl.textContent = 'West → East · Sudurpashchim to Koshi';
+            this.focusDescEl.textContent = 'Click any province below—or directly on the 3D map—to fly there and see its capital and elevation span.';
+        } else if (this.mode === 3) {
+            this.focusEyebrowEl.textContent = 'Map Layer · Pure Relief';
+            this.focusNameEl.textContent = 'Museum Plaster Study';
+            this.focusNepEl.textContent = 'भू-बनोट';
+            this.focusMetaEl.textContent = 'Monochrome sun, shadow & river gorges';
+            this.focusDescEl.textContent = 'Strips away color to highlight pure Himalayan ridges, Inner Terai Dun basins, and deep river incisions.';
+        } else {
+            const ov = TOUR_STOPS[0];
+            this.focusEyebrowEl.textContent = showReset ? 'Free Camera View' : 'Overview · Stop 1 of 8';
+            this.focusNameEl.textContent = ov.title;
+            this.focusNepEl.textContent = ov.nep;
+            this.focusMetaEl.textContent = ov.meta;
+            this.focusDescEl.textContent = ov.desc;
+        }
     }
 
     updateTelemetry(hit) {
@@ -2057,7 +2541,7 @@ class NepalReliefInstance {
             this.readoutEl.innerHTML = `
                 <strong>60 m → 8,848.86 m</strong>
                 <span class="nr-readout-sep">·</span>
-                <span>Pinch to zoom in &amp; out · Drag sculpture to tilt &amp; orbit</span>
+                <span>Hover terrain to inspect elevation &amp; zone</span>
             `;
             return;
         }
@@ -2132,7 +2616,8 @@ class NepalReliefInstance {
     updateProjectedPins() {
         const w = this.viewW || 800;
         const h = this.viewH || 420;
-        const zoomedIn = this.spherical.radius < 4.7;
+        const regionFiltered = (this.mode === 1 || this.mode === 2) && this.focusId > 0;
+        const zoomedIn = this.spherical.radius < 4.7 || regionFiltered;
         const placedBoxes = [];
 
         // Prioritize selected landmark first, then Tier 1, then Tier 2 by elevation
@@ -2148,6 +2633,14 @@ class NepalReliefInstance {
         for (const item of ordered) {
             const isSel = this.selectedLandmark?.id === item.lm.id;
             if (!this.showLabels && !isSel) {
+                item.el.classList.add('nr-pin-hidden');
+                continue;
+            }
+            if (this.mode === 2 && this.focusId > 0 && item.provId !== this.focusId && !isSel) {
+                item.el.classList.add('nr-pin-hidden');
+                continue;
+            }
+            if (this.mode === 1 && this.focusId > 0 && item.ecoId !== this.focusId && !isSel) {
                 item.el.classList.add('nr-pin-hidden');
                 continue;
             }
@@ -2167,16 +2660,17 @@ class NepalReliefInstance {
             const sx = (vProj.x * 0.5 + 0.5) * w;
             const sy = (-vProj.y * 0.5 + 0.5) * h;
 
-            if (sx < 24 || sx > w - 24 || sy < 22 || sy > h - 10) {
-                item.el.classList.add('nr-pin-hidden');
-                continue;
-            }
-
-            // Screen-space collision decluttering so labels never pile on top of each other
+            // Screen-space collision & viewport margin decluttering so labels never clip or overlap
             const charScale = w < 600 ? 3.1 : 3.5;
             const elevPad = w < 600 ? 10 : 28;
             const halfTagW = Math.max(42, item.lm.short.length * charScale + elevPad);
             const tagH = 23;
+
+            if (sx < halfTagW + 6 || sx > w - halfTagW - 6 || sy < 34 || sy > h - 12) {
+                item.el.classList.add('nr-pin-hidden');
+                continue;
+            }
+
             const box = { x0: sx - halfTagW, x1: sx + halfTagW, y0: sy - 34, y1: sy - 34 + tagH };
 
             let overlaps = false;
