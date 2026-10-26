@@ -28,6 +28,18 @@
                 style="color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.875rem;">Vocabulary</a>
             <h1>Writing Practice</h1>
         </div>
+        <div class="practice-topbar-center">
+            <nav class="practice-mode-nav" aria-label="अभ्यास प्रकार / Practice Type">
+                <button type="button" class="mode-tab active" id="tab-btn-characters">
+                    <span class="mode-tab-np">✍️ अक्षर अभ्यास</span>
+                    <span class="mode-tab-en">Characters</span>
+                </button>
+                <button type="button" class="mode-tab" id="tab-btn-prompts">
+                    <span class="mode-tab-np">📝 लेखन विषयहरू</span>
+                    <span class="mode-tab-en">Prompts (215)</span>
+                </button>
+            </nav>
+        </div>
         <div class="practice-topbar-right">
             <button class="print-btn" id="print-btn">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -62,7 +74,8 @@
         </div>
     </header>
 
-    <div class="practice-layout">
+    <!-- Character Practice Section -->
+    <div class="practice-layout" id="section-characters">
         <!-- Main Worksheet Area -->
         <main class="practice-main" id="worksheet">
             <div class="empty-state">
@@ -160,7 +173,128 @@
         </aside>
     </div>
 
+    <!-- Writing Prompts Section (Bilingual: First Nepali, Then English) -->
+    <div id="section-prompts" class="prompts-layout" style="display: none;">
+        <!-- Hero / Header -->
+        <div class="prompts-hero">
+            <div class="prompts-hero-inner">
+                <div class="prompts-hero-text">
+                    <div class="prompts-title-badge">द्विभाषी लेखन अभ्यास • Bilingual Writing Prompts</div>
+                    <h2 class="prompts-title-nep">नेपाली लेखन अभ्यास विषयहरू</h2>
+                    <h3 class="prompts-title-eng">Canonical Writing Prompts (215 Prompts across 14 Topics)</h3>
+                    <p class="prompts-subtitle">
+                        दैनिक जीवन, आत्म-चिन्तन, सम्बन्ध, संस्कृति, र सिर्जनात्मक लेखनका २१५ वटा मानक विषयहरू।
+                        कुनै पनि विषय रोज्नुहोस् र आफ्ना विचारहरू नेपालीमा लेख्न अभ्यास गर्नुहोस्।
+                    </p>
+                    <p class="prompts-subtitle-eng">
+                        Practice written expression in natural Nepali. Each prompt is presented in authentic Devanagari first, with an English translation alongside. Write your response directly in the built-in notebook.
+                    </p>
+                </div>
+                <div class="prompts-hero-actions">
+                    <button type="button" class="prompts-btn-random" id="prompts-random-btn">
+                        <span class="random-icon">🎲</span>
+                        <div class="random-btn-text">
+                            <span class="random-text-nep">कुनै एक विषय रोज्नुहोस्</span>
+                            <span class="random-text-eng">Pick a Random Prompt</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search & Controls Toolbar -->
+        <div class="prompts-controls-bar">
+            <div class="prompts-search-wrap">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="search" id="prompts-search-input" class="prompts-search-input" placeholder="नेपाली वा अङ्ग्रेजीमा खोज्नुहोस् (Search prompts in Nepali, English, or #number)..." autocomplete="off">
+                <button type="button" id="prompts-clear-search" class="prompts-clear-btn" style="display: none;" aria-label="खोज हटाउनुहोस् (Clear search)">✕</button>
+            </div>
+            <div class="prompts-stats-bar">
+                <span class="prompts-counter-label">उपलब्ध विषयहरू (Matched):</span>
+                <span class="prompts-counter-badge" id="prompts-matched-count">215 / 215</span>
+            </div>
+        </div>
+
+        <!-- Category Filter Pills (Strictly First Nepali, Then English) -->
+        <div class="prompts-categories-wrapper">
+            <div class="prompts-categories-scroll" id="prompts-category-filters">
+                <!-- Populated by writing-prompts.js -->
+            </div>
+        </div>
+
+        <!-- Prompts Main Container -->
+        <main class="prompts-main-container">
+            <div id="prompts-list-container">
+                <!-- Populated by writing-prompts.js -->
+            </div>
+
+            <!-- Empty State when search has no matches -->
+            <div id="prompts-empty-search" class="prompts-empty-search" style="display: none;">
+                <div class="empty-icon">🔍</div>
+                <h4>कुनै विषय फेला परेन</h4>
+                <p>No writing prompts matched your search query. Try searching for a different keyword or prompt number.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Interactive Writing Notebook Modal / Drawer -->
+    <div id="prompt-drawer-modal" class="prompt-drawer-modal" role="dialog" aria-modal="true" aria-labelledby="drawer-prompt-nepali">
+        <div class="prompt-drawer-backdrop" id="drawer-backdrop"></div>
+        <div class="prompt-drawer-content">
+            <!-- Drawer Header -->
+            <div class="drawer-header">
+                <div class="drawer-header-left">
+                    <div class="drawer-badges">
+                        <span class="drawer-badge-num" id="drawer-prompt-num">#1</span>
+                        <span class="drawer-badge-cat" id="drawer-prompt-category">व्यक्तिगत विवरण</span>
+                    </div>
+                    <!-- First Nepali (Devanagari), then English -->
+                    <h3 class="drawer-prompt-nepali" id="drawer-prompt-nepali">विषय</h3>
+                    <p class="drawer-prompt-english" id="drawer-prompt-english">Prompt</p>
+                </div>
+                <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="बन्द गर्नुहोस् (Close)">✕</button>
+            </div>
+
+            <!-- Devanagari Virtual Helper Keys -->
+            <div class="devanagari-helpers-wrap" id="devanagari-helpers">
+                <!-- Populated by writing-prompts.js -->
+            </div>
+
+            <!-- Writing Area -->
+            <div class="drawer-body">
+                <textarea id="drawer-textarea" class="drawer-textarea" placeholder="आफ्नो विचार वा रचना यहाँ नेपालीमा लेख्नुहोस्... (Write your essay or response here in Nepali...)" spellcheck="false"></textarea>
+            </div>
+
+            <!-- Drawer Footer / Controls -->
+            <div class="drawer-footer">
+                <div class="drawer-footer-stats">
+                    <span class="drawer-stat-item" id="drawer-word-count">० शब्द (0 words)</span>
+                    <span class="drawer-stat-item" id="drawer-char-count">० अक्षर (0 chars)</span>
+                    <span class="drawer-stat-status" id="drawer-save-status">💾 स्वतः सुरक्षित (Autosaved)</span>
+                </div>
+                <div class="drawer-footer-actions">
+                    <div class="drawer-nav-group">
+                        <button type="button" class="drawer-btn-secondary" id="drawer-prev-prompt" title="अघिल्लो विषय (Previous Prompt)">← अघिल्लो</button>
+                        <button type="button" class="drawer-btn-secondary" id="drawer-next-prompt" title="अर्को विषय (Next Prompt)">अर्को →</button>
+                    </div>
+                    <div class="drawer-action-group">
+                        <button type="button" class="drawer-btn-action" id="drawer-copy-text" title="रचना प्रतिलिपि गर्नुहोस् (Copy Text)">📋 प्रतिलिपि</button>
+                        <button type="button" class="drawer-btn-action" id="drawer-download-text" title="फाइल डाउनलोड गर्नुहोस् (Download .txt)">📥 डाउनलोड</button>
+                        <button type="button" class="drawer-btn-action" id="drawer-print-text" title="प्रिन्ट गर्नुहोस् (Print response)">🖨️ प्रिन्ट</button>
+                        <button type="button" class="drawer-btn-danger" id="drawer-clear-text" title="खाली गर्नुहोस् (Clear draft)">🗑️ खाली गर्नुहोस्</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/practice.js"></script>
+    <script src="js/writing-prompts-data.js"></script>
+    <script src="js/writing-prompts.js"></script>
 </body>
 
 </html>

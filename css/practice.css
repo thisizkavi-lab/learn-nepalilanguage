@@ -454,3 +454,993 @@
         display: none !important;
     }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CANONICAL WRITING PROMPTS (नेपाली लेखन विषयहरू) STYLES
+   Format: First Nepali (Devanagari), Then English
+   ══════════════════════════════════════════════════════════════ */
+
+/* Topbar Center & Mode Navigation */
+.practice-topbar-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.practice-mode-nav {
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 4px;
+}
+
+.mode-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.82);
+    font-family: inherit;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.mode-tab:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.mode-tab.active {
+    background: #ffffff;
+    color: #1a73e8;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .mode-tab.active {
+    background: #2b2d31;
+    color: #ffffff;
+}
+
+.mode-tab-np {
+    font-weight: 600;
+}
+
+.mode-tab-en {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+/* Prompts Section Main Layout */
+.prompts-layout {
+    margin-top: var(--topbar-height);
+    min-height: calc(100vh - var(--topbar-height));
+    background: var(--bg-color);
+    color: var(--text-main);
+    padding: 24px 24px 80px 24px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Section */
+.prompts-hero {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.prompts-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.prompts-hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.prompts-title-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(26, 115, 232, 0.1);
+    color: var(--link-color);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+[data-theme="dark"] .prompts-title-badge {
+    background: rgba(88, 101, 242, 0.15);
+    color: #8591f8;
+}
+
+.prompts-title-nep {
+    font-size: 1.625rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.prompts-title-eng {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    color: var(--text-muted);
+}
+
+.prompts-subtitle {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0 0 4px 0;
+    color: var(--text-content);
+}
+
+.prompts-subtitle-eng {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.prompts-hero-actions {
+    display: flex;
+    align-items: center;
+}
+
+.prompts-btn-random {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #1a73e8, #1557b0);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(26, 115, 232, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-theme="dark"] .prompts-btn-random {
+    background: linear-gradient(135deg, #5865f2, #4752c4);
+    box-shadow: 0 3px 10px rgba(88, 101, 242, 0.3);
+}
+
+.prompts-btn-random:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(26, 115, 232, 0.4);
+}
+
+.prompts-btn-random .random-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.random-btn-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.random-text-nep {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.random-text-eng {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Controls & Search Bar */
+.prompts-controls-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.prompts-search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 600px;
+}
+
+.prompts-search-wrap .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.prompts-search-input {
+    width: 100%;
+    padding: 10px 36px 10px 42px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.prompts-search-input:focus {
+    border-color: var(--link-color);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+.prompts-clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px;
+    line-height: 1;
+}
+
+.prompts-clear-btn:hover {
+    color: var(--text-main);
+}
+
+.prompts-stats-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.prompts-counter-badge {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Category Filter Pills */
+.prompts-categories-wrapper {
+    margin-bottom: 28px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.prompts-categories-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    color: var(--text-main);
+    text-align: left;
+}
+
+.category-pill:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--text-muted);
+}
+
+.category-pill.active {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.25);
+}
+
+.category-pill .pill-nep {
+    font-weight: 600;
+    font-size: 0.8125rem;
+}
+
+.category-pill .pill-eng {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.category-pill .pill-count {
+    background: rgba(0, 0, 0, 0.08);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 2px;
+}
+
+.category-pill.active .pill-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+/* Prompt Groups & Cards Grid */
+.prompt-category-group {
+    margin-bottom: 40px;
+}
+
+.prompt-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.prompt-category-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prompt-category-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--link-color);
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.prompt-category-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-title-nep {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.category-title-eng {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 2px 0 0 0;
+}
+
+.category-count-badge {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.prompts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Prompt Card */
+.prompt-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 1px 4px var(--shadow-color);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prompt-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(26, 115, 232, 0.4);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+[data-theme="dark"] .prompt-card:hover {
+    border-color: rgba(88, 101, 242, 0.45);
+}
+
+.prompt-card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.prompt-num-badge {
+    background: rgba(26, 115, 232, 0.1);
+    color: var(--link-color);
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+[data-theme="dark"] .prompt-num-badge {
+    background: rgba(88, 101, 242, 0.15);
+    color: #8591f8;
+}
+
+.prompt-category-tag {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prompt-draft-indicator {
+    display: none;
+    font-size: 0.75rem;
+    background: var(--callout-bg);
+    color: var(--callout-text);
+    border: 1px solid var(--callout-border);
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-left: auto;
+    font-weight: 500;
+}
+
+.prompt-draft-indicator.visible {
+    display: inline-block;
+}
+
+/* FIRST NEPALI (DEVANAGARI) */
+.prompt-body-nepali {
+    margin-top: 4px;
+}
+
+.prompt-text-nepali {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* THEN ENGLISH */
+.prompt-body-english {
+    margin-top: 2px;
+}
+
+.prompt-text-english {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--text-content);
+    margin: 0;
+}
+
+.prompt-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+.prompt-btn-write {
+    flex: 1;
+    background: var(--link-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.prompt-btn-write:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.prompt-btn-write .btn-subtext {
+    font-size: 0.75rem;
+    opacity: 0.85;
+    font-weight: normal;
+}
+
+.prompt-btn-copy {
+    background: var(--bg-surface-hover);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+}
+
+.prompt-btn-copy:hover {
+    background: var(--border-color);
+}
+
+/* Empty State */
+.prompts-empty-search {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+}
+
+.prompts-empty-search .empty-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.prompts-empty-search h4 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin: 0 0 6px 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INTERACTIVE WRITING NOTEBOOK MODAL / DRAWER
+   ══════════════════════════════════════════════════════════════ */
+.prompt-drawer-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.prompt-drawer-modal.open {
+    display: flex;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.prompt-drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.prompt-drawer-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 880px;
+    max-height: 90vh;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Drawer Header */
+.drawer-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.drawer-header-left {
+    flex: 1;
+}
+
+.drawer-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.drawer-badge-num {
+    background: var(--link-color);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.drawer-badge-cat {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.drawer-prompt-nepali {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0 0 6px 0;
+}
+
+.drawer-prompt-english {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.drawer-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.drawer-close-btn:hover {
+    color: var(--text-main);
+    background: var(--bg-surface-hover);
+}
+
+/* Devanagari Virtual Helper Keys */
+.devanagari-helpers-wrap {
+    padding: 10px 24px;
+    background: var(--bg-surface-hover);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.devanagari-helper-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.helper-keys-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.helper-char-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-family: 'Kalimati', 'Noto Sans Devanagari', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.helper-char-btn:hover {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: #ffffff;
+}
+
+/* Drawer Body (Writing Area) */
+.drawer-body {
+    flex: 1;
+    padding: 20px 24px;
+    overflow-y: auto;
+    min-height: 280px;
+}
+
+.drawer-textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    font-family: 'Kalimati', 'Noto Sans Devanagari', var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    outline: none;
+    resize: none;
+}
+
+.drawer-textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* Drawer Footer */
+.drawer-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 24px;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.drawer-footer-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+}
+
+.drawer-stat-item {
+    font-weight: 500;
+}
+
+.drawer-stat-status {
+    color: #16a34a;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+[data-theme="dark"] .drawer-stat-status {
+    color: #4ade80;
+}
+
+.drawer-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.drawer-nav-group,
+.drawer-action-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.drawer-btn-secondary {
+    background: var(--bg-surface-hover);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.drawer-btn-secondary:hover {
+    background: var(--border-color);
+}
+
+.drawer-btn-action {
+    background: var(--link-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.drawer-btn-action:hover {
+    opacity: 0.9;
+}
+
+.drawer-btn-danger {
+    background: transparent;
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.drawer-btn-danger:hover {
+    background: rgba(220, 38, 38, 0.1);
+}
+
+/* Toast Notifications */
+.prompt-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 2000;
+    background: #1e293b;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .prompt-toast {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.prompt-toast.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRINT ADJUSTMENTS FOR PROMPTS
+   ══════════════════════════════════════════════════════════════ */
+@media print {
+    .practice-mode-nav,
+    .prompts-hero-actions,
+    .prompts-controls-bar,
+    .prompts-categories-wrapper,
+    .prompt-card-actions,
+    .devanagari-helpers-wrap,
+    .drawer-footer,
+    .drawer-close-btn,
+    .prompt-toast {
+        display: none !important;
+    }
+
+    .prompts-layout {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+
+    .prompt-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .prompt-text-nepali {
+        color: #000 !important;
+    }
+
+    .prompt-text-english {
+        color: #444 !important;
+    }
+
+    .prompt-drawer-modal {
+        position: static !important;
+        padding: 0 !important;
+    }
+
+    .prompt-drawer-backdrop {
+        display: none !important;
+    }
+
+    .prompt-drawer-content {
+        max-width: 100% !important;
+        max-height: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .practice-topbar {
+        padding: 0 12px;
+    }
+
+    .practice-topbar-left a:not([href="index.html"]) {
+        display: none;
+    }
+
+    .prompts-hero {
+        padding: 20px;
+    }
+
+    .prompts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .drawer-header {
+        padding: 16px;
+    }
+
+    .drawer-body {
+        padding: 16px;
+    }
+
+    .drawer-footer {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mode-tab-en {
+        display: none;
+    }
+
+    .practice-topbar h1 {
+        display: none;
+    }
+
+    .prompts-layout {
+        padding: 16px 12px 60px 12px;
+    }
+}
