@@ -208,34 +208,46 @@ a:hover {
     text-decoration: none;
 }
 
-/* Compact wordmark: tightly crop the transparent source image in its SVG.
-   The white backing keeps the dark lettering legible on the blue top bar. */
+/* Transparent PNG brand on the existing blue bar.
+   The second image whitens only the lettering for contrast; the book,
+   Nepal flag, and red mark retain their original colors. No backing box. */
 .topbar .logo {
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 8px;
-    border-radius: 5px;
-    background: #fff;
-    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 180px;
+    height: 34px;
     flex-shrink: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 .brand-logo-image {
+    position: absolute;
     display: block;
-    width: 150px;
+    top: -17px;
+    left: 0;
+    width: 180px;
     height: auto;
+}
+
+.brand-logo-contrast {
+    filter: brightness(0) invert(1);
+    clip-path: inset(0 10% 0 19%);
+    pointer-events: none;
 }
 
 @media (max-width: 600px) {
     .topbar .logo {
-        height: 32px;
-        padding: 0 6px;
+        width: 158px;
+        height: 30px;
     }
 
     .brand-logo-image {
-        width: 128px;
+        width: 158px;
+        top: -15px;
     }
 }
 
