@@ -13913,7 +13913,160 @@ const courseData = [
                             </div>
                         `
                     },
-                    { id: "lesson-76", title: "76 Going camping" },
+                    {
+                        id: "lesson-76",
+                        title: "76 Going camping",
+                        content: `
+                            <h2>76 Tents, Campfires & Camping Under the Himalayan Stars</h2>
+                            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem;"><strong>Pitching Tents, Gathering Firewood, The "Dhuni" & Wilderness Etiquette</strong></p>
+                            
+                            <p>In the West, "camping" often conjures images of designated RV parks, electric hookups, and picnic tables with park rangers. In Nepal, going camping means picking a ridgeline in Shivapuri, a secluded meadow near Chisapani, or a quiet river bend, clearing away stones, pitching a canvas tent against the gusting Himalayan wind, and boiling black tea over a crackling wood fire.</p>
+                            <p>While most trekkers sleep in village teahouses and lodges, true camping (तम्बु / क्याम्पिङ) gives you Nepal at its rawest: zero light pollution, billion-star skies, roaring campfires, and crisp alpine air. Here is the exact vocabulary and phrasebook you need for a campout in Nepal.</p>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #10b981;"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
+                                <h3 style="margin: 0;">1. The Gear & Pitching the Tent (पाल टाङ्ने र सामान)</h3>
+                            </div>
+                            <p>Whether you rent your gear from the shops in Thamel or carry your own ultra-light gear, here are the essential camping words every hiker uses:</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">तम्बु / पाल</span> (Tambu / Paal)</div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Tent / Tarpaulin canvas.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुत्ने झोला</span> (Sutne jhola)</div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Sleeping bag.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">गुन्द्री / म्याट</span> (Gundri / Mat)</div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Sleeping pad / straw ground mat.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">टर्च / हेडल्याम्प</span></div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Torch / Headlamp.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">डोरी र किला</span> (Dori ra kila)</div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Guyline ropes & tent stakes.</div>
+                                </div>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">समतल ठाउँ</span> (Samatal thau)</div>
+                                    <div style="font-size: 0.85rem; color: #166534; margin-top: 4px;">Flat, level ground.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">यहाँ पाल टाङ्दा हुन्छ?</span> (Yaha paal taangda hunchha?)</strong><br>
+                                    <em>Is it okay to pitch a tent here? (Crucial when camping near a village or forest post).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">समतल ठाउँ खोजेर ढुङ्गा पन्छाऔं।</span> (Samatal thau khojera dhunga panchhaaun.)</strong><br>
+                                    <em>Let’s find a flat spot and clear away the rocks.</em>
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">हावा चल्यो, किला राम्ररी ठोक।</span> (Hawa chalyo, kila ramrari thoka.)</strong><br>
+                                    <em>The wind picked up, hammer the pegs firmly into the dirt.</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #f59e0b;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                                <h3 style="margin: 0;">2. Campfire, Firewood & The Sacred "Dhuni" (आगो र दाउरा)</h3>
+                            </div>
+                            <p>Once the sun sinks behind the Himalayan ridge, the temperature drops precipitously. The centerpiece of every Nepali camp night is the <strong>धुनी (Dhuni)</strong> — a communal bonfire for cooking, singing, and surviving the chill.</p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0;">
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">दाउरा</span> (Daura)</div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Firewood.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सुकेको पात / सिन्का</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Dry leaves / small twigs (kindling).</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">धुनी</span> (Dhuni)</div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Bonfire / warm social fire.</div>
+                                </div>
+                                <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 1rem; border-radius: 10px;">
+                                    <div style="font-size: 1.05rem; font-weight: 700;"><span class="nepali-font">सलाई / लाइटर</span></div>
+                                    <div style="font-size: 0.85rem; color: #92400e; margin-top: 4px;">Matches / lighter.</div>
+                                </div>
+                            </div>
+
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">सुकेको दाउरा बटुलौं।</span> (Sukeko daura batulau.)</strong><br>
+                                    <em>Let’s gather fallen dry firewood. (Never chop live green branches!).</em>
+                                </li>
+                                <li style="margin-bottom: 0.75rem;">
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">धुनी तापेर बसौं, असाध्यै चिसो भयो।</span> (Dhuni taapera basau, asaadhyai chiso bhayo.)</strong><br>
+                                    <em>Let’s sit around the campfire and warm up, it’s bitterly cold.</em>
+                                </li>
+                                <li>
+                                    <strong><span class="nepali-font" style="font-size: 1.05rem;">सुत्नुअघि आगो पूरै निभाऊ!</span> (Sutnu-aghi aago poorai nibhaau!)</strong><br>
+                                    <em>Douse the fire completely with water before sleeping!</em>
+                                </li>
+                            </ul>
+
+                            <hr class="section-divider">
+
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #3b82f6;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                <h3 style="margin: 0;">3. Camp Cooking & Campfire Dialogue</h3>
+                            </div>
+                            <p>No gourmet camp kitchen needed — real Nepali camping runs on sweet milk tea, instant noodles (Wai Wai), boiled eggs, and fire-roasted potatoes.</p>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="100%" height="100%">
+                                <rect width="100%" height="100%" fill="#f8fafc" rx="10"/>
+                                <rect x="50" y="40" width="300" height="70" rx="15" fill="#10b981"/>
+                                <text x="200" y="70" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">"घाम डुब्न लाग्यो, छिटो पाल टाँगौं!"</text>
+                                <text x="200" y="95" font-family="Arial, sans-serif" font-size="13" fill="#d1fae5" text-anchor="middle">(The sun is dipping, let’s pitch the tent fast!)</text>
+                                <path d="M 80 110 L 90 140 L 110 110 Z" fill="#10b981"/>
+                                <rect x="350" y="120" width="300" height="70" rx="15" fill="#3b82f6"/>
+                                <text x="500" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">"मैले दाउरा ल्याएँ, म आगो बालेर चिया बसाल्छु।"</text>
+                                <text x="500" y="175" font-family="Arial, sans-serif" font-size="13" fill="#dbeafe" text-anchor="middle">(I brought wood; I’ll light the fire and start tea.)</text>
+                                <path d="M 620 190 L 610 220 L 590 190 Z" fill="#3b82f6"/>
+                            </svg>
+
+                            <div style="background: #eff6ff; border: 1px solid #bfdbfe; padding: 1.25rem; border-radius: 10px; margin: 1.5rem 0;">
+                                <ul style="list-style-type: none; padding: 0; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">पानीको मुहान</span> (Paani ko muhaan)</strong> — Fresh natural spring / drinking water source.
+                                    </li>
+                                    <li style="margin-bottom: 0.75rem;">
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">पानी उम्लियो?</span> (Paani umliyo?)</strong> — Has the water boiled? <em>(Always boil wilderness stream water before drinking!).</em>
+                                    </li>
+                                    <li>
+                                        <strong><span class="nepali-font" style="font-size: 1.05rem;">आज राति तारा कस्तो सफा देखिएको!</span></strong><br>
+                                        <span style="color: #1e40af;">The stars are so crystal clear tonight! <em>(Zero city haze or light pollution).</em></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="section-divider">
+
+                            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                                <h3 style="margin-top: 0; color: #065f46;">The Cultural Insight: Forest Rules, Wildlife & "Leave No Trace" 🌲🦌⛺</h3>
+                                <p style="margin-bottom: 1rem;">Camping in Nepal is deeply rewarding, but the mountains are delicate ecosystems shared with local wildlife and protected conservation areas.</p>
+                                <div style="background: #ffffff; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #047857; margin-bottom: 0.8rem;">
+                                    <strong>1. National Parks & Army Checkposts:</strong> In national parks (like Shivapuri, Langtang, or Chitwan), wild camping without prior registration or camping permits is strictly prohibited. Always inform the local army post or park rangers (<em>रेन्जर</em>).
+                                </div>
+                                <div style="background: #ffffff; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #047857; margin-bottom: 0.8rem;">
+                                    <strong>2. Wild Animals (बँदेल र चितुवा):</strong> Wild boars, monkeys, and on higher ridges, leopards roam at night. Never leave food scraps or open snacks outside your tent; pack everything inside your rucksack.
+                                </div>
+                                <div style="background: #ffffff; border: 1px solid #a7f3d0; padding: 1rem; border-radius: 10px; color: #047857;">
+                                    <strong>3. आफ्नो फोहोर आफैं लैजाने (Pack It In, Pack It Out):</strong> The ridges have no municipal waste collection. Every plastic wrapper, noodle packet, and bottle must go back down into your backpack to keep the mountains pristine.
+                                </div>
+                            </div>
+                        `
+                    },
                     {
                         id: "lesson-77",
                         title: "77 At the beach",
